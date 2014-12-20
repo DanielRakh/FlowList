@@ -95,6 +95,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		8ECFE3121A45FB2B0088DE6E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		8EFBB01B1A45F015003DDDC9 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +127,7 @@
 				8ECFE3071A45F3CE0088DE6E /* Model */,
 				8ECFE3061A45F3CA0088DE6E /* Controllers */,
 				8ECFE3051A45F3C20088DE6E /* Views */,
+				8ECFE3121A45FB2B0088DE6E /* Helpers */,
 				8EFBB0301A45F015003DDDC9 /* Images.xcassets */,
 				8EFBB0271A45F015003DDDC9 /* Supporting Files */,
 			);

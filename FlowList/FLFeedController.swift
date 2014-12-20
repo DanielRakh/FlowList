@@ -24,7 +24,6 @@ class FLFeedController: UIViewController {
     //MARK: Private
     
     
-    
     //MARK:
     //MARK:Methods
     
