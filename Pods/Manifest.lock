@@ -1,0 +1,10 @@
+PODS:
+  - MMScalableVectorView (0.1.0)
+
+DEPENDENCIES:
+  - MMScalableVectorView (~> 0.1)
+
+SPEC CHECKSUMS:
+  MMScalableVectorView: c8f1b86036c8d1056ff5d5c3be59044ef93fd9fe
+
+COCOAPODS: 0.35.0
