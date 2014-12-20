@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9i1-7y-3fb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--FlowList-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="FLMasterController" customModule="FlowList" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,158 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTr-XN-oq2">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <segue destination="S01-Eu-7jm" kind="embed" id="jVA-pK-7fp"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSz-z2-15B" customClass="FLPlaybackView" customModule="FlowList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Uw3-Or-GhJ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Uw3-Or-GhJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Uw3-Or-GhJ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mTr-XN-oq2" secondAttribute="trailing" id="JOa-Wc-yii"/>
+                            <constraint firstItem="mTr-XN-oq2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="MHN-KW-PLz"/>
+                            <constraint firstAttribute="trailing" secondItem="QSz-z2-15B" secondAttribute="trailing" id="Ms3-5Z-ycy"/>
+                            <constraint firstItem="mTr-XN-oq2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Rwb-q8-HiU"/>
+                            <constraint firstItem="QSz-z2-15B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Uj1-Q3-2CY"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QSz-z2-15B" secondAttribute="bottom" id="dVv-R5-Syu"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="mTr-XN-oq2" secondAttribute="bottom" id="hYu-Jw-3XY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mTr-XN-oq2"/>
+                                <exclude reference="QSz-z2-15B"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="JOa-Wc-yii"/>
+                                <exclude reference="MHN-KW-PLz"/>
+                                <exclude reference="Rwb-q8-HiU"/>
+                                <exclude reference="Ms3-5Z-ycy"/>
+                                <exclude reference="Uj1-Q3-2CY"/>
+                                <exclude reference="dVv-R5-Syu"/>
+                                <exclude reference="hYu-Jw-3XY"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="mTr-XN-oq2"/>
+                                <include reference="QSz-z2-15B"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="JOa-Wc-yii"/>
+                                <include reference="MHN-KW-PLz"/>
+                                <include reference="Rwb-q8-HiU"/>
+                                <include reference="Ms3-5Z-ycy"/>
+                                <include reference="Uj1-Q3-2CY"/>
+                                <include reference="dVv-R5-Syu"/>
+                                <include reference="hYu-Jw-3XY"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="FlowList" id="3Ac-fP-q9h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1386" y="-318"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="e6l-Kr-Q7Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9i1-7y-3fb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="evZ-Ah-5bY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="pqD-Q0-TwG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A7Y-Pw-O9x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549" y="-318"/>
+        </scene>
+        <!--Feed Controller-->
+        <scene sceneID="dGb-Vo-Rhc">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="S01-Eu-7jm" customClass="FLFeedController" customModule="FlowList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P4d-kg-64r"/>
+                        <viewControllerLayoutGuide type="bottom" id="rZb-zd-hKr"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="s0C-11-C0L">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="vDa-Jn-QWw" customClass="FLTableView" customModule="FlowList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TrackCell" rowHeight="80" id="9wO-69-01t" customClass="FLTrackCell" customModule="FlowList" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9wO-69-01t" id="KBW-UQ-7wo">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vDa-Jn-QWw" firstAttribute="leading" secondItem="s0C-11-C0L" secondAttribute="leading" id="7Ic-rb-OHe"/>
+                            <constraint firstAttribute="trailing" secondItem="vDa-Jn-QWw" secondAttribute="trailing" id="fhD-vk-nda"/>
+                            <constraint firstItem="vDa-Jn-QWw" firstAttribute="top" secondItem="P4d-kg-64r" secondAttribute="bottom" id="jtE-eb-B9i"/>
+                            <constraint firstItem="rZb-zd-hKr" firstAttribute="top" secondItem="vDa-Jn-QWw" secondAttribute="bottom" id="xJh-23-LWZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vDa-Jn-QWw"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7Ic-rb-OHe"/>
+                                <exclude reference="fhD-vk-nda"/>
+                                <exclude reference="jtE-eb-B9i"/>
+                                <exclude reference="xJh-23-LWZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vDa-Jn-QWw"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7Ic-rb-OHe"/>
+                                <include reference="fhD-vk-nda"/>
+                                <include reference="jtE-eb-B9i"/>
+                                <include reference="xJh-23-LWZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="tableView" destination="vDa-Jn-QWw" id="uSM-AM-JL8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yin-cd-zNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2250" y="-318"/>
         </scene>
     </scenes>
 </document>

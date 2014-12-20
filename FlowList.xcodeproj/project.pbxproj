@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8ECFE3091A45F4130088DE6E /* FLFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE3081A45F4130088DE6E /* FLFeedController.swift */; };
+		8ECFE30B1A45F4690088DE6E /* FLPlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE30A1A45F4690088DE6E /* FLPlaybackView.swift */; };
+		8ECFE30D1A45F4B90088DE6E /* FLTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE30C1A45F4B90088DE6E /* FLTableView.swift */; };
+		8ECFE30F1A45F4D10088DE6E /* FLTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE30E1A45F4D10088DE6E /* FLTableViewManager.swift */; };
+		8ECFE3111A45F5090088DE6E /* FLTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE3101A45F5090088DE6E /* FLTrackCell.swift */; };
 		8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */; };
-		8EFBB02C1A45F015003DDDC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB02B1A45F015003DDDC9 /* ViewController.swift */; };
+		8EFBB02C1A45F015003DDDC9 /* FLMasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB02B1A45F015003DDDC9 /* FLMasterController.swift */; };
 		8EFBB02F1A45F015003DDDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB02D1A45F015003DDDC9 /* Main.storyboard */; };
 		8EFBB0311A45F015003DDDC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0301A45F015003DDDC9 /* Images.xcassets */; };
 		8EFBB0341A45F015003DDDC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */; };
@@ -26,10 +31,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8ECFE3081A45F4130088DE6E /* FLFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedController.swift; sourceTree = "<group>"; };
+		8ECFE30A1A45F4690088DE6E /* FLPlaybackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlaybackView.swift; sourceTree = "<group>"; };
+		8ECFE30C1A45F4B90088DE6E /* FLTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTableView.swift; sourceTree = "<group>"; };
+		8ECFE30E1A45F4D10088DE6E /* FLTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTableViewManager.swift; sourceTree = "<group>"; };
+		8ECFE3101A45F5090088DE6E /* FLTrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTrackCell.swift; sourceTree = "<group>"; };
 		8EFBB0241A45F015003DDDC9 /* FlowList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBB0281A45F015003DDDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8EFBB02B1A45F015003DDDC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8EFBB02B1A45F015003DDDC9 /* FLMasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLMasterController.swift; sourceTree = "<group>"; };
 		8EFBB02E1A45F015003DDDC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EFBB0301A45F015003DDDC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8EFBB0331A45F015003DDDC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -56,6 +66,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8ECFE3051A45F3C20088DE6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EFBB02D1A45F015003DDDC9 /* Main.storyboard */,
+				8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */,
+				8ECFE30A1A45F4690088DE6E /* FLPlaybackView.swift */,
+				8ECFE30C1A45F4B90088DE6E /* FLTableView.swift */,
+				8ECFE3101A45F5090088DE6E /* FLTrackCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8ECFE3061A45F3CA0088DE6E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8EFBB02B1A45F015003DDDC9 /* FLMasterController.swift */,
+				8ECFE3081A45F4130088DE6E /* FLFeedController.swift */,
+				8ECFE30E1A45F4D10088DE6E /* FLTableViewManager.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8ECFE3071A45F3CE0088DE6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		8EFBB01B1A45F015003DDDC9 = {
 			isa = PBXGroup;
 			children = (
@@ -78,10 +117,10 @@
 			isa = PBXGroup;
 			children = (
 				8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */,
-				8EFBB02B1A45F015003DDDC9 /* ViewController.swift */,
-				8EFBB02D1A45F015003DDDC9 /* Main.storyboard */,
+				8ECFE3071A45F3CE0088DE6E /* Model */,
+				8ECFE3061A45F3CA0088DE6E /* Controllers */,
+				8ECFE3051A45F3C20088DE6E /* Views */,
 				8EFBB0301A45F015003DDDC9 /* Images.xcassets */,
-				8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */,
 				8EFBB0271A45F015003DDDC9 /* Supporting Files */,
 			);
 			path = FlowList;
@@ -212,8 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EFBB02C1A45F015003DDDC9 /* ViewController.swift in Sources */,
+				8EFBB02C1A45F015003DDDC9 /* FLMasterController.swift in Sources */,
 				8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */,
+				8ECFE30D1A45F4B90088DE6E /* FLTableView.swift in Sources */,
+				8ECFE30F1A45F4D10088DE6E /* FLTableViewManager.swift in Sources */,
+				8ECFE3091A45F4130088DE6E /* FLFeedController.swift in Sources */,
+				8ECFE30B1A45F4690088DE6E /* FLPlaybackView.swift in Sources */,
+				8ECFE3111A45F5090088DE6E /* FLTrackCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +449,7 @@
 				8EFBB0451A45F015003DDDC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EFBB0461A45F015003DDDC9 /* Build configuration list for PBXNativeTarget "FlowListTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +458,7 @@
 				8EFBB0481A45F015003DDDC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
