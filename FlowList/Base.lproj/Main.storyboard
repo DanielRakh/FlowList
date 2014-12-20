@@ -85,16 +85,16 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="Uw3-Or-GhJ"/>
-                                        <exclude reference="5Dc-jm-zxN"/>
-                                        <exclude reference="NGU-az-fB1"/>
-                                        <exclude reference="hNk-G0-Cgw"/>
+                                        <exclude reference="jt9-nF-bLL"/>
+                                        <exclude reference="sQE-qS-2PT"/>
+                                        <exclude reference="uBC-BC-fvi"/>
                                         <exclude reference="Vzm-sA-IrN"/>
                                         <exclude reference="tfs-uh-Xyc"/>
                                         <exclude reference="7gD-hY-eGS"/>
                                         <exclude reference="aNg-8B-kg5"/>
-                                        <exclude reference="jt9-nF-bLL"/>
-                                        <exclude reference="sQE-qS-2PT"/>
-                                        <exclude reference="uBC-BC-fvi"/>
+                                        <exclude reference="5Dc-jm-zxN"/>
+                                        <exclude reference="NGU-az-fB1"/>
+                                        <exclude reference="hNk-G0-Cgw"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -106,18 +106,24 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="Uw3-Or-GhJ"/>
-                                        <include reference="5Dc-jm-zxN"/>
-                                        <include reference="NGU-az-fB1"/>
-                                        <include reference="hNk-G0-Cgw"/>
+                                        <include reference="jt9-nF-bLL"/>
+                                        <include reference="sQE-qS-2PT"/>
+                                        <include reference="uBC-BC-fvi"/>
                                         <include reference="Vzm-sA-IrN"/>
                                         <include reference="tfs-uh-Xyc"/>
                                         <include reference="7gD-hY-eGS"/>
                                         <include reference="aNg-8B-kg5"/>
-                                        <include reference="jt9-nF-bLL"/>
-                                        <include reference="sQE-qS-2PT"/>
-                                        <include reference="uBC-BC-fvi"/>
+                                        <include reference="5Dc-jm-zxN"/>
+                                        <include reference="NGU-az-fB1"/>
+                                        <include reference="hNk-G0-Cgw"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="playButton" destination="q5z-5A-ivK" id="WAD-th-8wa"/>
+                                    <outlet property="trackScrubber" destination="JdW-s9-prA" id="CLB-ek-Kit"/>
+                                    <outlet property="trackTimeStartLabel" destination="Ssj-a7-9Sx" id="TZh-dw-oi1"/>
+                                    <outlet property="tracktimeEndLabel" destination="KdR-kG-VQS" id="pQs-vK-zX3"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

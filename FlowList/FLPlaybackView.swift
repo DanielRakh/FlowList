@@ -9,13 +9,10 @@
 import UIKit
 
 class FLPlaybackView: UIView {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+    
+    @IBOutlet weak var playButton:UIButton!
+    @IBOutlet weak var trackScrubber:UISlider!
+    @IBOutlet weak var trackTimeStartLabel:UILabel!
+    @IBOutlet weak var tracktimeEndLabel:UILabel!
+    
 }
