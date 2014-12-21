@@ -9,10 +9,15 @@
 import UIKit
 
 class FLMasterController: UIViewController {
-
+    
+    var audioPlayerManager:FLAudioPlayerManager!
+    @IBOutlet weak var playBackView: FLPlaybackView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        audioPlayerManager = FLAudioPlayerManager(playBackView: playBackView, audioFile: "GoDJ", fileExtension: "mp3")
     }
 
     override func didReceiveMemoryWarning() {

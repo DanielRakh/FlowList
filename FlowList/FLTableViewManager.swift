@@ -41,7 +41,7 @@ extension FLTableViewManager: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as FLTrackCell
-                        configureCell(cell, forIndexPath: indexPath)
+        configureCell(cell, forIndexPath: indexPath)
         return cell
     }
     

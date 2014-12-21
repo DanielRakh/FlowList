@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E36F6161A46171600DD88D8 /* GoDJ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E36F6151A46171600DD88D8 /* GoDJ.mp3 */; };
 		8ECFE3091A45F4130088DE6E /* FLFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE3081A45F4130088DE6E /* FLFeedController.swift */; };
 		8ECFE30B1A45F4690088DE6E /* FLPlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE30A1A45F4690088DE6E /* FLPlaybackView.swift */; };
 		8ECFE30D1A45F4B90088DE6E /* FLTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE30C1A45F4B90088DE6E /* FLTableView.swift */; };
 		8ECFE30F1A45F4D10088DE6E /* FLTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE30E1A45F4D10088DE6E /* FLTableViewManager.swift */; };
 		8ECFE3111A45F5090088DE6E /* FLTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE3101A45F5090088DE6E /* FLTrackCell.swift */; };
+		8ECFE3181A4600EF0088DE6E /* FLAudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE3171A4600EF0088DE6E /* FLAudioPlayerManager.swift */; };
 		8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */; };
 		8EFBB02C1A45F015003DDDC9 /* FLMasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB02B1A45F015003DDDC9 /* FLMasterController.swift */; };
 		8EFBB02F1A45F015003DDDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB02D1A45F015003DDDC9 /* Main.storyboard */; };
@@ -34,12 +36,14 @@
 /* Begin PBXFileReference section */
 		01EAE4507B2D77ADF373ED54 /* Pods-FlowList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.debug.xcconfig"; sourceTree = "<group>"; };
 		5D0840D31A70F1DF5623C4FA /* Pods-FlowList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.release.xcconfig"; sourceTree = "<group>"; };
+		8E36F6151A46171600DD88D8 /* GoDJ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = GoDJ.mp3; path = ../GoDJ.mp3; sourceTree = "<group>"; };
 		8ECFE3081A45F4130088DE6E /* FLFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedController.swift; sourceTree = "<group>"; };
 		8ECFE30A1A45F4690088DE6E /* FLPlaybackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlaybackView.swift; sourceTree = "<group>"; };
 		8ECFE30C1A45F4B90088DE6E /* FLTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTableView.swift; sourceTree = "<group>"; };
 		8ECFE30E1A45F4D10088DE6E /* FLTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTableViewManager.swift; sourceTree = "<group>"; };
 		8ECFE3101A45F5090088DE6E /* FLTrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTrackCell.swift; sourceTree = "<group>"; };
 		8ECFE3131A45FD060088DE6E /* FlowList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlowList-Bridging-Header.h"; sourceTree = "<group>"; };
+		8ECFE3171A4600EF0088DE6E /* FLAudioPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLAudioPlayerManager.swift; sourceTree = "<group>"; };
 		8EFBB0241A45F015003DDDC9 /* FlowList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBB0281A45F015003DDDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				8EFBB02B1A45F015003DDDC9 /* FLMasterController.swift */,
 				8ECFE3081A45F4130088DE6E /* FLFeedController.swift */,
 				8ECFE30E1A45F4D10088DE6E /* FLTableViewManager.swift */,
+				8ECFE3171A4600EF0088DE6E /* FLAudioPlayerManager.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 		8EFBB0271A45F015003DDDC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E36F6151A46171600DD88D8 /* GoDJ.mp3 */,
 				8EFBB0281A45F015003DDDC9 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -267,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E36F6161A46171600DD88D8 /* GoDJ.mp3 in Resources */,
 				8EFBB02F1A45F015003DDDC9 /* Main.storyboard in Resources */,
 				8EFBB0341A45F015003DDDC9 /* LaunchScreen.xib in Resources */,
 				8EFBB0311A45F015003DDDC9 /* Images.xcassets in Resources */,
@@ -321,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EFBB02C1A45F015003DDDC9 /* FLMasterController.swift in Sources */,
+				8ECFE3181A4600EF0088DE6E /* FLAudioPlayerManager.swift in Sources */,
 				8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */,
 				8ECFE30D1A45F4B90088DE6E /* FLTableView.swift in Sources */,
 				8ECFE30F1A45F4D10088DE6E /* FLTableViewManager.swift in Sources */,
