@@ -7,19 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E2FC66C1A4DC9AD00D48898 /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC66B1A4DC9AD00D48898 /* RootWireframe.swift */; };
+		8E2FC6751A4DCD6300D48898 /* ListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC6741A4DCD6300D48898 /* ListWireframe.swift */; };
+		8E2FC6771A4DD0F400D48898 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC6761A4DD0F400D48898 /* ListViewController.swift */; };
 		8E36F6161A46171600DD88D8 /* GoDJ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E36F6151A46171600DD88D8 /* GoDJ.mp3 */; };
+		8E505AB11A4DC4E20019E1CD /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E505AB01A4DC4E20019E1CD /* AppDependencies.swift */; };
 		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8ECFE3091A45F4130088DE6E /* FLFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE3081A45F4130088DE6E /* FLFeedController.swift */; };
-		8ECFE30B1A45F4690088DE6E /* FLPlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE30A1A45F4690088DE6E /* FLPlaybackView.swift */; };
-		8ECFE30D1A45F4B90088DE6E /* FLTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE30C1A45F4B90088DE6E /* FLTableView.swift */; };
-		8ECFE30F1A45F4D10088DE6E /* FLTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE30E1A45F4D10088DE6E /* FLTableViewManager.swift */; };
-		8ECFE3111A45F5090088DE6E /* FLTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE3101A45F5090088DE6E /* FLTrackCell.swift */; };
-		8ECFE3181A4600EF0088DE6E /* FLAudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE3171A4600EF0088DE6E /* FLAudioPlayerManager.swift */; };
 		8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */; };
-		8EFBB02C1A45F015003DDDC9 /* FLMasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB02B1A45F015003DDDC9 /* FLMasterController.swift */; };
 		8EFBB02F1A45F015003DDDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB02D1A45F015003DDDC9 /* Main.storyboard */; };
 		8EFBB0311A45F015003DDDC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0301A45F015003DDDC9 /* Images.xcassets */; };
-		8EFBB0341A45F015003DDDC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */; };
 		8EFBB0401A45F015003DDDC9 /* FlowListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB03F1A45F015003DDDC9 /* FlowListTests.swift */; };
 		A41F3B02375B7518E181A79F /* libPods-FlowList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7C4C4184AF2FB2E444196C /* libPods-FlowList.a */; };
 /* End PBXBuildFile section */
@@ -72,22 +68,18 @@
 /* Begin PBXFileReference section */
 		01EAE4507B2D77ADF373ED54 /* Pods-FlowList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.debug.xcconfig"; sourceTree = "<group>"; };
 		5D0840D31A70F1DF5623C4FA /* Pods-FlowList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.release.xcconfig"; sourceTree = "<group>"; };
+		8E2FC66B1A4DC9AD00D48898 /* RootWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
+		8E2FC6741A4DCD6300D48898 /* ListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListWireframe.swift; sourceTree = "<group>"; };
+		8E2FC6761A4DD0F400D48898 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		8E36F6151A46171600DD88D8 /* GoDJ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = GoDJ.mp3; path = ../GoDJ.mp3; sourceTree = "<group>"; };
+		8E505AB01A4DC4E20019E1CD /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		8ECFE3081A45F4130088DE6E /* FLFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedController.swift; sourceTree = "<group>"; };
-		8ECFE30A1A45F4690088DE6E /* FLPlaybackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlaybackView.swift; sourceTree = "<group>"; };
-		8ECFE30C1A45F4B90088DE6E /* FLTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTableView.swift; sourceTree = "<group>"; };
-		8ECFE30E1A45F4D10088DE6E /* FLTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTableViewManager.swift; sourceTree = "<group>"; };
-		8ECFE3101A45F5090088DE6E /* FLTrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTrackCell.swift; sourceTree = "<group>"; };
 		8ECFE3131A45FD060088DE6E /* FlowList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlowList-Bridging-Header.h"; sourceTree = "<group>"; };
-		8ECFE3171A4600EF0088DE6E /* FLAudioPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLAudioPlayerManager.swift; sourceTree = "<group>"; };
 		8EFBB0241A45F015003DDDC9 /* FlowList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBB0281A45F015003DDDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8EFBB02B1A45F015003DDDC9 /* FLMasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLMasterController.swift; sourceTree = "<group>"; };
 		8EFBB02E1A45F015003DDDC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EFBB0301A45F015003DDDC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8EFBB0331A45F015003DDDC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8EFBB0391A45F015003DDDC9 /* FlowListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBB03E1A45F015003DDDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFBB03F1A45F015003DDDC9 /* FlowListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowListTests.swift; sourceTree = "<group>"; };
@@ -122,6 +114,98 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8E2FC66E1A4DCC8700D48898 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				8E2FC6731A4DCD0E00D48898 /* Wireframe */,
+				8E2FC6721A4DCCDF00D48898 /* View */,
+				8E2FC6711A4DCCD400D48898 /* Data Manager */,
+				8E2FC6701A4DCCC000D48898 /* Presenter */,
+				8E2FC66F1A4DCCB900D48898 /* Interactor */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		8E2FC66F1A4DCCB900D48898 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		8E2FC6701A4DCCC000D48898 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		8E2FC6711A4DCCD400D48898 /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Data Manager";
+			sourceTree = "<group>";
+		};
+		8E2FC6721A4DCCDF00D48898 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E2FC6761A4DD0F400D48898 /* ListViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8E2FC6731A4DCD0E00D48898 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				8E2FC6741A4DCD6300D48898 /* ListWireframe.swift */,
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		8E505AAB1A4DC4070019E1CD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E505AAD1A4DC42D0019E1CD /* Common */,
+				8E505AAE1A4DC4340019E1CD /* Modules */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		8E505AAD1A4DC42D0019E1CD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8E505AB41A4DC5CC0019E1CD /* View */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		8E505AAE1A4DC4340019E1CD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8E2FC66E1A4DCC8700D48898 /* List */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		8E505AB21A4DC5090019E1CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E36F6151A46171600DD88D8 /* GoDJ.mp3 */,
+				8EFBB0301A45F015003DDDC9 /* Images.xcassets */,
+				8EFBB02D1A45F015003DDDC9 /* Main.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8E505AB41A4DC5CC0019E1CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E2FC66B1A4DC9AD00D48898 /* RootWireframe.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		8E624ADA1A4728CD00472E9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,43 +213,6 @@
 				8E624AE11A4728CD00472E9B /* AlamofireTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8ECFE3051A45F3C20088DE6E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8EFBB02D1A45F015003DDDC9 /* Main.storyboard */,
-				8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */,
-				8ECFE30A1A45F4690088DE6E /* FLPlaybackView.swift */,
-				8ECFE30C1A45F4B90088DE6E /* FLTableView.swift */,
-				8ECFE3101A45F5090088DE6E /* FLTrackCell.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		8ECFE3061A45F3CA0088DE6E /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				8EFBB02B1A45F015003DDDC9 /* FLMasterController.swift */,
-				8ECFE3081A45F4130088DE6E /* FLFeedController.swift */,
-				8ECFE30E1A45F4D10088DE6E /* FLTableViewManager.swift */,
-				8ECFE3171A4600EF0088DE6E /* FLAudioPlayerManager.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		8ECFE3071A45F3CE0088DE6E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		8ECFE3121A45FB2B0088DE6E /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Helpers;
 			sourceTree = "<group>";
 		};
 		8EFBB01B1A45F015003DDDC9 = {
@@ -192,12 +239,10 @@
 		8EFBB0261A45F015003DDDC9 /* FlowList */ = {
 			isa = PBXGroup;
 			children = (
+				8E505AAB1A4DC4070019E1CD /* Classes */,
+				8E505AB21A4DC5090019E1CD /* Resources */,
 				8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */,
-				8ECFE3071A45F3CE0088DE6E /* Model */,
-				8ECFE3061A45F3CA0088DE6E /* Controllers */,
-				8ECFE3051A45F3C20088DE6E /* Views */,
-				8ECFE3121A45FB2B0088DE6E /* Helpers */,
-				8EFBB0301A45F015003DDDC9 /* Images.xcassets */,
+				8E505AB01A4DC4E20019E1CD /* AppDependencies.swift */,
 				8EFBB0271A45F015003DDDC9 /* Supporting Files */,
 				8ECFE3131A45FD060088DE6E /* FlowList-Bridging-Header.h */,
 			);
@@ -207,7 +252,6 @@
 		8EFBB0271A45F015003DDDC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8E36F6151A46171600DD88D8 /* GoDJ.mp3 */,
 				8EFBB0281A45F015003DDDC9 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -347,7 +391,6 @@
 			files = (
 				8E36F6161A46171600DD88D8 /* GoDJ.mp3 in Resources */,
 				8EFBB02F1A45F015003DDDC9 /* Main.storyboard in Resources */,
-				8EFBB0341A45F015003DDDC9 /* LaunchScreen.xib in Resources */,
 				8EFBB0311A45F015003DDDC9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,14 +442,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EFBB02C1A45F015003DDDC9 /* FLMasterController.swift in Sources */,
-				8ECFE3181A4600EF0088DE6E /* FLAudioPlayerManager.swift in Sources */,
+				8E2FC6751A4DCD6300D48898 /* ListWireframe.swift in Sources */,
+				8E505AB11A4DC4E20019E1CD /* AppDependencies.swift in Sources */,
 				8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */,
-				8ECFE30D1A45F4B90088DE6E /* FLTableView.swift in Sources */,
-				8ECFE30F1A45F4D10088DE6E /* FLTableViewManager.swift in Sources */,
-				8ECFE3091A45F4130088DE6E /* FLFeedController.swift in Sources */,
-				8ECFE30B1A45F4690088DE6E /* FLPlaybackView.swift in Sources */,
-				8ECFE3111A45F5090088DE6E /* FLTrackCell.swift in Sources */,
+				8E2FC6771A4DD0F400D48898 /* ListViewController.swift in Sources */,
+				8E2FC66C1A4DC9AD00D48898 /* RootWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,14 +480,6 @@
 				8EFBB02E1A45F015003DDDC9 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8EFBB0331A45F015003DDDC9 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
