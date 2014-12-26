@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8E36F6161A46171600DD88D8 /* GoDJ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E36F6151A46171600DD88D8 /* GoDJ.mp3 */; };
 		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8E624B081A47682B00472E9B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E624B071A47682B00472E9B /* SwiftyJSON.swift */; };
 		8ECFE3091A45F4130088DE6E /* FLFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE3081A45F4130088DE6E /* FLFeedController.swift */; };
 		8ECFE30B1A45F4690088DE6E /* FLPlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE30A1A45F4690088DE6E /* FLPlaybackView.swift */; };
 		8ECFE30D1A45F4B90088DE6E /* FLTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECFE30C1A45F4B90088DE6E /* FLTableView.swift */; };
@@ -75,7 +74,6 @@
 		5D0840D31A70F1DF5623C4FA /* Pods-FlowList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.release.xcconfig"; sourceTree = "<group>"; };
 		8E36F6151A46171600DD88D8 /* GoDJ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = GoDJ.mp3; path = ../GoDJ.mp3; sourceTree = "<group>"; };
 		8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		8E624B071A47682B00472E9B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		8ECFE3081A45F4130088DE6E /* FLFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedController.swift; sourceTree = "<group>"; };
 		8ECFE30A1A45F4690088DE6E /* FLPlaybackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlaybackView.swift; sourceTree = "<group>"; };
 		8ECFE30C1A45F4B90088DE6E /* FLTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTableView.swift; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 		8ECFE3121A45FB2B0088DE6E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8E624B071A47682B00472E9B /* SwiftyJSON.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -408,7 +405,6 @@
 				8ECFE30D1A45F4B90088DE6E /* FLTableView.swift in Sources */,
 				8ECFE30F1A45F4D10088DE6E /* FLTableViewManager.swift in Sources */,
 				8ECFE3091A45F4130088DE6E /* FLFeedController.swift in Sources */,
-				8E624B081A47682B00472E9B /* SwiftyJSON.swift in Sources */,
 				8ECFE30B1A45F4690088DE6E /* FLPlaybackView.swift in Sources */,
 				8ECFE3111A45F5090088DE6E /* FLTrackCell.swift in Sources */,
 			);

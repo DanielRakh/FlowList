@@ -170,20 +170,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="FlowList" id="3Ac-fP-q9h">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="W3r-r2-etR">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rEP-1d-sFK">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Post">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="post:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Clf-Yt-5GE"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="FlowList" id="3Ac-fP-q9h"/>
                     <connections>
                         <outlet property="playBackView" destination="QSz-z2-15B" id="MHc-JF-ccu"/>
                     </connections>

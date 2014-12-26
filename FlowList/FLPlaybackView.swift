@@ -39,8 +39,6 @@ class FLPlaybackView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-
-
     
     @IBAction func playbackButtonTapped(sender:UIButton!) {
         
