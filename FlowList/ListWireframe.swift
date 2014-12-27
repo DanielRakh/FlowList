@@ -14,11 +14,13 @@ class ListWireframe: NSObject {
     
     var rootWireframe: RootWireframe?
     var listViewController: ListViewController?
+    var listPresenter: ListPresenter?
    
     func presentListInterfaceFromWindow(window:UIWindow) {
         let viewController = listViewControllerFromStoryboard()
-        //TODO:Attach Presenter to .eventHandler of viewController(View)
-        //TODO:Attach viewController(View) to .userInterface of Presenter
+        viewController.eventHandler = listPresenter
+        listViewController = viewController
+        listPresenter?.userInterface = listViewController
         rootWireframe?.showRootViewController(viewController, inWindow: window)
     }
     

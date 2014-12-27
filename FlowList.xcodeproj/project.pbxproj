@@ -10,6 +10,13 @@
 		8E2FC66C1A4DC9AD00D48898 /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC66B1A4DC9AD00D48898 /* RootWireframe.swift */; };
 		8E2FC6751A4DCD6300D48898 /* ListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC6741A4DCD6300D48898 /* ListWireframe.swift */; };
 		8E2FC6771A4DD0F400D48898 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC6761A4DD0F400D48898 /* ListViewController.swift */; };
+		8E2FC6791A4DE08700D48898 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC6781A4DE08700D48898 /* ListPresenter.swift */; };
+		8E2FC67B1A4DE09800D48898 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC67A1A4DE09800D48898 /* ListInteractor.swift */; };
+		8E2FC67D1A4DE0B300D48898 /* ListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC67C1A4DE0B300D48898 /* ListDataManager.swift */; };
+		8E2FC67F1A4DE9A900D48898 /* TrendingSongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC67E1A4DE9A900D48898 /* TrendingSongItem.swift */; };
+		8E2FC6821A4DEFF100D48898 /* SongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC6811A4DEFF100D48898 /* SongItem.swift */; };
+		8E2FC6841A4E7E4900D48898 /* ListPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC6831A4E7E4900D48898 /* ListPresenterInterface.swift */; };
+		8E2FC6861A4E7E9E00D48898 /* ListViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2FC6851A4E7E9E00D48898 /* ListViewInterface.swift */; };
 		8E36F6161A46171600DD88D8 /* GoDJ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E36F6151A46171600DD88D8 /* GoDJ.mp3 */; };
 		8E505AB11A4DC4E20019E1CD /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E505AB01A4DC4E20019E1CD /* AppDependencies.swift */; };
 		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -71,6 +78,13 @@
 		8E2FC66B1A4DC9AD00D48898 /* RootWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
 		8E2FC6741A4DCD6300D48898 /* ListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListWireframe.swift; sourceTree = "<group>"; };
 		8E2FC6761A4DD0F400D48898 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		8E2FC6781A4DE08700D48898 /* ListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		8E2FC67A1A4DE09800D48898 /* ListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		8E2FC67C1A4DE0B300D48898 /* ListDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDataManager.swift; sourceTree = "<group>"; };
+		8E2FC67E1A4DE9A900D48898 /* TrendingSongItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingSongItem.swift; sourceTree = "<group>"; };
+		8E2FC6811A4DEFF100D48898 /* SongItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongItem.swift; sourceTree = "<group>"; };
+		8E2FC6831A4E7E4900D48898 /* ListPresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPresenterInterface.swift; sourceTree = "<group>"; };
+		8E2FC6851A4E7E9E00D48898 /* ListViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewInterface.swift; sourceTree = "<group>"; };
 		8E36F6151A46171600DD88D8 /* GoDJ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = GoDJ.mp3; path = ../GoDJ.mp3; sourceTree = "<group>"; };
 		8E505AB01A4DC4E20019E1CD /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
@@ -129,6 +143,8 @@
 		8E2FC66F1A4DCCB900D48898 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				8E2FC67A1A4DE09800D48898 /* ListInteractor.swift */,
+				8E2FC67E1A4DE9A900D48898 /* TrendingSongItem.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -136,6 +152,8 @@
 		8E2FC6701A4DCCC000D48898 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				8E2FC6781A4DE08700D48898 /* ListPresenter.swift */,
+				8E2FC6831A4E7E4900D48898 /* ListPresenterInterface.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -143,6 +161,7 @@
 		8E2FC6711A4DCCD400D48898 /* Data Manager */ = {
 			isa = PBXGroup;
 			children = (
+				8E2FC67C1A4DE0B300D48898 /* ListDataManager.swift */,
 			);
 			name = "Data Manager";
 			sourceTree = "<group>";
@@ -151,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				8E2FC6761A4DD0F400D48898 /* ListViewController.swift */,
+				8E2FC6851A4E7E9E00D48898 /* ListViewInterface.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -161,6 +181,14 @@
 				8E2FC6741A4DCD6300D48898 /* ListWireframe.swift */,
 			);
 			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		8E2FC6801A4DEFA500D48898 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E2FC6811A4DEFF100D48898 /* SongItem.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		8E505AAB1A4DC4070019E1CD /* Classes */ = {
@@ -175,6 +203,7 @@
 		8E505AAD1A4DC42D0019E1CD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8E2FC6801A4DEFA500D48898 /* Model */,
 				8E505AB41A4DC5CC0019E1CD /* View */,
 			);
 			name = Common;
@@ -442,10 +471,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2FC6841A4E7E4900D48898 /* ListPresenterInterface.swift in Sources */,
 				8E2FC6751A4DCD6300D48898 /* ListWireframe.swift in Sources */,
+				8E2FC67D1A4DE0B300D48898 /* ListDataManager.swift in Sources */,
 				8E505AB11A4DC4E20019E1CD /* AppDependencies.swift in Sources */,
 				8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */,
+				8E2FC67F1A4DE9A900D48898 /* TrendingSongItem.swift in Sources */,
+				8E2FC6821A4DEFF100D48898 /* SongItem.swift in Sources */,
+				8E2FC67B1A4DE09800D48898 /* ListInteractor.swift in Sources */,
 				8E2FC6771A4DD0F400D48898 /* ListViewController.swift in Sources */,
+				8E2FC6791A4DE08700D48898 /* ListPresenter.swift in Sources */,
+				8E2FC6861A4E7E9E00D48898 /* ListViewInterface.swift in Sources */,
 				8E2FC66C1A4DC9AD00D48898 /* RootWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
