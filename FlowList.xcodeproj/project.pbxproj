@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8E2E6E641A5086FD00DE49C9 /* Feed Use Cases.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E2E6E631A5086FD00DE49C9 /* Feed Use Cases.rtf */; };
+		8E2E6E691A50945500DE49C9 /* SongItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E681A50945500DE49C9 /* SongItemTests.swift */; };
+		8E2E6E6B1A50ADF200DE49C9 /* SongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6A1A50ADF200DE49C9 /* SongItem.swift */; };
+		8E2E6E6C1A50ADF200DE49C9 /* SongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6A1A50ADF200DE49C9 /* SongItem.swift */; };
 		8E36F6161A46171600DD88D8 /* GoDJ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E36F6151A46171600DD88D8 /* GoDJ.mp3 */; };
 		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */; };
@@ -67,6 +70,8 @@
 		01EAE4507B2D77ADF373ED54 /* Pods-FlowList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.debug.xcconfig"; sourceTree = "<group>"; };
 		5D0840D31A70F1DF5623C4FA /* Pods-FlowList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.release.xcconfig"; sourceTree = "<group>"; };
 		8E2E6E631A5086FD00DE49C9 /* Feed Use Cases.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Feed Use Cases.rtf"; sourceTree = "<group>"; };
+		8E2E6E681A50945500DE49C9 /* SongItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongItemTests.swift; sourceTree = "<group>"; };
+		8E2E6E6A1A50ADF200DE49C9 /* SongItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongItem.swift; sourceTree = "<group>"; };
 		8E36F6151A46171600DD88D8 /* GoDJ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = GoDJ.mp3; path = ../GoDJ.mp3; sourceTree = "<group>"; };
 		8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		8ECFE3131A45FD060088DE6E /* FlowList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlowList-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -162,6 +167,7 @@
 		8E2E6E601A5085F600DE49C9 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				8E2E6E6A1A50ADF200DE49C9 /* SongItem.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -246,6 +252,7 @@
 		8EFBB03C1A45F015003DDDC9 /* FlowListTests */ = {
 			isa = PBXGroup;
 			children = (
+				8E2E6E681A50945500DE49C9 /* SongItemTests.swift */,
 				8EFBB03F1A45F015003DDDC9 /* FeedTrendingListsTests.swift */,
 				8EFBB03D1A45F015003DDDC9 /* Supporting Files */,
 			);
@@ -431,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */,
+				8E2E6E6B1A50ADF200DE49C9 /* SongItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +447,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EFBB0401A45F015003DDDC9 /* FeedTrendingListsTests.swift in Sources */,
+				8E2E6E6C1A50ADF200DE49C9 /* SongItem.swift in Sources */,
+				8E2E6E691A50945500DE49C9 /* SongItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
