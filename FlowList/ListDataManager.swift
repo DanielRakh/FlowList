@@ -20,5 +20,4 @@ class ListDataManager: NSObject {
         return songItemArray
     }
     
-    
 }

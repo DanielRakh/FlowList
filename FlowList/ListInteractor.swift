@@ -29,14 +29,13 @@ class ListInteractor: NSObject {
     
     func trendingSongsForSongItems(songItems:[SongItem]) -> [TrendingSongItem] {
         
-        let mappedArray = songItems.map({song in
-            TrendingSongItem(songTitle: (song as SongItem).songTitle)
-        })
+        let mappedArray = songItems.map {
+            TrendingSongItem(songTitle: ($0 as SongItem).songTitle)
+        }
         return mappedArray
     }
     
 }
-
 
 extension ListInteractor:ListInteractorInput {
     func findTrendingSongs()  {

@@ -20,10 +20,9 @@ class ListViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
         eventHandler?.updateView()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +30,6 @@ class ListViewController: UIViewController {
     }
 
 }
-
 
 extension ListViewController: UITableViewDataSource {
     

@@ -133,9 +133,9 @@
 			children = (
 				8E2FC6731A4DCD0E00D48898 /* Wireframe */,
 				8E2FC6721A4DCCDF00D48898 /* View */,
-				8E2FC6711A4DCCD400D48898 /* Data Manager */,
 				8E2FC6701A4DCCC000D48898 /* Presenter */,
 				8E2FC66F1A4DCCB900D48898 /* Interactor */,
+				8E2FC6711A4DCCD400D48898 /* Data Manager */,
 			);
 			name = List;
 			sourceTree = "<group>";
