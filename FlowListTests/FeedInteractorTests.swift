@@ -9,12 +9,13 @@
 import UIKit
 import XCTest
 
-class FeedTrendingListTests: XCTestCase {
+class FeedInteractorTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
+    
     
     
     

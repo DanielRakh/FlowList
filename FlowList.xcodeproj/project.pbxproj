@@ -17,7 +17,7 @@
 		8EFBB02F1A45F015003DDDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB02D1A45F015003DDDC9 /* Main.storyboard */; };
 		8EFBB0311A45F015003DDDC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0301A45F015003DDDC9 /* Images.xcassets */; };
 		8EFBB0341A45F015003DDDC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */; };
-		8EFBB0401A45F015003DDDC9 /* FeedTrendingListsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB03F1A45F015003DDDC9 /* FeedTrendingListsTests.swift */; };
+		8EFBB0401A45F015003DDDC9 /* FeedInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB03F1A45F015003DDDC9 /* FeedInteractorTests.swift */; };
 		A41F3B02375B7518E181A79F /* libPods-FlowList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7C4C4184AF2FB2E444196C /* libPods-FlowList.a */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +83,7 @@
 		8EFBB0331A45F015003DDDC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8EFBB0391A45F015003DDDC9 /* FlowListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBB03E1A45F015003DDDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EFBB03F1A45F015003DDDC9 /* FeedTrendingListsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTrendingListsTests.swift; sourceTree = "<group>"; };
+		8EFBB03F1A45F015003DDDC9 /* FeedInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractorTests.swift; sourceTree = "<group>"; };
 		BA7C4C4184AF2FB2E444196C /* libPods-FlowList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlowList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -253,7 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				8E2E6E681A50945500DE49C9 /* SongItemTests.swift */,
-				8EFBB03F1A45F015003DDDC9 /* FeedTrendingListsTests.swift */,
+				8EFBB03F1A45F015003DDDC9 /* FeedInteractorTests.swift */,
 				8EFBB03D1A45F015003DDDC9 /* Supporting Files */,
 			);
 			path = FlowListTests;
@@ -446,7 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EFBB0401A45F015003DDDC9 /* FeedTrendingListsTests.swift in Sources */,
+				8EFBB0401A45F015003DDDC9 /* FeedInteractorTests.swift in Sources */,
 				8E2E6E6C1A50ADF200DE49C9 /* SongItem.swift in Sources */,
 				8E2E6E691A50945500DE49C9 /* SongItemTests.swift in Sources */,
 			);
