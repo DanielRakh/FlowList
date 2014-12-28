@@ -117,22 +117,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8ECFE3051A45F3C20088DE6E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8EFBB02D1A45F015003DDDC9 /* Main.storyboard */,
-				8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		8ECFE3121A45FB2B0088DE6E /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
 		8EFBB01B1A45F015003DDDC9 = {
 			isa = PBXGroup;
 			children = (
@@ -157,9 +141,9 @@
 		8EFBB0261A45F015003DDDC9 /* FlowList */ = {
 			isa = PBXGroup;
 			children = (
+				8EFBB02D1A45F015003DDDC9 /* Main.storyboard */,
+				8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */,
 				8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */,
-				8ECFE3051A45F3C20088DE6E /* Views */,
-				8ECFE3121A45FB2B0088DE6E /* Helpers */,
 				8EFBB0301A45F015003DDDC9 /* Images.xcassets */,
 				8EFBB0271A45F015003DDDC9 /* Supporting Files */,
 				8ECFE3131A45FD060088DE6E /* FlowList-Bridging-Header.h */,
