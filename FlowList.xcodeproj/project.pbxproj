@@ -14,7 +14,7 @@
 		8EFBB02F1A45F015003DDDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB02D1A45F015003DDDC9 /* Main.storyboard */; };
 		8EFBB0311A45F015003DDDC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0301A45F015003DDDC9 /* Images.xcassets */; };
 		8EFBB0341A45F015003DDDC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */; };
-		8EFBB0401A45F015003DDDC9 /* FlowListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB03F1A45F015003DDDC9 /* FlowListTests.swift */; };
+		8EFBB0401A45F015003DDDC9 /* FeedTrendingListsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB03F1A45F015003DDDC9 /* FeedTrendingListsTests.swift */; };
 		A41F3B02375B7518E181A79F /* libPods-FlowList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7C4C4184AF2FB2E444196C /* libPods-FlowList.a */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +78,7 @@
 		8EFBB0331A45F015003DDDC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8EFBB0391A45F015003DDDC9 /* FlowListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBB03E1A45F015003DDDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EFBB03F1A45F015003DDDC9 /* FlowListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowListTests.swift; sourceTree = "<group>"; };
+		8EFBB03F1A45F015003DDDC9 /* FeedTrendingListsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTrendingListsTests.swift; sourceTree = "<group>"; };
 		BA7C4C4184AF2FB2E444196C /* libPods-FlowList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlowList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -246,7 +246,7 @@
 		8EFBB03C1A45F015003DDDC9 /* FlowListTests */ = {
 			isa = PBXGroup;
 			children = (
-				8EFBB03F1A45F015003DDDC9 /* FlowListTests.swift */,
+				8EFBB03F1A45F015003DDDC9 /* FeedTrendingListsTests.swift */,
 				8EFBB03D1A45F015003DDDC9 /* Supporting Files */,
 			);
 			path = FlowListTests;
@@ -438,7 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EFBB0401A45F015003DDDC9 /* FlowListTests.swift in Sources */,
+				8EFBB0401A45F015003DDDC9 /* FeedTrendingListsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
