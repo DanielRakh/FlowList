@@ -9,13 +9,13 @@
 import Foundation
 import XCTest
 
-class SongItemTests: XCTestCase {
+class FLSongItemTests: XCTestCase {
 
-    var songItem:SongItem?
+    var songItem:FLSongItem?
     
     override func setUp() {
         super.setUp()
-        songItem = SongItem(title: "Title", creator: "Creator", urlString: "www.flowlist.io", secondsDuration:100.0)
+        songItem = FLSongItem(title: "Title", creator: "Creator", urlString: "www.flowlist.io", secondsDuration:100.0)
     }
     
     func testThatSongItemHasATitle() {

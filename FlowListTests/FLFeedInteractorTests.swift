@@ -18,13 +18,13 @@ class FeedInteractorTests: XCTestCase {
     
     func testThatInteractorCanFindAllSongs() {
         
-        var mockSongs = [SongItem]()
+        var mockSongs = [FLSongItem]()
         for i in 1...10 {
-            let song = SongItem(title: "", creator: "", urlString: "", secondsDuration: 1000.0)
+            let song = FLSongItem(title: "", creator: "", urlString: "", secondsDuration: 1000.0)
             mockSongs += [song]
             }
         
-        let interactor = FeedInteractor()
+        let interactor = FLFeedInteractor()
         let songs = interactor.findAllSongs()
         
         XCTAssertEqual(songs, mockSongs, "Should be equal")

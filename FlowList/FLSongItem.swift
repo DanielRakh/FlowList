@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SongItem:Equatable {
+struct FLSongItem:Equatable {
     
     let title:String
     let creator:String
@@ -24,7 +24,7 @@ struct SongItem:Equatable {
     
 }
 
-func ==(lhs: SongItem, rhs: SongItem) -> Bool {
+func ==(lhs: FLSongItem, rhs: FLSongItem) -> Bool {
     
     return  lhs.title == rhs.title &&
             lhs.creator == rhs.creator &&

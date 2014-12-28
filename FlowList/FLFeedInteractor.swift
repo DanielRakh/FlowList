@@ -8,13 +8,13 @@
 
 import Foundation
 
-class FeedInteractor {
+class FLFeedInteractor {
     
-    func findAllSongs() ->[SongItem] {
+    func findAllSongs() ->[FLSongItem] {
         
-        var songs = [SongItem]()
+        var songs = [FLSongItem]()
         for i in 1...10 {
-            let song = SongItem(title: "", creator: "", urlString: "", secondsDuration: 1000.0)
+            let song = FLSongItem(title: "", creator: "", urlString: "", secondsDuration: 1000.0)
             songs += [song]
         }
         

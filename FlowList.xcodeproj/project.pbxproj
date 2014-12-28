@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		8E2E6E641A5086FD00DE49C9 /* Feed Use Cases.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E2E6E631A5086FD00DE49C9 /* Feed Use Cases.rtf */; };
-		8E2E6E691A50945500DE49C9 /* SongItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E681A50945500DE49C9 /* SongItemTests.swift */; };
-		8E2E6E6B1A50ADF200DE49C9 /* SongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6A1A50ADF200DE49C9 /* SongItem.swift */; };
-		8E2E6E6C1A50ADF200DE49C9 /* SongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6A1A50ADF200DE49C9 /* SongItem.swift */; };
-		8E2E6E6E1A50C1EE00DE49C9 /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6D1A50C1EE00DE49C9 /* FeedInteractor.swift */; };
-		8E2E6E6F1A50C1EE00DE49C9 /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6D1A50C1EE00DE49C9 /* FeedInteractor.swift */; };
+		8E2E6E691A50945500DE49C9 /* FLSongItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E681A50945500DE49C9 /* FLSongItemTests.swift */; };
+		8E2E6E6B1A50ADF200DE49C9 /* FLSongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6A1A50ADF200DE49C9 /* FLSongItem.swift */; };
+		8E2E6E6C1A50ADF200DE49C9 /* FLSongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6A1A50ADF200DE49C9 /* FLSongItem.swift */; };
+		8E2E6E6E1A50C1EE00DE49C9 /* FLFeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6D1A50C1EE00DE49C9 /* FLFeedInteractor.swift */; };
+		8E2E6E6F1A50C1EE00DE49C9 /* FLFeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6D1A50C1EE00DE49C9 /* FLFeedInteractor.swift */; };
 		8E36F6161A46171600DD88D8 /* GoDJ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E36F6151A46171600DD88D8 /* GoDJ.mp3 */; };
 		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */; };
 		8EFBB02F1A45F015003DDDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB02D1A45F015003DDDC9 /* Main.storyboard */; };
 		8EFBB0311A45F015003DDDC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0301A45F015003DDDC9 /* Images.xcassets */; };
 		8EFBB0341A45F015003DDDC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */; };
-		8EFBB0401A45F015003DDDC9 /* FeedInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB03F1A45F015003DDDC9 /* FeedInteractorTests.swift */; };
+		8EFBB0401A45F015003DDDC9 /* FLFeedInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB03F1A45F015003DDDC9 /* FLFeedInteractorTests.swift */; };
 		A41F3B02375B7518E181A79F /* libPods-FlowList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7C4C4184AF2FB2E444196C /* libPods-FlowList.a */; };
 /* End PBXBuildFile section */
 
@@ -72,9 +72,9 @@
 		01EAE4507B2D77ADF373ED54 /* Pods-FlowList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.debug.xcconfig"; sourceTree = "<group>"; };
 		5D0840D31A70F1DF5623C4FA /* Pods-FlowList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.release.xcconfig"; sourceTree = "<group>"; };
 		8E2E6E631A5086FD00DE49C9 /* Feed Use Cases.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Feed Use Cases.rtf"; sourceTree = "<group>"; };
-		8E2E6E681A50945500DE49C9 /* SongItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongItemTests.swift; sourceTree = "<group>"; };
-		8E2E6E6A1A50ADF200DE49C9 /* SongItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongItem.swift; sourceTree = "<group>"; };
-		8E2E6E6D1A50C1EE00DE49C9 /* FeedInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
+		8E2E6E681A50945500DE49C9 /* FLSongItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLSongItemTests.swift; sourceTree = "<group>"; };
+		8E2E6E6A1A50ADF200DE49C9 /* FLSongItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLSongItem.swift; sourceTree = "<group>"; };
+		8E2E6E6D1A50C1EE00DE49C9 /* FLFeedInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedInteractor.swift; sourceTree = "<group>"; };
 		8E36F6151A46171600DD88D8 /* GoDJ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = GoDJ.mp3; path = ../GoDJ.mp3; sourceTree = "<group>"; };
 		8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		8ECFE3131A45FD060088DE6E /* FlowList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlowList-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		8EFBB0331A45F015003DDDC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8EFBB0391A45F015003DDDC9 /* FlowListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBB03E1A45F015003DDDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EFBB03F1A45F015003DDDC9 /* FeedInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractorTests.swift; sourceTree = "<group>"; };
+		8EFBB03F1A45F015003DDDC9 /* FLFeedInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLFeedInteractorTests.swift; sourceTree = "<group>"; };
 		BA7C4C4184AF2FB2E444196C /* libPods-FlowList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlowList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,11 +121,12 @@
 		8E2E6E5A1A50858A00DE49C9 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				8E2E6E651A50891500DE49C9 /* Protocols */,
 				8E2E6E5C1A5085B000DE49C9 /* View */,
 				8E2E6E5D1A5085B700DE49C9 /* Presenter */,
 				8E2E6E5E1A5085C300DE49C9 /* Interactor */,
 				8E2E6E5F1A5085D200DE49C9 /* Data Manager */,
-				8E2E6E651A50891500DE49C9 /* Protocols */,
+				8E2E6E701A50CB7100DE49C9 /* Network Services */,
 				8E2E6E601A5085F600DE49C9 /* Entities */,
 			);
 			name = Feed;
@@ -156,7 +157,7 @@
 		8E2E6E5E1A5085C300DE49C9 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				8E2E6E6D1A50C1EE00DE49C9 /* FeedInteractor.swift */,
+				8E2E6E6D1A50C1EE00DE49C9 /* FLFeedInteractor.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -171,7 +172,7 @@
 		8E2E6E601A5085F600DE49C9 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				8E2E6E6A1A50ADF200DE49C9 /* SongItem.swift */,
+				8E2E6E6A1A50ADF200DE49C9 /* FLSongItem.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -197,6 +198,13 @@
 			children = (
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		8E2E6E701A50CB7100DE49C9 /* Network Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Network Services";
 			sourceTree = "<group>";
 		};
 		8E624ADA1A4728CD00472E9B /* Products */ = {
@@ -256,8 +264,8 @@
 		8EFBB03C1A45F015003DDDC9 /* FlowListTests */ = {
 			isa = PBXGroup;
 			children = (
-				8E2E6E681A50945500DE49C9 /* SongItemTests.swift */,
-				8EFBB03F1A45F015003DDDC9 /* FeedInteractorTests.swift */,
+				8E2E6E681A50945500DE49C9 /* FLSongItemTests.swift */,
+				8EFBB03F1A45F015003DDDC9 /* FLFeedInteractorTests.swift */,
 				8EFBB03D1A45F015003DDDC9 /* Supporting Files */,
 			);
 			path = FlowListTests;
@@ -442,8 +450,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */,
-				8E2E6E6B1A50ADF200DE49C9 /* SongItem.swift in Sources */,
-				8E2E6E6E1A50C1EE00DE49C9 /* FeedInteractor.swift in Sources */,
+				8E2E6E6B1A50ADF200DE49C9 /* FLSongItem.swift in Sources */,
+				8E2E6E6E1A50C1EE00DE49C9 /* FLFeedInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,10 +459,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EFBB0401A45F015003DDDC9 /* FeedInteractorTests.swift in Sources */,
-				8E2E6E6C1A50ADF200DE49C9 /* SongItem.swift in Sources */,
-				8E2E6E6F1A50C1EE00DE49C9 /* FeedInteractor.swift in Sources */,
-				8E2E6E691A50945500DE49C9 /* SongItemTests.swift in Sources */,
+				8EFBB0401A45F015003DDDC9 /* FLFeedInteractorTests.swift in Sources */,
+				8E2E6E6C1A50ADF200DE49C9 /* FLSongItem.swift in Sources */,
+				8E2E6E6F1A50C1EE00DE49C9 /* FLFeedInteractor.swift in Sources */,
+				8E2E6E691A50945500DE49C9 /* FLSongItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
