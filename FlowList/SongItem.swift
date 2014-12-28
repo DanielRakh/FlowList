@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SongItem {
+struct SongItem:Equatable {
     
     let title:String
     let creator:String
@@ -21,4 +21,15 @@ struct SongItem {
         self.urlString = urlString
         self.secondsDuration = secondsDuration
     }
+    
 }
+
+func ==(lhs: SongItem, rhs: SongItem) -> Bool {
+    
+    return  lhs.title == rhs.title &&
+            lhs.creator == rhs.creator &&
+            lhs.urlString == rhs.urlString &&
+            lhs.secondsDuration == rhs.secondsDuration
+}
+
+
