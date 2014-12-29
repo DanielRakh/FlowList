@@ -13,6 +13,12 @@
 		8E2E6E6C1A50ADF200DE49C9 /* FLSongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6A1A50ADF200DE49C9 /* FLSongItem.swift */; };
 		8E2E6E6E1A50C1EE00DE49C9 /* FLFeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6D1A50C1EE00DE49C9 /* FLFeedInteractor.swift */; };
 		8E2E6E6F1A50C1EE00DE49C9 /* FLFeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6D1A50C1EE00DE49C9 /* FLFeedInteractor.swift */; };
+		8E2E6E721A50CCEE00DE49C9 /* FLFeedNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E711A50CCEE00DE49C9 /* FLFeedNetworkService.swift */; };
+		8E2E6E731A50CCEE00DE49C9 /* FLFeedNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E711A50CCEE00DE49C9 /* FLFeedNetworkService.swift */; };
+		8E2E6E751A511A8300DE49C9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E741A511A8300DE49C9 /* SwiftyJSON.swift */; };
+		8E2E6E761A511A8300DE49C9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E741A511A8300DE49C9 /* SwiftyJSON.swift */; };
+		8E2E6E781A511BB500DE49C9 /* FLFeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E771A511BB500DE49C9 /* FLFeedDataManager.swift */; };
+		8E2E6E791A511BB500DE49C9 /* FLFeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E771A511BB500DE49C9 /* FLFeedDataManager.swift */; };
 		8E36F6161A46171600DD88D8 /* GoDJ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E36F6151A46171600DD88D8 /* GoDJ.mp3 */; };
 		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */; };
@@ -75,6 +81,9 @@
 		8E2E6E681A50945500DE49C9 /* FLSongItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLSongItemTests.swift; sourceTree = "<group>"; };
 		8E2E6E6A1A50ADF200DE49C9 /* FLSongItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLSongItem.swift; sourceTree = "<group>"; };
 		8E2E6E6D1A50C1EE00DE49C9 /* FLFeedInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedInteractor.swift; sourceTree = "<group>"; };
+		8E2E6E711A50CCEE00DE49C9 /* FLFeedNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedNetworkService.swift; sourceTree = "<group>"; };
+		8E2E6E741A511A8300DE49C9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		8E2E6E771A511BB500DE49C9 /* FLFeedDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedDataManager.swift; sourceTree = "<group>"; };
 		8E36F6151A46171600DD88D8 /* GoDJ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = GoDJ.mp3; path = ../GoDJ.mp3; sourceTree = "<group>"; };
 		8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		8ECFE3131A45FD060088DE6E /* FlowList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlowList-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -165,6 +174,7 @@
 		8E2E6E5F1A5085D200DE49C9 /* Data Manager */ = {
 			isa = PBXGroup;
 			children = (
+				8E2E6E771A511BB500DE49C9 /* FLFeedDataManager.swift */,
 			);
 			name = "Data Manager";
 			sourceTree = "<group>";
@@ -203,6 +213,7 @@
 		8E2E6E701A50CB7100DE49C9 /* Network Services */ = {
 			isa = PBXGroup;
 			children = (
+				8E2E6E711A50CCEE00DE49C9 /* FLFeedNetworkService.swift */,
 			);
 			name = "Network Services";
 			sourceTree = "<group>";
@@ -240,6 +251,7 @@
 		8EFBB0261A45F015003DDDC9 /* FlowList */ = {
 			isa = PBXGroup;
 			children = (
+				8E2E6E741A511A8300DE49C9 /* SwiftyJSON.swift */,
 				8E2E6E5B1A5085A600DE49C9 /* Modules */,
 				8EFBB02D1A45F015003DDDC9 /* Main.storyboard */,
 				8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */,
@@ -451,7 +463,10 @@
 			files = (
 				8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */,
 				8E2E6E6B1A50ADF200DE49C9 /* FLSongItem.swift in Sources */,
+				8E2E6E721A50CCEE00DE49C9 /* FLFeedNetworkService.swift in Sources */,
+				8E2E6E751A511A8300DE49C9 /* SwiftyJSON.swift in Sources */,
 				8E2E6E6E1A50C1EE00DE49C9 /* FLFeedInteractor.swift in Sources */,
+				8E2E6E781A511BB500DE49C9 /* FLFeedDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +476,9 @@
 			files = (
 				8EFBB0401A45F015003DDDC9 /* FLFeedInteractorTests.swift in Sources */,
 				8E2E6E6C1A50ADF200DE49C9 /* FLSongItem.swift in Sources */,
+				8E2E6E731A50CCEE00DE49C9 /* FLFeedNetworkService.swift in Sources */,
+				8E2E6E761A511A8300DE49C9 /* SwiftyJSON.swift in Sources */,
+				8E2E6E791A511BB500DE49C9 /* FLFeedDataManager.swift in Sources */,
 				8E2E6E6F1A50C1EE00DE49C9 /* FLFeedInteractor.swift in Sources */,
 				8E2E6E691A50945500DE49C9 /* FLSongItemTests.swift in Sources */,
 			);
