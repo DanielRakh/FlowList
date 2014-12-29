@@ -9,7 +9,7 @@
 import Foundation
 
 
-class FLFeedDataManager {
+class FLFeedDataManager:NSObject {
     
     let feedNetworkService = FLFeedNetworkService()
     

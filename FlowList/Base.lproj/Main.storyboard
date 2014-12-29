@@ -17,7 +17,24 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7Y-Pw-O9x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="549" y="-318"/>
+            <point key="canvasLocation" x="162" y="-477"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="msZ-C9-PpB">
+            <objects>
+                <viewController storyboardIdentifier="FLFeedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ObG-NA-bx0" customClass="FLFeedViewController" customModule="FlowList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zTX-p4-Z72"/>
+                        <viewControllerLayoutGuide type="bottom" id="zGt-Tc-nV1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HiI-Vd-kca">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Als-YD-Ana" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006.5" y="-477"/>
         </scene>
     </scenes>
 </document>

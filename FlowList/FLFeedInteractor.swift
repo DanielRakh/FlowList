@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FLFeedInteractor {
+class FLFeedInteractor:NSObject {
     
     func findAllSongs() ->[FLSongItem] {
         
