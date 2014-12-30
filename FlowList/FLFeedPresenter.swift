@@ -32,16 +32,16 @@ extension FLFeedPresenter: FLFeedInteractorOutput {
 }
 
 
-extension FLFeedPresenter: UITableViewDataSource {
-    
-//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        
-//        return
-//    }
+//extension FLFeedPresenter: UITableViewDataSource {
 //    
+////    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+////        
+////        return
+////    }
+////    
+////    
+////    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+////        
+////    }
 //    
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        
-//    }
-    
-}
+//}
