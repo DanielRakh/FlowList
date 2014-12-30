@@ -10,15 +10,25 @@ import Foundation
 
 class FLFeedInteractor:NSObject {
     
+    let dataManager:FLFeedDataManager
+    
+    init(dataManager:FLFeedDataManager) {
+        self.dataManager = dataManager
+    }
+    
     func findAllSongs() ->[FLSongItem] {
         
-        var songs = [FLSongItem]()
-        for i in 1...10 {
-            let song = FLSongItem(title: "", creator: "", urlString: "", secondsDuration: 1000.0)
-            songs += [song]
-        }
-        
-        return songs
+        dataManager.fetchSongsForQuery("Nina Kraviz")
+        return [FLSongItem]()
     }
-} 
+}
+
+
+extension FLFeedInteractor: FLFeedInteractorInput {
+    
+    func initialSetup() {
+        findAllSongs()
+    }
+     
+}
 

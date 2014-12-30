@@ -28,8 +28,39 @@
                         <viewControllerLayoutGuide type="bottom" id="zGt-Tc-nV1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HiI-Vd-kca">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9C-ZU-azo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="l9C-ZU-azo" secondAttribute="centerY" id="N15-3K-Gig"/>
+                            <constraint firstAttribute="centerX" secondItem="l9C-ZU-azo" secondAttribute="centerX" id="OXn-7g-2Qi"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="l9C-ZU-azo"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="N15-3K-Gig"/>
+                                <exclude reference="OXn-7g-2Qi"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="l9C-ZU-azo"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="N15-3K-Gig"/>
+                                <include reference="OXn-7g-2Qi"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Als-YD-Ana" userLabel="First Responder" sceneMemberID="firstResponder"/>

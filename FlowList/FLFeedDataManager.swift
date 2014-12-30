@@ -14,7 +14,12 @@ class FLFeedDataManager:NSObject {
     let feedNetworkService = FLFeedNetworkService()
     
     func fetchSongsForQuery(query:String) {
-        feedNetworkService.fetchDataForQuery(query)
+        feedNetworkService.fetchDataForQuery(query,
+            failure: { error in
+            println("Data Manager Error")
+            }, success: { object in
+                println("Data Manager Object \(object)")
+        })
     }
     
     func fetchedSongs(query:String) {

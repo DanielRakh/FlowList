@@ -9,5 +9,24 @@
 import UIKit
 
 class FLFeedPresenter: NSObject {
-   
+    
+    var userInterface:FLFeedViewController?
+    var feedInteractor:FLFeedInteractor?
+    var feedWireframe:FLFeedWireframe?
+    
+}
+
+extension FLFeedPresenter:FLFeedViewOutput {
+    
+    func initialSetup() {
+        feedInteractor?.initialSetup()
+    }
+}
+
+
+extension FLFeedPresenter: FLFeedInteractorOutput {
+    
+    func foundAllSongs(songs:[FLSongItem]) {
+        
+    }
 }
