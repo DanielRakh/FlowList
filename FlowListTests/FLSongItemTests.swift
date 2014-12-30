@@ -15,7 +15,8 @@ class FLSongItemTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        songItem = FLSongItem(title: "Title", creator: "Creator", urlString: "www.flowlist.io", secondsDuration:100.0)
+        
+        songItem = FLSongItem(title: "Title", username: "Creator", streamURL: "www.flowlist.io", milliSecondsDuration: 100000, soundcloudId: 12345)
     }
     
     func testThatSongItemHasATitle() {
@@ -23,15 +24,19 @@ class FLSongItemTests: XCTestCase {
     }
     
     func testThatSongItemHasACreator() {
-        XCTAssertEqual(songItem!.creator, "Creator", "Song Item must have a creator")
+        XCTAssertEqual(songItem!.username, "Creator", "Song Item must have a creator")
     }
     
     func testThatSongItemHasAurlString() {
-        XCTAssertEqual(songItem!.urlString, "www.flowlist.io", "Song Item must have a url string")
+        XCTAssertEqual(songItem!.streamURL, "www.flowlist.io", "Song Item must have a url string")
     }
     
     func testThatSongItemHasASecondsDuration() {
-        XCTAssertEqual(songItem!.secondsDuration, 100.0, "Song Item must have a duration in seconds")
+        XCTAssertEqual(songItem!.milliSecondsDuration, 100000, "Song Item must have a duration in seconds")
+    }
+    
+    func testThatSongItemHasASoundcloudID() {
+        XCTAssertEqual(songItem!.soundcloudId, 12345, "Song Item must have a soundcloud ID")
     }
 
 

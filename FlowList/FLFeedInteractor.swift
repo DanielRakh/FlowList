@@ -16,10 +16,9 @@ class FLFeedInteractor:NSObject {
         self.dataManager = dataManager
     }
     
-    func findAllSongs() ->[FLSongItem] {
+    func findAllSongs() ->[FLSongItem]? {
         
-        dataManager.fetchSongsForQuery("Nina Kraviz")
-        return [FLSongItem]()
+        return dataManager.fetchSongsForQuery("Richie Hawtin")?
     }
 }
 

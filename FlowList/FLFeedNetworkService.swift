@@ -9,29 +9,19 @@
 import Foundation
 import Alamofire
 
-protocol FLFeedNetworkServiceDelegate {
-    
-}
-
-
 class FLFeedNetworkService {
-        
-    func fetchDataForQuery(query:String,
-        failure fail: (NSError -> ())? = nil,
-        success succeed: (AnyObject? -> ())? = nil) {
+
+   func fetchDataForQuery(query:String, completion:(response:AnyObject?, error:NSError?) -> Void) {
         
         let parameters = ["search" : ["query" : query]]
         
-        Alamofire.request(.POST, "flowlist.io/search", parameters: parameters).responseJSON {
-            (request:NSURLRequest, response:NSHTTPURLResponse?, json:AnyObject?, error:NSError?) -> Void in
-            if error != nil {
-              println(error)
-            } else {
-                println(json)
-            }
+        Alamofire.request(.POST, "http://flowlist.io/search", parameters: parameters).responseJSON { (request, response, json , error) in
+            completion(response: json, error: error)
         }
     }
     
+    
+ 
     
 
 }
