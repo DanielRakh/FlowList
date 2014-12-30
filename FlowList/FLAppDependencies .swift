@@ -32,5 +32,7 @@ class FLAppDependencies {
         
         feedWireframe.feedPresenter = feedPresenter
         feedWireframe.rootWireframe = rootWireframe
+        
+        feedInteractor.output = feedPresenter
     }
 }

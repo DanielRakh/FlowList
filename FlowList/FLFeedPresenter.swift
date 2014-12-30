@@ -27,6 +27,21 @@ extension FLFeedPresenter:FLFeedViewOutput {
 extension FLFeedPresenter: FLFeedInteractorOutput {
     
     func foundAllSongs(songs:[FLSongItem]) {
-        
+        println(songs)
     }
+}
+
+
+extension FLFeedPresenter: UITableViewDataSource {
+    
+//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        
+//        return
+//    }
+//    
+//    
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        
+//    }
+    
 }

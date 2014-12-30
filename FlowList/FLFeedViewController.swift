@@ -14,12 +14,17 @@ class FLFeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    @IBAction func hitApi() {
         eventHandler?.initialSetup()
     }
+    
     
     /*
     // MARK: - Navigation

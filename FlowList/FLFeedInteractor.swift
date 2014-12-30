@@ -12,13 +12,21 @@ class FLFeedInteractor:NSObject {
     
     let dataManager:FLFeedDataManager
     
+    var output:FLFeedInteractorOutput?
+    
     init(dataManager:FLFeedDataManager) {
         self.dataManager = dataManager
     }
     
-    func findAllSongs() ->[FLSongItem]? {
+    func findAllSongs() {
         
-        return dataManager.fetchSongsForQuery("Richie Hawtin")?
+        dataManager.fetchSongsForQuery("Boiler Room", onFailure: { error in
+            println("There was an error fetching the songs\(error.localizedDescription)")
+            }, onSuccess: { songItems in
+               if let interactorOutput = self.output {
+                    interactorOutput.foundAllSongs(songItems)
+                }
+        })
     }
 }
 
