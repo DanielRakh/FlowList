@@ -25,9 +25,7 @@ class FLFeedDataManager:NSObject {
                     let songItems = self.songItemsFromJSONResponse(json)
                     didSucceed(songItems)
                 }
-        
         })
-        
     }
     
     func songItemsFromJSONResponse(json:AnyObject) -> [FLSongItem] {

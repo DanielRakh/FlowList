@@ -9,9 +9,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9i1-7y-3fb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="evZ-Ah-5bY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="evZ-Ah-5bY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1803921568627451" green="0.18431372549019609" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                 </navigationController>
@@ -31,40 +32,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9C-ZU-azo">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5b9-z7-B56">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedCell" id="Z1j-9B-2rN">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z1j-9B-2rN" id="ahw-EJ-vfv">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <action selector="hitApi" destination="ObG-NA-bx0" eventType="touchUpInside" id="Naa-KN-zH6"/>
+                                    <outlet property="dataSource" destination="ObG-NA-bx0" id="fQe-eJ-uXQ"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.18039215689999999" green="0.1843137255" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="l9C-ZU-azo" secondAttribute="centerY" id="N15-3K-Gig"/>
-                            <constraint firstAttribute="centerX" secondItem="l9C-ZU-azo" secondAttribute="centerX" id="OXn-7g-2Qi"/>
+                            <constraint firstAttribute="trailing" secondItem="5b9-z7-B56" secondAttribute="trailing" id="mgX-qx-Qi1"/>
+                            <constraint firstItem="5b9-z7-B56" firstAttribute="leading" secondItem="HiI-Vd-kca" secondAttribute="leading" id="pB9-jz-Grc"/>
+                            <constraint firstItem="5b9-z7-B56" firstAttribute="top" secondItem="zTX-p4-Z72" secondAttribute="bottom" id="uW3-bA-whW"/>
+                            <constraint firstItem="zGt-Tc-nV1" firstAttribute="top" secondItem="5b9-z7-B56" secondAttribute="bottom" id="zdX-Sy-7gf"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="l9C-ZU-azo"/>
+                                <exclude reference="5b9-z7-B56"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="N15-3K-Gig"/>
-                                <exclude reference="OXn-7g-2Qi"/>
+                                <exclude reference="mgX-qx-Qi1"/>
+                                <exclude reference="pB9-jz-Grc"/>
+                                <exclude reference="uW3-bA-whW"/>
+                                <exclude reference="zdX-Sy-7gf"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="l9C-ZU-azo"/>
+                                <include reference="5b9-z7-B56"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="N15-3K-Gig"/>
-                                <include reference="OXn-7g-2Qi"/>
+                                <include reference="mgX-qx-Qi1"/>
+                                <include reference="pB9-jz-Grc"/>
+                                <include reference="uW3-bA-whW"/>
+                                <include reference="zdX-Sy-7gf"/>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="5b9-z7-B56" id="2lc-QZ-a1G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Als-YD-Ana" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

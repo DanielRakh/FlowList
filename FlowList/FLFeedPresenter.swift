@@ -10,10 +10,9 @@ import UIKit
 
 class FLFeedPresenter: NSObject {
     
-    var userInterface:FLFeedViewController?
+    var userInterface:FLFeedViewInput?
     var feedInteractor:FLFeedInteractor?
     var feedWireframe:FLFeedWireframe?
-    
 }
 
 extension FLFeedPresenter:FLFeedViewOutput {
@@ -27,21 +26,6 @@ extension FLFeedPresenter:FLFeedViewOutput {
 extension FLFeedPresenter: FLFeedInteractorOutput {
     
     func foundAllSongs(songs:[FLSongItem]) {
-        println(songs)
+        userInterface?.showSongs(songs)
     }
 }
-
-
-//extension FLFeedPresenter: UITableViewDataSource {
-//    
-////    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-////        
-////        return
-////    }
-////    
-////    
-////    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-////        
-////    }
-//    
-//}

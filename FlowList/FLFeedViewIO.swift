@@ -8,9 +8,8 @@
 
 import Foundation
 
-
 protocol FLFeedViewInput {
-    
+    func showSongs(songs:[FLSongItem])
 }
 
 protocol FLFeedViewOutput {

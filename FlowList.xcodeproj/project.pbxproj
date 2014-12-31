@@ -28,6 +28,8 @@
 		8E3D38D51A521C2400BFDD12 /* FLFeedViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D38D41A521C2400BFDD12 /* FLFeedViewIO.swift */; };
 		8E3D39091A523A0100BFDD12 /* FLFeedInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39081A523A0100BFDD12 /* FLFeedInteractorIO.swift */; };
 		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8EAAA1481A5361150041BD16 /* FLColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1471A5361150041BD16 /* FLColorPalette.swift */; };
+		8EAAA1491A5361150041BD16 /* FLColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1471A5361150041BD16 /* FLColorPalette.swift */; };
 		8ECE98281A523DA00052FCA0 /* FLFeedViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D38D41A521C2400BFDD12 /* FLFeedViewIO.swift */; };
 		8ECE982A1A523DA50052FCA0 /* FLFeedInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39081A523A0100BFDD12 /* FLFeedInteractorIO.swift */; };
 		8ECE982B1A5266940052FCA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */; };
@@ -108,6 +110,7 @@
 		8E3D38D41A521C2400BFDD12 /* FLFeedViewIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedViewIO.swift; sourceTree = "<group>"; };
 		8E3D39081A523A0100BFDD12 /* FLFeedInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedInteractorIO.swift; sourceTree = "<group>"; };
 		8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		8EAAA1471A5361150041BD16 /* FLColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLColorPalette.swift; sourceTree = "<group>"; };
 		8ECFE3131A45FD060088DE6E /* FlowList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlowList-Bridging-Header.h"; sourceTree = "<group>"; };
 		8EFBB0241A45F015003DDDC9 /* FlowList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBB0281A45F015003DDDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -270,6 +273,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8EAAA1441A535F0E0041BD16 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8EAAA1461A5360DF0041BD16 /* View */,
+				8E3D38C71A5207E200BFDD12 /* Helpers */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		8EAAA1461A5360DF0041BD16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8EAAA1471A5361150041BD16 /* FLColorPalette.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		8EFBB01B1A45F015003DDDC9 = {
 			isa = PBXGroup;
 			children = (
@@ -295,11 +315,11 @@
 			isa = PBXGroup;
 			children = (
 				8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */,
-				8E3D38C91A52086500BFDD12 /* FLRootWireframe.swift */,
 				8E3D38CB1A52092C00BFDD12 /* FLAppDependencies .swift */,
+				8E3D38C91A52086500BFDD12 /* FLRootWireframe.swift */,
 				8EFBB02D1A45F015003DDDC9 /* Main.storyboard */,
 				8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */,
-				8E3D38C71A5207E200BFDD12 /* Helpers */,
+				8EAAA1441A535F0E0041BD16 /* Common */,
 				8E2E6E5B1A5085A600DE49C9 /* Modules */,
 				8EFBB0271A45F015003DDDC9 /* Supporting Files */,
 				8ECFE3131A45FD060088DE6E /* FlowList-Bridging-Header.h */,
@@ -507,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */,
+				8EAAA1481A5361150041BD16 /* FLColorPalette.swift in Sources */,
 				8E3D38D51A521C2400BFDD12 /* FLFeedViewIO.swift in Sources */,
 				8E2E6E6B1A50ADF200DE49C9 /* FLSongItem.swift in Sources */,
 				8E3D38CA1A52086500BFDD12 /* FLRootWireframe.swift in Sources */,
@@ -541,6 +562,7 @@
 				8ECE982B1A5266940052FCA0 /* AppDelegate.swift in Sources */,
 				8ECE982C1A5266970052FCA0 /* FLRootWireframe.swift in Sources */,
 				8E2E6E691A50945500DE49C9 /* FLSongItemTests.swift in Sources */,
+				8EAAA1491A5361150041BD16 /* FLColorPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
