@@ -30,6 +30,7 @@
 		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EAAA1481A5361150041BD16 /* FLColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1471A5361150041BD16 /* FLColorPalette.swift */; };
 		8EAAA1491A5361150041BD16 /* FLColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1471A5361150041BD16 /* FLColorPalette.swift */; };
+		8EAAA14D1A5533FB0041BD16 /* FLFeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */; };
 		8ECE98281A523DA00052FCA0 /* FLFeedViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D38D41A521C2400BFDD12 /* FLFeedViewIO.swift */; };
 		8ECE982A1A523DA50052FCA0 /* FLFeedInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39081A523A0100BFDD12 /* FLFeedInteractorIO.swift */; };
 		8ECE982B1A5266940052FCA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */; };
@@ -111,6 +112,7 @@
 		8E3D39081A523A0100BFDD12 /* FLFeedInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedInteractorIO.swift; sourceTree = "<group>"; };
 		8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		8EAAA1471A5361150041BD16 /* FLColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLColorPalette.swift; sourceTree = "<group>"; };
+		8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTableCell.swift; sourceTree = "<group>"; };
 		8ECFE3131A45FD060088DE6E /* FlowList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlowList-Bridging-Header.h"; sourceTree = "<group>"; };
 		8EFBB0241A45F015003DDDC9 /* FlowList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBB0281A45F015003DDDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				8E3D38D11A520CE800BFDD12 /* Wireframe */,
-				8E2E6E651A50891500DE49C9 /* Protocols */,
 				8E2E6E5C1A5085B000DE49C9 /* View */,
 				8E2E6E5D1A5085B700DE49C9 /* Presenter */,
 				8E2E6E5E1A5085C300DE49C9 /* Interactor */,
@@ -180,6 +181,7 @@
 			children = (
 				8E3D38CD1A520C0400BFDD12 /* FLFeedViewController.swift */,
 				8E3D38D41A521C2400BFDD12 /* FLFeedViewIO.swift */,
+				8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -231,13 +233,6 @@
 				8E2E6E611A50865000DE49C9 /* Feed */,
 			);
 			name = "Use Cases";
-			sourceTree = "<group>";
-		};
-		8E2E6E651A50891500DE49C9 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Protocols;
 			sourceTree = "<group>";
 		};
 		8E2E6E701A50CB7100DE49C9 /* Network Services */ = {
@@ -535,6 +530,7 @@
 				8E3D38D01A520C4700BFDD12 /* FLFeedPresenter.swift in Sources */,
 				8E3D38CE1A520C0400BFDD12 /* FLFeedViewController.swift in Sources */,
 				8E3D38D31A520CFB00BFDD12 /* FLFeedWireframe.swift in Sources */,
+				8EAAA14D1A5533FB0041BD16 /* FLFeedTableCell.swift in Sources */,
 				8E2E6E751A511A8300DE49C9 /* SwiftyJSON.swift in Sources */,
 				8E3D38CC1A52092C00BFDD12 /* FLAppDependencies .swift in Sources */,
 				8E3D39091A523A0100BFDD12 /* FLFeedInteractorIO.swift in Sources */,

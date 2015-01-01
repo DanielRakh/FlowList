@@ -13,10 +13,12 @@ import UIKit
 extension UIColor {
     
     class func FLCMightnightBlue() -> UIColor {
-        return UIColor(red:0.180, green:0.184 , blue:0.231, alpha: 1.0) }
+        return UIColor(red:0.133, green:0.137 , blue:0.165, alpha: 1.0) }
     
     class func FLCHazyBlue() -> UIColor {
-        return UIColor(red:0.231, green:0.231 , blue:0.282, alpha: 1.0) }
+        return
+    UIColor(red:0.150, green:0.150 , blue:0.183, alpha: 1.0)
+    }
     
     class func FLCElectricBlue() -> UIColor {
         return UIColor(red:0.224, green:0.506 , blue:0.906, alpha: 1.0) }

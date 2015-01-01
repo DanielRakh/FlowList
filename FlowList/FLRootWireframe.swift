@@ -12,6 +12,7 @@ class FLRootWireframe : NSObject {
     func showRootViewController(viewController: UIViewController, inWindow: UIWindow) {
         let navigationController = navigationControllerFromWindow(inWindow)
         navigationController.viewControllers = [viewController]
+        navigationController.navigationBar.barTintColor = UIColor.FLCMightnightBlue()
     }
     
     func navigationControllerFromWindow(window: UIWindow) -> UINavigationController {
