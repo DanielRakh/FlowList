@@ -12,6 +12,7 @@ class FLFeedTableCell: UITableViewCell {
     
     @IBOutlet weak var creatorLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var upvoteCountLabel: UILabel!
     
 
     override init(frame: CGRect) {

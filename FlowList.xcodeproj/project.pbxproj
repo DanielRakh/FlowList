@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E2C89AD1A565BDD00293333 /* FLFeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */; };
 		8E2E6E641A5086FD00DE49C9 /* Feed Use Cases.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E2E6E631A5086FD00DE49C9 /* Feed Use Cases.rtf */; };
 		8E2E6E691A50945500DE49C9 /* FLSongItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E681A50945500DE49C9 /* FLSongItemTests.swift */; };
 		8E2E6E6B1A50ADF200DE49C9 /* FLSongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6A1A50ADF200DE49C9 /* FLSongItem.swift */; };
@@ -554,6 +555,7 @@
 				8ECE982A1A523DA50052FCA0 /* FLFeedInteractorIO.swift in Sources */,
 				8ECE982E1A52669F0052FCA0 /* FLFeedWireframe.swift in Sources */,
 				8ECE982D1A5266990052FCA0 /* FLAppDependencies .swift in Sources */,
+				8E2C89AD1A565BDD00293333 /* FLFeedTableCell.swift in Sources */,
 				8EFBB0401A45F015003DDDC9 /* FLFeedInteractorTests.swift in Sources */,
 				8E2E6E6C1A50ADF200DE49C9 /* FLSongItem.swift in Sources */,
 				8E2E6E731A50CCEE00DE49C9 /* FLFeedNetworkService.swift in Sources */,

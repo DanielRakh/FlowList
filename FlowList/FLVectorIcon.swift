@@ -30,7 +30,7 @@ class FLVectorIcon: MMScalableVectorView {
     override func drawInCurrentContext() {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
-        let fillColor = UIColor.FLCPlainWhite()
+        let fillColor = UIColor.FLCElectricBlue()
         fillColor.setFill()
         shapePath.fill()
     }

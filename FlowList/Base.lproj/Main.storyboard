@@ -221,6 +221,11 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="creatorLabel" destination="xz0-mT-NdY" id="0hq-uX-Yd8"/>
+                                            <outlet property="titleLabel" destination="gJe-aR-13S" id="dRE-cS-foU"/>
+                                            <outlet property="upvoteCountLabel" destination="6rV-bg-GcN" id="VIB-KG-Efp"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

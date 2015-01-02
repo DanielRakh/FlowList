@@ -119,11 +119,17 @@ extension FLFeedViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as FLFeedTableCell
         cell.backgroundColor = indexPath.row % 2 == 0 ? UIColor.FLCHazyBlue() : UIColor.FLCMightnightBlue()
         cell.layoutMargins = UIEdgeInsetsZero
         cell.preservesSuperviewLayoutMargins = false
+        setupCellForSong(cell, song: songs![indexPath.row])
         return cell
+    }
+    
+    func setupCellForSong(cell:FLFeedTableCell, song:FLSongItem) {
+        cell.creatorLabel.text = song.username
+        cell.titleLabel.text = song.title
     }
     
 }
