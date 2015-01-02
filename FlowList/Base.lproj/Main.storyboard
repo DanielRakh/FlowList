@@ -20,6 +20,57 @@
             </objects>
             <point key="canvasLocation" x="162" y="-477"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jst-aH-poi">
+            <objects>
+                <viewController id="ceL-4t-Q4F" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rLP-n1-p9v"/>
+                        <viewControllerLayoutGuide type="bottom" id="173-a1-snK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s2k-3M-hek">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-dT-ip7">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ovf-dT-ip7" firstAttribute="top" secondItem="rLP-n1-p9v" secondAttribute="bottom" id="1GT-aj-IKZ"/>
+                            <constraint firstAttribute="trailing" secondItem="ovf-dT-ip7" secondAttribute="trailing" id="7mq-oB-2PG"/>
+                            <constraint firstItem="173-a1-snK" firstAttribute="top" secondItem="ovf-dT-ip7" secondAttribute="bottom" id="cVG-mw-NPK"/>
+                            <constraint firstItem="ovf-dT-ip7" firstAttribute="leading" secondItem="s2k-3M-hek" secondAttribute="leading" id="crt-t1-b1U"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ovf-dT-ip7"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1GT-aj-IKZ"/>
+                                <exclude reference="7mq-oB-2PG"/>
+                                <exclude reference="crt-t1-b1U"/>
+                                <exclude reference="cVG-mw-NPK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ovf-dT-ip7"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1GT-aj-IKZ"/>
+                                <include reference="7mq-oB-2PG"/>
+                                <include reference="crt-t1-b1U"/>
+                                <include reference="cVG-mw-NPK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H2S-hZ-kNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="-477"/>
+        </scene>
         <!--Feed View Controller-->
         <scene sceneID="msZ-C9-PpB">
             <objects>
@@ -267,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Als-YD-Ana" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006.5" y="-477"/>
+            <point key="canvasLocation" x="1761" y="-477"/>
         </scene>
     </scenes>
 </document>
