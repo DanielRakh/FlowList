@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class FLFeedTableCell: UITableViewCell {
+class FLFeedTableCell: UITableViewCell {
     
     @IBOutlet weak var creatorLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!

@@ -27,6 +27,8 @@
 		8E3D38D31A520CFB00BFDD12 /* FLFeedWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D38D21A520CFB00BFDD12 /* FLFeedWireframe.swift */; };
 		8E3D38D51A521C2400BFDD12 /* FLFeedViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D38D41A521C2400BFDD12 /* FLFeedViewIO.swift */; };
 		8E3D39091A523A0100BFDD12 /* FLFeedInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39081A523A0100BFDD12 /* FLFeedInteractorIO.swift */; };
+		8E3DE31A1A55FBAB00FB79FC /* FLUpvoteIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DE3191A55FBAB00FB79FC /* FLUpvoteIcon.swift */; };
+		8E3DE3281A56009700FB79FC /* FLVectorIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DE3271A56009700FB79FC /* FLVectorIcon.swift */; };
 		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EAAA1481A5361150041BD16 /* FLColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1471A5361150041BD16 /* FLColorPalette.swift */; };
 		8EAAA1491A5361150041BD16 /* FLColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1471A5361150041BD16 /* FLColorPalette.swift */; };
@@ -110,10 +112,12 @@
 		8E3D38D21A520CFB00BFDD12 /* FLFeedWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedWireframe.swift; sourceTree = "<group>"; };
 		8E3D38D41A521C2400BFDD12 /* FLFeedViewIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedViewIO.swift; sourceTree = "<group>"; };
 		8E3D39081A523A0100BFDD12 /* FLFeedInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedInteractorIO.swift; sourceTree = "<group>"; };
+		8E3DE3191A55FBAB00FB79FC /* FLUpvoteIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLUpvoteIcon.swift; sourceTree = "<group>"; };
+		8E3DE3261A55FF7200FB79FC /* FlowList-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FlowList-Bridging-Header.h"; sourceTree = "<group>"; };
+		8E3DE3271A56009700FB79FC /* FLVectorIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLVectorIcon.swift; sourceTree = "<group>"; };
 		8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		8EAAA1471A5361150041BD16 /* FLColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLColorPalette.swift; sourceTree = "<group>"; };
 		8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTableCell.swift; sourceTree = "<group>"; };
-		8ECFE3131A45FD060088DE6E /* FlowList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlowList-Bridging-Header.h"; sourceTree = "<group>"; };
 		8EFBB0241A45F015003DDDC9 /* FlowList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBB0281A45F015003DDDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +285,8 @@
 			isa = PBXGroup;
 			children = (
 				8EAAA1471A5361150041BD16 /* FLColorPalette.swift */,
+				8E3DE3191A55FBAB00FB79FC /* FLUpvoteIcon.swift */,
+				8E3DE3271A56009700FB79FC /* FLVectorIcon.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -317,7 +323,6 @@
 				8EAAA1441A535F0E0041BD16 /* Common */,
 				8E2E6E5B1A5085A600DE49C9 /* Modules */,
 				8EFBB0271A45F015003DDDC9 /* Supporting Files */,
-				8ECFE3131A45FD060088DE6E /* FlowList-Bridging-Header.h */,
 			);
 			path = FlowList;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				8E2E6E621A5086C700DE49C9 /* Use Cases */,
 				8E36F6151A46171600DD88D8 /* GoDJ.mp3 */,
 				8EFBB0281A45F015003DDDC9 /* Info.plist */,
+				8E3DE3261A55FF7200FB79FC /* FlowList-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -530,8 +536,10 @@
 				8E3D38D01A520C4700BFDD12 /* FLFeedPresenter.swift in Sources */,
 				8E3D38CE1A520C0400BFDD12 /* FLFeedViewController.swift in Sources */,
 				8E3D38D31A520CFB00BFDD12 /* FLFeedWireframe.swift in Sources */,
+				8E3DE3281A56009700FB79FC /* FLVectorIcon.swift in Sources */,
 				8EAAA14D1A5533FB0041BD16 /* FLFeedTableCell.swift in Sources */,
 				8E2E6E751A511A8300DE49C9 /* SwiftyJSON.swift in Sources */,
+				8E3DE31A1A55FBAB00FB79FC /* FLUpvoteIcon.swift in Sources */,
 				8E3D38CC1A52092C00BFDD12 /* FLAppDependencies .swift in Sources */,
 				8E3D39091A523A0100BFDD12 /* FLFeedInteractorIO.swift in Sources */,
 				8E2E6E6E1A50C1EE00DE49C9 /* FLFeedInteractor.swift in Sources */,
@@ -684,7 +692,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FlowList/FlowList-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "FLowList/FlowList-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -699,7 +707,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FlowList/FlowList-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "FLowList/FlowList-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -707,6 +715,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -718,6 +727,9 @@
 				INFOPLIST_FILE = FlowListTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowList.app/FlowList";
 			};
 			name = Debug;
@@ -726,6 +738,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -733,6 +746,8 @@
 				INFOPLIST_FILE = FlowListTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowList.app/FlowList";
 			};
 			name = Release;
