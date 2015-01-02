@@ -42,32 +42,8 @@ class FLFeedViewController: UIViewController {
         tableView.tableHeaderView = tableViewHeader
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.backgroundColor = UIColor.clearColor()
-        setupNavigationBar()
     }
     
-    func setupNavigationBar() {
-        
-        let titleLabel = UILabel()
-
-        let attrString = NSAttributedString(
-            string: "</FLOWLIST>",
-            attributes:
-            [NSForegroundColorAttributeName: UIColor.FLCElectricBlue(),
-                NSKernAttributeName: 2,
-                NSFontAttributeName: UIFont(name:"AvenirNext-DemiBold", size: CGFloat(20))!] as NSDictionary)
-        titleLabel.attributedText = attrString
-        titleLabel.sizeToFit()
-        navigationItem.titleView = titleLabel
-        
-        createTestBarButton()
-        
-        
-    }
-    
-    func createTestBarButton() {
-        let addItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("hitApi"))
-        navigationItem.rightBarButtonItem = addItem
-    }
     
     
     //MARK: View Life Cycle
@@ -85,11 +61,10 @@ class FLFeedViewController: UIViewController {
     
     //MARK: Helpers
     
-    func hitApi() {
+    @IBAction func hitAPI(sender: AnyObject) {
         eventHandler?.initialSetup()
+
     }
-    
-    
 }
 
 

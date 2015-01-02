@@ -8,7 +8,39 @@
 
 import UIKit
 
+let FLRootContainerControllerIdentifer = "FLRootContainerController"
+
+
 class FLRootWireframe : NSObject {
+    
+//    var rootContainerController: FLRootContainerController?
+    var rootContainerPresenter: FLRootContainerPresenter?
+    
+    
+    var feedWireframe: FLFeedWireframe?
+    var playerWireframe: FLPlayerWireframe?
+    
+    func presentRootContainerViewControllerFromWindow(window:UIWindow) {
+        let viewController = rootContainerControllerFromStoryboard()
+        viewController.eventHandler = rootContainerPresenter
+        rootContainerPresenter!.userInterface = viewController
+        
+        showRootViewController(viewController, inWindow: window)
+        
+    }
+    
+    func setupFeedInterfaceFromViewController(controller:FLFeedViewController) {
+        feedWireframe?.setupFeedInterfaceFromViewController(controller)
+    }
+    
+    func setupPlayerInterfaceFromViewController(controller:FLPlayerViewController) {
+        playerWireframe?.setupPlayerInterfaceFromViewController(controller)
+    }
+    
+    
+    
+    
+    
     func showRootViewController(viewController: UIViewController, inWindow: UIWindow) {
         let navigationController = navigationControllerFromWindow(inWindow)
         navigationController.viewControllers = [viewController]
@@ -18,5 +50,17 @@ class FLRootWireframe : NSObject {
     func navigationControllerFromWindow(window: UIWindow) -> UINavigationController {
         let navigationController = window.rootViewController as UINavigationController
         return navigationController
+    }
+    
+    
+    func rootContainerControllerFromStoryboard() -> FLRootContainerController {
+        let storyboard = mainStoryboard()
+        let viewController = storyboard.instantiateViewControllerWithIdentifier(FLRootContainerControllerIdentifer) as FLRootContainerController
+        return viewController
+    }
+    
+    func mainStoryboard() -> UIStoryboard {
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        return storyboard
     }
 }

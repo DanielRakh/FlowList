@@ -10,9 +10,12 @@ import UIKit
 
 class FLPlayerViewController: UIViewController {
 
+    var eventHandler:FLPlayerPresenter?
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = UIColor.FLCHazyBlue()
         // Do any additional setup after loading the view.
     }
 
@@ -20,6 +23,9 @@ class FLPlayerViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+
     
 
     /*
@@ -32,4 +38,9 @@ class FLPlayerViewController: UIViewController {
     }
     */
 
+}
+
+
+extension FLPlayerViewController: FLPlayerViewInput {
+    
 }

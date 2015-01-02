@@ -9,5 +9,12 @@
 import UIKit
 
 class FLPlayerWireframe: NSObject {
-   
+    
+    var playerPresenter: FLPlayerPresenter?
+    
+    func setupPlayerInterfaceFromViewController(viewController:FLPlayerViewController) {
+        viewController.eventHandler = playerPresenter
+        playerPresenter!.userInterface = viewController
+    }
+    
 }
