@@ -11,14 +11,17 @@ import UIKit
 class FLVectorIcon: MMScalableVectorView {
     
     var shapePath:UIBezierPath
+    var fillColor:UIColor
 
     override init(frame: CGRect) {
         self.shapePath = UIBezierPath()
+        self.fillColor = UIColor.whiteColor()
         super.init(frame: frame)
     }
     
     required init(coder aDecoder: NSCoder) {
         self.shapePath = UIBezierPath()
+        self.fillColor = UIColor.whiteColor()
         super.init(coder: aDecoder)
         setup()
     }
@@ -30,7 +33,7 @@ class FLVectorIcon: MMScalableVectorView {
     override func drawInCurrentContext() {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
-        let fillColor = UIColor.FLCElectricBlue()
+        let fillColor = self.fillColor
         fillColor.setFill()
         shapePath.fill()
     }

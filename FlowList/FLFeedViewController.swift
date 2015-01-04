@@ -19,7 +19,7 @@ class FLFeedViewController: UIViewController {
     //MARK: Private
     private let cellIdentifier = "FeedCell"
     private var songs:[FLSongItem]?
-    
+
     //MARK: IBOutlets
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var tableViewHeader: UIView!

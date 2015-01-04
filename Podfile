@@ -9,6 +9,9 @@ pod 'MMScalableVectorView', '~> 0.1'
 end
 
 target 'FlowListTests' do
+    
+pod 'MMScalableVectorView', '~> 0.1'
+
 
 end
 

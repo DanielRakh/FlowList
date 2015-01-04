@@ -22,6 +22,7 @@ import UIKit
     
     func setup() {
         shapePath = iconShape()
+        fillColor = UIColor.FLCElectricBlue()
     }
     
     
