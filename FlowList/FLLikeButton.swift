@@ -19,11 +19,11 @@ import UIKit
     
     let uncoloredHeartImage = FLHeartIcon(frame: CGRectZero, iconColor: UIColor.FLCUnselectedGray()).getImageWithSize(CGSizeMake(14, 12))
     
-    var buttonMode:ButtonMode = .Like {
+    var buttonMode:ButtonMode = .Unlike {
         willSet {
             let imageToSet = newValue == .Unlike ? uncoloredHeartImage : coloredHeartImage
-            setImage(imageToSet, forState: .Normal)
             backgroundColor = newValue == .Unlike ? UIColor.FLCMightnightBlue() : UIColor.FLCCherryRed()
+            setImage(imageToSet, forState: .Normal)
         }
     }
     

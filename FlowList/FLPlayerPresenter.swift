@@ -16,6 +16,26 @@ class FLPlayerPresenter: NSObject {
 }
 
 extension FLPlayerPresenter:FLPlayerViewOutput {
+    
+    func playButtonDidTouch() {
+        //TODO: Check if song is already playing
+        
+    }
+    
+    func pauseButtonDidTouch() {
+        //TODO: Check if song is already paused
+        
+    }
+    
+    func likeButtonDidTouch() {
+        //TODO: Check if song is already liked
+        
+    }
+    
+    func unlikeButtonDidTouch() {
+        //TODO: Check if song is already unliked
+        
+    }
 }
 
 

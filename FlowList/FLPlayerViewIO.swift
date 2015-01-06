@@ -15,4 +15,11 @@ protocol FLPlayerViewInput {
 
 protocol FLPlayerViewOutput {
     
+    func playButtonDidTouch()
+    
+    func pauseButtonDidTouch()
+    
+    func likeButtonDidTouch()
+    
+    func unlikeButtonDidTouch()
 }

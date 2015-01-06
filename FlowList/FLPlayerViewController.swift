@@ -21,12 +21,25 @@ class FLPlayerViewController: UIViewController {
     
     //MARK:
     //MARK:IBActions
-
     @IBAction func playPauseButtonDidTouch(sender: FLPlayPauseButton) {
-        sender.buttonMode = sender.buttonMode == .Play ? .Pause : .Play
+        
+        if sender.buttonMode == .Play {
+            eventHandler?.pauseButtonDidTouch()
+            sender.buttonMode = .Pause
+        } else {
+            eventHandler?.playButtonDidTouch()
+            sender.buttonMode = .Play
+        }
     }
+    
     @IBAction func likeButtonDidTouch(sender: FLLikeButton) {
-        sender.buttonMode = sender.buttonMode == .Like ? .Unlike : .Like
+        if sender.buttonMode == .Like {
+            eventHandler?.unlikeButtonDidTouch()
+            sender.buttonMode = .Unlike
+        } else {
+            eventHandler?.likeButtonDidTouch()
+            sender.buttonMode = .Like
+        }
     }
 
 }
