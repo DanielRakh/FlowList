@@ -22,7 +22,7 @@ class FLFeedViewController: UIViewController {
 
     //MARK: IBOutlets
     @IBOutlet weak var tableView:UITableView!
-    @IBOutlet weak var tableViewHeader: UIView!
+    @IBOutlet weak var tableViewHeader: FLFeedHeaderView!
     
     
     //MARK:
@@ -65,6 +65,21 @@ class FLFeedViewController: UIViewController {
         eventHandler?.initialSetup()
 
     }
+    
+    @IBAction func newButtonDidTouch(sender: AnyObject) {
+        tableViewHeader.listMode = .New
+    }
+
+    
+    @IBAction func trendingButtonDidTouch(sender: AnyObject) {
+        tableViewHeader.listMode = .Trending
+    }
+    
+    @IBAction func likesButtonDidTouch(sender: AnyObject) {
+        tableViewHeader.listMode = .Likes
+    }
+    
+
 }
 
 

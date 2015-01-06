@@ -8,21 +8,29 @@
 
 import UIKit
 
-@IBDesignable class FLUpvoteIcon: FLVectorIcon {
+class FLUpvoteIcon: FLVectorIcon {
+    
+    init(frame:CGRect, iconColor:UIColor) {
+        super.init(frame: frame)
+        setupWithColor(iconColor)
+    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        setupWithColor(UIColor.whiteColor())
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        setupWithColor(UIColor.whiteColor())
     }
     
-    func setup() {
+    func setupWithColor(iconColor:UIColor?) {
+        backgroundColor = UIColor.clearColor()
         shapePath = iconShape()
-        fillColor = UIColor.FLCElectricBlue()
+        if let color = iconColor {
+            fillColor = color
+        }
     }
     
     

@@ -40,4 +40,5 @@ extension FLPlayerPresenter:FLPlayerViewOutput {
 
 
 extension FLPlayerPresenter: FLPlayerInteractorOutput {
+    
 }

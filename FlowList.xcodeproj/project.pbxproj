@@ -26,7 +26,7 @@
 		8E2C89E91A59D37600293333 /* FLPlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89E81A59D37600293333 /* FLPlayPauseButton.swift */; };
 		8E2C89EE1A5B6DB200293333 /* FLLikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89ED1A5B6DB200293333 /* FLLikeButton.swift */; };
 		8E2C89F01A5B6FA100293333 /* FLHeartIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89EF1A5B6FA100293333 /* FLHeartIcon.swift */; };
-		8E2E6E641A5086FD00DE49C9 /* Feed Use Cases.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E2E6E631A5086FD00DE49C9 /* Feed Use Cases.rtf */; };
+		8E2E6E641A5086FD00DE49C9 /* Feed_Usecases.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E2E6E631A5086FD00DE49C9 /* Feed_Usecases.rtf */; };
 		8E2E6E691A50945500DE49C9 /* FLSongItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E681A50945500DE49C9 /* FLSongItemTests.swift */; };
 		8E2E6E6B1A50ADF200DE49C9 /* FLSongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6A1A50ADF200DE49C9 /* FLSongItem.swift */; };
 		8E2E6E6C1A50ADF200DE49C9 /* FLSongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E6E6A1A50ADF200DE49C9 /* FLSongItem.swift */; };
@@ -49,6 +49,9 @@
 		8E3DE31A1A55FBAB00FB79FC /* FLUpvoteIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DE3191A55FBAB00FB79FC /* FLUpvoteIcon.swift */; };
 		8E3DE3281A56009700FB79FC /* FLVectorIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DE3271A56009700FB79FC /* FLVectorIcon.swift */; };
 		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8E8ECCEB1A5B824200373FFB /* Player_Usecases.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEA1A5B824200373FFB /* Player_Usecases.rtf */; };
+		8E8ECCED1A5BADA900373FFB /* FLUpvoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEC1A5BADA900373FFB /* FLUpvoteButton.swift */; };
+		8E8ECCF01A5BB69400373FFB /* FLFeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */; };
 		8EAAA1481A5361150041BD16 /* FLColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1471A5361150041BD16 /* FLColorPalette.swift */; };
 		8EAAA14D1A5533FB0041BD16 /* FLFeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */; };
 		8ECE982A1A523DA50052FCA0 /* FLFeedInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39081A523A0100BFDD12 /* FLFeedInteractorIO.swift */; };
@@ -126,7 +129,7 @@
 		8E2C89E81A59D37600293333 /* FLPlayPauseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlayPauseButton.swift; sourceTree = "<group>"; };
 		8E2C89ED1A5B6DB200293333 /* FLLikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLLikeButton.swift; sourceTree = "<group>"; };
 		8E2C89EF1A5B6FA100293333 /* FLHeartIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLHeartIcon.swift; sourceTree = "<group>"; };
-		8E2E6E631A5086FD00DE49C9 /* Feed Use Cases.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Feed Use Cases.rtf"; sourceTree = "<group>"; };
+		8E2E6E631A5086FD00DE49C9 /* Feed_Usecases.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Feed_Usecases.rtf; sourceTree = "<group>"; };
 		8E2E6E681A50945500DE49C9 /* FLSongItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLSongItemTests.swift; sourceTree = "<group>"; };
 		8E2E6E6A1A50ADF200DE49C9 /* FLSongItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLSongItem.swift; sourceTree = "<group>"; };
 		8E2E6E6D1A50C1EE00DE49C9 /* FLFeedInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedInteractor.swift; sourceTree = "<group>"; };
@@ -145,6 +148,9 @@
 		8E3DE3261A55FF7200FB79FC /* FlowList-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FlowList-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E3DE3271A56009700FB79FC /* FLVectorIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLVectorIcon.swift; sourceTree = "<group>"; };
 		8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		8E8ECCEA1A5B824200373FFB /* Player_Usecases.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Player_Usecases.rtf; sourceTree = "<group>"; };
+		8E8ECCEC1A5BADA900373FFB /* FLUpvoteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLUpvoteButton.swift; sourceTree = "<group>"; };
+		8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedHeaderView.swift; sourceTree = "<group>"; };
 		8EAAA1471A5361150041BD16 /* FLColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLColorPalette.swift; sourceTree = "<group>"; };
 		8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTableCell.swift; sourceTree = "<group>"; };
 		8EFBB0241A45F015003DDDC9 /* FlowList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,6 +333,7 @@
 				8E3D38CD1A520C0400BFDD12 /* FLFeedViewController.swift */,
 				8E3D38D41A521C2400BFDD12 /* FLFeedViewIO.swift */,
 				8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */,
+				8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -364,18 +371,11 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
-		8E2E6E611A50865000DE49C9 /* Feed */ = {
-			isa = PBXGroup;
-			children = (
-				8E2E6E631A5086FD00DE49C9 /* Feed Use Cases.rtf */,
-			);
-			name = Feed;
-			sourceTree = "<group>";
-		};
 		8E2E6E621A5086C700DE49C9 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
-				8E2E6E611A50865000DE49C9 /* Feed */,
+				8E2E6E631A5086FD00DE49C9 /* Feed_Usecases.rtf */,
+				8E8ECCEA1A5B824200373FFB /* Player_Usecases.rtf */,
 			);
 			name = "Use Cases";
 			sourceTree = "<group>";
@@ -413,6 +413,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8E8ECCEE1A5BB3F300373FFB /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8E2C89E81A59D37600293333 /* FLPlayPauseButton.swift */,
+				8E2C89ED1A5B6DB200293333 /* FLLikeButton.swift */,
+				8E8ECCEC1A5BADA900373FFB /* FLUpvoteButton.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
 		8EAAA1441A535F0E0041BD16 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,9 +437,8 @@
 		8EAAA1461A5360DF0041BD16 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E8ECCEE1A5BB3F300373FFB /* Buttons */,
 				8E2C89EC1A5B6D5600293333 /* Icons */,
-				8E2C89E81A59D37600293333 /* FLPlayPauseButton.swift */,
-				8E2C89ED1A5B6DB200293333 /* FLLikeButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -617,7 +626,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E2E6E641A5086FD00DE49C9 /* Feed Use Cases.rtf in Resources */,
+				8E2E6E641A5086FD00DE49C9 /* Feed_Usecases.rtf in Resources */,
+				8E8ECCEB1A5B824200373FFB /* Player_Usecases.rtf in Resources */,
 				8E36F6161A46171600DD88D8 /* GoDJ.mp3 in Resources */,
 				8EFBB02F1A45F015003DDDC9 /* Main.storyboard in Resources */,
 				8EFBB0341A45F015003DDDC9 /* LaunchScreen.xib in Resources */,
@@ -710,6 +720,7 @@
 				8E2C89D61A56807300293333 /* FLRootContainerViewIO.swift in Sources */,
 				8E2E6E6B1A50ADF200DE49C9 /* FLSongItem.swift in Sources */,
 				8E3D38CA1A52086500BFDD12 /* FLRootWireframe.swift in Sources */,
+				8E8ECCED1A5BADA900373FFB /* FLUpvoteButton.swift in Sources */,
 				8E2E6E721A50CCEE00DE49C9 /* FLFeedNetworkService.swift in Sources */,
 				8E3D38D01A520C4700BFDD12 /* FLFeedPresenter.swift in Sources */,
 				8E3D38CE1A520C0400BFDD12 /* FLFeedViewController.swift in Sources */,
@@ -728,6 +739,7 @@
 				8E2C89BD1A566D4400293333 /* FLPlayerPresenter.swift in Sources */,
 				8E2C89E71A58996000293333 /* FLPlayIcon.swift in Sources */,
 				8E2C89EE1A5B6DB200293333 /* FLLikeButton.swift in Sources */,
+				8E8ECCF01A5BB69400373FFB /* FLFeedHeaderView.swift in Sources */,
 				8E2C89C71A566E1C00293333 /* FLRootContainerController.swift in Sources */,
 				8E2C89F01A5B6FA100293333 /* FLHeartIcon.swift in Sources */,
 				8E2C89E51A58995000293333 /* FLPauseIcon.swift in Sources */,
