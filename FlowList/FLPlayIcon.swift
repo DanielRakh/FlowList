@@ -8,21 +8,29 @@
 
 import UIKit
 
-@IBDesignable class FLPlayIcon: FLVectorIcon {
+class FLPlayIcon: FLVectorIcon {
+    
+    init(frame:CGRect, iconColor:UIColor) {
+        super.init(frame: frame)
+        setupWithColor(iconColor)
+    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        setupWithColor(UIColor.whiteColor())
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        setupWithColor(UIColor.whiteColor())
     }
     
-    func setup() {
+    func setupWithColor(iconColor:UIColor?) {
         shapePath = iconShape()
-        fillColor = UIColor.whiteColor()
+        if let color = iconColor {
+            fillColor = color
+        }
+        backgroundColor = UIColor.clearColor()
     }
     
     

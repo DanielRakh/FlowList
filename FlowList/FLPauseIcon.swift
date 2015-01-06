@@ -8,21 +8,30 @@
 
 import UIKit
 
-@IBDesignable class FLPauseIcon: FLVectorIcon {
+class FLPauseIcon: FLVectorIcon {
     
-   required init(coder aDecoder: NSCoder) {
+    
+    init(frame:CGRect, iconColor:UIColor) {
+        super.init(frame: frame)
+        setupWithColor(iconColor)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        setupWithColor(UIColor.whiteColor())
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        setupWithColor(UIColor.whiteColor())
     }
     
-    func setup() {
+    func setupWithColor(iconColor:UIColor?) {
+        backgroundColor = UIColor.clearColor()
         shapePath = iconShape()
-        fillColor = UIColor.whiteColor()
+        if let color = iconColor {
+            fillColor = color
+        }
     }
     
     
@@ -47,10 +56,10 @@ import UIKit
         
         return rectangle26Path
     }
-
+    
     
     override func originalSize() -> CGSize {
         return CGSizeMake(22, 35)
     }
-   
+    
 }
