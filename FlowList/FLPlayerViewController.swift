@@ -17,6 +17,17 @@ class FLPlayerViewController: UIViewController {
         view.backgroundColor = UIColor.FLCHazyBlue()
         // Do any additional setup after loading the view.
     }
+    
+    
+    //MARK:
+    //MARK:IBActions
+
+    @IBAction func playPauseButtonDidTouch(sender: FLPlayPauseButton) {
+        sender.buttonMode = sender.buttonMode == .Play ? .Pause : .Play
+    }
+    @IBAction func likeButtonDidTouch(sender: FLLikeButton) {
+        sender.buttonMode = sender.buttonMode == .Like ? .Unlike : .Like
+    }
 
 }
 

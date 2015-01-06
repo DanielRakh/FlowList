@@ -16,10 +16,8 @@ class FLPlayerPresenter: NSObject {
 }
 
 extension FLPlayerPresenter:FLPlayerViewOutput {
-    
 }
 
 
 extension FLPlayerPresenter: FLPlayerInteractorOutput {
-    
 }

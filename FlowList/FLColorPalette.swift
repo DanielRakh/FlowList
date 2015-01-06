@@ -16,12 +16,13 @@ extension UIColor {
         return UIColor(red:0.133, green:0.137 , blue:0.165, alpha: 1.0) }
     
     class func FLCHazyBlue() -> UIColor {
-        return
-    UIColor(red:0.150, green:0.150 , blue:0.183, alpha: 1.0)
-    }
+        return UIColor(red:0.150, green:0.150 , blue:0.183, alpha: 1.0) }
     
     class func FLCElectricBlue() -> UIColor {
         return UIColor(red:0.224, green:0.506 , blue:0.906, alpha: 1.0) }
+    
+    class func FLCCherryRed() -> UIColor {
+        return UIColor(red:0.992, green:0.263 , blue:0.314, alpha: 1.0) }
     
     class func FLCGreen() -> UIColor {
         return UIColor(red:0.286, green:0.831 , blue:0.486, alpha: 1.0) }

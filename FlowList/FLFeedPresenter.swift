@@ -22,7 +22,6 @@ extension FLFeedPresenter:FLFeedViewOutput {
     }
 }
 
-
 extension FLFeedPresenter: FLFeedInteractorOutput {
     
     func foundAllSongs(songs:[FLSongItem]) {

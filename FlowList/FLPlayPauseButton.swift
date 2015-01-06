@@ -10,10 +10,24 @@ import UIKit
 
 @IBDesignable class FLPlayPauseButton: UIButton {
 
+    enum ButtonMode {
+        case Play
+        case Pause
+    }
     
+    let pausedIconImage = FLPauseIcon(frame: CGRectZero, iconColor: UIColor.FLCPlainWhite()).getImageWithSize(CGSizeMake(15, 24))
+
+    let playIconImage = FLPlayIcon(frame: CGRectZero, iconColor: UIColor.FLCPlainWhite()).getImageWithSize(CGSizeMake(19, 24))
+    
+    var buttonMode:ButtonMode = .Play {
+        willSet {
+            let imageToSet = newValue == .Pause ? pausedIconImage : playIconImage
+            setImage(imageToSet, forState: .Normal)
+        }
+    }
+
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.selected = true
         setupUI()
     }
     
@@ -28,20 +42,13 @@ import UIKit
     }
     
     func setupUI() {
-        
-        let pausedIconImage = FLPauseIcon(frame: CGRectZero, iconColor: UIColor.FLCPlainWhite()).getImageWithSize(CGSizeMake(15, 24))
-        let playIconImage = FLPlayIcon(frame: CGRectZero, iconColor: UIColor.FLCPlainWhite()).getImageWithSize(CGSizeMake(19, 24))
-        
-        setImage(pausedIconImage, forState: .Normal)
-        setImage(playIconImage, forState: .Selected)
+        setImage(playIconImage, forState: .Normal)
         backgroundColor = UIColor.FLCElectricBlue()
     }
     
     
     override func prepareForInterfaceBuilder() {
-        self.selected = true
         setupUI()
     }
-    
     
 }
