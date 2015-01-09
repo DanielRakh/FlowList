@@ -19,7 +19,7 @@ class FLFeedRootViewController: UIViewController {
 
     //MARK: IBOutlets
     @IBOutlet weak var tableViewHeader: FLFeedHeaderView!
-    
+    @IBOutlet var centerXTrendingViewToSuperView: NSLayoutConstraint!
     
     //MARK:
     //MARK: Methods
@@ -43,6 +43,7 @@ class FLFeedRootViewController: UIViewController {
     
     @IBAction func newButtonDidTouch(sender: AnyObject) {
         tableViewHeader.listMode = .New
+        
     }
     
     @IBAction func trendingButtonDidTouch(sender: AnyObject) {
