@@ -55,7 +55,7 @@ class FLFeedHeaderView: UIView {
     }
     
     func setupUI() {
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.FLCMightnightBlue()
     }
     
     override func updateConstraints() {

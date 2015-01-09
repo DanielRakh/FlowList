@@ -47,7 +47,7 @@ class FLRootContainerController: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "presentFeedController" {
-            eventHandler?.setupFeedModuleForViewController(segue.destinationViewController as FLFeedViewController)
+            eventHandler?.setupFeedModuleForViewController(segue.destinationViewController as FLFeedRootViewController)
         } else if segue.identifier == "presentPlayerController" {
             eventHandler?.setupPlayerModuleForViewController(segue.destinationViewController as FLPlayerViewController)
         }

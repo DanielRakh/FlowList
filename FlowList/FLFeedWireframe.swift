@@ -12,9 +12,8 @@ class FLFeedWireframe:NSObject {
     
     var feedPresenter: FLFeedPresenter?
     
-    func setupFeedInterfaceFromViewController(viewController:FLFeedViewController) {
+    func setupFeedInterfaceFromViewController(viewController:FLFeedRootViewController) {
         viewController.eventHandler = feedPresenter
-        feedPresenter!.userInterface = viewController
     }
     
 }

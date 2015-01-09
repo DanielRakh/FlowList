@@ -13,7 +13,6 @@ let FLRootContainerControllerIdentifer = "FLRootContainerController"
 
 class FLRootWireframe : NSObject {
     
-//    var rootContainerController: FLRootContainerController?
     var rootContainerPresenter: FLRootContainerPresenter?
     
     
@@ -29,7 +28,7 @@ class FLRootWireframe : NSObject {
         
     }
     
-    func setupFeedInterfaceFromViewController(controller:FLFeedViewController) {
+    func setupFeedInterfaceFromViewController(controller:FLFeedRootViewController) {
         feedWireframe?.setupFeedInterfaceFromViewController(controller)
     }
     

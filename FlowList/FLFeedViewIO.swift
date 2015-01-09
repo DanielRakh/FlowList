@@ -13,6 +13,5 @@ protocol FLFeedViewInput {
 }
 
 protocol FLFeedViewOutput {
-    
     func initialSetup()
 }

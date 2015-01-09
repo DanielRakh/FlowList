@@ -41,7 +41,7 @@
 		8E36F6161A46171600DD88D8 /* GoDJ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E36F6151A46171600DD88D8 /* GoDJ.mp3 */; };
 		8E3D38CA1A52086500BFDD12 /* FLRootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D38C91A52086500BFDD12 /* FLRootWireframe.swift */; };
 		8E3D38CC1A52092C00BFDD12 /* FLAppDependencies .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D38CB1A52092C00BFDD12 /* FLAppDependencies .swift */; };
-		8E3D38CE1A520C0400BFDD12 /* FLFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D38CD1A520C0400BFDD12 /* FLFeedViewController.swift */; };
+		8E3D38CE1A520C0400BFDD12 /* FLFeedRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D38CD1A520C0400BFDD12 /* FLFeedRootViewController.swift */; };
 		8E3D38D01A520C4700BFDD12 /* FLFeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D38CF1A520C4700BFDD12 /* FLFeedPresenter.swift */; };
 		8E3D38D31A520CFB00BFDD12 /* FLFeedWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D38D21A520CFB00BFDD12 /* FLFeedWireframe.swift */; };
 		8E3D38D51A521C2400BFDD12 /* FLFeedViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D38D41A521C2400BFDD12 /* FLFeedViewIO.swift */; };
@@ -53,6 +53,8 @@
 		8E8ECCED1A5BADA900373FFB /* FLUpvoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEC1A5BADA900373FFB /* FLUpvoteButton.swift */; };
 		8E8ECCF01A5BB69400373FFB /* FLFeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */; };
 		8E8F075E1A5FA5590052E246 /* FLManagedSongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F075D1A5FA5590052E246 /* FLManagedSongItem.swift */; };
+		8E8F07611A6068670052E246 /* FLFeedTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F07601A6068670052E246 /* FLFeedTableViewManager.swift */; };
+		8E8F07631A606A980052E246 /* FLFeedTrendingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F07621A606A980052E246 /* FLFeedTrendingTableViewController.swift */; };
 		8EAAA1481A5361150041BD16 /* FLColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1471A5361150041BD16 /* FLColorPalette.swift */; };
 		8EAAA14D1A5533FB0041BD16 /* FLFeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */; };
 		8ECE982A1A523DA50052FCA0 /* FLFeedInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39081A523A0100BFDD12 /* FLFeedInteractorIO.swift */; };
@@ -142,7 +144,7 @@
 		8E36F6151A46171600DD88D8 /* GoDJ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = GoDJ.mp3; path = ../GoDJ.mp3; sourceTree = "<group>"; };
 		8E3D38C91A52086500BFDD12 /* FLRootWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLRootWireframe.swift; sourceTree = "<group>"; };
 		8E3D38CB1A52092C00BFDD12 /* FLAppDependencies .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FLAppDependencies .swift"; sourceTree = "<group>"; };
-		8E3D38CD1A520C0400BFDD12 /* FLFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedViewController.swift; sourceTree = "<group>"; };
+		8E3D38CD1A520C0400BFDD12 /* FLFeedRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedRootViewController.swift; sourceTree = "<group>"; };
 		8E3D38CF1A520C4700BFDD12 /* FLFeedPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedPresenter.swift; sourceTree = "<group>"; };
 		8E3D38D21A520CFB00BFDD12 /* FLFeedWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedWireframe.swift; sourceTree = "<group>"; };
 		8E3D38D41A521C2400BFDD12 /* FLFeedViewIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedViewIO.swift; sourceTree = "<group>"; };
@@ -155,6 +157,8 @@
 		8E8ECCEC1A5BADA900373FFB /* FLUpvoteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLUpvoteButton.swift; sourceTree = "<group>"; };
 		8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedHeaderView.swift; sourceTree = "<group>"; };
 		8E8F075D1A5FA5590052E246 /* FLManagedSongItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLManagedSongItem.swift; sourceTree = "<group>"; };
+		8E8F07601A6068670052E246 /* FLFeedTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTableViewManager.swift; sourceTree = "<group>"; };
+		8E8F07621A606A980052E246 /* FLFeedTrendingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTrendingTableViewController.swift; sourceTree = "<group>"; };
 		8EAAA1471A5361150041BD16 /* FLColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLColorPalette.swift; sourceTree = "<group>"; };
 		8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTableCell.swift; sourceTree = "<group>"; };
 		8EE1685F1A5F9D9F0014EAB1 /* FLCoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCoreDataStack.swift; sourceTree = "<group>"; };
@@ -327,8 +331,8 @@
 			isa = PBXGroup;
 			children = (
 				8E2C89C51A566DF300293333 /* Root Container */,
-				8E2C89AF1A56629600293333 /* Player */,
 				8E2E6E5A1A50858A00DE49C9 /* Feed */,
+				8E2C89AF1A56629600293333 /* Player */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -336,10 +340,12 @@
 		8E2E6E5C1A5085B000DE49C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8E3D38CD1A520C0400BFDD12 /* FLFeedViewController.swift */,
+				8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */,
+				8E3D38CD1A520C0400BFDD12 /* FLFeedRootViewController.swift */,
 				8E3D38D41A521C2400BFDD12 /* FLFeedViewIO.swift */,
 				8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */,
-				8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */,
+				8E8F07601A6068670052E246 /* FLFeedTableViewManager.swift */,
+				8E8F07621A606A980052E246 /* FLFeedTrendingTableViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -741,8 +747,9 @@
 				8E3D38CA1A52086500BFDD12 /* FLRootWireframe.swift in Sources */,
 				8E8ECCED1A5BADA900373FFB /* FLUpvoteButton.swift in Sources */,
 				8E2E6E721A50CCEE00DE49C9 /* FLFeedNetworkService.swift in Sources */,
+				8E8F07631A606A980052E246 /* FLFeedTrendingTableViewController.swift in Sources */,
 				8E3D38D01A520C4700BFDD12 /* FLFeedPresenter.swift in Sources */,
-				8E3D38CE1A520C0400BFDD12 /* FLFeedViewController.swift in Sources */,
+				8E3D38CE1A520C0400BFDD12 /* FLFeedRootViewController.swift in Sources */,
 				8E2C89CD1A56749300293333 /* FLRootContainerPresenter.swift in Sources */,
 				8E3D38D31A520CFB00BFDD12 /* FLFeedWireframe.swift in Sources */,
 				8E3DE3281A56009700FB79FC /* FLVectorIcon.swift in Sources */,
@@ -752,6 +759,7 @@
 				8E2E6E751A511A8300DE49C9 /* SwiftyJSON.swift in Sources */,
 				8E2C89C01A566D5900293333 /* FLPlayerInteractor.swift in Sources */,
 				8E3DE31A1A55FBAB00FB79FC /* FLUpvoteIcon.swift in Sources */,
+				8E8F07611A6068670052E246 /* FLFeedTableViewManager.swift in Sources */,
 				8E2C89C31A566D9500293333 /* FLPlayerDataManger.swift in Sources */,
 				8E3D38CC1A52092C00BFDD12 /* FLAppDependencies .swift in Sources */,
 				8E3D39091A523A0100BFDD12 /* FLFeedInteractorIO.swift in Sources */,
