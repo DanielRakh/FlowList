@@ -152,7 +152,5 @@ class FLFeedHeaderView: UIView {
         
     }
     
-    //MARK:
-    //MARK:IBActions
 
 }

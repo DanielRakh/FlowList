@@ -9,7 +9,7 @@
 import Foundation
 
 struct FLSongItem:Equatable {
-    
+
     let title:String
     let username:String
     let streamURL:String
@@ -17,6 +17,7 @@ struct FLSongItem:Equatable {
     let soundcloudId:Double
 
     init(title:String, username:String, streamURL:String, milliSecondsDuration:Double, soundcloudId:Double) {
+    
         self.title = title
         self.username = username
         self.streamURL = streamURL

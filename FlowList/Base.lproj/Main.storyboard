@@ -200,15 +200,15 @@
                                             <exclude reference="IJN-ou-FsD"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="B8P-hu-owm"/>
+                                            <exclude reference="v8H-YL-ekp"/>
+                                            <exclude reference="zza-gI-Zav"/>
                                             <exclude reference="HRY-mf-1ui"/>
                                             <exclude reference="QYd-B0-E6E"/>
                                             <exclude reference="khJ-6O-7gQ"/>
+                                            <exclude reference="B8P-hu-owm"/>
                                             <exclude reference="fk4-gz-EHC"/>
                                             <exclude reference="gsl-XP-mhF"/>
                                             <exclude reference="pvQ-oN-Qxy"/>
-                                            <exclude reference="v8H-YL-ekp"/>
-                                            <exclude reference="zza-gI-Zav"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -219,15 +219,15 @@
                                             <include reference="IJN-ou-FsD"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="B8P-hu-owm"/>
+                                            <include reference="v8H-YL-ekp"/>
+                                            <include reference="zza-gI-Zav"/>
                                             <include reference="HRY-mf-1ui"/>
                                             <include reference="QYd-B0-E6E"/>
                                             <include reference="khJ-6O-7gQ"/>
+                                            <include reference="B8P-hu-owm"/>
                                             <include reference="fk4-gz-EHC"/>
                                             <include reference="gsl-XP-mhF"/>
                                             <include reference="pvQ-oN-Qxy"/>
-                                            <include reference="v8H-YL-ekp"/>
-                                            <include reference="zza-gI-Zav"/>
                                         </mask>
                                     </variation>
                                     <connections>

@@ -17,7 +17,7 @@ class FLFeedInteractor:NSObject {
     init(dataManager:FLFeedDataManager) {
         self.dataManager = dataManager
     }
-    
+
     func findAllSongs() {
         
         dataManager.fetchSongsForQuery("Boiler Room", onFailure: { error in

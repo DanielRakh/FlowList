@@ -55,6 +55,8 @@
 		8EAAA1481A5361150041BD16 /* FLColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1471A5361150041BD16 /* FLColorPalette.swift */; };
 		8EAAA14D1A5533FB0041BD16 /* FLFeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */; };
 		8ECE982A1A523DA50052FCA0 /* FLFeedInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39081A523A0100BFDD12 /* FLFeedInteractorIO.swift */; };
+		8EE168601A5F9D9F0014EAB1 /* FLCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1685F1A5F9D9F0014EAB1 /* FLCoreDataStack.swift */; };
+		8EE168631A5F9E9C0014EAB1 /* FLDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EE168611A5F9E9C0014EAB1 /* FLDataModel.xcdatamodeld */; };
 		8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */; };
 		8EFBB02F1A45F015003DDDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB02D1A45F015003DDDC9 /* Main.storyboard */; };
 		8EFBB0311A45F015003DDDC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0301A45F015003DDDC9 /* Images.xcassets */; };
@@ -153,6 +155,8 @@
 		8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedHeaderView.swift; sourceTree = "<group>"; };
 		8EAAA1471A5361150041BD16 /* FLColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLColorPalette.swift; sourceTree = "<group>"; };
 		8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTableCell.swift; sourceTree = "<group>"; };
+		8EE1685F1A5F9D9F0014EAB1 /* FLCoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCoreDataStack.swift; sourceTree = "<group>"; };
+		8EE168621A5F9E9C0014EAB1 /* FLDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FLDataModel.xcdatamodel; sourceTree = "<group>"; };
 		8EFBB0241A45F015003DDDC9 /* FlowList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBB0281A45F015003DDDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -426,6 +430,7 @@
 		8EAAA1441A535F0E0041BD16 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8EE1685D1A5F9D7B0014EAB1 /* Core Data */,
 				8E2C89B51A56661800293333 /* Extensions */,
 				8E2E6E601A5085F600DE49C9 /* Entities */,
 				8EAAA1461A5360DF0041BD16 /* View */,
@@ -441,6 +446,15 @@
 				8E2C89EC1A5B6D5600293333 /* Icons */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		8EE1685D1A5F9D7B0014EAB1 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				8EE1685F1A5F9D9F0014EAB1 /* FLCoreDataStack.swift */,
+				8EE168611A5F9E9C0014EAB1 /* FLDataModel.xcdatamodeld */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 		8EFBB01B1A45F015003DDDC9 = {
@@ -713,12 +727,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EFBB02A1A45F015003DDDC9 /* AppDelegate.swift in Sources */,
+				8EE168631A5F9E9C0014EAB1 /* FLDataModel.xcdatamodeld in Sources */,
 				8EAAA1481A5361150041BD16 /* FLColorPalette.swift in Sources */,
 				8E3D38D51A521C2400BFDD12 /* FLFeedViewIO.swift in Sources */,
 				8E2C89BA1A5666A000293333 /* FLPlayerViewController.swift in Sources */,
 				8E2C89B71A56665F00293333 /* FLPlayerWireframe.swift in Sources */,
 				8E2C89D61A56807300293333 /* FLRootContainerViewIO.swift in Sources */,
 				8E2E6E6B1A50ADF200DE49C9 /* FLSongItem.swift in Sources */,
+				8EE168601A5F9D9F0014EAB1 /* FLCoreDataStack.swift in Sources */,
 				8E3D38CA1A52086500BFDD12 /* FLRootWireframe.swift in Sources */,
 				8E8ECCED1A5BADA900373FFB /* FLUpvoteButton.swift in Sources */,
 				8E2E6E721A50CCEE00DE49C9 /* FLFeedNetworkService.swift in Sources */,
@@ -983,6 +999,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8EE168611A5F9E9C0014EAB1 /* FLDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8EE168621A5F9E9C0014EAB1 /* FLDataModel.xcdatamodel */,
+			);
+			currentVersion = 8EE168621A5F9E9C0014EAB1 /* FLDataModel.xcdatamodel */;
+			path = FLDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8EFBB01C1A45F015003DDDC9 /* Project object */;
 }

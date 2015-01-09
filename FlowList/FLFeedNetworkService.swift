@@ -11,11 +11,53 @@ import Alamofire
 
 
 
+
 class FLFeedNetworkService {
+    
+    enum SongRouter: URLRequestConvertible, Printable {
+        
+        private static let baseURLString = "http://flowlist.io"
+        
+        case New(String, Int)
+        case Trending(String, Int)
+        case Liked(String, Int)
+        
+        var URLRequest: NSURLRequest {
+            let (path:String, parameters: [String: AnyObject]) = {
+                switch self {
+                    
+                case New(let query, let count):
+                    let params = ["query": query]
+                    return("/search/",params)
+                    
+                case Trending(let query, let count):
+                    let params = ["query": query]
+                    return("/search/",params)
+                    
+                case Liked(let query, let count):
+                    let params = ["query": query]
+                    return("/search/",params)
+                }
+                
+            }()
+            
+            let URL = NSURL(string: SongRouter.baseURLString)
+            let URLRequest = NSURLRequest(URL: URL!.URLByAppendingPathComponent(path))
+            let encoding = Alamofire.ParameterEncoding.URL
+            
+            return encoding.encode(URLRequest, parameters: parameters).0
+            
+        }
+        
+        var description: String {
+            return self.URLRequest.description
+        }
+
+    }
+    
     private let searchParam = "search"
     private let queryParam = "query"
     private let apiURL = "http://flowlist.io/"
-    
     
     func fetchDataForQuery(query:String, onFailure fail:(NSError -> Void)? = nil, onSuccess succeed:(AnyObject -> Void)? = nil) {
         
@@ -24,6 +66,7 @@ class FLFeedNetworkService {
         let parameters = [searchParam : [queryParam : query]]
         
         Alamofire.request(.POST, apiURL + searchParam, parameters: parameters).responseJSON { (request, response, json , error) in
+            println((request as NSURLRequest).allHTTPHeaderFields)
             if error != nil {
                 if let didFail = fail {
                     didFail(error!)
@@ -38,7 +81,6 @@ class FLFeedNetworkService {
             }
         }
     }
-    
     
     
 }

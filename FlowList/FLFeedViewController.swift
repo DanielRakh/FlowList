@@ -55,7 +55,7 @@ class FLFeedViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        println(self.tableView.tableHeaderView)
+        eventHandler?.initialSetup()
     }
     
     
@@ -78,7 +78,6 @@ class FLFeedViewController: UIViewController {
     @IBAction func likesButtonDidTouch(sender: AnyObject) {
         tableViewHeader.listMode = .Likes
     }
-    
 
 }
 
@@ -126,6 +125,10 @@ extension FLFeedViewController: UITableViewDataSource {
 
 //MARK: Table View Delegate
 extension FLFeedViewController: UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("Table View Did Select row")
+    }
 }
 
 
