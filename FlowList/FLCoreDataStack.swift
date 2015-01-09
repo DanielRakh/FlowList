@@ -50,11 +50,33 @@ class FLCoreDataStack {
         return urls.first!
     }
     
+    
     func saveContext() {
         var error:NSError?
         
         if managedObjectContext.hasChanges && !managedObjectContext.save(&error) {
             println("Could not save \(error?.localizedDescription), info:\(error?.userInfo)")
         }
+    }
+    
+    func fetchEntriesWithPredicate(predicate:NSPredicate, sortDescriptors:[AnyObject], completionBlock:(([FLManagedSongItem]) -> Void)!) {
+        
+        let fetchRequest = NSFetchRequest(entityName: "FLManagedSongItem")
+        fetchRequest.predicate = predicate
+        fetchRequest.sortDescriptors = []
+        
+        managedObjectContext?.performBlock {
+            let queryResults = self.managedObjectContext?.executeFetchRequest(fetchRequest, error: nil)
+            let managedResults = queryResults! as [FLManagedSongItem]
+            completionBlock(managedResults)
+        }
+    }
+    
+    func newSongItem() -> FLManagedSongItem {
+        
+        let entityDescription = NSEntityDescription.entityForName("FLManagedSongItem", inManagedObjectContext: managedObjectContext)
+        let newEntry = NSManagedObject(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext) as FLManagedSongItem
+        
+        return newEntry
     }
 }

@@ -11,15 +11,15 @@ import Foundation
 struct FLSongItem:Equatable {
 
     let title:String
-    let username:String
+    let creator:String
     let streamURL:String
     let milliSecondsDuration:Double
     let soundcloudId:Double
 
-    init(title:String, username:String, streamURL:String, milliSecondsDuration:Double, soundcloudId:Double) {
+    init(title:String, creator:String, streamURL:String, milliSecondsDuration:Double, soundcloudId:Double) {
     
         self.title = title
-        self.username = username
+        self.creator = creator
         self.streamURL = streamURL
         self.milliSecondsDuration = milliSecondsDuration
         self.soundcloudId = soundcloudId
@@ -30,7 +30,7 @@ struct FLSongItem:Equatable {
 func ==(lhs: FLSongItem, rhs: FLSongItem) -> Bool {
     
     return  lhs.title == rhs.title &&
-            lhs.username == rhs.username &&
+            lhs.creator == rhs.creator &&
             lhs.streamURL == rhs.streamURL &&
             lhs.milliSecondsDuration == rhs.milliSecondsDuration &&
             lhs.soundcloudId == rhs.soundcloudId

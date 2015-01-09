@@ -52,6 +52,7 @@
 		8E8ECCEB1A5B824200373FFB /* Player_Usecases.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEA1A5B824200373FFB /* Player_Usecases.rtf */; };
 		8E8ECCED1A5BADA900373FFB /* FLUpvoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEC1A5BADA900373FFB /* FLUpvoteButton.swift */; };
 		8E8ECCF01A5BB69400373FFB /* FLFeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */; };
+		8E8F075E1A5FA5590052E246 /* FLManagedSongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F075D1A5FA5590052E246 /* FLManagedSongItem.swift */; };
 		8EAAA1481A5361150041BD16 /* FLColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1471A5361150041BD16 /* FLColorPalette.swift */; };
 		8EAAA14D1A5533FB0041BD16 /* FLFeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */; };
 		8ECE982A1A523DA50052FCA0 /* FLFeedInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39081A523A0100BFDD12 /* FLFeedInteractorIO.swift */; };
@@ -153,6 +154,7 @@
 		8E8ECCEA1A5B824200373FFB /* Player_Usecases.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Player_Usecases.rtf; sourceTree = "<group>"; };
 		8E8ECCEC1A5BADA900373FFB /* FLUpvoteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLUpvoteButton.swift; sourceTree = "<group>"; };
 		8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedHeaderView.swift; sourceTree = "<group>"; };
+		8E8F075D1A5FA5590052E246 /* FLManagedSongItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLManagedSongItem.swift; sourceTree = "<group>"; };
 		8EAAA1471A5361150041BD16 /* FLColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLColorPalette.swift; sourceTree = "<group>"; };
 		8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTableCell.swift; sourceTree = "<group>"; };
 		8EE1685F1A5F9D9F0014EAB1 /* FLCoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCoreDataStack.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 			children = (
 				8EE1685F1A5F9D9F0014EAB1 /* FLCoreDataStack.swift */,
 				8EE168611A5F9E9C0014EAB1 /* FLDataModel.xcdatamodeld */,
+				8E8F075D1A5FA5590052E246 /* FLManagedSongItem.swift */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -757,6 +760,7 @@
 				8E2C89EE1A5B6DB200293333 /* FLLikeButton.swift in Sources */,
 				8E8ECCF01A5BB69400373FFB /* FLFeedHeaderView.swift in Sources */,
 				8E2C89C71A566E1C00293333 /* FLRootContainerController.swift in Sources */,
+				8E8F075E1A5FA5590052E246 /* FLManagedSongItem.swift in Sources */,
 				8E2C89F01A5B6FA100293333 /* FLHeartIcon.swift in Sources */,
 				8E2C89E51A58995000293333 /* FLPauseIcon.swift in Sources */,
 				8E2E6E6E1A50C1EE00DE49C9 /* FLFeedInteractor.swift in Sources */,

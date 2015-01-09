@@ -32,7 +32,7 @@ class FLFeedDataManager:NSObject {
         
         let songsArray = JSON(json)["tracks"].arrayObject?.map{ track in
             FLSongItem(title: track["title"] as String,
-                username:track["user_name"] as String ,
+                creator:track["user_name"] as String ,
                 streamURL:track["stream_url"] as String,
                 milliSecondsDuration: track["duration"] as Double,
                 soundcloudId: track["soundcloud_id"] as Double)

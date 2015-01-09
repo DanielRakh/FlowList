@@ -9,7 +9,7 @@
 import UIKit
 
 class FLFeedViewController: UIViewController {
-    
+
     //MARK:
     //MARK: Properties
     
@@ -43,7 +43,6 @@ class FLFeedViewController: UIViewController {
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.backgroundColor = UIColor.clearColor()
     }
-    
     
     
     //MARK: View Life Cycle
@@ -117,7 +116,7 @@ extension FLFeedViewController: UITableViewDataSource {
     }
     
     func setupCellForSong(cell:FLFeedTableCell, song:FLSongItem) {
-        cell.creatorLabel.text = song.username
+        cell.creatorLabel.text = song.creator
         cell.titleLabel.text = song.title
     }
     
