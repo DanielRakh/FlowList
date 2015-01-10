@@ -11,6 +11,8 @@ import Foundation
 
 class FLFeedTrendingDataManager:NSObject {
     
+    var dataStore:FLCoreDataStack?
+    
     let feedNetworkService = FLFeedNetworkService()
     
     func fetchSongsForQuery(query:String, onFailure fail:(NSError -> Void)? = nil, onSuccess succeed:([FLSongItem] -> Void)? = nil) {
@@ -41,6 +43,20 @@ class FLFeedTrendingDataManager:NSObject {
         
     }
     
+    func queueNewSong(song:FLSongItem) {
+        
+        let newSongItem = dataStore?.newSongItem() as FLManagedSongItem!
+        newSongItem.title = song.title
+        newSongItem.creator = song.creator
+        newSongItem.soundCloudID = "\(song.soundcloudId)"
+        newSongItem.streamURL = song.streamURL
+        newSongItem.milliSecondsDuration = NSNumber(double: song.milliSecondsDuration)
+        
+        dataStore?.saveContext()
+        
+    }
+    
+
     
 
 }

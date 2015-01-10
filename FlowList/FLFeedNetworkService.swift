@@ -15,7 +15,6 @@ class FLFeedNetworkService {
     enum SongRouter: URLRequestConvertible, Printable {
         
         private static let baseURLString = "http://flowlist.io"
-        
         case New(String, Int)
         case Trending(String, Int)
         case Liked(String, Int)
@@ -53,6 +52,7 @@ class FLFeedNetworkService {
 
     }
     
+
     func fetchDataForQuery(query:String, onFailure fail:(NSError -> Void)? = nil, onSuccess succeed:(AnyObject -> Void)? = nil) {
         
         if fail == nil && succeed == nil { return }

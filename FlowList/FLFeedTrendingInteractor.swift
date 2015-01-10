@@ -35,14 +35,19 @@ class FLFeedTrendingInteractor:NSObject {
             FLTrendingSongItem(title: $0.title, creator: $0.creator, streamURL: $0.streamURL, milliSecondsDuration: $0.milliSecondsDuration, soundcloudId: $0.soundcloudId)
         })
     }
-    
-}
 
+}
 
 extension FLFeedTrendingInteractor: FLFeedTrendingInteractorInput {
     
     func initialSetup() {
         findTrendingSongs()
+    }
+    
+    func queueSong(song:FLTrendingSongItem) {
+        
+        let songItem = FLSongItem(title: song.title, creator: song.creator, streamURL: song.streamURL, milliSecondsDuration: song.milliSecondsDuration, soundcloudId: song.soundcloudId)
+        dataManager.queueNewSong(songItem)
     }
     
 }

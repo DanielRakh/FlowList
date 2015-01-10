@@ -42,3 +42,11 @@ extension FLPlayerPresenter:FLPlayerViewOutput {
 extension FLPlayerPresenter: FLPlayerInteractorOutput {
     
 }
+
+
+extension FLPlayerPresenter: FLFeedModuleDelegate {
+    
+    func feedModuleDidSelectSong() {
+        playerInteractor?.returnQueuedSong()
+    }
+}

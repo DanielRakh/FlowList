@@ -14,4 +14,6 @@ protocol FLFeedTrendingViewInput {
 
 protocol FLFeedTrendingViewOutput {
     func initialSetup()
+    func queueSong(song:FLTrendingSongItem)
+
 }

@@ -13,6 +13,7 @@ class FLFeedTrendingPresenter: NSObject {
     var userInterface:FLFeedTrendingViewInput?
     var feedInteractor:FLFeedTrendingInteractor?
     var feedWireframe:FLFeedTrendingWireframe?
+    var feedModuleDelegate:FLFeedModuleDelegate?
 
 }
 
@@ -23,8 +24,9 @@ extension FLFeedTrendingPresenter:FLFeedTrendingViewOutput {
         feedInteractor?.initialSetup()
     }
     
-    func queueSong() {
-        
+    func queueSong(song:FLTrendingSongItem) {
+        feedInteractor?.queueSong(song)
+        feedModuleDelegate?.feedModuleDidSelectSong()
     }
 }
 

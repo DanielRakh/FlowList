@@ -72,6 +72,23 @@ class FLCoreDataStack {
         }
     }
     
+    func fetchAllEntries(completionBlock:(([FLManagedSongItem]) -> Void)!) {
+        let fetchRequest = NSFetchRequest(entityName: "FLManagedSongItem")
+        managedObjectContext?.performBlock {
+            
+            var error:NSError?
+            
+            let queryResults = self.managedObjectContext?.executeFetchRequest(fetchRequest, error: &error)
+            if error == nil {
+                let managedResults = queryResults! as [FLManagedSongItem]
+                completionBlock(managedResults)
+            } else {
+                println("Error Fetching Core Data: \(error?.localizedDescription)")
+            }
+        
+        }
+    }
+    
     func newSongItem() -> FLManagedSongItem {
         
         let entityDescription = NSEntityDescription.entityForName("FLManagedSongItem", inManagedObjectContext: managedObjectContext)

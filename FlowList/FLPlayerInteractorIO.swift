@@ -9,7 +9,9 @@
 import Foundation
 
 protocol FLPlayerInteractorInput {
+    func returnQueuedSong()
 }
 
 protocol FLPlayerInteractorOutput {
+//    func 
 }

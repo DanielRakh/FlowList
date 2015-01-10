@@ -89,7 +89,8 @@ extension FLFeedTrendingTableViewController: UITableViewDelegate {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        eventHandler?.queueSong()
+        let trendingSongItem = songs![indexPath.row] as FLTrendingSongItem
+        eventHandler?.queueSong(trendingSongItem)
     }
 }
 
