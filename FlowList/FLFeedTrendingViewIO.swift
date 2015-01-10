@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol FLFeedViewInput {
+protocol FLFeedTrendingViewInput {
     func showSongs(songs:[FLSongItem])
 }
 
-protocol FLFeedViewOutput {
+protocol FLFeedTrendingViewOutput {
     func initialSetup()
 }

@@ -15,7 +15,7 @@ class FLFeedTrendingTableViewController: UITableViewController {
     //MARK: Properties
     
     //MARK: Public
-    var eventHandler:FLFeedPresenter! {
+    var eventHandler:FLFeedTrendingPresenter! {
         didSet {
             eventHandler!.userInterface = self
         }
@@ -26,8 +26,6 @@ class FLFeedTrendingTableViewController: UITableViewController {
     private let cellIdentifier = "FeedCell"
     private var songs:[FLSongItem]?
 
-    
-    
     //MARK:
     //MARK: Methods
 
@@ -44,6 +42,7 @@ class FLFeedTrendingTableViewController: UITableViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.contentInset = UIEdgeInsetsMake(54, 0, 0, 0)
+
     }
     
     func setupViews() {
@@ -96,7 +95,7 @@ extension FLFeedTrendingTableViewController: UITableViewDelegate {
 
 
 //MARK: Feed View Input
-extension FLFeedTrendingTableViewController: FLFeedViewInput {
+extension FLFeedTrendingTableViewController: FLFeedTrendingViewInput {
     
     func showSongs(songs:[FLSongItem]) {
         self.songs = songs

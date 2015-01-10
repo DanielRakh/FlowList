@@ -16,7 +16,7 @@ class FLRootWireframe : NSObject {
     var rootContainerPresenter: FLRootContainerPresenter?
     
     
-    var feedWireframe: FLFeedWireframe?
+    var feedWireframe: FLFeedRootWireframe?
     var playerWireframe: FLPlayerWireframe?
     
     func presentRootContainerViewControllerFromWindow(window:UIWindow) {
@@ -28,8 +28,8 @@ class FLRootWireframe : NSObject {
         
     }
     
-    func setupFeedInterfaceFromViewController(controller:FLFeedRootViewController) {
-        feedWireframe?.setupFeedInterfaceFromViewController(controller)
+    func setupFeedRootInterfaceForViewController(controller:FLFeedRootViewController) {
+        feedWireframe?.setupFeedRootInterfaceForViewController(controller)
     }
     
     func setupPlayerInterfaceFromViewController(controller:FLPlayerViewController) {

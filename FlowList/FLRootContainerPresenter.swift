@@ -14,8 +14,8 @@ class FLRootContainerPresenter: NSObject {
     var userInterface:FLRootContainerViewInput?
 
     
-    func setupFeedModuleForViewController(viewController:FLFeedRootViewController) {
-        rootWireframe?.setupFeedInterfaceFromViewController(viewController)
+    func setupFeedRootModuleForViewController(viewController:FLFeedRootViewController) {
+        rootWireframe?.setupFeedRootInterfaceForViewController(viewController)
     }
     
     func setupPlayerModuleForViewController(viewController:FLPlayerViewController) {

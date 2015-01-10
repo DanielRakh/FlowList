@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol FLFeedInteractorInput {
+protocol FLFeedTrendingInteractorInput {
     func initialSetup()
 }
 
-protocol FLFeedInteractorOutput {
+protocol FLFeedTrendingInteractorOutput {
     func foundAllSongs(songs:[FLSongItem])
 }

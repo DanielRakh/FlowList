@@ -14,7 +14,7 @@ class FLFeedRootViewController: UIViewController {
     //MARK: Properties
     
     //MARK: Public
-    var eventHandler:FLFeedPresenter?
+    var eventHandler:FLFeedRootPresenter?
 
 
     //MARK: IBOutlets
@@ -43,25 +43,51 @@ class FLFeedRootViewController: UIViewController {
     
     @IBAction func newButtonDidTouch(sender: AnyObject) {
         tableViewHeader.listMode = .New
-        
+        animateForConstant(-view.bounds.size.width)
     }
     
     @IBAction func trendingButtonDidTouch(sender: AnyObject) {
         tableViewHeader.listMode = .Trending
+        animateForConstant(0)
     }
     
     @IBAction func likesButtonDidTouch(sender: AnyObject) {
         tableViewHeader.listMode = .Likes
+        animateForConstant(view.bounds.size.width)
     }
     
     //MARK: Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "embedTrendingVC" {
-            (segue.destinationViewController as FLFeedTrendingTableViewController).eventHandler = eventHandler
+            eventHandler?.setupFeedTrendModuleForViewController(segue.destinationViewController as FLFeedTrendingTableViewController)
+        } else if segue.identifier == "embedNewVC"  {
+            eventHandler?.setupFeedNewModuleForViewController(segue.destinationViewController as FLFeedNewTableViewController)
+        } else if segue.identifier == "embedLikesVC" {
+            eventHandler?.setupFeedLikesModuleForViewController(segue.destinationViewController as FLFeedLikesTableViewController)            
+        }
+    }
+    
+    
+    func animateForConstant(constant:CGFloat) {
+        
+        centerXTrendingViewToSuperView.constant = constant
+        UIView.animateWithDuration(0.35, delay: 0.0,
+            usingSpringWithDamping: 0.8,
+            initialSpringVelocity: 0.2,
+            options: .CurveEaseInOut,
+            animations: { () -> Void in
+                self.view.layoutIfNeeded()
+            }) { (success:Bool) -> Void in
+                //
         }
     }
 
+
+}
+
+extension FLFeedRootViewController: FLFeedRootViewInput {
+    
 }
 
 

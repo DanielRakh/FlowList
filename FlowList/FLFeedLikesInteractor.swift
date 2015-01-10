@@ -1,23 +1,23 @@
 //
-//  FeedInteractor.swift
+//  FLFeedLikesInteractor.swift
 //  FlowList
 //
-//  Created by Daniel on 12/28/14.
-//  Copyright (c) 2014 Daniel Rakhamimov. All rights reserved.
+//  Created by Daniel on 1/10/15.
+//  Copyright (c) 2015 Daniel Rakhamimov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class FLFeedInteractor:NSObject {
+class FLFeedLikesInteractor: NSObject {
+   
+    let dataManager:FLFeedLikesDataManager
     
-    let dataManager:FLFeedDataManager
+    var output:FLFeedLikesInteractorOutput?
     
-    var output:FLFeedInteractorOutput?
-    
-    init(dataManager:FLFeedDataManager) {
+    init(dataManager:FLFeedLikesDataManager) {
         self.dataManager = dataManager
     }
-
+    
     func findAllSongs() {
         
         dataManager.fetchSongsForQuery("Boiler Room", onFailure: { error in
@@ -31,11 +31,10 @@ class FLFeedInteractor:NSObject {
 }
 
 
-extension FLFeedInteractor: FLFeedInteractorInput {
+extension FLFeedLikesInteractor: FLFeedLikesInteractorInput {
     
     func initialSetup() {
         findAllSongs()
     }
     
 }
-

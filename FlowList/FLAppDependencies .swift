@@ -28,20 +28,13 @@ class FLAppDependencies {
         rootWireframe.rootContainerPresenter = rootPresenter
         
         
-        let feedWireframe = FLFeedWireframe()
-        
-        rootWireframe.feedWireframe = feedWireframe
+        let feedRootWireframe = FLFeedRootWireframe()
+        rootWireframe.feedWireframe = feedRootWireframe
 
-        let feedPresenter = FLFeedPresenter()
-        let feedDataManager = FLFeedDataManager()
-        let feedInteractor = FLFeedInteractor(dataManager: feedDataManager)
+        let feedRootPresenter = FLFeedRootPresenter()
+        feedRootPresenter.feedRootWireframe = feedRootWireframe
+        feedRootWireframe.rootPresenter = feedRootPresenter
         
-        feedPresenter.feedInteractor = feedInteractor
-        feedPresenter.feedWireframe = feedWireframe
-        
-        feedWireframe.feedPresenter = feedPresenter
-        
-        feedInteractor.output = feedPresenter
         
         
         
@@ -59,6 +52,58 @@ class FLAppDependencies {
         playerWireframe.playerPresenter = playerPresenter
         
         playerInteractor.output = playerPresenter
+        
+        
+        
+        let trendingWireframe = FLFeedTrendingWireframe()
+        feedRootWireframe.trendingWireframe = trendingWireframe
+        
+        let trendingPresenter = FLFeedTrendingPresenter()
+        let trendingDataManager = FLFeedTrendingDataManager()
+        let trendingInteractor = FLFeedTrendingInteractor(dataManager: trendingDataManager)
+        
+        trendingPresenter.feedInteractor = trendingInteractor
+        trendingPresenter.feedWireframe = trendingWireframe
+        
+        trendingWireframe.trendingPresenter = trendingPresenter
+        
+        trendingInteractor.output = trendingPresenter
+        
+        
+        
+        let newWireframe = FLFeedNewWireframe()
+        feedRootWireframe.newWireframe = newWireframe
+        
+        let newPresenter = FLFeedNewPresenter()
+        let newDataManager = FLFeedNewDataManager()
+        let newInteractor = FLFeedNewInteractor(dataManager: newDataManager)
+        
+        newPresenter.feedInteractor = newInteractor
+        newPresenter.feedWireframe = newWireframe
+        
+        newWireframe.newPresenter = newPresenter
+        
+        newInteractor.output = newPresenter
+        
+        
+        let likesWireframe = FLFeedLikesWireframe()
+        feedRootWireframe.likesWireframe = likesWireframe
+        
+        let likesPresenter = FLFeedLikesPresenter()
+        let likesDataManager = FLFeedLikesDataManager()
+        let likesInteractor = FLFeedLikesInteractor(dataManager: likesDataManager)
+        
+        likesPresenter.feedInteractor = likesInteractor
+        likesPresenter.feedWireframe = likesWireframe
+        
+        likesWireframe.likesPresenter = likesPresenter
+        
+        likesInteractor.output = likesPresenter
+        
+        
+        
+        
+        
         
     }
 }
