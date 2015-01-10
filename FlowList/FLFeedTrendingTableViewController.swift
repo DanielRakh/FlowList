@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class FLFeedTrendingTableViewController: UITableViewController {
     
     //MARK:
@@ -24,7 +23,7 @@ class FLFeedTrendingTableViewController: UITableViewController {
     //MARK: Private
 
     private let cellIdentifier = "FeedCell"
-    private var songs:[FLSongItem]?
+    private var songs:[FLTrendingSongItem]?
 
     //MARK:
     //MARK: Methods
@@ -78,7 +77,7 @@ extension FLFeedTrendingTableViewController: UITableViewDataSource {
         return cell
     }
     
-    func setupCellForSong(cell:FLFeedTableCell, song:FLSongItem) {
+    func setupCellForSong(cell:FLFeedTableCell, song:FLTrendingSongItem) {
         cell.creatorLabel.text = song.creator
         cell.titleLabel.text = song.title
     }
@@ -89,7 +88,8 @@ extension FLFeedTrendingTableViewController: UITableViewDataSource {
 extension FLFeedTrendingTableViewController: UITableViewDelegate {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Table View Did Select row")
+        
+        eventHandler?.queueSong()
     }
 }
 
@@ -97,7 +97,7 @@ extension FLFeedTrendingTableViewController: UITableViewDelegate {
 //MARK: Feed View Input
 extension FLFeedTrendingTableViewController: FLFeedTrendingViewInput {
     
-    func showSongs(songs:[FLSongItem]) {
+    func showTrendingSongs(songs:[FLTrendingSongItem]) {
         self.songs = songs
         tableView.reloadData()
     }

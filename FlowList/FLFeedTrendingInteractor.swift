@@ -18,23 +18,31 @@ class FLFeedTrendingInteractor:NSObject {
         self.dataManager = dataManager
     }
 
-    func findAllSongs() {
+    func findTrendingSongs() {
         
         dataManager.fetchSongsForQuery("Boiler Room", onFailure: { error in
             println("There was an error fetching the songs\(error.localizedDescription)")
             }, onSuccess: { songItems in
-               if let interactorOutput = self.output {
-                    interactorOutput.foundAllSongs(songItems)
-                }
+                
+                let trendingSongs = self.trendingSongsForSongItems(songItems)
+                self.output?.foundTrendingSongs(trendingSongs)
         })
     }
+    
+    func trendingSongsForSongItems(songItems:[FLSongItem]) -> [FLTrendingSongItem] {
+        
+       return songItems.map({
+            FLTrendingSongItem(title: $0.title, creator: $0.creator, streamURL: $0.streamURL, milliSecondsDuration: $0.milliSecondsDuration, soundcloudId: $0.soundcloudId)
+        })
+    }
+    
 }
 
 
 extension FLFeedTrendingInteractor: FLFeedTrendingInteractorInput {
     
     func initialSetup() {
-        findAllSongs()
+        findTrendingSongs()
     }
     
 }

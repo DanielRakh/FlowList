@@ -13,5 +13,5 @@ protocol FLFeedTrendingInteractorInput {
 }
 
 protocol FLFeedTrendingInteractorOutput {
-    func foundAllSongs(songs:[FLSongItem])
+    func foundTrendingSongs(songs:[FLTrendingSongItem])
 }

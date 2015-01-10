@@ -9,7 +9,7 @@
 import Foundation
 
 protocol FLFeedTrendingViewInput {
-    func showSongs(songs:[FLSongItem])
+    func showTrendingSongs(songs:[FLTrendingSongItem])
 }
 
 protocol FLFeedTrendingViewOutput {

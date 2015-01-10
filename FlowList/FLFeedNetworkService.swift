@@ -10,8 +10,6 @@ import Foundation
 import Alamofire
 
 
-
-
 class FLFeedNetworkService {
     
     enum SongRouter: URLRequestConvertible, Printable {
@@ -28,15 +26,15 @@ class FLFeedNetworkService {
                     
                 case New(let query, let count):
                     let params = ["query": query]
-                    return("/search/",params)
+                    return("/search",params)
                     
                 case Trending(let query, let count):
                     let params = ["query": query]
-                    return("/search/",params)
+                    return("/search",params)
                     
                 case Liked(let query, let count):
                     let params = ["query": query]
-                    return("/search/",params)
+                    return("/search",params)
                 }
                 
             }()
@@ -55,18 +53,12 @@ class FLFeedNetworkService {
 
     }
     
-    private let searchParam = "search"
-    private let queryParam = "query"
-    private let apiURL = "http://flowlist.io/"
-    
     func fetchDataForQuery(query:String, onFailure fail:(NSError -> Void)? = nil, onSuccess succeed:(AnyObject -> Void)? = nil) {
         
         if fail == nil && succeed == nil { return }
         
-        let parameters = [searchParam : [queryParam : query]]
         
-        Alamofire.request(.POST, apiURL + searchParam, parameters: parameters).responseJSON { (request, response, json , error) in
-            println((request as NSURLRequest).allHTTPHeaderFields)
+        Alamofire.request(SongRouter.Trending(query, 10)).responseJSON { (request, response, json , error) in
             if error != nil {
                 if let didFail = fail {
                     didFail(error!)
@@ -75,6 +67,7 @@ class FLFeedNetworkService {
                 assert(json != nil, "There must be some JSON returned if there is no error.")
                 if json != nil {
                     if let didSucceed = succeed {
+                        println(json)
                         didSucceed(json!)
                     }
                 }
