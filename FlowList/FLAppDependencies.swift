@@ -48,7 +48,7 @@ class FLAppDependencies {
         playerDataManager.coreDataStore = coreDataStore
         let playerInteractor = FLPlayerInteractor(dataManager: playerDataManager)
         
-        playerPresenter.playerInteractor = playerInteractor
+        playerPresenter.playerInteractorInput = playerInteractor
         playerPresenter.playerWireframe = playerWireframe
         
         playerWireframe.playerPresenter = playerPresenter

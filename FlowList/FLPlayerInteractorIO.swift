@@ -9,9 +9,8 @@
 import Foundation
 
 protocol FLPlayerInteractorInput {
-    func returnQueuedSong()
+    func returnNextQueuedSong()
 }
-
 protocol FLPlayerInteractorOutput {
     func queuedSongs(songs:[FLSongItem])
 }

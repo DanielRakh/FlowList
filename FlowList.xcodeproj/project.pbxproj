@@ -78,6 +78,8 @@
 		8E8F07A41A61CBF60052E246 /* FLFeedModuleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F07A31A61CBF60052E246 /* FLFeedModuleDelegate.swift */; };
 		8EAAA1481A5361150041BD16 /* FLColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1471A5361150041BD16 /* FLColorPalette.swift */; };
 		8EAAA14D1A5533FB0041BD16 /* FLFeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */; };
+		8EAFB75C1A63083B00341D3A /* FLPlayerAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFB75B1A63083B00341D3A /* FLPlayerAudioManager.swift */; };
+		8EAFB75E1A6314DF00341D3A /* FLPlayerAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFB75B1A63083B00341D3A /* FLPlayerAudioManager.swift */; };
 		8ECE982A1A523DA50052FCA0 /* FLFeedTrendingInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39081A523A0100BFDD12 /* FLFeedTrendingInteractorIO.swift */; };
 		8EE168601A5F9D9F0014EAB1 /* FLCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1685F1A5F9D9F0014EAB1 /* FLCoreDataStack.swift */; };
 		8EE168631A5F9E9C0014EAB1 /* FLDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EE168611A5F9E9C0014EAB1 /* FLDataModel.xcdatamodeld */; };
@@ -200,6 +202,7 @@
 		8E8F07A31A61CBF60052E246 /* FLFeedModuleDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedModuleDelegate.swift; sourceTree = "<group>"; };
 		8EAAA1471A5361150041BD16 /* FLColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLColorPalette.swift; sourceTree = "<group>"; };
 		8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTableCell.swift; sourceTree = "<group>"; };
+		8EAFB75B1A63083B00341D3A /* FLPlayerAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlayerAudioManager.swift; sourceTree = "<group>"; };
 		8EE1685F1A5F9D9F0014EAB1 /* FLCoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCoreDataStack.swift; sourceTree = "<group>"; };
 		8EE168621A5F9E9C0014EAB1 /* FLDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FLDataModel.xcdatamodel; sourceTree = "<group>"; };
 		8EFBB0241A45F015003DDDC9 /* FlowList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				8E2C89BC1A566D4400293333 /* FLPlayerPresenter.swift */,
+				8EAFB75B1A63083B00341D3A /* FLPlayerAudioManager.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -969,6 +973,7 @@
 				8E8F07811A60FD470052E246 /* FLFeedTrendingPresenter.swift in Sources */,
 				8E3D39091A523A0100BFDD12 /* FLFeedTrendingInteractorIO.swift in Sources */,
 				8E2C89BD1A566D4400293333 /* FLPlayerPresenter.swift in Sources */,
+				8EAFB75C1A63083B00341D3A /* FLPlayerAudioManager.swift in Sources */,
 				8E2C89E71A58996000293333 /* FLPlayIcon.swift in Sources */,
 				8E2C89EE1A5B6DB200293333 /* FLLikeButton.swift in Sources */,
 				8E8ECCF01A5BB69400373FFB /* FLFeedHeaderView.swift in Sources */,
@@ -997,6 +1002,7 @@
 				8E8F07A01A61A3170052E246 /* FLTrendingSongItem.swift in Sources */,
 				8E8F07A11A61C89F0052E246 /* FLCoreDataStack.swift in Sources */,
 				8E2E6E731A50CCEE00DE49C9 /* FLFeedNetworkService.swift in Sources */,
+				8EAFB75E1A6314DF00341D3A /* FLPlayerAudioManager.swift in Sources */,
 				8E2E6E761A511A8300DE49C9 /* SwiftyJSON.swift in Sources */,
 				8E2E6E791A511BB500DE49C9 /* FLFeedTrendingDataManager.swift in Sources */,
 				8E2E6E6F1A50C1EE00DE49C9 /* FLFeedTrendingInteractor.swift in Sources */,

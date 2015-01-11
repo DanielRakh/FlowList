@@ -11,15 +11,17 @@ import UIKit
 class FLPlayerPresenter: NSObject {
 
     var userInterface:FLPlayerViewInput?
-    var playerInteractor:FLPlayerInteractor?
+    var playerInteractorInput:FLPlayerInteractorInput?
     var playerWireframe:FLPlayerWireframe?
+    let audioManager = FLPlayerAudioManager.shared
+    var songs:[FLSongItem]?
 }
 
 extension FLPlayerPresenter:FLPlayerViewOutput {
     
     func playButtonDidTouch() {
         //TODO: Check if song is already playing
-        
+        playSong()
     }
     
     func pauseButtonDidTouch() {
@@ -36,12 +38,19 @@ extension FLPlayerPresenter:FLPlayerViewOutput {
         //TODO: Check if song is already unliked
         
     }
+    
+    func playSong() {
+        let URL = NSURL(string: (songs?[0] as FLSongItem!).streamURL)
+        audioManager.playItemForURL(URL!)
+    }
+    
 }
 
 
 extension FLPlayerPresenter: FLPlayerInteractorOutput {
     
     func queuedSongs(songs:[FLSongItem]) {
+        self.songs = songs
         userInterface?.setupInterfaceForSong(songs[0])
     }
 }
@@ -50,7 +59,7 @@ extension FLPlayerPresenter: FLPlayerInteractorOutput {
 extension FLPlayerPresenter: FLFeedModuleDelegate {
     
     func feedModuleDidSelectSong() {
-        playerInteractor?.returnQueuedSong()
+        playerInteractorInput?.returnNextQueuedSong()
     }
 }
 

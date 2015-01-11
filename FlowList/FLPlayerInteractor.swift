@@ -9,27 +9,26 @@
 import UIKit
 
 class FLPlayerInteractor: NSObject {
-   
-    let dataManager:FLPlayerDataManger?
     
+    let dataManager:FLPlayerDataManger?
     var output:FLPlayerInteractorOutput?
     
     init(dataManager:FLPlayerDataManger) {
         self.dataManager = dataManager
     }
     
-
-}
-
-
-extension FLPlayerInteractor: FLPlayerInteractorInput {
-    
-    func returnQueuedSong() {
+    func returnSongs() {
         dataManager?.songItemsFromDataStoreQueue { songItems in
             println("Songs:\(songItems)")
             self.output!.queuedSongs(songItems)
         }
     }
+
+}
+
+extension FLPlayerInteractor: FLPlayerInteractorInput {
     
-    
+    func returnNextQueuedSong() {
+        returnSongs()
+    }
 }
