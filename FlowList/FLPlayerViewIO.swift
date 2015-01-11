@@ -11,6 +11,8 @@ import Foundation
 
 protocol FLPlayerViewInput {
     
+    func setupInterfaceForSong(song:FLSongItem)
+    
 }
 
 protocol FLPlayerViewOutput {

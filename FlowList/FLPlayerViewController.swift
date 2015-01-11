@@ -12,6 +12,10 @@ class FLPlayerViewController: UIViewController {
 
     var eventHandler:FLPlayerPresenter?
 
+    @IBOutlet weak var creatorTitleLabel: UILabel!
+    @IBOutlet weak var songTitleLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.FLCHazyBlue()
@@ -46,5 +50,10 @@ class FLPlayerViewController: UIViewController {
 
 
 extension FLPlayerViewController: FLPlayerViewInput {
+    
+    func setupInterfaceForSong(song:FLSongItem) {
+        creatorTitleLabel.text = song.creator
+        songTitleLabel.text = song.title
+    }
     
 }

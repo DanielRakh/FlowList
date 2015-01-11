@@ -493,6 +493,10 @@
                         </variation>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="creatorTitleLabel" destination="ALa-8y-Y8c" id="iTr-Xb-HGc"/>
+                        <outlet property="songTitleLabel" destination="qNx-hA-G3P" id="kdn-4e-cwe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJ4-IQ-3by" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

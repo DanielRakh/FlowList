@@ -42,7 +42,7 @@ extension FLPlayerPresenter:FLPlayerViewOutput {
 extension FLPlayerPresenter: FLPlayerInteractorOutput {
     
     func queuedSongs(songs:[FLSongItem]) {
-        println(songs)
+        userInterface?.setupInterfaceForSong(songs[0])
     }
 }
 
@@ -53,3 +53,13 @@ extension FLPlayerPresenter: FLFeedModuleDelegate {
         playerInteractor?.returnQueuedSong()
     }
 }
+
+
+
+
+
+
+
+
+
+
