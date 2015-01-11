@@ -32,16 +32,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-dT-ip7">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-dT-ip7" userLabel="Feed Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <connections>
                                     <segue destination="ObG-NA-bx0" kind="embed" identifier="presentFeedController" id="Bc5-Ju-SC1"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7t8-lZ-HVd">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7t8-lZ-HVd" userLabel="Player Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="xTb-v9-uLD"/>
+                                    <constraint firstAttribute="height" constant="70" id="xTb-v9-uLD">
+                                        <variation key="widthClass=compact" constant="140"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -66,7 +68,9 @@
                             <constraint firstItem="173-a1-snK" firstAttribute="top" secondItem="ovf-dT-ip7" secondAttribute="bottom" id="cVG-mw-NPK"/>
                             <constraint firstItem="ovf-dT-ip7" firstAttribute="leading" secondItem="s2k-3M-hek" secondAttribute="leading" id="crt-t1-b1U"/>
                             <constraint firstAttribute="trailing" secondItem="7t8-lZ-HVd" secondAttribute="trailing" id="foZ-1d-30G"/>
-                            <constraint firstItem="173-a1-snK" firstAttribute="top" secondItem="7t8-lZ-HVd" secondAttribute="bottom" id="yTt-Ye-JFx"/>
+                            <constraint firstItem="173-a1-snK" firstAttribute="top" secondItem="7t8-lZ-HVd" secondAttribute="bottom" id="yTt-Ye-JFx">
+                                <variation key="widthClass=compact" constant="-70"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -100,6 +104,10 @@
                         </variation>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="bottomSpacePlayerContainerViewToSuperView" destination="yTt-Ye-JFx" id="AXC-I6-5zT"/>
+                        <outlet property="playerContainerView" destination="7t8-lZ-HVd" id="BQq-nc-m3k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2S-hZ-kNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -513,7 +521,7 @@
                         <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedCell" rowHeight="90" id="Z1j-9B-2rN" customClass="FLFeedTableCell" customModule="FlowList" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedCell" rowHeight="90" id="Z1j-9B-2rN" customClass="FLFeedTableCell" customModule="FlowList" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z1j-9B-2rN" id="ahw-EJ-vfv">
                                     <autoresizingMask key="autoresizingMask"/>

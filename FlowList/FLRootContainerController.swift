@@ -11,6 +11,8 @@ import UIKit
 class FLRootContainerController: UIViewController {
     
     var eventHandler:FLRootContainerPresenter?
+    @IBOutlet weak var playerContainerView: UIView!
+    @IBOutlet weak var bottomSpacePlayerContainerViewToSuperView: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()

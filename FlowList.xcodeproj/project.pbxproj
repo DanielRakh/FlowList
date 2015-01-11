@@ -15,7 +15,6 @@
 		8E2C89C11A566D5900293333 /* FLPlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89BF1A566D5900293333 /* FLPlayerInteractor.swift */; };
 		8E2C89C31A566D9500293333 /* FLPlayerDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89C21A566D9500293333 /* FLPlayerDataManger.swift */; };
 		8E2C89C41A566D9500293333 /* FLPlayerDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89C21A566D9500293333 /* FLPlayerDataManger.swift */; };
-		8E2C89C71A566E1C00293333 /* FLRootContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89C61A566E1C00293333 /* FLRootContainerController.swift */; };
 		8E2C89CD1A56749300293333 /* FLRootContainerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89CC1A56749300293333 /* FLRootContainerPresenter.swift */; };
 		8E2C89D01A5679C500293333 /* FLPlayerViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89CF1A5679C500293333 /* FLPlayerViewIO.swift */; };
 		8E2C89D31A5679FE00293333 /* FLPlayerInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89D21A5679FE00293333 /* FLPlayerInteractorIO.swift */; };
@@ -48,6 +47,7 @@
 		8E3D39091A523A0100BFDD12 /* FLFeedTrendingInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39081A523A0100BFDD12 /* FLFeedTrendingInteractorIO.swift */; };
 		8E3DE31A1A55FBAB00FB79FC /* FLUpvoteIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DE3191A55FBAB00FB79FC /* FLUpvoteIcon.swift */; };
 		8E3DE3281A56009700FB79FC /* FLVectorIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DE3271A56009700FB79FC /* FLVectorIcon.swift */; };
+		8E47DCF21A633196009B1A08 /* FLRootContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89C61A566E1C00293333 /* FLRootContainerController.swift */; };
 		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8E8ECCEB1A5B824200373FFB /* Player_Usecases.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEA1A5B824200373FFB /* Player_Usecases.rtf */; };
 		8E8ECCED1A5BADA900373FFB /* FLUpvoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEC1A5BADA900373FFB /* FLUpvoteButton.swift */; };
@@ -957,6 +957,7 @@
 				8E8F07951A611A140052E246 /* FLFeedRootViewIO.swift in Sources */,
 				8E8F079F1A6199720052E246 /* FLTrendingSongItem.swift in Sources */,
 				8E8F07671A6091630052E246 /* FLFeedLikesTableViewController.swift in Sources */,
+				8E47DCF21A633196009B1A08 /* FLRootContainerController.swift in Sources */,
 				8E2C89CD1A56749300293333 /* FLRootContainerPresenter.swift in Sources */,
 				8E3D38D31A520CFB00BFDD12 /* FLFeedRootWireframe.swift in Sources */,
 				8E3DE3281A56009700FB79FC /* FLVectorIcon.swift in Sources */,
@@ -977,7 +978,6 @@
 				8E2C89E71A58996000293333 /* FLPlayIcon.swift in Sources */,
 				8E2C89EE1A5B6DB200293333 /* FLLikeButton.swift in Sources */,
 				8E8ECCF01A5BB69400373FFB /* FLFeedHeaderView.swift in Sources */,
-				8E2C89C71A566E1C00293333 /* FLRootContainerController.swift in Sources */,
 				8E8F07851A60FFED0052E246 /* FLFeedTrendingWireframe.swift in Sources */,
 				8E8F07991A6120580052E246 /* FLFeedLikesViewIO.swift in Sources */,
 				8E8F075E1A5FA5590052E246 /* FLManagedSongItem.swift in Sources */,
