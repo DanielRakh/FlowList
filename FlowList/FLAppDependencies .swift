@@ -36,6 +36,7 @@ class FLAppDependencies {
         feedRootWireframe.rootPresenter = feedRootPresenter
         
         
+        let coreDataStore = FLCoreDataStack()
         
         
         let playerWireframe = FLPlayerWireframe()
@@ -44,6 +45,7 @@ class FLAppDependencies {
         
         let playerPresenter = FLPlayerPresenter()
         let playerDataManager = FLPlayerDataManger()
+        playerDataManager.coreDataStore = coreDataStore
         let playerInteractor = FLPlayerInteractor(dataManager: playerDataManager)
         
         playerPresenter.playerInteractor = playerInteractor
@@ -59,11 +61,14 @@ class FLAppDependencies {
         feedRootWireframe.trendingWireframe = trendingWireframe
         
         let trendingPresenter = FLFeedTrendingPresenter()
+
         let trendingDataManager = FLFeedTrendingDataManager()
+        trendingDataManager.dataStore = coreDataStore
         let trendingInteractor = FLFeedTrendingInteractor(dataManager: trendingDataManager)
         
         trendingPresenter.feedInteractor = trendingInteractor
         trendingPresenter.feedWireframe = trendingWireframe
+        trendingPresenter.feedModuleDelegate = playerPresenter
         
         trendingWireframe.trendingPresenter = trendingPresenter
         

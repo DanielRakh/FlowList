@@ -14,7 +14,7 @@ class FLFeedNetworkService {
     
     enum SongRouter: URLRequestConvertible, Printable {
         
-        private static let baseURLString = "http://flowlist.io"
+        private static let baseURLString = "http://flowlist.io/v1"
         case New(String, Int)
         case Trending(String, Int)
         case Liked(String, Int)
@@ -24,15 +24,15 @@ class FLFeedNetworkService {
                 switch self {
                     
                 case New(let query, let count):
-                    let params = ["query": query]
+                    let params = ["limit": "\(count)", "query": query] as Dictionary
                     return("/search",params)
                     
                 case Trending(let query, let count):
-                    let params = ["query": query]
+                    let params = ["limit": "\(count)", "query": query] as Dictionary
                     return("/search",params)
                     
                 case Liked(let query, let count):
-                    let params = ["query": query]
+                    let params = ["limit": "\(count)","query": query] as Dictionary
                     return("/search",params)
                 }
                 
@@ -57,7 +57,6 @@ class FLFeedNetworkService {
         
         if fail == nil && succeed == nil { return }
         
-        
         Alamofire.request(SongRouter.Trending(query, 10)).responseJSON { (request, response, json , error) in
             if error != nil {
                 if let didFail = fail {
@@ -67,7 +66,6 @@ class FLFeedNetworkService {
                 assert(json != nil, "There must be some JSON returned if there is no error.")
                 if json != nil {
                     if let didSucceed = succeed {
-                        println(json)
                         didSucceed(json!)
                     }
                 }

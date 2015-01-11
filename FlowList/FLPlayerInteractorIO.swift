@@ -13,5 +13,5 @@ protocol FLPlayerInteractorInput {
 }
 
 protocol FLPlayerInteractorOutput {
-//    func 
+    func queuedSongs(songs:[FLSongItem])
 }

@@ -17,6 +17,7 @@ class FLPlayerInteractor: NSObject {
     init(dataManager:FLPlayerDataManger) {
         self.dataManager = dataManager
     }
+    
 
 }
 
@@ -25,7 +26,8 @@ extension FLPlayerInteractor: FLPlayerInteractorInput {
     
     func returnQueuedSong() {
         dataManager?.songItemsFromDataStoreQueue { songItems in
-//            self.output?
+            println("Songs:\(songItems)")
+            self.output!.queuedSongs(songItems)
         }
     }
     
