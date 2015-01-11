@@ -283,21 +283,21 @@
                                 <exclude reference="7gX-bZ-uKN"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="GlH-Ia-Na1"/>
-                                <exclude reference="g8t-xB-DrO"/>
-                                <exclude reference="gEO-5c-VIG"/>
                                 <exclude reference="O71-mc-RnM"/>
                                 <exclude reference="UBQ-Zz-Vgf"/>
                                 <exclude reference="jS2-X1-zoV"/>
                                 <exclude reference="xfc-go-mkG"/>
                                 <exclude reference="yEG-P2-Xgc"/>
-                                <exclude reference="Uqy-zo-Mkb"/>
-                                <exclude reference="sUy-kE-JoY"/>
-                                <exclude reference="vik-6e-fXS"/>
                                 <exclude reference="Pvx-Bu-Zq2"/>
                                 <exclude reference="ngK-Z2-nX3"/>
                                 <exclude reference="sTE-BM-7OE"/>
                                 <exclude reference="ufg-Hc-Cwq"/>
+                                <exclude reference="Uqy-zo-Mkb"/>
+                                <exclude reference="sUy-kE-JoY"/>
+                                <exclude reference="vik-6e-fXS"/>
+                                <exclude reference="GlH-Ia-Na1"/>
+                                <exclude reference="g8t-xB-DrO"/>
+                                <exclude reference="gEO-5c-VIG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -308,21 +308,21 @@
                                 <include reference="7gX-bZ-uKN"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="GlH-Ia-Na1"/>
-                                <include reference="g8t-xB-DrO"/>
-                                <include reference="gEO-5c-VIG"/>
                                 <include reference="O71-mc-RnM"/>
                                 <include reference="UBQ-Zz-Vgf"/>
                                 <include reference="jS2-X1-zoV"/>
                                 <include reference="xfc-go-mkG"/>
                                 <include reference="yEG-P2-Xgc"/>
-                                <include reference="Uqy-zo-Mkb"/>
-                                <include reference="sUy-kE-JoY"/>
-                                <include reference="vik-6e-fXS"/>
                                 <include reference="Pvx-Bu-Zq2"/>
                                 <include reference="ngK-Z2-nX3"/>
                                 <include reference="sTE-BM-7OE"/>
                                 <include reference="ufg-Hc-Cwq"/>
+                                <include reference="Uqy-zo-Mkb"/>
+                                <include reference="sUy-kE-JoY"/>
+                                <include reference="vik-6e-fXS"/>
+                                <include reference="GlH-Ia-Na1"/>
+                                <include reference="g8t-xB-DrO"/>
+                                <include reference="gEO-5c-VIG"/>
                             </mask>
                         </variation>
                     </view>
