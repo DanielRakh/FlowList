@@ -12,28 +12,25 @@ class FLPlayerViewController: UIViewController {
 
     var eventHandler:FLPlayerPresenter?
 
+    @IBOutlet weak var topPlayerContainerView: UIView!
+    @IBOutlet weak var hairlineView: FLHairlineView!
     @IBOutlet weak var creatorTitleLabel: UILabel!
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var playButton: FLPlayPauseButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.FLCCherryRed()
+        view.backgroundColor = UIColor.FLCHazyBlue()
         // Do any additional setup after loading the view.
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-//        println(view.constraintsAffectingLayoutForAxis(.Vertical))
-    }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        println(view.constraintsAffectingLayoutForAxis(.Vertical))
+        hairlineView.frame = CGRectMake(0, 0, hairlineView.bounds.size.width, hairlineView.bounds.size.height)
+        topPlayerContainerView.frame = CGRectMake(0, 0, topPlayerContainerView.bounds.size.width, topPlayerContainerView.bounds.size.height)
+        
     }
-    
-    
+
     //MARK:
     //MARK:IBActions
     @IBAction func playPauseButtonDidTouch(sender: FLPlayPauseButton) {

@@ -19,7 +19,6 @@ class FLRootContainerController: UIViewController {
     @IBOutlet weak var bottomSpacePlayerContainerViewToSuperView: NSLayoutConstraint!
     @IBOutlet weak var playerTapGestureRecognizer: UITapGestureRecognizer!
     @IBOutlet weak var feedTapGestureRecognizer: UITapGestureRecognizer!
-
     
     @IBAction func playerViewDidTap(sender: AnyObject) {
         eventHandler?.playerViewDidRecognizeTap()
