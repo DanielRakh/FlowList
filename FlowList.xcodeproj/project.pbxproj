@@ -80,6 +80,7 @@
 		8EAAA14D1A5533FB0041BD16 /* FLFeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */; };
 		8EAFB75C1A63083B00341D3A /* FLPlayerAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFB75B1A63083B00341D3A /* FLPlayerAudioManager.swift */; };
 		8EAFB75E1A6314DF00341D3A /* FLPlayerAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFB75B1A63083B00341D3A /* FLPlayerAudioManager.swift */; };
+		8EBF3F981A639B0200F598E1 /* FLHairlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF3F971A639B0200F598E1 /* FLHairlineView.swift */; };
 		8ECE982A1A523DA50052FCA0 /* FLFeedTrendingInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39081A523A0100BFDD12 /* FLFeedTrendingInteractorIO.swift */; };
 		8EE168601A5F9D9F0014EAB1 /* FLCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1685F1A5F9D9F0014EAB1 /* FLCoreDataStack.swift */; };
 		8EE168631A5F9E9C0014EAB1 /* FLDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EE168611A5F9E9C0014EAB1 /* FLDataModel.xcdatamodeld */; };
@@ -203,6 +204,7 @@
 		8EAAA1471A5361150041BD16 /* FLColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLColorPalette.swift; sourceTree = "<group>"; };
 		8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTableCell.swift; sourceTree = "<group>"; };
 		8EAFB75B1A63083B00341D3A /* FLPlayerAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlayerAudioManager.swift; sourceTree = "<group>"; };
+		8EBF3F971A639B0200F598E1 /* FLHairlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLHairlineView.swift; sourceTree = "<group>"; };
 		8EE1685F1A5F9D9F0014EAB1 /* FLCoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCoreDataStack.swift; sourceTree = "<group>"; };
 		8EE168621A5F9E9C0014EAB1 /* FLDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FLDataModel.xcdatamodel; sourceTree = "<group>"; };
 		8EFBB0241A45F015003DDDC9 /* FlowList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -649,6 +651,7 @@
 				8E8F07691A60EB9B0052E246 /* Cells */,
 				8E8ECCEE1A5BB3F300373FFB /* Buttons */,
 				8E2C89EC1A5B6D5600293333 /* Icons */,
+				8EBF3F971A639B0200F598E1 /* FLHairlineView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -942,6 +945,7 @@
 				8E8F078B1A6100590052E246 /* FLFeedLikesDataManager.swift in Sources */,
 				8E2C89D61A56807300293333 /* FLRootContainerViewIO.swift in Sources */,
 				8E2E6E6B1A50ADF200DE49C9 /* FLSongItem.swift in Sources */,
+				8EBF3F981A639B0200F598E1 /* FLHairlineView.swift in Sources */,
 				8EE168601A5F9D9F0014EAB1 /* FLCoreDataStack.swift in Sources */,
 				8E3D38CA1A52086500BFDD12 /* FLRootWireframe.swift in Sources */,
 				8E8F07A41A61CBF60052E246 /* FLFeedModuleDelegate.swift in Sources */,

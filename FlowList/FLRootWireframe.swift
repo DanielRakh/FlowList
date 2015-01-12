@@ -23,7 +23,6 @@ class FLRootWireframe : NSObject {
         rootContainerViewController = window.rootViewController as? FLRootContainerController
         rootContainerViewController?.eventHandler = rootContainerPresenter
         rootContainerPresenter?.userInterface = rootContainerViewController
-//        showRootViewController(rootContainerViewController?, inWindow: window)
     }
     
     func setupFeedRootInterfaceForViewController(controller:FLFeedRootViewController) {
@@ -38,7 +37,7 @@ class FLRootWireframe : NSObject {
         
         rootContainerViewController?.bottomSpacePlayerContainerViewToSuperView.constant = slideTransition == .Out ? 0 : -rootContainerViewController!.playerContainerView.bounds.size.height * 0.5
         
-        let alpha:CGFloat = slideTransition == .Out ? 0.35 : 0
+        let alpha:CGFloat = slideTransition == .Out ? 0.50 : 0
         
         UIView.animateWithDuration(0.35,
             delay: 0.0,

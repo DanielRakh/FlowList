@@ -11,6 +11,8 @@ import UIKit
 class FLRootContainerController: UIViewController {
     
     var eventHandler:FLRootContainerViewOutput?
+    
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var playerContainerView: UIView!
     @IBOutlet weak var feedContainerView: UIView!
     @IBOutlet weak var transparentView: UIView!
@@ -33,20 +35,28 @@ class FLRootContainerController: UIViewController {
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-//        setupNavigationBar()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     func setupUI() {
+        view.backgroundColor = UIColor.FLCMightnightBlue()
+        setupNavigationBar()
         playerTapGestureRecognizer.enabled = true
         feedTapGestureRecognizer.enabled = false
     
     }
     
     func setupNavigationBar() {
+        
+        self.navigationBar.translucent = false
+        self.navigationBar.barTintColor = UIColor.FLCMightnightBlue()
         
         let titleLabel = UILabel()
         
@@ -58,17 +68,12 @@ class FLRootContainerController: UIViewController {
                 NSFontAttributeName: UIFont(name:"AvenirNext-DemiBold", size: CGFloat(20))!] as NSDictionary)
         titleLabel.attributedText = attrString
         titleLabel.sizeToFit()
-        navigationItem.titleView = titleLabel
         
-        createTestBarButton()
+        (navigationBar.items[0] as UINavigationItem).titleView = titleLabel
+        navigationItem.titleView = titleLabel
         
     }
     
-    func createTestBarButton() {
-        let addItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("hitApi"))
-        navigationItem.rightBarButtonItem = addItem
-    }
-
 
     // MARK: - Navigation
 

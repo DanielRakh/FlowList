@@ -14,12 +14,23 @@ class FLPlayerViewController: UIViewController {
 
     @IBOutlet weak var creatorTitleLabel: UILabel!
     @IBOutlet weak var songTitleLabel: UILabel!
+    @IBOutlet weak var playButton: FLPlayPauseButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.FLCHazyBlue()
+        view.backgroundColor = UIColor.FLCCherryRed()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+//        println(view.constraintsAffectingLayoutForAxis(.Vertical))
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        println(view.constraintsAffectingLayoutForAxis(.Vertical))
     }
     
     
