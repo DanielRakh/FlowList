@@ -14,18 +14,16 @@ let FLRootContainerControllerIdentifer = "FLRootContainerController"
 class FLRootWireframe : NSObject {
     
     var rootContainerPresenter: FLRootContainerPresenter?
-    
-    
+    var rootContainerViewController: FLRootContainerController?
+
     var feedWireframe: FLFeedRootWireframe?
     var playerWireframe: FLPlayerWireframe?
     
     func presentRootContainerViewControllerFromWindow(window:UIWindow) {
-        let viewController = rootContainerControllerFromStoryboard()
-        viewController.eventHandler = rootContainerPresenter
-        rootContainerPresenter!.userInterface = viewController
-        
-        showRootViewController(viewController, inWindow: window)
-        
+        rootContainerViewController = rootContainerControllerFromStoryboard()
+        rootContainerViewController?.eventHandler = rootContainerPresenter
+        rootContainerPresenter?.userInterface = rootContainerViewController
+        showRootViewController(rootContainerViewController?, inWindow: window)
     }
     
     func setupFeedRootInterfaceForViewController(controller:FLFeedRootViewController) {
@@ -36,13 +34,29 @@ class FLRootWireframe : NSObject {
         playerWireframe?.setupPlayerInterfaceFromViewController(controller)
     }
     
+    func slidePlayerContainerView(shouldSlideOut:Bool) {
+        
+        rootContainerViewController?.bottomSpacePlayerContainerViewToSuperView.constant = shouldSlideOut ? 0 : -rootContainerViewController!.playerContainerView.bounds.size.height * 0.5
+        
+        let alpha:CGFloat = shouldSlideOut ? 0.35 : 1.0
+        
+        UIView.animateWithDuration(0.35,
+            delay: 0.0,
+            usingSpringWithDamping: 0.8,
+            initialSpringVelocity: 0.5,
+            options: UIViewAnimationOptions.CurveEaseInOut,
+            animations: {
+                self.rootContainerViewController!.feedContainerView.alpha = alpha
+                self.rootContainerViewController!.view.layoutIfNeeded()
+            }) { success in
+            //
+        }
+        
+    }
     
-    
-    
-    
-    func showRootViewController(viewController: UIViewController, inWindow: UIWindow) {
+    func showRootViewController(viewController: UIViewController?, inWindow: UIWindow) {
         let navigationController = navigationControllerFromWindow(inWindow)
-        navigationController.viewControllers = [viewController]
+        navigationController.viewControllers = [viewController!]
         navigationController.navigationBar.barTintColor = UIColor.FLCMightnightBlue()
     }
     

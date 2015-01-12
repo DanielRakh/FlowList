@@ -35,6 +35,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-dT-ip7" userLabel="Feed Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nJv-5s-1wM" appends="YES" id="GKd-Qn-T9o"/>
                                     <segue destination="ObG-NA-bx0" kind="embed" identifier="presentFeedController" id="Bc5-Ju-SC1"/>
                                 </connections>
                             </containerView>
@@ -56,11 +57,13 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MfB-x6-jkq" appends="YES" id="Crc-CK-e7j"/>
                                     <segue destination="yWP-CK-utu" kind="embed" identifier="presentPlayerController" id="Cly-ud-gdA"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ovf-dT-ip7" firstAttribute="top" secondItem="rLP-n1-p9v" secondAttribute="bottom" id="1GT-aj-IKZ"/>
                             <constraint firstAttribute="trailing" secondItem="ovf-dT-ip7" secondAttribute="trailing" id="7mq-oB-2PG"/>
@@ -106,10 +109,23 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="bottomSpacePlayerContainerViewToSuperView" destination="yTt-Ye-JFx" id="AXC-I6-5zT"/>
+                        <outlet property="feedContainerView" destination="ovf-dT-ip7" id="GiS-rL-wf6"/>
+                        <outlet property="feedTapGestureRecognizer" destination="nJv-5s-1wM" id="Vqb-5u-7nL"/>
                         <outlet property="playerContainerView" destination="7t8-lZ-HVd" id="BQq-nc-m3k"/>
+                        <outlet property="playerTapGestureRecognizer" destination="MfB-x6-jkq" id="V42-Y5-aUb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2S-hZ-kNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MfB-x6-jkq" userLabel="Player Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="playerViewDidTap:" destination="ceL-4t-Q4F" id="hfe-AO-7zf"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="nJv-5s-1wM" userLabel="Feed Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="feedViewDidTap:" destination="ceL-4t-Q4F" id="l4q-O4-2PW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="942" y="-477"/>
         </scene>
@@ -451,6 +467,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.18039215689999999" green="0.1843137255" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ALa-8y-Y8c" firstAttribute="leading" secondItem="DRC-VB-yUh" secondAttribute="trailing" constant="15" id="GjY-vL-2mv"/>
                             <constraint firstItem="DRC-VB-yUh" firstAttribute="centerY" secondItem="aCl-K0-JGM" secondAttribute="centerY" constant="11.5" id="Lkd-VQ-dka">

@@ -333,7 +333,6 @@
 			children = (
 				8E2C89C61A566E1C00293333 /* FLRootContainerController.swift */,
 				8E2C89D51A56807300293333 /* FLRootContainerViewIO.swift */,
-				8E8F07941A611A140052E246 /* FLFeedRootViewIO.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -488,6 +487,7 @@
 		8E8F076F1A60F1730052E246 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E8F07941A611A140052E246 /* FLFeedRootViewIO.swift */,
 				8E3D38CD1A520C0400BFDD12 /* FLFeedRootViewController.swift */,
 				8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */,
 			);

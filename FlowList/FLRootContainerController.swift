@@ -10,14 +10,38 @@ import UIKit
 
 class FLRootContainerController: UIViewController {
     
-    var eventHandler:FLRootContainerPresenter?
+    var eventHandler:FLRootContainerViewOutput?
     @IBOutlet weak var playerContainerView: UIView!
+    @IBOutlet weak var feedContainerView: UIView!
     @IBOutlet weak var bottomSpacePlayerContainerViewToSuperView: NSLayoutConstraint!
+    @IBOutlet weak var playerTapGestureRecognizer: UITapGestureRecognizer!
+    @IBOutlet weak var feedTapGestureRecognizer: UITapGestureRecognizer!
 
+    
+    @IBAction func playerViewDidTap(sender: AnyObject) {
+        eventHandler?.playerViewDidRecognizeTap()
+        playerTapGestureRecognizer.enabled = false
+        feedTapGestureRecognizer.enabled = true
+    }
+    
+    @IBAction func feedViewDidTap(sender: AnyObject) {
+        
+        eventHandler?.feedViewDidRecognizeTap()
+        playerTapGestureRecognizer.enabled = true
+        feedTapGestureRecognizer.enabled = false
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         setupNavigationBar()
         // Do any additional setup after loading the view.
+    }
+    
+    func setupUI() {
+        playerTapGestureRecognizer.enabled = true
+        feedTapGestureRecognizer.enabled = false
     }
     
     func setupNavigationBar() {
@@ -36,7 +60,6 @@ class FLRootContainerController: UIViewController {
         
         createTestBarButton()
         
-        
     }
     
     func createTestBarButton() {
@@ -49,9 +72,9 @@ class FLRootContainerController: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "presentFeedController" {
-            eventHandler?.setupFeedRootModuleForViewController(segue.destinationViewController as FLFeedRootViewController)
+            eventHandler?.setupFeedRootModule(segue.destinationViewController as FLFeedRootViewController)
         } else if segue.identifier == "presentPlayerController" {
-            eventHandler?.setupPlayerModuleForViewController(segue.destinationViewController as FLPlayerViewController)
+            eventHandler?.setupPlayerModule(segue.destinationViewController as FLPlayerViewController)
         }
     }
 
