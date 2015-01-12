@@ -36,7 +36,7 @@ class FLRootContainerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setupNavigationBar()
+//        setupNavigationBar()
         // Do any additional setup after loading the view.
     }
     

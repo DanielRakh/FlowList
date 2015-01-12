@@ -20,10 +20,10 @@ class FLRootWireframe : NSObject {
     var playerWireframe: FLPlayerWireframe?
     
     func presentRootContainerViewControllerFromWindow(window:UIWindow) {
-        rootContainerViewController = rootContainerControllerFromStoryboard()
+        rootContainerViewController = window.rootViewController as? FLRootContainerController
         rootContainerViewController?.eventHandler = rootContainerPresenter
         rootContainerPresenter?.userInterface = rootContainerViewController
-        showRootViewController(rootContainerViewController?, inWindow: window)
+//        showRootViewController(rootContainerViewController?, inWindow: window)
     }
     
     func setupFeedRootInterfaceForViewController(controller:FLFeedRootViewController) {
@@ -54,26 +54,26 @@ class FLRootWireframe : NSObject {
         
     }
     
-    func showRootViewController(viewController: UIViewController?, inWindow: UIWindow) {
-        let navigationController = navigationControllerFromWindow(inWindow)
-        navigationController.viewControllers = [viewController!]
-        navigationController.navigationBar.barTintColor = UIColor.FLCMightnightBlue()
-    }
-    
-    func navigationControllerFromWindow(window: UIWindow) -> UINavigationController {
-        let navigationController = window.rootViewController as UINavigationController
-        return navigationController
-    }
-    
-    
-    func rootContainerControllerFromStoryboard() -> FLRootContainerController {
-        let storyboard = mainStoryboard()
-        let viewController = storyboard.instantiateViewControllerWithIdentifier(FLRootContainerControllerIdentifer) as FLRootContainerController
-        return viewController
-    }
-    
-    func mainStoryboard() -> UIStoryboard {
-        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        return storyboard
-    }
+//    func showRootViewController(viewController: UIViewController?, inWindow: UIWindow) {
+//        let navigationController = navigationControllerFromWindow(inWindow)
+//        navigationController.viewControllers = [viewController!]
+//        navigationController.navigationBar.barTintColor = UIColor.FLCMightnightBlue()
+//    }
+//    
+//    func navigationControllerFromWindow(window: UIWindow) -> UINavigationController {
+//        let navigationController = window.rootViewController as UINavigationController
+//        return navigationController
+//    }
+//    
+//    
+//    func rootContainerControllerFromStoryboard() -> FLRootContainerController {
+//        let storyboard = mainStoryboard()
+//        let viewController = storyboard.instantiateViewControllerWithIdentifier(FLRootContainerControllerIdentifer) as FLRootContainerController
+//        return viewController
+//    }
+//    
+//    func mainStoryboard() -> UIStoryboard {
+//        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+//        return storyboard
+//    }
 }

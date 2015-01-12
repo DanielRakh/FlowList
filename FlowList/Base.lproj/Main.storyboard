@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C81h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9i1-7y-3fb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C81h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ceL-4t-Q4F">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
     </dependencies>
@@ -18,7 +18,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7Y-Pw-O9x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="-477"/>
+            <point key="canvasLocation" x="-132" y="-477"/>
         </scene>
         <!--Root Container Controller-->
         <scene sceneID="jst-aH-poi">
@@ -32,6 +32,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nz5-X5-IV1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="0Ei-4A-UAo"/>
+                                </items>
+                            </navigationBar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-dT-ip7" userLabel="Feed Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <connections>
@@ -42,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="536"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                                 </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="nJv-5s-1wM" appends="YES" id="Aht-5J-Jm9"/>
@@ -74,50 +80,63 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="ovf-dT-ip7" firstAttribute="top" secondItem="rLP-n1-p9v" secondAttribute="bottom" id="1GT-aj-IKZ"/>
                             <constraint firstAttribute="trailing" secondItem="ovf-dT-ip7" secondAttribute="trailing" id="7mq-oB-2PG"/>
                             <constraint firstItem="7t8-lZ-HVd" firstAttribute="leading" secondItem="s2k-3M-hek" secondAttribute="leading" id="BDl-cF-eEi"/>
-                            <constraint firstItem="173-a1-snK" firstAttribute="top" secondItem="ovf-dT-ip7" secondAttribute="bottom" id="cVG-mw-NPK"/>
+                            <constraint firstItem="7t8-lZ-HVd" firstAttribute="top" secondItem="ovf-dT-ip7" secondAttribute="bottom" constant="-6" id="Gj9-wk-ROn">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="ovf-dT-ip7" firstAttribute="leading" secondItem="s2k-3M-hek" secondAttribute="leading" id="crt-t1-b1U"/>
+                            <constraint firstItem="ovf-dT-ip7" firstAttribute="top" secondItem="Nz5-X5-IV1" secondAttribute="bottom" id="evp-Gj-9Lu"/>
                             <constraint firstAttribute="trailing" secondItem="7t8-lZ-HVd" secondAttribute="trailing" id="foZ-1d-30G"/>
+                            <constraint firstItem="Nz5-X5-IV1" firstAttribute="top" secondItem="rLP-n1-p9v" secondAttribute="bottom" id="krc-Jp-XiZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Nz5-X5-IV1" secondAttribute="trailing" id="o49-u3-Bfw"/>
                             <constraint firstItem="173-a1-snK" firstAttribute="top" secondItem="7t8-lZ-HVd" secondAttribute="bottom" id="yTt-Ye-JFx">
                                 <variation key="widthClass=compact" constant="-70"/>
                             </constraint>
+                            <constraint firstItem="Nz5-X5-IV1" firstAttribute="leading" secondItem="s2k-3M-hek" secondAttribute="leading" id="zE0-pd-mGh"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="Nz5-X5-IV1"/>
                                 <exclude reference="ovf-dT-ip7"/>
                                 <exclude reference="fbd-zC-MT0"/>
                                 <exclude reference="7t8-lZ-HVd"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="cVG-mw-NPK"/>
-                                <exclude reference="yTt-Ye-JFx"/>
-                                <exclude reference="BDl-cF-eEi"/>
-                                <exclude reference="foZ-1d-30G"/>
-                                <exclude reference="1GT-aj-IKZ"/>
+                                <exclude reference="krc-Jp-XiZ"/>
+                                <exclude reference="o49-u3-Bfw"/>
+                                <exclude reference="zE0-pd-mGh"/>
                                 <exclude reference="7mq-oB-2PG"/>
                                 <exclude reference="crt-t1-b1U"/>
+                                <exclude reference="evp-Gj-9Lu"/>
+                                <exclude reference="BDl-cF-eEi"/>
+                                <exclude reference="Gj9-wk-ROn"/>
+                                <exclude reference="foZ-1d-30G"/>
+                                <exclude reference="yTt-Ye-JFx"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="Nz5-X5-IV1"/>
                                 <include reference="ovf-dT-ip7"/>
                                 <include reference="fbd-zC-MT0"/>
                                 <include reference="7t8-lZ-HVd"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="cVG-mw-NPK"/>
-                                <include reference="yTt-Ye-JFx"/>
-                                <include reference="BDl-cF-eEi"/>
-                                <include reference="foZ-1d-30G"/>
-                                <include reference="1GT-aj-IKZ"/>
+                                <include reference="krc-Jp-XiZ"/>
+                                <include reference="o49-u3-Bfw"/>
+                                <include reference="zE0-pd-mGh"/>
                                 <include reference="7mq-oB-2PG"/>
                                 <include reference="crt-t1-b1U"/>
+                                <include reference="evp-Gj-9Lu"/>
+                                <include reference="BDl-cF-eEi"/>
+                                <include reference="Gj9-wk-ROn"/>
+                                <include reference="foZ-1d-30G"/>
+                                <include reference="yTt-Ye-JFx"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="bottomSpacePlayerContainerViewToSuperView" destination="yTt-Ye-JFx" id="AXC-I6-5zT"/>
                         <outlet property="feedContainerView" destination="ovf-dT-ip7" id="GiS-rL-wf6"/>
@@ -365,8 +384,6 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="400" height="536"/>
                     <connections>
                         <outlet property="centerXTrendingViewToSuperView" destination="jS2-X1-zoV" id="6os-ou-SEi"/>
                         <outlet property="tableViewHeader" destination="7gX-bZ-uKN" id="gLv-Dx-0V4"/>
