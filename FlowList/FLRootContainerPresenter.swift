@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum PlayerViewAnimation {
+    case Out
+    case In
+}
+
 class FLRootContainerPresenter: NSObject {
     
     var rootWireframe:FLRootWireframe?
@@ -21,8 +26,8 @@ class FLRootContainerPresenter: NSObject {
         rootWireframe?.setupPlayerInterfaceFromViewController(viewController)
     }
     
-    func playerContainerViewShouldSlideOut(shouldSlideOut:Bool) {
-        rootWireframe?.slidePlayerContainerView(shouldSlideOut)
+    func playerContainerViewShouldSlide(slideTransition:PlayerViewAnimation) {
+        rootWireframe?.slidePlayerContainerView(slideTransition)
     }
     
    
@@ -39,11 +44,11 @@ extension FLRootContainerPresenter:FLRootContainerViewOutput {
     }
     
     func playerViewDidRecognizeTap() {
-        playerContainerViewShouldSlideOut(true)
+        playerContainerViewShouldSlide(.Out)
     }
     
     func feedViewDidRecognizeTap() {
-        playerContainerViewShouldSlideOut(false)
+        playerContainerViewShouldSlide(.In)
     }
     
 }

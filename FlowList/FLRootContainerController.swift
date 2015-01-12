@@ -13,6 +13,7 @@ class FLRootContainerController: UIViewController {
     var eventHandler:FLRootContainerViewOutput?
     @IBOutlet weak var playerContainerView: UIView!
     @IBOutlet weak var feedContainerView: UIView!
+    @IBOutlet weak var transparentView: UIView!
     @IBOutlet weak var bottomSpacePlayerContainerViewToSuperView: NSLayoutConstraint!
     @IBOutlet weak var playerTapGestureRecognizer: UITapGestureRecognizer!
     @IBOutlet weak var feedTapGestureRecognizer: UITapGestureRecognizer!
@@ -42,6 +43,7 @@ class FLRootContainerController: UIViewController {
     func setupUI() {
         playerTapGestureRecognizer.enabled = true
         feedTapGestureRecognizer.enabled = false
+    
     }
     
     func setupNavigationBar() {

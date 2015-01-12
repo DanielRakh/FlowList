@@ -34,19 +34,19 @@ class FLRootWireframe : NSObject {
         playerWireframe?.setupPlayerInterfaceFromViewController(controller)
     }
     
-    func slidePlayerContainerView(shouldSlideOut:Bool) {
+    func slidePlayerContainerView(slideTransition:PlayerViewAnimation) {
         
-        rootContainerViewController?.bottomSpacePlayerContainerViewToSuperView.constant = shouldSlideOut ? 0 : -rootContainerViewController!.playerContainerView.bounds.size.height * 0.5
+        rootContainerViewController?.bottomSpacePlayerContainerViewToSuperView.constant = slideTransition == .Out ? 0 : -rootContainerViewController!.playerContainerView.bounds.size.height * 0.5
         
-        let alpha:CGFloat = shouldSlideOut ? 0.35 : 1.0
+        let alpha:CGFloat = slideTransition == .Out ? 0.35 : 0
         
         UIView.animateWithDuration(0.35,
             delay: 0.0,
             usingSpringWithDamping: 0.8,
-            initialSpringVelocity: 0.5,
+            initialSpringVelocity: 0.8,
             options: UIViewAnimationOptions.CurveEaseInOut,
             animations: {
-                self.rootContainerViewController!.feedContainerView.alpha = alpha
+                self.rootContainerViewController!.transparentView.alpha = alpha
                 self.rootContainerViewController!.view.layoutIfNeeded()
             }) { success in
             //

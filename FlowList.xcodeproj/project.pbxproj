@@ -47,8 +47,8 @@
 		8E3D39091A523A0100BFDD12 /* FLFeedTrendingInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39081A523A0100BFDD12 /* FLFeedTrendingInteractorIO.swift */; };
 		8E3DE31A1A55FBAB00FB79FC /* FLUpvoteIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DE3191A55FBAB00FB79FC /* FLUpvoteIcon.swift */; };
 		8E3DE3281A56009700FB79FC /* FLVectorIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DE3271A56009700FB79FC /* FLVectorIcon.swift */; };
-		8E47DCF21A633196009B1A08 /* FLRootContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89C61A566E1C00293333 /* FLRootContainerController.swift */; };
 		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8E6C4A151A6359210060B69A /* FLRootContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89C61A566E1C00293333 /* FLRootContainerController.swift */; };
 		8E8ECCEB1A5B824200373FFB /* Player_Usecases.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEA1A5B824200373FFB /* Player_Usecases.rtf */; };
 		8E8ECCED1A5BADA900373FFB /* FLUpvoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEC1A5BADA900373FFB /* FLUpvoteButton.swift */; };
 		8E8ECCF01A5BB69400373FFB /* FLFeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */; };
@@ -957,7 +957,7 @@
 				8E8F07951A611A140052E246 /* FLFeedRootViewIO.swift in Sources */,
 				8E8F079F1A6199720052E246 /* FLTrendingSongItem.swift in Sources */,
 				8E8F07671A6091630052E246 /* FLFeedLikesTableViewController.swift in Sources */,
-				8E47DCF21A633196009B1A08 /* FLRootContainerController.swift in Sources */,
+				8E6C4A151A6359210060B69A /* FLRootContainerController.swift in Sources */,
 				8E2C89CD1A56749300293333 /* FLRootContainerPresenter.swift in Sources */,
 				8E3D38D31A520CFB00BFDD12 /* FLFeedRootWireframe.swift in Sources */,
 				8E3DE3281A56009700FB79FC /* FLVectorIcon.swift in Sources */,
