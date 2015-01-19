@@ -43,7 +43,7 @@ class FLFeedLikesTableViewController: UITableViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tableView.contentInset = UIEdgeInsetsMake(54, 0, 0, 0)
+        tableView.contentInset = UIEdgeInsetsMake(118, 0, 0, 0)
     }
     
     func setupViews() {
