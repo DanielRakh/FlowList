@@ -12,6 +12,8 @@ class FLPlayerViewController: UIViewController {
 
     var eventHandler:FLPlayerPresenter?
 
+    @IBOutlet weak var backgroundBlurView: UIVisualEffectView!
+    @IBOutlet weak var vibrancyBackground: UIVisualEffectView!
     @IBOutlet weak var topPlayerContainerView: UIView!
     @IBOutlet weak var hairlineView: FLHairlineView!
     @IBOutlet weak var creatorTitleLabel: UILabel!
@@ -20,14 +22,15 @@ class FLPlayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.FLCHazyBlue()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.clearColor()
+        vibrancyBackground.contentView.backgroundColor = UIColor.FLCHazyBlue()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        hairlineView.frame = CGRectMake(0, 0, hairlineView.bounds.size.width, hairlineView.bounds.size.height)
-        topPlayerContainerView.frame = CGRectMake(0, 0, topPlayerContainerView.bounds.size.width, topPlayerContainerView.bounds.size.height)
+        backgroundBlurView.frame = CGRectMake(0, 0, backgroundBlurView.bounds.size.width, backgroundBlurView.bounds.size.height)
+        println("Layout:\(backgroundBlurView)")
+        println(view)
         
     }
 

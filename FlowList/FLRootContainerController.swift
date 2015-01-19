@@ -12,7 +12,7 @@ class FLRootContainerController: UIViewController {
     
     var eventHandler:FLRootContainerViewOutput?
     
-    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var blurNavBar: FLBlurNavBar!
     @IBOutlet weak var playerContainerView: UIView!
     @IBOutlet weak var feedContainerView: UIView!
     @IBOutlet weak var transparentView: UIView!
@@ -46,34 +46,11 @@ class FLRootContainerController: UIViewController {
     
     func setupUI() {
         view.backgroundColor = UIColor.FLCMightnightBlue()
-        setupNavigationBar()
         playerTapGestureRecognizer.enabled = true
         feedTapGestureRecognizer.enabled = false
     
     }
     
-    func setupNavigationBar() {
-        
-        self.navigationBar.translucent = false
-        self.navigationBar.barTintColor = UIColor.FLCMightnightBlue()
-        
-        let titleLabel = UILabel()
-        
-        let attrString = NSAttributedString(
-            string: "</FLOWLIST>",
-            attributes:
-            [NSForegroundColorAttributeName: UIColor.FLCElectricBlue(),
-                NSKernAttributeName: 2,
-                NSFontAttributeName: UIFont(name:"AvenirNext-DemiBold", size: CGFloat(20))!] as NSDictionary)
-        titleLabel.attributedText = attrString
-        titleLabel.sizeToFit()
-        
-        (navigationBar.items[0] as UINavigationItem).titleView = titleLabel
-        navigationItem.titleView = titleLabel
-        
-    }
-    
-
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

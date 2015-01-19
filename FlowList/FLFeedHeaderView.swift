@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FLFeedHeaderView: UIView {
+class FLFeedHeaderView: UIVisualEffectView {
     
     enum ListMode {
         case New
@@ -26,6 +26,7 @@ class FLFeedHeaderView: UIView {
     @IBOutlet weak var newButton:UIButton!
     @IBOutlet weak var trendingButton:UIButton!
     @IBOutlet weak var likesButton:UIButton!
+    @IBOutlet weak var vibrancyEffectView:UIVisualEffectView!
     
     //Constraints
     var centerXAlignUnderlineToNewButton:NSLayoutConstraint?
@@ -35,27 +36,19 @@ class FLFeedHeaderView: UIView {
     var centerXAlignUnderlineToLikesButton:NSLayoutConstraint?
     var equalWidthUnderlineToLikesButton:NSLayoutConstraint?
     
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupUI()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupUI()
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupUI()
+    }
+    
+    func setupUI() {
+        
+        backgroundColor = UIColor.clearColor()
+        vibrancyEffectView.contentView.backgroundColor = UIColor.FLCHazyBlue()
         trendingButton.setTitleColor(UIColor.FLCPlainWhite(), forState: .Normal)
         likesButton.setTitleColor(UIColor.FLCUnselectedGray(), forState: .Normal)
         newButton.setTitleColor(UIColor.FLCUnselectedGray(), forState: .Normal)
         underlineView.backgroundColor = UIColor.FLCElectricBlue()
-    }
-    
-    func setupUI() {
-        backgroundColor = UIColor.FLCMightnightBlue()
     }
     
     override func updateConstraints() {
