@@ -13,4 +13,7 @@ protocol FLFeedRootViewInput {
 }
 
 protocol FLFeedRootViewOutput {
+    func setupPlayerModule(playerViewController:FLPlayerViewController)
+    func playerViewDidRecognizeTap()
+    func feedViewDidRecognizeTap()
 }

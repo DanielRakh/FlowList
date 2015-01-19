@@ -8,21 +8,25 @@
 
 import UIKit
 
-class FLFeedRootWireframe:NSObject {
+let FLFeedRootContainerControllerIdentifer = "FLFeedRootContainerController"
+
+
+class FLFeedRootWireframe: NSObject {
     
     var rootPresenter:FLFeedRootPresenter?
+    var rootContainerViewController: FLFeedRootViewController?
     
+    var playerWireframe: FLPlayerWireframe?
     var trendingWireframe:FLFeedTrendingWireframe?
     var newWireframe:FLFeedNewWireframe?
     var likesWireframe:FLFeedLikesWireframe?
-
-
     
-    func setupFeedRootInterfaceForViewController(viewController:FLFeedRootViewController) {
-        viewController.eventHandler = rootPresenter
-        rootPresenter!.userInterface = viewController
+    
+    func presentRootContainerViewControllerFromWindow(window:UIWindow) {
+        rootContainerViewController = window.rootViewController as? FLFeedRootViewController
+        rootContainerViewController?.eventHandler = rootPresenter
+        rootPresenter?.userInterface = rootContainerViewController
     }
-    
     
     func setupTrendingFeedRootInterfaceForViewController(viewController:FLFeedTrendingTableViewController) {
         trendingWireframe?.setupTrendingFeedInterfaceFromViewController(viewController)
@@ -34,6 +38,30 @@ class FLFeedRootWireframe:NSObject {
     
     func setupLikesFeedRootInterfaceForViewController(viewController:FLFeedLikesTableViewController) {
         likesWireframe?.setupLikesFeedInterfaceFromViewController(viewController)
+    }
+    
+    func setupPlayerInterfaceFromViewController(controller:FLPlayerViewController) {
+        playerWireframe?.setupPlayerInterfaceFromViewController(controller)
+    }
+    
+    func slidePlayerContainerView(slideTransition:PlayerViewAnimation) {
+        
+        rootContainerViewController?.bottomSpacePlayerContainerViewToSuperView.constant = slideTransition == .Out ? 0 : -rootContainerViewController!.playerContainerView.bounds.size.height + 70
+        
+        let alpha:CGFloat = slideTransition == .Out ? 0.50 : 0
+        
+        UIView.animateWithDuration(0.35,
+            delay: 0.0,
+            usingSpringWithDamping: 0.8,
+            initialSpringVelocity: 0.8,
+            options: UIViewAnimationOptions.CurveEaseInOut,
+            animations: {
+                self.rootContainerViewController!.transparentView.alpha = alpha
+                self.rootContainerViewController!.view.layoutIfNeeded()
+            }) { success in
+                //
+        }
+        
     }
     
 }

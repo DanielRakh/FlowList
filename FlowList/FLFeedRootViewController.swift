@@ -18,8 +18,18 @@ class FLFeedRootViewController: UIViewController {
 
 
     //MARK: IBOutlets
+    @IBOutlet weak var transparentView: UIView!
+    @IBOutlet weak var playerContainerView: UIView!
     @IBOutlet weak var tableViewHeader: FLFeedHeaderView!
+    
+    //MARK: Constraints
     @IBOutlet var centerXTrendingViewToSuperView: NSLayoutConstraint!
+    @IBOutlet weak var bottomSpacePlayerContainerViewToSuperView: NSLayoutConstraint!
+    
+    //MARK: Gesture Recognizers
+    @IBOutlet weak var playerTapGestureRecognizer: UITapGestureRecognizer!
+    @IBOutlet weak var feedTapGestureRecognizer: UITapGestureRecognizer!
+
     
     //MARK:
     //MARK: Methods
@@ -28,6 +38,8 @@ class FLFeedRootViewController: UIViewController {
 
     func setupViews() {
         view.backgroundColor = UIColor.FLCMightnightBlue()
+        playerTapGestureRecognizer.enabled = true
+        feedTapGestureRecognizer.enabled = false
     }
     
     
@@ -56,6 +68,18 @@ class FLFeedRootViewController: UIViewController {
         animateForConstant(view.bounds.size.width)
     }
     
+    @IBAction func playerViewDidTap(sender: AnyObject) {
+        eventHandler?.playerViewDidRecognizeTap()
+        playerTapGestureRecognizer.enabled = false
+        feedTapGestureRecognizer.enabled = true
+    }
+    
+    @IBAction func feedViewDidTap(sender: AnyObject) {
+        eventHandler?.feedViewDidRecognizeTap()
+        playerTapGestureRecognizer.enabled = true
+        feedTapGestureRecognizer.enabled = false
+    }
+    
     //MARK: Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -65,6 +89,8 @@ class FLFeedRootViewController: UIViewController {
             eventHandler?.setupFeedNewModuleForViewController(segue.destinationViewController as FLFeedNewTableViewController)
         } else if segue.identifier == "embedLikesVC" {
             eventHandler?.setupFeedLikesModuleForViewController(segue.destinationViewController as FLFeedLikesTableViewController)            
+        } else if segue.identifier == "presentPlayerController" {
+            eventHandler?.setupPlayerModule(segue.destinationViewController as FLPlayerViewController)
         }
     }
     

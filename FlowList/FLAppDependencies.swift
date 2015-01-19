@@ -10,26 +10,19 @@ import UIKit
 
 class FLAppDependencies {
     
-    let rootWireframe = FLRootWireframe()
+    let feedRootWireframe = FLFeedRootWireframe()
+
     
     init() {
         configureDependencies()
     }
 
     func installRootViewControllerIntoWindow(window:UIWindow) {
-        rootWireframe.presentRootContainerViewControllerFromWindow(window)
+        feedRootWireframe.presentRootContainerViewControllerFromWindow(window)
         
     }
 
     func configureDependencies() {
-        
-        let rootPresenter = FLRootContainerPresenter()
-        rootPresenter.rootWireframe = rootWireframe
-        rootWireframe.rootContainerPresenter = rootPresenter
-        
-        
-        let feedRootWireframe = FLFeedRootWireframe()
-        rootWireframe.feedWireframe = feedRootWireframe
 
         let feedRootPresenter = FLFeedRootPresenter()
         feedRootPresenter.feedRootWireframe = feedRootWireframe
@@ -41,7 +34,7 @@ class FLAppDependencies {
         
         let playerWireframe = FLPlayerWireframe()
         
-        rootWireframe.playerWireframe = playerWireframe
+        feedRootWireframe.playerWireframe = playerWireframe
         
         let playerPresenter = FLPlayerPresenter()
         let playerDataManager = FLPlayerDataManger()
