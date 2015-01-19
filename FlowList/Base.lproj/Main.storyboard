@@ -38,7 +38,9 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUY-5J-1hk" userLabel="Player Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="tPg-ex-yH4"/>
+                                    <constraint firstAttribute="height" constant="140" id="tPg-ex-yH4">
+                                        <variation key="widthClass=compact" constant="230"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -69,8 +71,8 @@
                             <constraint firstItem="iUY-5J-1hk" firstAttribute="leading" secondItem="s2k-3M-hek" secondAttribute="leading" id="KmW-OC-cZd"/>
                             <constraint firstItem="fbd-zC-MT0" firstAttribute="leading" secondItem="s2k-3M-hek" secondAttribute="leading" id="LGj-om-7tg"/>
                             <constraint firstAttribute="trailing" secondItem="fbd-zC-MT0" secondAttribute="trailing" id="LLT-yT-Ppz"/>
-                            <constraint firstItem="173-a1-snK" firstAttribute="top" secondItem="iUY-5J-1hk" secondAttribute="bottom" constant="-60" id="OKA-UD-fpC">
-                                <variation key="widthClass=compact" constant="-70"/>
+                            <constraint firstItem="173-a1-snK" firstAttribute="top" secondItem="iUY-5J-1hk" secondAttribute="bottom" constant="-70" id="OKA-UD-fpC">
+                                <variation key="widthClass=compact" constant="-160"/>
                             </constraint>
                             <constraint firstItem="173-a1-snK" firstAttribute="top" secondItem="fbd-zC-MT0" secondAttribute="bottom" id="PF5-zP-Hvd"/>
                             <constraint firstItem="173-a1-snK" firstAttribute="top" secondItem="ovf-dT-ip7" secondAttribute="bottom" id="bRH-Dz-onk"/>
@@ -88,20 +90,20 @@
                                 <exclude reference="iUY-5J-1hk"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="6ki-pe-D86"/>
-                                <exclude reference="LGj-om-7tg"/>
-                                <exclude reference="LLT-yT-Ppz"/>
-                                <exclude reference="krc-Jp-XiZ"/>
-                                <exclude reference="o49-u3-Bfw"/>
-                                <exclude reference="zE0-pd-mGh"/>
-                                <exclude reference="7mq-oB-2PG"/>
-                                <exclude reference="DOh-hA-mBX"/>
-                                <exclude reference="crt-t1-b1U"/>
-                                <exclude reference="KmW-OC-cZd"/>
-                                <exclude reference="p5P-LK-vXM"/>
                                 <exclude reference="OKA-UD-fpC"/>
                                 <exclude reference="PF5-zP-Hvd"/>
                                 <exclude reference="bRH-Dz-onk"/>
+                                <exclude reference="krc-Jp-XiZ"/>
+                                <exclude reference="o49-u3-Bfw"/>
+                                <exclude reference="zE0-pd-mGh"/>
+                                <exclude reference="KmW-OC-cZd"/>
+                                <exclude reference="p5P-LK-vXM"/>
+                                <exclude reference="7mq-oB-2PG"/>
+                                <exclude reference="DOh-hA-mBX"/>
+                                <exclude reference="crt-t1-b1U"/>
+                                <exclude reference="6ki-pe-D86"/>
+                                <exclude reference="LGj-om-7tg"/>
+                                <exclude reference="LLT-yT-Ppz"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -112,20 +114,20 @@
                                 <include reference="iUY-5J-1hk"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="6ki-pe-D86"/>
-                                <include reference="LGj-om-7tg"/>
-                                <include reference="LLT-yT-Ppz"/>
-                                <include reference="krc-Jp-XiZ"/>
-                                <include reference="o49-u3-Bfw"/>
-                                <include reference="zE0-pd-mGh"/>
-                                <include reference="7mq-oB-2PG"/>
-                                <include reference="DOh-hA-mBX"/>
-                                <include reference="crt-t1-b1U"/>
-                                <include reference="KmW-OC-cZd"/>
-                                <include reference="p5P-LK-vXM"/>
                                 <include reference="OKA-UD-fpC"/>
                                 <include reference="PF5-zP-Hvd"/>
                                 <include reference="bRH-Dz-onk"/>
+                                <include reference="krc-Jp-XiZ"/>
+                                <include reference="o49-u3-Bfw"/>
+                                <include reference="zE0-pd-mGh"/>
+                                <include reference="KmW-OC-cZd"/>
+                                <include reference="p5P-LK-vXM"/>
+                                <include reference="7mq-oB-2PG"/>
+                                <include reference="DOh-hA-mBX"/>
+                                <include reference="crt-t1-b1U"/>
+                                <include reference="6ki-pe-D86"/>
+                                <include reference="LGj-om-7tg"/>
+                                <include reference="LLT-yT-Ppz"/>
                             </mask>
                         </variation>
                     </view>
@@ -425,7 +427,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Als-YD-Ana" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-954" y="-532"/>
+            <point key="canvasLocation" x="-921" y="-533"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="WJa-mN-pgX">
@@ -446,10 +448,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="1"/>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJT-NU-O7g">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJT-NU-O7g" userLabel="Top Player Container">
                                 <rect key="frame" x="-8" y="-10" width="416" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOILER ROOM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALa-8y-Y8c">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="BOILER ROOM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALa-8y-Y8c">
                                         <rect key="frame" x="85" y="27" width="236" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="236" id="zfW-eH-lpo"/>
@@ -468,7 +470,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nina Kraviz 75 min Boiler Room Berlin Mix" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNx-hA-G3P">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Nina Kraviz 75 min Boiler Room Berlin Mix" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNx-hA-G3P">
                                         <rect key="frame" x="85" y="50" width="236" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="236" id="enC-Nu-Oil"/>
@@ -487,7 +489,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRC-VB-yUh" userLabel="Play Button" customClass="FLPlayPauseButton" customModule="FlowList" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRC-VB-yUh" userLabel="Play Button" customClass="FLPlayPauseButton" customModule="FlowList" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="kvD-j2-SfF"/>
@@ -513,7 +515,7 @@
                                             <action selector="playPauseButtonDidTouch:" destination="yWP-CK-utu" eventType="touchUpInside" id="EJd-PH-gId"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCl-K0-JGM" userLabel="Like Button" customClass="FLLikeButton" customModule="FlowList" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCl-K0-JGM" userLabel="Like Button" customClass="FLLikeButton" customModule="FlowList" customModuleProvider="target">
                                         <rect key="frame" x="369" y="31" width="27" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="27" id="9GK-ZU-1sy"/>
@@ -539,7 +541,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.29803921570000003" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="2Xl-rN-Nca"/>
                                     <constraint firstAttribute="trailing" secondItem="aCl-K0-JGM" secondAttribute="trailing" constant="8" id="IXU-2N-PHI"/>
@@ -578,6 +580,29 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xp4-Bj-fVe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8db-by-7jG" customClass="FLScrubberSlider" customModule="FlowList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="41" y="20" width="314" height="31"/>
+                                        </variation>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="8db-by-7jG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="70" width="400" height="70"/>
+                                    <mask key="subviews">
+                                        <include reference="8db-by-7jG"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.18039215689999999" green="0.1843137255" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -589,6 +614,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="EJK-ro-UDn"/>
+                                <exclude reference="xp4-Bj-fVe"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="QwJ-mA-NTg"/>
@@ -599,6 +625,7 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="EJK-ro-UDn"/>
+                                <include reference="xp4-Bj-fVe"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="QwJ-mA-NTg"/>
@@ -619,7 +646,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJ4-IQ-3by" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1686" y="45"/>
+            <point key="canvasLocation" x="-1686" y="116"/>
         </scene>
         <!--Feed Trending Table View Controller-->
         <scene sceneID="sQU-tX-csC">
@@ -782,7 +809,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rz-Cj-QNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="-532"/>
+            <point key="canvasLocation" x="-150" y="-533"/>
         </scene>
         <!--Feed New Table View Controller-->
         <scene sceneID="aoq-8z-qi3">
@@ -945,7 +972,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fC4-jJ-W59" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="-1300"/>
+            <point key="canvasLocation" x="-150" y="-1157"/>
         </scene>
         <!--Feed Likes Table View Controller-->
         <scene sceneID="I0B-g2-oQt">
@@ -1108,7 +1135,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJP-9Y-5FN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="152"/>
+            <point key="canvasLocation" x="-150" y="152"/>
         </scene>
     </scenes>
 </document>
