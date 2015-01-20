@@ -65,6 +65,7 @@ class FLFeedRootViewController: UIViewController {
     
     @IBAction func likesButtonDidTouch(sender: AnyObject) {
         blurNavBar.feedHeaderView.listMode = .Likes
+        println(view.bounds)
         animateForConstant(view.bounds.size.width)
     }
     
@@ -96,8 +97,9 @@ class FLFeedRootViewController: UIViewController {
     
     
     func animateForConstant(constant:CGFloat) {
-        
+
         centerXTrendingViewToSuperView.constant = constant
+        
         UIView.animateWithDuration(0.35, delay: 0.0,
             usingSpringWithDamping: 0.8,
             initialSpringVelocity: 0.2,

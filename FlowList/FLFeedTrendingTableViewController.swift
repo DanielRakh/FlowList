@@ -40,7 +40,7 @@ class FLFeedTrendingTableViewController: UITableViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tableView.contentInset = UIEdgeInsetsMake(118, 0, 0, 0)
+        tableView.contentInset = UIEdgeInsetsMake(118, 0, 70, 0)
 
     }
     
@@ -48,7 +48,6 @@ class FLFeedTrendingTableViewController: UITableViewController {
         tableView.separatorColor = UIColor(white: 0, alpha: 0.35)
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.backgroundColor = UIColor.clearColor()
-
     }
 }
 
