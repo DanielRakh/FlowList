@@ -20,7 +20,7 @@ class FLFeedRootViewController: UIViewController {
     //MARK: IBOutlets
     @IBOutlet weak var transparentView: UIView!
     @IBOutlet weak var playerContainerView: UIView!
-    @IBOutlet weak var tableViewHeader: FLFeedHeaderView!
+    @IBOutlet weak var blurNavBar: FLBlurNavBar!
     
     //MARK: Constraints
     @IBOutlet var centerXTrendingViewToSuperView: NSLayoutConstraint!
@@ -54,17 +54,17 @@ class FLFeedRootViewController: UIViewController {
     //MARK: IBAction
     
     @IBAction func newButtonDidTouch(sender: AnyObject) {
-        tableViewHeader.listMode = .New
+        blurNavBar.feedHeaderView.listMode = .New
         animateForConstant(-view.bounds.size.width)
     }
     
     @IBAction func trendingButtonDidTouch(sender: AnyObject) {
-        tableViewHeader.listMode = .Trending
+        blurNavBar.feedHeaderView.listMode = .Trending
         animateForConstant(0)
     }
     
     @IBAction func likesButtonDidTouch(sender: AnyObject) {
-        tableViewHeader.listMode = .Likes
+        blurNavBar.feedHeaderView.listMode = .Likes
         animateForConstant(view.bounds.size.width)
     }
     

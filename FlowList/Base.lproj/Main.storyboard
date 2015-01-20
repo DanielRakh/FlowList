@@ -38,7 +38,7 @@
                                     <segue destination="u9t-NI-mw4" kind="embed" identifier="embedLikesVC" id="OnM-us-fMS"/>
                                 </connections>
                             </containerView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEY-1D-HFW" userLabel="Header View" customClass="FLFeedHeaderView" customModule="FlowList" customModuleProvider="target">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEY-1D-HFW" userLabel="Blur Nav Bar" customClass="FLBlurNavBar" customModule="FlowList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FoT-Oi-h9P">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -54,7 +54,13 @@
                                                 <blurEffect style="dark"/>
                                             </vibrancyEffect>
                                         </visualEffectView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gX-bZ-uKN" userLabel="Container View">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;/FLOWLIST&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EC-TQ-y6b">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gX-bZ-uKN" customClass="FLFeedHeaderView" customModule="FlowList" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oha-0o-mvZ" customClass="FLHairlineView" customModule="FlowList" customModuleProvider="target">
@@ -202,11 +208,23 @@
                                                     <include reference="yyj-JK-PA4"/>
                                                 </mask>
                                             </variation>
+                                            <connections>
+                                                <outlet property="centerXAlignUnderlineToTrendingButton" destination="fk4-gz-EHC" id="EUD-D5-iEK"/>
+                                                <outlet property="equalWidthUnderlineToTrendingButton" destination="gsl-XP-mhF" id="zNV-g7-XP1"/>
+                                                <outlet property="likesButton" destination="IGc-B4-cRk" id="eXm-wb-Adh"/>
+                                                <outlet property="newButton" destination="Xa8-aR-aAH" id="Zkj-cj-wzX"/>
+                                                <outlet property="trendingButton" destination="OKi-ic-JDO" id="ELP-d2-wgn"/>
+                                                <outlet property="underlineView" destination="IJN-ou-FsD" id="pY9-op-ZyG"/>
+                                            </connections>
                                         </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="7gX-bZ-uKN" secondAttribute="trailing" id="DzB-3P-4w5"/>
+                                        <constraint firstAttribute="centerX" secondItem="1EC-TQ-y6b" secondAttribute="centerX" constant="-34" id="Gza-e2-i4b">
+                                            <variation key="widthClass=compact" constant="0.0"/>
+                                        </constraint>
                                         <constraint firstAttribute="bottom" secondItem="7gX-bZ-uKN" secondAttribute="bottom" id="LPT-dr-Y3M"/>
+                                        <constraint firstItem="1EC-TQ-y6b" firstAttribute="top" secondItem="FoT-Oi-h9P" secondAttribute="top" constant="26" id="OLQ-8S-beb"/>
                                         <constraint firstItem="7gX-bZ-uKN" firstAttribute="top" secondItem="FoT-Oi-h9P" secondAttribute="top" id="QXe-hZ-pvX">
                                             <variation key="widthClass=compact" constant="64"/>
                                         </constraint>
@@ -218,32 +236,38 @@
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
+                                            <exclude reference="1EC-TQ-y6b"/>
                                             <exclude reference="7gX-bZ-uKN"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="DzB-3P-4w5"/>
-                                            <exclude reference="LPT-dr-Y3M"/>
-                                            <exclude reference="QXe-hZ-pvX"/>
-                                            <exclude reference="bMp-cg-dBD"/>
                                             <exclude reference="Uc3-Z2-Glm"/>
                                             <exclude reference="cIN-SZ-pOl"/>
                                             <exclude reference="i51-3g-DeX"/>
                                             <exclude reference="oY2-qq-xXf"/>
+                                            <exclude reference="DzB-3P-4w5"/>
+                                            <exclude reference="LPT-dr-Y3M"/>
+                                            <exclude reference="QXe-hZ-pvX"/>
+                                            <exclude reference="bMp-cg-dBD"/>
+                                            <exclude reference="Gza-e2-i4b"/>
+                                            <exclude reference="OLQ-8S-beb"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
                                         <mask key="subviews">
+                                            <include reference="1EC-TQ-y6b"/>
                                             <include reference="7gX-bZ-uKN"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="DzB-3P-4w5"/>
-                                            <include reference="LPT-dr-Y3M"/>
-                                            <include reference="QXe-hZ-pvX"/>
-                                            <include reference="bMp-cg-dBD"/>
                                             <include reference="Uc3-Z2-Glm"/>
                                             <include reference="cIN-SZ-pOl"/>
                                             <include reference="i51-3g-DeX"/>
                                             <include reference="oY2-qq-xXf"/>
+                                            <include reference="DzB-3P-4w5"/>
+                                            <include reference="LPT-dr-Y3M"/>
+                                            <include reference="QXe-hZ-pvX"/>
+                                            <include reference="bMp-cg-dBD"/>
+                                            <include reference="Gza-e2-i4b"/>
+                                            <include reference="OLQ-8S-beb"/>
                                         </mask>
                                     </variation>
                                 </view>
@@ -264,13 +288,9 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <outlet property="centerXAlignUnderlineToTrendingButton" destination="fk4-gz-EHC" id="CPy-Nn-NRj"/>
-                                    <outlet property="equalWidthUnderlineToTrendingButton" destination="gsl-XP-mhF" id="AS0-gf-epe"/>
-                                    <outlet property="likesButton" destination="IGc-B4-cRk" id="aNv-DD-XlA"/>
-                                    <outlet property="newButton" destination="Xa8-aR-aAH" id="kSm-aJ-WSP"/>
-                                    <outlet property="trendingButton" destination="OKi-ic-JDO" id="Vuh-RR-gCm"/>
-                                    <outlet property="underlineView" destination="IJN-ou-FsD" id="jiB-eW-G13"/>
-                                    <outlet property="vibrancyEffectView" destination="RJz-8K-aum" id="eEo-rB-wW0"/>
+                                    <outlet property="feedHeaderView" destination="7gX-bZ-uKN" id="33V-Yr-aVk"/>
+                                    <outlet property="titleLabel" destination="1EC-TQ-y6b" id="v9J-rh-GGB"/>
+                                    <outlet property="vibrancyEffectView" destination="RJz-8K-aum" id="z6Q-eN-zhA"/>
                                 </connections>
                             </visualEffectView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRC-5h-CBy" userLabel="Transparent View">
@@ -402,12 +422,12 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="blurNavBar" destination="zEY-1D-HFW" id="FLn-80-D6l"/>
                         <outlet property="bottomSpacePlayerContainerViewToSuperView" destination="8fJ-Ie-kuR" id="Wan-e9-ZSP"/>
                         <outlet property="centerXTrendingViewToSuperView" destination="jS2-X1-zoV" id="6os-ou-SEi"/>
                         <outlet property="feedTapGestureRecognizer" destination="Ruj-83-Pnz" id="oYh-qQ-pSB"/>
                         <outlet property="playerContainerView" destination="nog-LH-6sr" id="EH3-jZ-eKG"/>
                         <outlet property="playerTapGestureRecognizer" destination="6Ow-87-5Me" id="KO1-mg-BZM"/>
-                        <outlet property="tableViewHeader" destination="zEY-1D-HFW" id="umP-Kz-qBP"/>
                         <outlet property="transparentView" destination="wRC-5h-CBy" id="oHO-7g-cMc"/>
                     </connections>
                 </viewController>

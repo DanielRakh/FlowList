@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FLFeedHeaderView: UIVisualEffectView {
+class FLFeedHeaderView: UIView {
     
     enum ListMode {
         case New
@@ -26,8 +26,6 @@ class FLFeedHeaderView: UIVisualEffectView {
     @IBOutlet weak var newButton:UIButton!
     @IBOutlet weak var trendingButton:UIButton!
     @IBOutlet weak var likesButton:UIButton!
-    @IBOutlet weak var vibrancyEffectView:UIVisualEffectView!
-    
     //Constraints
     var centerXAlignUnderlineToNewButton:NSLayoutConstraint?
     var equalWidthUnderlineToNewButton:NSLayoutConstraint?
@@ -44,7 +42,6 @@ class FLFeedHeaderView: UIVisualEffectView {
     func setupUI() {
         
         backgroundColor = UIColor.clearColor()
-        vibrancyEffectView.contentView.backgroundColor = UIColor.FLCHazyBlue()
         trendingButton.setTitleColor(UIColor.FLCPlainWhite(), forState: .Normal)
         likesButton.setTitleColor(UIColor.FLCUnselectedGray(), forState: .Normal)
         newButton.setTitleColor(UIColor.FLCUnselectedGray(), forState: .Normal)

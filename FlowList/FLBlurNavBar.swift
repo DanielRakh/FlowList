@@ -12,6 +12,7 @@ class FLBlurNavBar: UIVisualEffectView {
     
     @IBOutlet weak var vibrancyEffectView:UIVisualEffectView!
     @IBOutlet weak var titleLabel:UILabel!
+    @IBOutlet weak var feedHeaderView:FLFeedHeaderView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
