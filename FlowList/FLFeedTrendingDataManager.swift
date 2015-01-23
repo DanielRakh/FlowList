@@ -31,7 +31,7 @@ class FLFeedTrendingDataManager:NSObject {
     }
     
     func songItemsFromJSONResponse(json:AnyObject) -> [FLSongItem] {
-        let songsArray = JSON(json)["songs"].arrayObject?.map{ track in
+        let songsArray = JSON(json)["results"].arrayObject?.map{ track in
             FLSongItem(title: track["title"] as String,
                 creator:track["user_name"] as String ,
                 streamURL:track["stream_url"] as String,

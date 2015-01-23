@@ -106,7 +106,13 @@ extension FLFeedTrendingTableViewController: UITableViewDelegate {
         var cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.contentView.backgroundColor = indexPath.row % 2 == 0 ? UIColor.FLCHazyBlue() : UIColor.FLCMightnightBlue()
     }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        //
+    }
+    
 }
+
 
 
 
