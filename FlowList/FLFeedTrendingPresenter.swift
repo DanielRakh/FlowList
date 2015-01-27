@@ -33,8 +33,17 @@ extension FLFeedTrendingPresenter:FLFeedTrendingViewOutput {
         scrollViewDelegate?.userDidScrollDirection(direction, dragValue: dragValue)
     }
     
-    func scrollViewWillEndDraggingWithDragValue(dragValue: CGFloat) {
-        //
+    func scrollViewIsFullyScrolledUp() {
+        scrollViewDelegate?.userDidScrollFullyUp()
+    }
+    
+    func scrollViewWillEndDraggingScrollingUp() {
+        scrollViewDelegate?.userDidScrollFullyUp()
+
+    }
+    
+    func scrollViewWillEndDraggingScrollingDown() {
+        scrollViewDelegate?.userDidScrollFullyDown()
     }
 }
 

@@ -12,5 +12,7 @@ import Foundation
 protocol FLTrendingScrollViewDelegate {
     
     func userDidScrollDirection(direction:ScrollDirection, dragValue:CGFloat)
+    func userDidScrollFullyUp()
+    func userDidScrollFullyDown()
     
 }

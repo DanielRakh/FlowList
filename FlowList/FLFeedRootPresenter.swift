@@ -68,5 +68,15 @@ extension FLFeedRootPresenter: FLTrendingScrollViewDelegate {
             userInterface?.expandNavBarWithValue(dragValue)
         }
     }
+
+    func userDidScrollFullyUp() {
+        userInterface?.fullyExpandNavBar()
+    }
+
+    func userDidScrollFullyDown() {
+        userInterface?.fullyCollapseNavBar()
+    }
+    
+    
     
 }

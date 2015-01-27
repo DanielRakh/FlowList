@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum NavBarMode {
+    case Collapse
+    case Expand
+}
+
 class FLBlurNavBar: UIVisualEffectView {
     
     @IBOutlet weak var vibrancyEffectView:UIVisualEffectView!
@@ -33,4 +38,9 @@ class FLBlurNavBar: UIVisualEffectView {
         titleLabel.attributedText = attrString
         titleLabel.sizeToFit()
     }
+    
+    
+    
+    
+    
 }

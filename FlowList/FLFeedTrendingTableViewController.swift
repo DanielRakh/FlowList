@@ -108,23 +108,10 @@ extension FLFeedTrendingTableViewController: UITableViewDelegate {
         var cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.contentView.backgroundColor = indexPath.row % 2 == 0 ? UIColor.FLCHazyBlue() : UIColor.FLCMightnightBlue()
     }
-    
-//    func animateNavBarForMode(mode: NavBarMode, value: CGFloat, shouldAnimate: Bool) {
-//        
-//        let initialHeight = navBar.bounds.size.height
-//        let dragCoefficient:CGFloat = 0.25
-//        let collapsedHeight = ((initialHeight - (value * dragCoefficient)) < 20) ? 20 : initialHeight - (value * dragCoefficient)
-//        let expandedHeight = ((initialHeight + (value * dragCoefficient)) > 64) ? 64 : initialHeight + (value * dragCoefficient)
-//        
-//        if shouldAnimate {
-//            UIView.animateWithDuration(0.15) {
-//                self.navBar.frame = CGRectMake(0, 0, self.navBar.bounds.size.width, mode == .Expanded ? expandedHeight : collapsedHeight)
-//            }
-//        } else {
-//            self.navBar.frame = CGRectMake(0, 0, self.navBar.bounds.size.width, mode == .Expanded ? expandedHeight : collapsedHeight)
-//        }
-//    }
-    
+}
+
+
+extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
     
     func isScrollViewBouncing(scrollView:UIScrollView) -> Bool {
         return scrollView.contentOffset.y > scrollView.contentSize.height - scrollView.frame.size.height && scrollView.contentSize.height > scrollView.frame.size.height
@@ -143,76 +130,41 @@ extension FLFeedTrendingTableViewController: UITableViewDelegate {
             if scrollView.contentOffset.y > initialContentOffset {
                 
                 eventHandler?.scrollViewDidScrollWithDragValue(dragValue, direction: .Down)
-//                if navBar.bounds.size.height != 20 {
-//                    println(dragValue)
-//                    animateNavBarForMode(.Collapsed, value: dragValue, shouldAnimate:false)
-//                }
+                
             } else if scrollView.contentOffset.y < initialContentOffset {
                 
                 if isScrollViewBouncing(scrollView) == false {
                     eventHandler?.scrollViewDidScrollWithDragValue(dragValue, direction: .Up) }
-                
-//                if navBar.bounds.size.height != 64 && isScrollViewBouncing(scrollView) == false {
-//                    animateNavBarForMode(.Expanded, value: dragValue, shouldAnimate:false)
-//                }
             }
             
             initialContentOffset = scrollView.contentOffset.y
             
             
         } else {
-            
-//            let expandedHeight:CGFloat = 64.0
-//            
-//            if navBar.bounds.size.height != expandedHeight {
-//                UIView.animateWithDuration(0.15,
-//                    delay: 0.0,
-//                    options: .BeginFromCurrentState,
-//                    animations: { () -> Void in
-//                        self.navBar.frame = CGRectMake(0, 0, self.navBar.bounds.size.width, expandedHeight)
-//                    }) { (success:Bool) -> Void in
-//                        //
-//                }
-//                
-//            }
-//            
-//        }
+            eventHandler?.scrollViewIsFullyScrolledUp()
+        }
         
     }
-        
-}
     
     override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         if scrollView.decelerating == false {
             initialContentOffset = 1.0
         }
-        
     }
     
     override func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
-//        let expandedHeight = 64
-//        let collapsedHeight = 20
-//        let velocity = scrollView.panGestureRecognizer.velocityInView(view.superview)
-//        var newHeight:Int = 0
-//        
-//        if velocity.y < 20 {
-//            newHeight = collapsedHeight
-//        } else if velocity.y > 40 {
-//            newHeight = expandedHeight
-//        }
-//        
-//        
-//        UIView.animateWithDuration(0.15,
-//            delay: 0.0,
-//            options: .BeginFromCurrentState,
-//            animations: { () -> Void in
-//                self.navBar.frame = CGRectMake(0, 0, self.navBar.bounds.size.width, CGFloat(newHeight))
-//            }) { (success:Bool) -> Void in
-//                //
+        let velocity = scrollView.panGestureRecognizer.velocityInView(view.superview)
+        
+        if velocity.y < 20 {
+            eventHandler?.scrollViewWillEndDraggingScrollingDown()
+        } else if velocity.y > 40 {
+            eventHandler?.scrollViewWillEndDraggingScrollingUp()
         }
+        
+    }
+    
 }
-
 
 
 

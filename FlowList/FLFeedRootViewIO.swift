@@ -13,6 +13,8 @@ protocol FLFeedRootViewInput {
     
     func expandNavBarWithValue(value:CGFloat)
     func collapseNavBarWithValue(value:CGFloat)
+    func fullyExpandNavBar()
+    func fullyCollapseNavBar()
 }
 
 protocol FLFeedRootViewOutput {

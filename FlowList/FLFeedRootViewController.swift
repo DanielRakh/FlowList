@@ -9,11 +9,6 @@
 import UIKit
 
 
-enum NavBarMode {
-    case Collapse
-    case Expand
-}
-
 class FLFeedRootViewController: UIViewController {
 
     //MARK:
@@ -21,6 +16,9 @@ class FLFeedRootViewController: UIViewController {
     
     //MARK: Public
     var eventHandler:FLFeedRootPresenter?
+    
+    private let expandedNavBarHeight:CGFloat = 118
+    private let collapsedNavBarHeight:CGFloat = 20
 
 
     //MARK: IBOutlets
@@ -121,30 +119,55 @@ class FLFeedRootViewController: UIViewController {
     
     func transitionNavBarForMode(mode: NavBarMode, navBar:UIView, value: CGFloat) {
         
+//        let initialAlpha = (heightNavBar.constant - 18) / 100
         let initialHeight = heightNavBar.constant
         let dragCoefficient:CGFloat = 0.25
-        let collapsedHeight = ((initialHeight - (value * dragCoefficient)) < 20) ? 20 : initialHeight - (value * dragCoefficient)
-        let expandedHeight = ((initialHeight + (value * dragCoefficient)) > 118) ? 118 : initialHeight + (value * dragCoefficient)
+        let collapsedHeight = ((initialHeight - (value * dragCoefficient)) < collapsedNavBarHeight) ? collapsedNavBarHeight : initialHeight - (value * dragCoefficient)
+        let expandedHeight = ((initialHeight + (value * dragCoefficient)) > expandedNavBarHeight) ? expandedNavBarHeight : initialHeight + (value * dragCoefficient)
         
+        blurNavBar.titleLabel.alpha = mode == .Expand ? ((expandedHeight - 18) / 100) : ((collapsedHeight - 18) / 100)
+        blurNavBar.feedHeaderView.alpha = mode == .Expand ? ((expandedHeight - 18) / 100) : ((collapsedHeight - 18) / 100)
+
         heightNavBar.constant = mode == .Expand ? expandedHeight : collapsedHeight
         view.layoutIfNeeded()
 
-//            navBar.frame = CGRectMake(0, 0, navBar.bounds.size.width, mode == .Expand ? expandedHeight : collapsedHeight)
     }
 }
 
 extension FLFeedRootViewController: FLFeedRootViewInput {
     
     func expandNavBarWithValue(value:CGFloat) {
-        if heightNavBar.constant != 118 {
+        if heightNavBar.constant != expandedNavBarHeight {
             transitionNavBarForMode(.Expand, navBar: blurNavBar, value: value)
         }
 
     }
     
     func collapseNavBarWithValue(value:CGFloat) {
-        if heightNavBar.constant != 20 {
+        if heightNavBar.constant != collapsedNavBarHeight {
             transitionNavBarForMode(.Collapse, navBar: blurNavBar, value: value)
+        }
+    }
+
+    func fullyExpandNavBar() {
+        if heightNavBar.constant != expandedNavBarHeight {
+            heightNavBar.constant = expandedNavBarHeight
+            UIView.animateWithDuration(0.15, animations: { () -> Void in
+                self.blurNavBar.titleLabel.alpha = 1.0
+                self.blurNavBar.feedHeaderView.alpha = 1.0
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    
+    func fullyCollapseNavBar() {
+        if heightNavBar.constant != collapsedNavBarHeight {
+            heightNavBar.constant = collapsedNavBarHeight
+            UIView.animateWithDuration(0.15, animations: { () -> Void in
+                self.blurNavBar.titleLabel.alpha = 0.0
+                self.blurNavBar.feedHeaderView.alpha = 0.0
+                self.view.layoutIfNeeded()
+            })
         }
     }
     

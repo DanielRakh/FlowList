@@ -15,7 +15,10 @@ protocol FLFeedTrendingViewInput {
 protocol FLFeedTrendingViewOutput {
     func initialSetup()
     func queueSong(song:FLTrendingSongItem)
+    
     func scrollViewDidScrollWithDragValue(dragValue:CGFloat, direction:ScrollDirection)
-    func scrollViewWillEndDraggingWithDragValue(dragValue:CGFloat)
+    func scrollViewWillEndDraggingScrollingDown()
+    func scrollViewWillEndDraggingScrollingUp()
+    func scrollViewIsFullyScrolledUp()
     
 }
