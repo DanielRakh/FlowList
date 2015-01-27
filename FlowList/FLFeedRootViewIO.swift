@@ -10,6 +10,9 @@ import Foundation
 
 
 protocol FLFeedRootViewInput {
+    
+    func expandNavBarWithValue(value:CGFloat)
+    func collapseNavBarWithValue(value:CGFloat)
 }
 
 protocol FLFeedRootViewOutput {
@@ -17,3 +20,4 @@ protocol FLFeedRootViewOutput {
     func playerViewDidRecognizeTap()
     func feedViewDidRecognizeTap()
 }
+

@@ -74,6 +74,7 @@
 		8E8F07A11A61C89F0052E246 /* FLCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1685F1A5F9D9F0014EAB1 /* FLCoreDataStack.swift */; };
 		8E8F07A21A61C8A10052E246 /* FLManagedSongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F075D1A5FA5590052E246 /* FLManagedSongItem.swift */; };
 		8E8F07A41A61CBF60052E246 /* FLFeedModuleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8F07A31A61CBF60052E246 /* FLFeedModuleDelegate.swift */; };
+		8E9A01331A76DDBF0087A86D /* FLTrendingScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9A01321A76DDBF0087A86D /* FLTrendingScrollViewDelegate.swift */; };
 		8EAAA1481A5361150041BD16 /* FLColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA1471A5361150041BD16 /* FLColorPalette.swift */; };
 		8EAAA14D1A5533FB0041BD16 /* FLFeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */; };
 		8EAFB75C1A63083B00341D3A /* FLPlayerAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFB75B1A63083B00341D3A /* FLPlayerAudioManager.swift */; };
@@ -197,6 +198,7 @@
 		8E8F079C1A6121AD0052E246 /* FLFeedNewInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedNewInteractorIO.swift; sourceTree = "<group>"; };
 		8E8F079E1A6199720052E246 /* FLTrendingSongItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTrendingSongItem.swift; sourceTree = "<group>"; };
 		8E8F07A31A61CBF60052E246 /* FLFeedModuleDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedModuleDelegate.swift; sourceTree = "<group>"; };
+		8E9A01321A76DDBF0087A86D /* FLTrendingScrollViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTrendingScrollViewDelegate.swift; sourceTree = "<group>"; };
 		8EAAA1471A5361150041BD16 /* FLColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLColorPalette.swift; sourceTree = "<group>"; };
 		8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTableCell.swift; sourceTree = "<group>"; };
 		8EAFB75B1A63083B00341D3A /* FLPlayerAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlayerAudioManager.swift; sourceTree = "<group>"; };
@@ -540,6 +542,7 @@
 			children = (
 				8E3D38D41A521C2400BFDD12 /* FLFeedTrendingViewIO.swift */,
 				8E8F07621A606A980052E246 /* FLFeedTrendingTableViewController.swift */,
+				8E9A01321A76DDBF0087A86D /* FLTrendingScrollViewDelegate.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -928,6 +931,7 @@
 				8E8F079B1A6121680052E246 /* FLFeedLikesInteractorIO.swift in Sources */,
 				8E2C89E91A59D37600293333 /* FLPlayPauseButton.swift in Sources */,
 				8E2C89D01A5679C500293333 /* FLPlayerViewIO.swift in Sources */,
+				8E9A01331A76DDBF0087A86D /* FLTrendingScrollViewDelegate.swift in Sources */,
 				8E2E6E751A511A8300DE49C9 /* SwiftyJSON.swift in Sources */,
 				8E2C89C01A566D5900293333 /* FLPlayerInteractor.swift in Sources */,
 				8E3DE31A1A55FBAB00FB79FC /* FLUpvoteIcon.swift in Sources */,

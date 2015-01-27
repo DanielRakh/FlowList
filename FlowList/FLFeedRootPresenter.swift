@@ -38,6 +38,8 @@ class FLFeedRootPresenter: NSObject {
         feedRootWireframe?.slidePlayerContainerView(slideTransition)
     }
     
+    
+    
 }
 
 extension FLFeedRootPresenter: FLFeedRootViewOutput {
@@ -52,6 +54,19 @@ extension FLFeedRootPresenter: FLFeedRootViewOutput {
     
     func feedViewDidRecognizeTap() {
         playerContainerViewShouldSlide(.In)
+    }
+    
+}
+
+
+extension FLFeedRootPresenter: FLTrendingScrollViewDelegate {
+    
+    func userDidScrollDirection(direction: ScrollDirection, dragValue: CGFloat) {
+        if direction == .Down {
+            userInterface?.collapseNavBarWithValue(dragValue)
+        } else {
+            userInterface?.expandNavBarWithValue(dragValue)
+        }
     }
     
 }

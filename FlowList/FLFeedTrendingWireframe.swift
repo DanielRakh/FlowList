@@ -14,6 +14,7 @@ class FLFeedTrendingWireframe: NSObject {
     
     func setupTrendingFeedInterfaceFromViewController(viewController:FLFeedTrendingTableViewController) {
         viewController.eventHandler = trendingPresenter
+        trendingPresenter?.userInterface = viewController
     }
    
 }

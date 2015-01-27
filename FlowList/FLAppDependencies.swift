@@ -62,6 +62,7 @@ class FLAppDependencies {
         trendingPresenter.feedInteractor = trendingInteractor
         trendingPresenter.feedWireframe = trendingWireframe
         trendingPresenter.feedModuleDelegate = playerPresenter
+        trendingPresenter.scrollViewDelegate = feedRootPresenter
         
         trendingWireframe.trendingPresenter = trendingPresenter
         

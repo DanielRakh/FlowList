@@ -8,6 +8,12 @@
 
 import UIKit
 
+
+enum NavBarMode {
+    case Collapse
+    case Expand
+}
+
 class FLFeedRootViewController: UIViewController {
 
     //MARK:
@@ -25,6 +31,7 @@ class FLFeedRootViewController: UIViewController {
     //MARK: Constraints
     @IBOutlet var centerXTrendingViewToSuperView: NSLayoutConstraint!
     @IBOutlet weak var bottomSpacePlayerContainerViewToSuperView: NSLayoutConstraint!
+    @IBOutlet weak var heightNavBar: NSLayoutConstraint!
     
     //MARK: Gesture Recognizers
     @IBOutlet weak var playerTapGestureRecognizer: UITapGestureRecognizer!
@@ -110,13 +117,40 @@ class FLFeedRootViewController: UIViewController {
                 //
         }
     }
+    
+    
+    func transitionNavBarForMode(mode: NavBarMode, navBar:UIView, value: CGFloat) {
+        
+        let initialHeight = heightNavBar.constant
+        let dragCoefficient:CGFloat = 0.25
+        let collapsedHeight = ((initialHeight - (value * dragCoefficient)) < 20) ? 20 : initialHeight - (value * dragCoefficient)
+        let expandedHeight = ((initialHeight + (value * dragCoefficient)) > 118) ? 118 : initialHeight + (value * dragCoefficient)
+        
+        heightNavBar.constant = mode == .Expand ? expandedHeight : collapsedHeight
+        view.layoutIfNeeded()
 
-
+//            navBar.frame = CGRectMake(0, 0, navBar.bounds.size.width, mode == .Expand ? expandedHeight : collapsedHeight)
+    }
 }
 
 extension FLFeedRootViewController: FLFeedRootViewInput {
     
+    func expandNavBarWithValue(value:CGFloat) {
+        if heightNavBar.constant != 118 {
+            transitionNavBarForMode(.Expand, navBar: blurNavBar, value: value)
+        }
+
+    }
+    
+    func collapseNavBarWithValue(value:CGFloat) {
+        if heightNavBar.constant != 20 {
+            transitionNavBarForMode(.Collapse, navBar: blurNavBar, value: value)
+        }
+    }
+    
+    
 }
+
 
 
 

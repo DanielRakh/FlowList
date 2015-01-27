@@ -14,7 +14,7 @@ class FLFeedTrendingPresenter: NSObject {
     var feedInteractor:FLFeedTrendingInteractor?
     var feedWireframe:FLFeedTrendingWireframe?
     var feedModuleDelegate:FLFeedModuleDelegate?
-
+    var scrollViewDelegate:FLTrendingScrollViewDelegate?
 }
 
 
@@ -28,6 +28,14 @@ extension FLFeedTrendingPresenter:FLFeedTrendingViewOutput {
         feedInteractor?.queueSong(song)
         feedModuleDelegate?.feedModuleDidSelectSong()
     }
+    
+    func scrollViewDidScrollWithDragValue(dragValue: CGFloat, direction: ScrollDirection) {
+        scrollViewDelegate?.userDidScrollDirection(direction, dragValue: dragValue)
+    }
+    
+    func scrollViewWillEndDraggingWithDragValue(dragValue: CGFloat) {
+        //
+    }
 }
 
 extension FLFeedTrendingPresenter: FLFeedTrendingInteractorOutput {
@@ -35,4 +43,5 @@ extension FLFeedTrendingPresenter: FLFeedTrendingInteractorOutput {
     func foundTrendingSongs(songs:[FLTrendingSongItem]) {
         userInterface?.showTrendingSongs(songs)
     }
+    
 }
