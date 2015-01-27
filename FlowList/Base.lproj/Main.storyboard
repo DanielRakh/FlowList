@@ -169,18 +169,18 @@
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="t1d-Dz-leA"/>
-                                                    <exclude reference="B8P-hu-owm"/>
-                                                    <exclude reference="7hQ-j6-VbM"/>
-                                                    <exclude reference="s0P-Fl-4MA"/>
-                                                    <exclude reference="yyj-JK-PA4"/>
+                                                    <exclude reference="v8H-YL-ekp"/>
+                                                    <exclude reference="zza-gI-Zav"/>
                                                     <exclude reference="HRY-mf-1ui"/>
                                                     <exclude reference="QYd-B0-E6E"/>
                                                     <exclude reference="khJ-6O-7gQ"/>
+                                                    <exclude reference="B8P-hu-owm"/>
                                                     <exclude reference="fk4-gz-EHC"/>
                                                     <exclude reference="gsl-XP-mhF"/>
                                                     <exclude reference="pvQ-oN-Qxy"/>
-                                                    <exclude reference="v8H-YL-ekp"/>
-                                                    <exclude reference="zza-gI-Zav"/>
+                                                    <exclude reference="7hQ-j6-VbM"/>
+                                                    <exclude reference="s0P-Fl-4MA"/>
+                                                    <exclude reference="yyj-JK-PA4"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -193,18 +193,18 @@
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="t1d-Dz-leA"/>
-                                                    <include reference="B8P-hu-owm"/>
-                                                    <include reference="7hQ-j6-VbM"/>
-                                                    <include reference="s0P-Fl-4MA"/>
-                                                    <include reference="yyj-JK-PA4"/>
+                                                    <include reference="v8H-YL-ekp"/>
+                                                    <include reference="zza-gI-Zav"/>
                                                     <include reference="HRY-mf-1ui"/>
                                                     <include reference="QYd-B0-E6E"/>
                                                     <include reference="khJ-6O-7gQ"/>
+                                                    <include reference="B8P-hu-owm"/>
                                                     <include reference="fk4-gz-EHC"/>
                                                     <include reference="gsl-XP-mhF"/>
                                                     <include reference="pvQ-oN-Qxy"/>
-                                                    <include reference="v8H-YL-ekp"/>
-                                                    <include reference="zza-gI-Zav"/>
+                                                    <include reference="7hQ-j6-VbM"/>
+                                                    <include reference="s0P-Fl-4MA"/>
+                                                    <include reference="yyj-JK-PA4"/>
                                                 </mask>
                                             </variation>
                                             <connections>
@@ -218,11 +218,11 @@
                                         </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="7gX-bZ-uKN" secondAttribute="centerY" constant="-32" id="6Sy-l5-1cF"/>
                                         <constraint firstAttribute="trailing" secondItem="7gX-bZ-uKN" secondAttribute="trailing" id="DzB-3P-4w5"/>
                                         <constraint firstAttribute="centerX" secondItem="1EC-TQ-y6b" secondAttribute="centerX" constant="-34" id="Gza-e2-i4b">
                                             <variation key="widthClass=compact" constant="0.0"/>
                                         </constraint>
-                                        <constraint firstAttribute="bottom" secondItem="7gX-bZ-uKN" secondAttribute="bottom" id="LPT-dr-Y3M"/>
                                         <constraint firstItem="1EC-TQ-y6b" firstAttribute="top" secondItem="FoT-Oi-h9P" secondAttribute="top" constant="26" id="OLQ-8S-beb"/>
                                         <constraint firstItem="RJz-8K-aum" firstAttribute="top" secondItem="FoT-Oi-h9P" secondAttribute="top" id="Uc3-Z2-Glm"/>
                                         <constraint firstItem="7gX-bZ-uKN" firstAttribute="leading" secondItem="FoT-Oi-h9P" secondAttribute="leading" id="bMp-cg-dBD"/>
@@ -236,15 +236,15 @@
                                             <exclude reference="7gX-bZ-uKN"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="Gza-e2-i4b"/>
-                                            <exclude reference="OLQ-8S-beb"/>
                                             <exclude reference="Uc3-Z2-Glm"/>
                                             <exclude reference="cIN-SZ-pOl"/>
                                             <exclude reference="i51-3g-DeX"/>
                                             <exclude reference="oY2-qq-xXf"/>
+                                            <exclude reference="6Sy-l5-1cF"/>
                                             <exclude reference="DzB-3P-4w5"/>
-                                            <exclude reference="LPT-dr-Y3M"/>
                                             <exclude reference="bMp-cg-dBD"/>
+                                            <exclude reference="Gza-e2-i4b"/>
+                                            <exclude reference="OLQ-8S-beb"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -253,15 +253,15 @@
                                             <include reference="7gX-bZ-uKN"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="Gza-e2-i4b"/>
-                                            <include reference="OLQ-8S-beb"/>
                                             <include reference="Uc3-Z2-Glm"/>
                                             <include reference="cIN-SZ-pOl"/>
                                             <include reference="i51-3g-DeX"/>
                                             <include reference="oY2-qq-xXf"/>
+                                            <include reference="6Sy-l5-1cF"/>
                                             <include reference="DzB-3P-4w5"/>
-                                            <include reference="LPT-dr-Y3M"/>
                                             <include reference="bMp-cg-dBD"/>
+                                            <include reference="Gza-e2-i4b"/>
+                                            <include reference="OLQ-8S-beb"/>
                                         </mask>
                                     </variation>
                                 </view>
@@ -863,12 +863,18 @@
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="90" y="24" width="130" height="20"/>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJe-aR-13S">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="90" y="48" width="130" height="20"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -1026,12 +1032,18 @@
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="90" y="24" width="130" height="20"/>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wj-oe-4Jw">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="90" y="48" width="130" height="20"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -1189,12 +1201,18 @@
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="90" y="48" width="130" height="20"/>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOILER ROOM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqE-kE-N7h">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="90" y="24" width="130" height="20"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>

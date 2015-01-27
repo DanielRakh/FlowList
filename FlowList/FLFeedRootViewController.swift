@@ -119,17 +119,24 @@ class FLFeedRootViewController: UIViewController {
     
     func transitionNavBarForMode(mode: NavBarMode, navBar:UIView, value: CGFloat) {
         
-//        let initialAlpha = (heightNavBar.constant - 18) / 100
         let initialHeight = heightNavBar.constant
-        let dragCoefficient:CGFloat = 0.25
+        let dragCoefficient:CGFloat = 0.9
         let collapsedHeight = ((initialHeight - (value * dragCoefficient)) < collapsedNavBarHeight) ? collapsedNavBarHeight : initialHeight - (value * dragCoefficient)
         let expandedHeight = ((initialHeight + (value * dragCoefficient)) > expandedNavBarHeight) ? expandedNavBarHeight : initialHeight + (value * dragCoefficient)
         
-        blurNavBar.titleLabel.alpha = mode == .Expand ? ((expandedHeight - 18) / 100) : ((collapsedHeight - 18) / 100)
-        blurNavBar.feedHeaderView.alpha = mode == .Expand ? ((expandedHeight - 18) / 100) : ((collapsedHeight - 18) / 100)
-
         heightNavBar.constant = mode == .Expand ? expandedHeight : collapsedHeight
-        view.layoutIfNeeded()
+        UIView.animateWithDuration(0.1,
+            animations: { () -> Void in
+                self.blurNavBar.titleLabel.alpha = mode == .Expand ? ((expandedHeight - 18) / 100) : ((collapsedHeight - 18) / 100)
+                self.blurNavBar.feedHeaderView.alpha = mode == .Expand ? ((expandedHeight - 18) / 100) : ((collapsedHeight - 18) / 100)
+                self.blurNavBar.titleLabel.transform = mode == .Expand ? CGAffineTransformMakeScale(((expandedHeight - 18) / 100), ((expandedHeight - 18) / 100)) : CGAffineTransformMakeScale(((collapsedHeight - 18) / 100), ((collapsedHeight - 18) / 100))
+              
+               // self.blurNavBar.feedHeaderView.transform = mode == .Expand ? CGAffineTransformMakeScale(((expandedHeight - 18) / 100), ((expandedHeight - 18) / 100)) : CGAffineTransformMakeScale(((collapsedHeight - 18) / 100), ((collapsedHeight - 18) / 100))
+                
+                self.view.layoutIfNeeded()
+        })
+        
+
 
     }
 }
@@ -155,6 +162,9 @@ extension FLFeedRootViewController: FLFeedRootViewInput {
             UIView.animateWithDuration(0.15, animations: { () -> Void in
                 self.blurNavBar.titleLabel.alpha = 1.0
                 self.blurNavBar.feedHeaderView.alpha = 1.0
+                self.blurNavBar.titleLabel.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                //self.blurNavBar.feedHeaderView.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                
                 self.view.layoutIfNeeded()
             })
         }
@@ -166,12 +176,12 @@ extension FLFeedRootViewController: FLFeedRootViewInput {
             UIView.animateWithDuration(0.15, animations: { () -> Void in
                 self.blurNavBar.titleLabel.alpha = 0.0
                 self.blurNavBar.feedHeaderView.alpha = 0.0
+                self.blurNavBar.titleLabel.transform = CGAffineTransformMakeScale(0, 0)
+                //self.blurNavBar.feedHeaderView.transform = CGAffineTransformMakeScale(0, 0)
                 self.view.layoutIfNeeded()
             })
         }
     }
-    
-    
 }
 
 
