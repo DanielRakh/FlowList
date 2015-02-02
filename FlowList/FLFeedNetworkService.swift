@@ -56,7 +56,7 @@ class FLFeedNetworkService {
         
         if fail == nil && succeed == nil { return }
         
-        Alamofire.request(SongRouter.Trending(query, 10)).responseJSON { (request, response, json , error) in
+        Alamofire.request(SongRouter.Trending(query, 15)).responseJSON { (request, response, json , error) in
             if error != nil {
                 if let didFail = fail {
                     didFail(error!)
