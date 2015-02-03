@@ -159,12 +159,10 @@ extension FLFeedRootViewController: FLFeedRootViewInput {
     func fullyExpandNavBar() {
         if heightNavBar.constant != expandedNavBarHeight {
             heightNavBar.constant = expandedNavBarHeight
-            UIView.animateWithDuration(0.15, animations: { () -> Void in
+            UIView.animateWithDuration(0.35, animations: { () -> Void in
                 self.blurNavBar.titleLabel.alpha = 1.0
                 self.blurNavBar.feedHeaderView.alpha = 1.0
                 self.blurNavBar.titleLabel.transform = CGAffineTransformMakeScale(1.0, 1.0)
-                //self.blurNavBar.feedHeaderView.transform = CGAffineTransformMakeScale(1.0, 1.0)
-                
                 self.view.layoutIfNeeded()
             })
         }
@@ -173,11 +171,10 @@ extension FLFeedRootViewController: FLFeedRootViewInput {
     func fullyCollapseNavBar() {
         if heightNavBar.constant != collapsedNavBarHeight {
             heightNavBar.constant = collapsedNavBarHeight
-            UIView.animateWithDuration(0.15, animations: { () -> Void in
+            UIView.animateWithDuration(0.35, animations: { () -> Void in
                 self.blurNavBar.titleLabel.alpha = 0.0
                 self.blurNavBar.feedHeaderView.alpha = 0.0
                 self.blurNavBar.titleLabel.transform = CGAffineTransformMakeScale(0, 0)
-                //self.blurNavBar.feedHeaderView.transform = CGAffineTransformMakeScale(0, 0)
                 self.view.layoutIfNeeded()
             })
         }

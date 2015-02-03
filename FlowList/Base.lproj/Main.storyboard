@@ -236,6 +236,8 @@
                                             <exclude reference="7gX-bZ-uKN"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <exclude reference="Gza-e2-i4b"/>
+                                            <exclude reference="OLQ-8S-beb"/>
                                             <exclude reference="Uc3-Z2-Glm"/>
                                             <exclude reference="cIN-SZ-pOl"/>
                                             <exclude reference="i51-3g-DeX"/>
@@ -243,8 +245,6 @@
                                             <exclude reference="6Sy-l5-1cF"/>
                                             <exclude reference="DzB-3P-4w5"/>
                                             <exclude reference="bMp-cg-dBD"/>
-                                            <exclude reference="Gza-e2-i4b"/>
-                                            <exclude reference="OLQ-8S-beb"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -253,6 +253,8 @@
                                             <include reference="7gX-bZ-uKN"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <include reference="Gza-e2-i4b"/>
+                                            <include reference="OLQ-8S-beb"/>
                                             <include reference="Uc3-Z2-Glm"/>
                                             <include reference="cIN-SZ-pOl"/>
                                             <include reference="i51-3g-DeX"/>
@@ -260,8 +262,6 @@
                                             <include reference="6Sy-l5-1cF"/>
                                             <include reference="DzB-3P-4w5"/>
                                             <include reference="bMp-cg-dBD"/>
-                                            <include reference="Gza-e2-i4b"/>
-                                            <include reference="OLQ-8S-beb"/>
                                         </mask>
                                     </variation>
                                 </view>
@@ -287,14 +287,6 @@
                                     <outlet property="vibrancyEffectView" destination="RJz-8K-aum" id="z6Q-eN-zhA"/>
                                 </connections>
                             </visualEffectView>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRC-5h-CBy" userLabel="Transparent View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Ruj-83-Pnz" appends="YES" id="oZ8-ca-YDS"/>
-                                </connections>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nog-LH-6sr" userLabel="Player Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
@@ -317,6 +309,14 @@
                                     <segue destination="yWP-CK-utu" kind="embed" identifier="presentPlayerController" id="ksI-KH-DCN"/>
                                 </connections>
                             </containerView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRC-5h-CBy" userLabel="Transparent View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ruj-83-Pnz" appends="YES" id="oZ8-ca-YDS"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
@@ -349,8 +349,8 @@
                                 <exclude reference="XrL-gj-d3m"/>
                                 <exclude reference="aF2-L5-Uuz"/>
                                 <exclude reference="zEY-1D-HFW"/>
-                                <exclude reference="wRC-5h-CBy"/>
                                 <exclude reference="nog-LH-6sr"/>
+                                <exclude reference="wRC-5h-CBy"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="3ar-m4-wSv"/>
@@ -383,8 +383,8 @@
                                 <include reference="XrL-gj-d3m"/>
                                 <include reference="aF2-L5-Uuz"/>
                                 <include reference="zEY-1D-HFW"/>
-                                <include reference="wRC-5h-CBy"/>
                                 <include reference="nog-LH-6sr"/>
+                                <include reference="wRC-5h-CBy"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="3ar-m4-wSv"/>
@@ -864,7 +864,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="24" width="130" height="20"/>
+                                                <rect key="frame" x="90" y="24" width="130" height="19.5"/>
                                             </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJe-aR-13S">
@@ -873,7 +873,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="48" width="130" height="20"/>
+                                                <rect key="frame" x="90" y="48" width="130" height="19.5"/>
                                             </variation>
                                         </label>
                                     </subviews>
@@ -1033,7 +1033,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="24" width="130" height="20"/>
+                                                <rect key="frame" x="90" y="24" width="130" height="19.5"/>
                                             </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wj-oe-4Jw">
@@ -1042,7 +1042,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="48" width="130" height="20"/>
+                                                <rect key="frame" x="90" y="48" width="130" height="19.5"/>
                                             </variation>
                                         </label>
                                     </subviews>
@@ -1202,7 +1202,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="48" width="130" height="20"/>
+                                                <rect key="frame" x="90" y="48" width="130" height="19.5"/>
                                             </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOILER ROOM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqE-kE-N7h">
@@ -1211,7 +1211,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="24" width="130" height="20"/>
+                                                <rect key="frame" x="90" y="24" width="130" height="19.5"/>
                                             </variation>
                                         </label>
                                     </subviews>

@@ -39,8 +39,4 @@ class FLBlurNavBar: UIVisualEffectView {
         titleLabel.sizeToFit()
     }
     
-    
-    
-    
-    
 }
