@@ -8,6 +8,19 @@
 
 import UIKit
 
+/*
+Rules for the UX:
+
+Scroll View controls the height of the Nav Bar.
+Nav Bar must always be in collapsed or expanded state. 
+If Nav bar is <= half of its height. It should animate automatically to collapsed mode and return the difference between that intial state and the collaped state to offset the scrollview.
+Vice versa for > half of its height. 
+
+So as a user you
+
+
+*/
+
 enum NavBarMode {
     case Collapse
     case Expand
