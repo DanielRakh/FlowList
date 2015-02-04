@@ -109,7 +109,7 @@ extension FLFeedTrendingTableViewController: UITableViewDelegate {
     
     override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
         var cell = tableView.cellForRowAtIndexPath(indexPath)
-//        cell?.contentView.backgroundColor = UIColor.FLCElectricBlue()
+        //        cell?.contentView.backgroundColor = UIColor.FLCElectricBlue()
     }
     
     override func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
@@ -127,8 +127,7 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         
-        
-        if scrollView.contentOffset.y > -topContentInset && isScrollViewBouncing(scrollView) == false {
+        if scrollView.dragging && scrollView.contentOffset.y > -topContentInset && isScrollViewBouncing(scrollView) == false {
             //In the bounds of the scroll.
             
             var dragValue = abs(abs(initialContentOffset) - abs(scrollView.contentOffset.y))
@@ -142,21 +141,13 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
                 
                 initialNavBarExpansionContentOffset = scrollView.contentOffset.y
                 
-                navBarMode = .Collapse
-                
-                
             } else if scrollView.contentOffset.y < initialContentOffset {
                 
                 if scrollView.contentOffset.y > topContentInset {
-                    
                     if (initialNavBarExpansionContentOffset - scrollView.contentOffset.y) > CGRectGetHeight(view.bounds) / 2 {
                         eventHandler?.scrollViewDidScrollWithDragValue(dragValue, direction: .Up)
-                        navBarMode = .Expand
-                        println("EXPANDED!")
                     }
-                    
                 } else {
-                    
                     eventHandler?.scrollViewDidScrollWithDragValue(dragValue, direction: .Up)
                 }
                 
@@ -172,103 +163,17 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
         if scrollView.decelerating == false {
             initialContentOffset = scrollView.contentOffset.y
             initialNavBarExpansionContentOffset = scrollView.contentOffset.y
-            initialNavBarDragContentOffset = scrollView.contentOffset.y
+            //            initialNavBarDragContentOffset = scrollView.contentOffset.y
         }
     }
     
     override func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
-        //        println("targetContentOffset:\(targetContentOffset.memory.y)")
-        
-        //        if scrollVelocity.y > 20 {
-        //            eventHandler?.scrollViewWillEndDraggingScrollingDown()
-        //        } else if scrollVelocity.y > 40 {
-        //            eventHandler?.scrollViewWillEndDraggingScrollingUp()
-        //        }
-        
-        
-        // User releases: If we're in mid collapse/expansion: grab the offset between the start point and end point of the animation and offset the view accordingly.
-        // If the view is soff s
-        
-        //       println("Velocity:\(velocity)")
-        
-        if scrollView.contentOffset.y <= topContentInset {
-            
-            // If we're still at the top of the feed.
-            if scrollView.contentOffset.y <= -(topContentInset / 2) {
-                //Animate nav bar to expansion.
-                //Scroll feed to -contentInset
-                scrollView.setContentOffset(CGPointMake(scrollView.contentOffset.x, -topContentInset), animated: true)
-                eventHandler?.scrollViewWillEndDraggingScrollingUp()
-                
-                
-            } else if scrollView.contentOffset.y >= -(topContentInset / 2)  {
-                //Animate nav bar to collapse
-                scrollView.setContentOffset(CGPointMake(scrollView.contentOffset.x, -20), animated: true)
-                eventHandler?.scrollViewWillEndDraggingScrollingDown()
-                
-            }
-            
+        if navBarMode == .Animating {
+            eventHandler?.userWillEndDragging()
         }
-            
-            
-            
-        else {
-            
-//            if targetContentOffset.memory.y == scrollView.contentOffset.y {
-            
-                if navBarMode == .Expand && isScrollViewBouncing(scrollView) == false  {
-                    //
-                    eventHandler?.scrollViewWillEndDraggingScrollingUp()
-                    //
-                    //
-                } else if navBarMode == .Collapse && isScrollViewBouncing(scrollView) == false && scrollView.decelerating == false  && velocity.y == 0{
-                    
-                    println("TARGET OFFSET:\(targetContentOffset.memory.y)")
-                    println("SCROLL VIEW OFFSET:\(scrollView.contentOffset.y)")
-                    
-                    if scrollView.contentOffset.y - initialNavBarDragContentOffset <= (topContentInset / 3) && scrollView.contentOffset.y - initialNavBarDragContentOffset > 0  {
-                        println(scrollView.contentOffset.y - initialNavBarDragContentOffset)
-                        scrollView.setContentOffset(CGPointMake(scrollView.contentOffset.x, initialNavBarDragContentOffset), animated: true)
-                        eventHandler?.scrollViewWillEndDraggingScrollingUp()
-                        println("EXPAND!")
-                    } else if scrollView.contentOffset.y - initialNavBarDragContentOffset >= (topContentInset / 3) && scrollView.contentOffset.y - initialNavBarDragContentOffset < topContentInset {
-                        println("COLLAPSE!")
-                        scrollView.setContentOffset(CGPointMake(scrollView.contentOffset.x, scrollView.contentOffset.y + (scrollView.contentOffset.y - initialNavBarDragContentOffset)), animated: true)
-                        eventHandler?.scrollViewWillEndDraggingScrollingDown()
-                    }
-                    
-                }
-                
-//            }
-            
-        }
-        
-        
         
     }
-    
-    
-    
-    //    override func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-    //
-    //        if scrollView.contentOffset.y > 0 {
-    //
-    //            if navBarMode == .Collapse {
-    //                if decelerate == false {
-    //                    if scrollView.contentOffset.y - initialNavBarDragContentOffset <= (topContentInset / 2) {
-    //                        eventHandler?.scrollViewWillEndDraggingScrollingUp()
-    //                        println("EXPAND!")
-    //                    } else {
-    //                        println("COLLAPSE!")
-    //                        eventHandler?.scrollViewWillEndDraggingScrollingDown()
-    //                    }
-    //
-    //                }
-    //            }
-    //        }
-    //
-    //    }
     
     
 }
@@ -281,6 +186,16 @@ extension FLFeedTrendingTableViewController: FLFeedTrendingViewInput {
         self.songs = songs
         tableView.reloadData()
     }
+    
+    func navBarIsMidAnimation() {
+        self.navBarMode = .Animating
+    }
+    func navBarIsExpanded(){
+        self.navBarMode = .Expanded
+    }
+    func navBarIsCollapsed() {
+        self.navBarMode = .Collapsed
+}
 }
 
 

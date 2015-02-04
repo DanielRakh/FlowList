@@ -121,20 +121,26 @@ class FLFeedRootViewController: UIViewController {
         
         let initialHeight = heightNavBar.constant
         let dragCoefficient:CGFloat = 0.9
+        
         let collapsedHeight = ((initialHeight - (value * dragCoefficient)) < collapsedNavBarHeight) ? collapsedNavBarHeight : initialHeight - (value * dragCoefficient)
         let expandedHeight = ((initialHeight + (value * dragCoefficient)) > expandedNavBarHeight) ? expandedNavBarHeight : initialHeight + (value * dragCoefficient)
         
         heightNavBar.constant = mode == .Expand ? expandedHeight : collapsedHeight
+
+
         UIView.animateWithDuration(0.1,
             animations: { () -> Void in
                 self.blurNavBar.titleLabel.alpha = mode == .Expand ? ((expandedHeight - 18) / 100) : ((collapsedHeight - 18) / 100)
                 self.blurNavBar.feedHeaderView.alpha = mode == .Expand ? ((expandedHeight - 18) / 100) : ((collapsedHeight - 18) / 100)
                 self.blurNavBar.titleLabel.transform = mode == .Expand ? CGAffineTransformMakeScale(((expandedHeight - 18) / 100), ((expandedHeight - 18) / 100)) : CGAffineTransformMakeScale(((collapsedHeight - 18) / 100), ((collapsedHeight - 18) / 100))
-              
-               // self.blurNavBar.feedHeaderView.transform = mode == .Expand ? CGAffineTransformMakeScale(((expandedHeight - 18) / 100), ((expandedHeight - 18) / 100)) : CGAffineTransformMakeScale(((collapsedHeight - 18) / 100), ((collapsedHeight - 18) / 100))
+                
+                // self.blurNavBar.feedHeaderView.transform = mode == .Expand ? CGAffineTransformMakeScale(((expandedHeight - 18) / 100), ((expandedHeight - 18) / 100)) : CGAffineTransformMakeScale(((collapsedHeight - 18) / 100), ((collapsedHeight - 18) / 100))
                 
                 self.view.layoutIfNeeded()
-        })
+            }) { (success:Bool) -> Void in
+                self.blurNavBar.mode = .Animating
+                self.eventHandler!.navBarIsInMidAnimation()
+        }
         
 
 
@@ -147,12 +153,20 @@ extension FLFeedRootViewController: FLFeedRootViewInput {
         if heightNavBar.constant != expandedNavBarHeight {
             transitionNavBarForMode(.Expand, navBar: blurNavBar, value: value)
         }
+        else {
+            blurNavBar.mode = .Expanded
+            eventHandler?.navBarIsExpanded()
+        }
 
     }
     
     func collapseNavBarWithValue(value:CGFloat) {
         if heightNavBar.constant != collapsedNavBarHeight {
             transitionNavBarForMode(.Collapse, navBar: blurNavBar, value: value)
+        }
+        else {
+            blurNavBar.mode = .Collapsed
+            eventHandler?.navBarIsCollapsed()
         }
     }
 
@@ -179,6 +193,19 @@ extension FLFeedRootViewController: FLFeedRootViewInput {
             })
         }
     }
+    
+    func finishNavBarTransition() {
+        
+        if self.blurNavBar.mode == .Animating {
+            if heightNavBar.constant <= (expandedNavBarHeight / 2) {
+                fullyCollapseNavBar()
+            } else {
+                fullyExpandNavBar()
+            }
+        }
+    }
+    
+    
 }
 
 

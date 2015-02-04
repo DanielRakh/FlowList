@@ -10,6 +10,11 @@ import Foundation
 
 protocol FLFeedTrendingViewInput {
     func showTrendingSongs(songs:[FLTrendingSongItem])
+    
+    func navBarIsMidAnimation()
+    func navBarIsExpanded()
+    func navBarIsCollapsed()
+    
 }
 
 protocol FLFeedTrendingViewOutput {
@@ -17,8 +22,10 @@ protocol FLFeedTrendingViewOutput {
     func queueSong(song:FLTrendingSongItem)
     
     func scrollViewDidScrollWithDragValue(dragValue:CGFloat, direction:ScrollDirection)
-    func scrollViewWillEndDraggingScrollingDown()
-    func scrollViewWillEndDraggingScrollingUp()
-    func scrollViewIsFullyScrolledUp()
+//    func scrollViewWillEndDraggingScrollingDown()
+//    func scrollViewWillEndDraggingScrollingUp()
+//    func scrollViewIsFullyScrolledUp()
+    
+    func userWillEndDragging()
     
 }

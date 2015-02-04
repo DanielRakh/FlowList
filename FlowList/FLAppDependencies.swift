@@ -69,6 +69,9 @@ class FLAppDependencies {
         trendingInteractor.output = trendingPresenter
         
         
+        feedRootPresenter.blurNavBarInterface = trendingPresenter
+        
+        
         
         let newWireframe = FLFeedNewWireframe()
         feedRootWireframe.newWireframe = newWireframe

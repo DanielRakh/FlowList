@@ -24,6 +24,10 @@ So as a user you
 enum NavBarMode {
     case Collapse
     case Expand
+    
+    case Expanded
+    case Collapsed
+    case Animating
 }
 
 class FLBlurNavBar: UIVisualEffectView {
@@ -31,6 +35,7 @@ class FLBlurNavBar: UIVisualEffectView {
     @IBOutlet weak var vibrancyEffectView:UIVisualEffectView!
     @IBOutlet weak var titleLabel:UILabel!
     @IBOutlet weak var feedHeaderView:FLFeedHeaderView!
+    var mode:NavBarMode = .Expanded
     
     override func awakeFromNib() {
         super.awakeFromNib()

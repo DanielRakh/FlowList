@@ -17,6 +17,7 @@ class FLFeedRootPresenter: NSObject {
     
     var userInterface:FLFeedRootViewInput?
     var feedRootWireframe:FLFeedRootWireframe?
+    var blurNavBarInterface:FLBlurNavBarInterface?
     
     func setupFeedTrendModuleForViewController(viewController:FLFeedTrendingTableViewController) {
         feedRootWireframe?.setupTrendingFeedRootInterfaceForViewController(viewController)
@@ -55,6 +56,17 @@ extension FLFeedRootPresenter: FLFeedRootViewOutput {
     func feedViewDidRecognizeTap() {
         playerContainerViewShouldSlide(.In)
     }
+    func navBarIsInMidAnimation() {
+        blurNavBarInterface?.navBarIsMidAnimation()
+    }
+    func navBarIsExpanded() {
+        blurNavBarInterface?.navBarIsExpanded()
+
+    }
+    func navBarIsCollapsed() {
+        blurNavBarInterface?.navBarIsCollapsed()
+    }
+    
     
 }
 
@@ -68,14 +80,19 @@ extension FLFeedRootPresenter: FLTrendingScrollViewDelegate {
             userInterface?.expandNavBarWithValue(dragValue)
         }
     }
-
-    func userDidScrollFullyUp() {
-        userInterface?.fullyExpandNavBar()
+    
+    func scrollViewWillEndDragging() {
+        
+        userInterface?.finishNavBarTransition()
     }
 
-    func userDidScrollFullyDown() {
-        userInterface?.fullyCollapseNavBar()
-    }
+//    func userDidScrollFullyUp() {
+//        userInterface?.fullyExpandNavBar()
+//    }
+//
+//    func userDidScrollFullyDown() {
+//        userInterface?.fullyCollapseNavBar()
+//    }
     
     
     

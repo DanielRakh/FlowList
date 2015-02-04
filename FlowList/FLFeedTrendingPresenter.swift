@@ -33,17 +33,21 @@ extension FLFeedTrendingPresenter:FLFeedTrendingViewOutput {
         scrollViewDelegate?.userDidScrollDirection(direction, dragValue: dragValue)
     }
     
-    func scrollViewIsFullyScrolledUp() {
-        scrollViewDelegate?.userDidScrollFullyUp()
-    }
-    
-    func scrollViewWillEndDraggingScrollingUp() {
-        scrollViewDelegate?.userDidScrollFullyUp()
-
-    }
-    
-    func scrollViewWillEndDraggingScrollingDown() {
-        scrollViewDelegate?.userDidScrollFullyDown()
+//    func scrollViewIsFullyScrolledUp() {
+//        scrollViewDelegate?.userDidScrollFullyUp()
+//    }
+//    
+//    func scrollViewWillEndDraggingScrollingUp() {
+//        scrollViewDelegate?.userDidScrollFullyUp()
+//
+//    }
+//    
+//    func scrollViewWillEndDraggingScrollingDown() {
+//        scrollViewDelegate?.userDidScrollFullyDown()
+//    }
+//    
+    func userWillEndDragging() {
+        scrollViewDelegate?.scrollViewWillEndDragging() 
     }
 }
 
@@ -51,6 +55,25 @@ extension FLFeedTrendingPresenter: FLFeedTrendingInteractorOutput {
     
     func foundTrendingSongs(songs:[FLTrendingSongItem]) {
         userInterface?.showTrendingSongs(songs)
+    }
+    
+}
+
+extension FLFeedTrendingPresenter: FLBlurNavBarInterface {
+    
+    func navBarIsMidAnimation() {
+        userInterface?.navBarIsMidAnimation()
+        
+    }
+    
+    func navBarIsExpanded() {
+        userInterface?.navBarIsExpanded()
+
+    }
+    
+    func navBarIsCollapsed() {
+        userInterface?.navBarIsCollapsed()
+
     }
     
 }

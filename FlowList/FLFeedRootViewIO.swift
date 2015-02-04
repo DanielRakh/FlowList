@@ -15,11 +15,16 @@ protocol FLFeedRootViewInput {
     func collapseNavBarWithValue(value:CGFloat)
     func fullyExpandNavBar()
     func fullyCollapseNavBar()
+    func finishNavBarTransition()
 }
 
 protocol FLFeedRootViewOutput {
     func setupPlayerModule(playerViewController:FLPlayerViewController)
     func playerViewDidRecognizeTap()
     func feedViewDidRecognizeTap()
+    
+    func navBarIsInMidAnimation()
+    func navBarIsExpanded()
+    func navBarIsCollapsed()
 }
 
