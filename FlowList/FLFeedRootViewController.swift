@@ -17,10 +17,6 @@ class FLFeedRootViewController: UIViewController {
     //MARK: Public
     var eventHandler:FLFeedRootPresenter?
     
-    private let expandedNavBarHeight:CGFloat = 118
-    private let collapsedNavBarHeight:CGFloat = 20
-
-
     //MARK: IBOutlets
     @IBOutlet weak var transparentView: UIView!
     @IBOutlet weak var playerContainerView: UIView!
@@ -29,7 +25,6 @@ class FLFeedRootViewController: UIViewController {
     //MARK: Constraints
     @IBOutlet var centerXTrendingViewToSuperView: NSLayoutConstraint!
     @IBOutlet weak var bottomSpacePlayerContainerViewToSuperView: NSLayoutConstraint!
-    @IBOutlet weak var heightNavBar: NSLayoutConstraint!
     
     //MARK: Gesture Recognizers
     @IBOutlet weak var playerTapGestureRecognizer: UITapGestureRecognizer!
@@ -45,6 +40,7 @@ class FLFeedRootViewController: UIViewController {
         view.backgroundColor = UIColor.FLCMightnightBlue()
         playerTapGestureRecognizer.enabled = true
         feedTapGestureRecognizer.enabled = false
+        blurNavBar.delegate = self
     }
     
     
@@ -116,98 +112,46 @@ class FLFeedRootViewController: UIViewController {
         }
     }
     
-    
-    func transitionNavBarForMode(mode: NavBarMode, navBar:UIView, value: CGFloat) {
-        
-        let initialHeight = heightNavBar.constant
-        let dragCoefficient:CGFloat = 0.9
-        
-        let collapsedHeight = ((initialHeight - (value * dragCoefficient)) < collapsedNavBarHeight) ? collapsedNavBarHeight : initialHeight - (value * dragCoefficient)
-        let expandedHeight = ((initialHeight + (value * dragCoefficient)) > expandedNavBarHeight) ? expandedNavBarHeight : initialHeight + (value * dragCoefficient)
-        
-        heightNavBar.constant = mode == .Expand ? expandedHeight : collapsedHeight
-
-
-        UIView.animateWithDuration(0.1,
-            animations: { () -> Void in
-                self.blurNavBar.titleLabel.alpha = mode == .Expand ? ((expandedHeight - 18) / 100) : ((collapsedHeight - 18) / 100)
-                self.blurNavBar.feedHeaderView.alpha = mode == .Expand ? ((expandedHeight - 18) / 100) : ((collapsedHeight - 18) / 100)
-                self.blurNavBar.titleLabel.transform = mode == .Expand ? CGAffineTransformMakeScale(((expandedHeight - 18) / 100), ((expandedHeight - 18) / 100)) : CGAffineTransformMakeScale(((collapsedHeight - 18) / 100), ((collapsedHeight - 18) / 100))
-                
-                // self.blurNavBar.feedHeaderView.transform = mode == .Expand ? CGAffineTransformMakeScale(((expandedHeight - 18) / 100), ((expandedHeight - 18) / 100)) : CGAffineTransformMakeScale(((collapsedHeight - 18) / 100), ((collapsedHeight - 18) / 100))
-                
-                self.view.layoutIfNeeded()
-            }) { (success:Bool) -> Void in
-                self.blurNavBar.mode = .Animating
-                self.eventHandler!.navBarIsInMidAnimation()
-        }
-        
-
-
-    }
 }
 
 extension FLFeedRootViewController: FLFeedRootViewInput {
     
     func expandNavBarWithValue(value:CGFloat) {
-        if heightNavBar.constant != expandedNavBarHeight {
-            transitionNavBarForMode(.Expand, navBar: blurNavBar, value: value)
+        if blurNavBar.mode != .Expanded  {
+            blurNavBar.expandWithValue(value)
         }
-        else {
-            blurNavBar.mode = .Expanded
-            eventHandler?.navBarIsExpanded()
-        }
-
     }
     
     func collapseNavBarWithValue(value:CGFloat) {
-        if heightNavBar.constant != collapsedNavBarHeight {
-            transitionNavBarForMode(.Collapse, navBar: blurNavBar, value: value)
-        }
-        else {
-            blurNavBar.mode = .Collapsed
-            eventHandler?.navBarIsCollapsed()
-        }
-    }
-
-    func fullyExpandNavBar() {
-        if heightNavBar.constant != expandedNavBarHeight {
-            heightNavBar.constant = expandedNavBarHeight
-            UIView.animateWithDuration(0.35, animations: { () -> Void in
-                self.blurNavBar.titleLabel.alpha = 1.0
-                self.blurNavBar.feedHeaderView.alpha = 1.0
-                self.blurNavBar.titleLabel.transform = CGAffineTransformMakeScale(1.0, 1.0)
-                self.view.layoutIfNeeded()
-            })
-        }
-    }
-    
-    func fullyCollapseNavBar() {
-        if heightNavBar.constant != collapsedNavBarHeight {
-            heightNavBar.constant = collapsedNavBarHeight
-            UIView.animateWithDuration(0.35, animations: { () -> Void in
-                self.blurNavBar.titleLabel.alpha = 0.0
-                self.blurNavBar.feedHeaderView.alpha = 0.0
-                self.blurNavBar.titleLabel.transform = CGAffineTransformMakeScale(0, 0)
-                self.view.layoutIfNeeded()
-            })
+        if blurNavBar.mode != .Collapsed {
+            blurNavBar.collapseWithValue(value)
         }
     }
     
     func finishNavBarTransition() {
         
-        if self.blurNavBar.mode == .Animating {
-            if heightNavBar.constant <= (expandedNavBarHeight / 2) {
-                fullyCollapseNavBar()
+        if blurNavBar.mode == .Animating {
+            if blurNavBar.heightConstraint.constant <= (blurNavBar.expandedHeight / 2) {
+                blurNavBar.fullyCollapse()
             } else {
-                fullyExpandNavBar()
+                blurNavBar.fullyExpand()
             }
         }
     }
-    
-    
 }
 
+
+extension FLFeedRootViewController: FLBlurNavBarDelegate {
+    
+    func navBarExpandedBy(height:CGFloat) {
+        eventHandler?.navBarHasExpandedBy(height)
+    }
+    
+    func navBarCollapsedBy(height:CGFloat) {
+        eventHandler?.navBarHasCollapsedBy(height)
+    }
+
+}
 
 
 

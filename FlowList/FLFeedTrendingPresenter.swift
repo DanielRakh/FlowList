@@ -32,20 +32,7 @@ extension FLFeedTrendingPresenter:FLFeedTrendingViewOutput {
     func scrollViewDidScrollWithDragValue(dragValue: CGFloat, direction: ScrollDirection) {
         scrollViewDelegate?.userDidScrollDirection(direction, dragValue: dragValue)
     }
-    
-//    func scrollViewIsFullyScrolledUp() {
-//        scrollViewDelegate?.userDidScrollFullyUp()
-//    }
-//    
-//    func scrollViewWillEndDraggingScrollingUp() {
-//        scrollViewDelegate?.userDidScrollFullyUp()
-//
-//    }
-//    
-//    func scrollViewWillEndDraggingScrollingDown() {
-//        scrollViewDelegate?.userDidScrollFullyDown()
-//    }
-//    
+
     func userWillEndDragging() {
         scrollViewDelegate?.scrollViewWillEndDragging() 
     }
@@ -61,19 +48,27 @@ extension FLFeedTrendingPresenter: FLFeedTrendingInteractorOutput {
 
 extension FLFeedTrendingPresenter: FLBlurNavBarInterface {
     
-    func navBarIsMidAnimation() {
-        userInterface?.navBarIsMidAnimation()
+//    func navBarIsMidAnimation() {
+//        userInterface?.navBarIsMidAnimation()
+//        
+//    }
+//    
+//    func navBarIsExpanded() {
+//        userInterface?.navBarIsExpanded()
+//
+//    }
+//    
+//    func navBarIsCollapsed() {
+//        userInterface?.navBarIsCollapsed()
+//
+//    }
+    
+    func navBarHasExpandedBy(value:CGFloat) {
+        userInterface?.offSetScrollViewBy(value)
+    }
+    
+    func navBarHasCollapsedBy(value:CGFloat) {
+        userInterface?.offSetScrollViewBy(value)
         
     }
-    
-    func navBarIsExpanded() {
-        userInterface?.navBarIsExpanded()
-
-    }
-    
-    func navBarIsCollapsed() {
-        userInterface?.navBarIsCollapsed()
-
-    }
-    
 }

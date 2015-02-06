@@ -19,6 +19,8 @@ class FLFeedRootPresenter: NSObject {
     var feedRootWireframe:FLFeedRootWireframe?
     var blurNavBarInterface:FLBlurNavBarInterface?
     
+    
+    
     func setupFeedTrendModuleForViewController(viewController:FLFeedTrendingTableViewController) {
         feedRootWireframe?.setupTrendingFeedRootInterfaceForViewController(viewController)
     }
@@ -39,6 +41,10 @@ class FLFeedRootPresenter: NSObject {
         feedRootWireframe?.slidePlayerContainerView(slideTransition)
     }
     
+    func heightForNavBarForDragValue(value:CGFloat) -> Int {
+        return 5
+    }
+    
     
     
 }
@@ -56,15 +62,24 @@ extension FLFeedRootPresenter: FLFeedRootViewOutput {
     func feedViewDidRecognizeTap() {
         playerContainerViewShouldSlide(.In)
     }
-    func navBarIsInMidAnimation() {
-        blurNavBarInterface?.navBarIsMidAnimation()
+    
+//    func navBarIsInMidAnimation() {
+//        blurNavBarInterface?.navBarIsMidAnimation()
+//    }
+//    func navBarIsExpanded() {
+//        blurNavBarInterface?.navBarIsExpanded()
+//
+//    }
+//    func navBarIsCollapsed() {
+//        blurNavBarInterface?.navBarIsCollapsed()
+//    }
+    
+    func navBarHasExpandedBy(value:CGFloat) {
+        blurNavBarInterface?.navBarHasExpandedBy(value)
     }
-    func navBarIsExpanded() {
-        blurNavBarInterface?.navBarIsExpanded()
-
-    }
-    func navBarIsCollapsed() {
-        blurNavBarInterface?.navBarIsCollapsed()
+    
+    func navBarHasCollapsedBy(value:CGFloat) {
+        blurNavBarInterface?.navBarHasCollapsedBy(value)
     }
     
     
@@ -85,15 +100,5 @@ extension FLFeedRootPresenter: FLTrendingScrollViewDelegate {
         
         userInterface?.finishNavBarTransition()
     }
-
-//    func userDidScrollFullyUp() {
-//        userInterface?.fullyExpandNavBar()
-//    }
-//
-//    func userDidScrollFullyDown() {
-//        userInterface?.fullyCollapseNavBar()
-//    }
-    
-    
     
 }

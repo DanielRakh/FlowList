@@ -11,8 +11,11 @@ import Foundation
 
 protocol FLBlurNavBarInterface {
     
-    func navBarIsMidAnimation()
-    func navBarIsExpanded()
-    func navBarIsCollapsed()
+//    func navBarIsMidAnimation()
+//    func navBarIsExpanded()
+//    func navBarIsCollapsed()
+    
+    func navBarHasExpandedBy(value:CGFloat)
+    func navBarHasCollapsedBy(value:CGFloat)
     
 }

@@ -11,9 +11,11 @@ import Foundation
 protocol FLFeedTrendingViewInput {
     func showTrendingSongs(songs:[FLTrendingSongItem])
     
-    func navBarIsMidAnimation()
-    func navBarIsExpanded()
-    func navBarIsCollapsed()
+//    func navBarIsMidAnimation()
+//    func navBarIsExpanded()
+//    func navBarIsCollapsed()
+    
+    func offSetScrollViewBy(value:CGFloat)
     
 }
 

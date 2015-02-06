@@ -31,7 +31,6 @@ class FLFeedTrendingTableViewController: UITableViewController {
     private var initialContentOffset:CGFloat = 0
     private var initialNavBarExpansionContentOffset:CGFloat = 0
     private var initialNavBarDragContentOffset:CGFloat = 0
-    private var navBarMode:NavBarMode = .Expand
     
     
     
@@ -168,10 +167,10 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
     }
     
     override func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
-        if navBarMode == .Animating {
+    
+//        if navBarMode == .Animating {
             eventHandler?.userWillEndDragging()
-        }
+//        }
         
     }
     
@@ -187,15 +186,21 @@ extension FLFeedTrendingTableViewController: FLFeedTrendingViewInput {
         tableView.reloadData()
     }
     
-    func navBarIsMidAnimation() {
-        self.navBarMode = .Animating
+//    func navBarIsMidAnimation() {
+//        self.navBarMode = .Animating
+//    }
+//    func navBarIsExpanded(){
+//        self.navBarMode = .Expanded
+//    }
+//    func navBarIsCollapsed() {
+//        self.navBarMode = .Collapsed
+//}
+    
+    func offSetScrollViewBy(value:CGFloat) {
+        self.tableView.setContentOffset(CGPointMake(tableView.contentOffset.x, tableView.contentOffset.y - value), animated: true)
     }
-    func navBarIsExpanded(){
-        self.navBarMode = .Expanded
-    }
-    func navBarIsCollapsed() {
-        self.navBarMode = .Collapsed
-}
+    
+    
 }
 
 
