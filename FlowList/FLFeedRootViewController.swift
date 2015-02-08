@@ -117,26 +117,43 @@ class FLFeedRootViewController: UIViewController {
 extension FLFeedRootViewController: FLFeedRootViewInput {
     
     func expandNavBarWithValue(value:CGFloat) {
-        if blurNavBar.mode != .Expanded  {
+        if blurNavBar.mode != NavBarMode.Expanded  {
             blurNavBar.expandWithValue(value)
         }
     }
     
     func collapseNavBarWithValue(value:CGFloat) {
-        if blurNavBar.mode != .Collapsed {
+        if blurNavBar.mode != NavBarMode.Collapsed {
             blurNavBar.collapseWithValue(value)
         }
     }
     
     func finishNavBarTransition() {
         
-        if blurNavBar.mode == .Animating {
+//        if blurNavBar.transitioning == true {
+        println(blurNavBar.heightConstraint.constant)
             if blurNavBar.heightConstraint.constant <= (blurNavBar.expandedHeight / 2) {
-                blurNavBar.fullyCollapse()
+                blurNavBar.fullyCollapse(true, shouldCallDelegate: true)
             } else {
-                blurNavBar.fullyExpand()
+                blurNavBar.fullyExpand(true, shouldCallDelegate: true)
             }
-        }
+//        }
+    }
+    
+    func startNavBarTransition() {
+//        if blurNavBar.transitioning == false{
+            blurNavBar.transitioning = true
+        println(blurNavBar.transitioning)
+
+//        }
+    }
+    
+    func collapseNavBar() {
+        blurNavBar.fullyCollapse(true, shouldCallDelegate: false)
+    }
+    
+    func expandNavBar() {
+        blurNavBar.fullyExpand(true, shouldCallDelegate: false)
     }
 }
 

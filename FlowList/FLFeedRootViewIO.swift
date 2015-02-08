@@ -14,6 +14,9 @@ protocol FLFeedRootViewInput {
     func expandNavBarWithValue(value:CGFloat)
     func collapseNavBarWithValue(value:CGFloat)
     func finishNavBarTransition()
+    func collapseNavBar()
+    func expandNavBar()
+    func startNavBarTransition()
 }
 
 protocol FLFeedRootViewOutput {

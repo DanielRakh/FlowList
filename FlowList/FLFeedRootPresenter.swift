@@ -63,17 +63,6 @@ extension FLFeedRootPresenter: FLFeedRootViewOutput {
         playerContainerViewShouldSlide(.In)
     }
     
-//    func navBarIsInMidAnimation() {
-//        blurNavBarInterface?.navBarIsMidAnimation()
-//    }
-//    func navBarIsExpanded() {
-//        blurNavBarInterface?.navBarIsExpanded()
-//
-//    }
-//    func navBarIsCollapsed() {
-//        blurNavBarInterface?.navBarIsCollapsed()
-//    }
-    
     func navBarHasExpandedBy(value:CGFloat) {
         blurNavBarInterface?.navBarHasExpandedBy(value)
     }
@@ -96,9 +85,23 @@ extension FLFeedRootPresenter: FLTrendingScrollViewDelegate {
         }
     }
     
-    func scrollViewWillEndDragging() {
+    func scrollViewWillEndDragging(direction:ScrollDirection?) {
         
-        userInterface?.finishNavBarTransition()
+        if let scrollDirection = direction {
+            if scrollDirection == .Down {
+                userInterface?.collapseNavBar()
+            } else {
+                userInterface?.expandNavBar()
+            }
+        } else {
+            userInterface?.finishNavBarTransition()
+        }
+
+    }
+    
+    
+    func scrollViewWillBeginDragging() {
+        userInterface?.startNavBarTransition()
     }
     
 }

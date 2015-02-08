@@ -126,7 +126,7 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         
-        if scrollView.dragging && scrollView.contentOffset.y > -topContentInset && isScrollViewBouncing(scrollView) == false {
+        if scrollView.dragging && scrollView.tracking && scrollView.contentOffset.y > -topContentInset && isScrollViewBouncing(scrollView) == false {
             //In the bounds of the scroll.
             
             var dragValue = abs(abs(initialContentOffset) - abs(scrollView.contentOffset.y))
@@ -159,21 +159,40 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
     }
     
     override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        if scrollView.decelerating == false {
-            initialContentOffset = scrollView.contentOffset.y
-            initialNavBarExpansionContentOffset = scrollView.contentOffset.y
-            //            initialNavBarDragContentOffset = scrollView.contentOffset.y
-        }
+        println("scrollViewWillBeginDragging")
+        
+        //        if scrollView.decelerating == false {
+        initialContentOffset = scrollView.contentOffset.y
+        initialNavBarExpansionContentOffset = scrollView.contentOffset.y
+        //        }
+        eventHandler?.userWillBeginDragging()
     }
     
     override func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-    
-//        if navBarMode == .Animating {
-            eventHandler?.userWillEndDragging()
-//        }
         
+        //            println("scrollViewWillEndDragging")
+        //        println("Velocity:\(velocity)")
+        println("Scroll View Offset:\(scrollView.contentOffset.y)")
+        //        println("Target Content:\(targetContentOffset.memory.y)")
+        
+        
+        
+        if scrollView.contentOffset.y > -topContentInset && isScrollViewBouncing(scrollView) == false {
+            if (targetContentOffset.memory.y - scrollView.contentOffset.y) >= topContentInset {
+                println("Velociy down")
+                eventHandler?.userWillEndDragging(.Down)
+            } else if (targetContentOffset.memory.y - scrollView.contentOffset.y) < topContentInset {
+                println("Velociy up")
+                eventHandler?.userWillEndDragging(nil)
+            } else {
+                eventHandler?.userWillEndDragging(nil)
+            }
+        } else {
+            println("nil")
+            
+            eventHandler?.userWillEndDragging(nil)
+        }
     }
-    
     
 }
 
@@ -185,16 +204,6 @@ extension FLFeedTrendingTableViewController: FLFeedTrendingViewInput {
         self.songs = songs
         tableView.reloadData()
     }
-    
-//    func navBarIsMidAnimation() {
-//        self.navBarMode = .Animating
-//    }
-//    func navBarIsExpanded(){
-//        self.navBarMode = .Expanded
-//    }
-//    func navBarIsCollapsed() {
-//        self.navBarMode = .Collapsed
-//}
     
     func offSetScrollViewBy(value:CGFloat) {
         self.tableView.setContentOffset(CGPointMake(tableView.contentOffset.x, tableView.contentOffset.y - value), animated: true)

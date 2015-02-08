@@ -33,9 +33,14 @@ extension FLFeedTrendingPresenter:FLFeedTrendingViewOutput {
         scrollViewDelegate?.userDidScrollDirection(direction, dragValue: dragValue)
     }
 
-    func userWillEndDragging() {
-        scrollViewDelegate?.scrollViewWillEndDragging() 
+    func userWillEndDragging(direction:ScrollDirection?) {
+        scrollViewDelegate?.scrollViewWillEndDragging(direction)
     }
+    
+    func userWillBeginDragging() {
+        scrollViewDelegate?.scrollViewWillBeginDragging()
+    }
+
 }
 
 extension FLFeedTrendingPresenter: FLFeedTrendingInteractorOutput {
@@ -47,21 +52,6 @@ extension FLFeedTrendingPresenter: FLFeedTrendingInteractorOutput {
 }
 
 extension FLFeedTrendingPresenter: FLBlurNavBarInterface {
-    
-//    func navBarIsMidAnimation() {
-//        userInterface?.navBarIsMidAnimation()
-//        
-//    }
-//    
-//    func navBarIsExpanded() {
-//        userInterface?.navBarIsExpanded()
-//
-//    }
-//    
-//    func navBarIsCollapsed() {
-//        userInterface?.navBarIsCollapsed()
-//
-//    }
     
     func navBarHasExpandedBy(value:CGFloat) {
         userInterface?.offSetScrollViewBy(value)

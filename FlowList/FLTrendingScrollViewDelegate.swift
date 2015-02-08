@@ -15,8 +15,8 @@ protocol FLTrendingScrollViewDelegate {
     
 //    func userDidScrollFullyUp()
 //    func userDidScrollFullyDown()
-    func scrollViewWillEndDragging()
-    
+    func scrollViewWillEndDragging(direction:ScrollDirection?)
+    func scrollViewWillBeginDragging()
 }
 
 
