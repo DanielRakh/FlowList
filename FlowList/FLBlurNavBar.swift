@@ -8,28 +8,6 @@
 
 import UIKit
 
-/*
-Rules for the UX:
-
-Scroll View controls the height of the Nav Bar.
-Nav Bar must always be in collapsed or expanded state.
-If Nav bar is <= half of its height. It should animate automatically to collapsed mode and return the difference between that intial state and the collaped state to offset the scrollview.
-Vice versa for > half of its height.
-
-So as a user you
-
-
-*/
-
-
-enum NavBarMode {
-    case Expanded
-    case Collapsed
-    case Transitioning
-}
-
-
-
 
 @objc protocol FLBlurNavBarDelegate {
     
@@ -37,7 +15,6 @@ enum NavBarMode {
     optional func navBarCollapsedBy(height:CGFloat)
     
 }
-
 
 // var description : String {
 //    switch self {
@@ -58,6 +35,8 @@ class FLBlurNavBar: UIVisualEffectView {
     @IBOutlet weak var vibrancyEffectView:UIVisualEffectView!
     @IBOutlet weak var titleLabel:UILabel!
     @IBOutlet weak var feedHeaderView:FLFeedHeaderView!
+    @IBOutlet weak var hairlineView:FLHairlineView!
+    
     
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
@@ -67,7 +46,7 @@ class FLBlurNavBar: UIVisualEffectView {
     let expandedHeight:CGFloat = 118.0
     let collapsedHeight:CGFloat = 20.0
     
-    var mode:NavBarMode = .Expanded
+    var mode:FLNavBarMode = .Expanded
     var transitioning:Bool = false
 
     

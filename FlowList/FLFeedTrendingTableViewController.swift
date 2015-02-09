@@ -8,10 +8,6 @@
 
 import UIKit
 
-enum ScrollDirection {
-    case Up
-    case Down
-}
 
 class FLFeedTrendingTableViewController: UITableViewController {
     

@@ -7,8 +7,7 @@
 //
 
 
-//MARK: This is a collection of all of the global enums used fully documented.
-
+// ** A collection of all of the global enums ** //
 
 
 /**
@@ -27,11 +26,9 @@ enum ScrollDirection {
 }
 
 
-
 /**
 
 The current visible feed
-
 
 - New:      New Feed
 
@@ -46,3 +43,24 @@ enum FLVisibleFeedMode {
     case Trending
     case Liked
 }
+
+
+/**
+
+The current visible state of FLNavBar
+
+
+- Expanded:      Fully expanded
+
+- Collapsed:     Fully collapsed
+
+- Transitioning: In mid animation to either be expanded or collapsed.
+
+*/
+
+enum FLNavBarMode {
+    case Expanded
+    case Collapsed
+    case Transitioning
+}
+

@@ -10,13 +10,7 @@ import UIKit
 
 class FLFeedHeaderView: UIView {
     
-    enum ListMode {
-        case New
-        case Trending
-        case Likes
-    }
-    
-    var listMode:ListMode = .Trending {
+    var feedMode:FLVisibleFeedMode = .Trending {
         willSet {
             performAnimationsForMode(newValue)
         }
@@ -55,19 +49,19 @@ class FLFeedHeaderView: UIView {
         super.updateConstraints()
     }
     
-    func performAnimationsForMode(listMode:ListMode) {
+    func performAnimationsForMode(feedMode:FLVisibleFeedMode) {
         
         UIApplication.sharedApplication().beginIgnoringInteractionEvents()
         
-        adjustConstraintsForMode(listMode)
+        adjustConstraintsForMode(feedMode)
         
         UIView.animateWithDuration(0.35, delay: 0.0, usingSpringWithDamping:0.7, initialSpringVelocity:0.5, options: .CurveEaseInOut, animations: {
             UIView.performWithoutAnimation {
-                let trendingColor = listMode == .Trending ? UIColor.FLCPlainWhite() : UIColor.FLCUnselectedGray()
+                let trendingColor = feedMode == .Trending ? UIColor.FLCPlainWhite() : UIColor.FLCUnselectedGray()
                 self.trendingButton.setTitleColor(trendingColor, forState: .Normal)
-                let newColor = listMode == .New ?  UIColor.FLCPlainWhite() : UIColor.FLCUnselectedGray()
+                let newColor = feedMode == .New ?  UIColor.FLCPlainWhite() : UIColor.FLCUnselectedGray()
                 self.newButton.setTitleColor(newColor, forState: .Normal)
-                let likesColor = listMode == .Likes ? UIColor.FLCPlainWhite() : UIColor.FLCUnselectedGray()
+                let likesColor = feedMode == .Liked ? UIColor.FLCPlainWhite() : UIColor.FLCUnselectedGray()
                 self.likesButton.setTitleColor(likesColor, forState: .Normal)
             }
             self.layoutIfNeeded()
@@ -79,15 +73,15 @@ class FLFeedHeaderView: UIView {
         
     }
     
-    func adjustConstraintsForMode(listMode:ListMode) {
-        switch listMode {
+    func adjustConstraintsForMode(feedMode:FLVisibleFeedMode) {
+        switch feedMode {
         case .New:
             removeConstraints([centerXAlignUnderlineToTrendingButton!, equalWidthUnderlineToTrendingButton,
                 centerXAlignUnderlineToLikesButton!, equalWidthUnderlineToLikesButton!
                 ])
             setNeedsUpdateConstraints()
             addConstraints([centerXAlignUnderlineToNewButton!,equalWidthUnderlineToNewButton!])
-        case .Likes:
+        case .Liked:
             removeConstraints([centerXAlignUnderlineToTrendingButton!, centerXAlignUnderlineToNewButton!, equalWidthUnderlineToTrendingButton, equalWidthUnderlineToNewButton!])
             setNeedsUpdateConstraints()
             addConstraints([centerXAlignUnderlineToLikesButton!,equalWidthUnderlineToLikesButton!])
