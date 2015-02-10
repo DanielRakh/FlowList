@@ -163,14 +163,42 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
     
     override func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
+        /*
+            If the user ended dragging.
+        */
         
-        if abs(abs(targetContentOffset.memory.y) - abs(initialTargetContentOffset)) <= abs(initialContentOffset) {
+        println(velocity)
+        println(abs(abs(targetContentOffset.memory.y) - abs(initialTargetContentOffset)))
+        
+        
+        if targetContentOffset.memory.y > initialTargetContentOffset {
+            if velocity.y == 0 {
+                println("Ended Weakly Scrolling Down")
+                eventHandler?.userWillEndDraggingWeakly(direction: .Down)
+            } else {
+                println("Ended Scrolling Down")
+                eventHandler?.userWillEndDragging(.Down)
+            }
+        } else if targetContentOffset.memory.y < initialTargetContentOffset {
+            if velocity.y == 0 {
+                println("Ended Weakly direction NIL")
+                eventHandler?.userWillEndDraggingWeakly(direction: nil)
+                
+            } else if abs(abs(targetContentOffset.memory.y) - abs(initialTargetContentOffset)) > 55 {
+                
+                eventHandler?.userWillEndDragging(.Up)
+                println("Ended Scrolling up")
+            }
+        }
+        
+        /*
+        if abs(abs(targetContentOffset.memory.y) - abs(initialTargetContentOffset)) <= abs(initialContentOffset) && isScrollViewBouncing(scrollView) == false {
             if targetContentOffset.memory.y > initialTargetContentOffset {
                  println("Ended Dragging direction Down")
                 eventHandler?.userWillEndDraggingWeakly(direction: .Down)
-            } else {
+            } else if targetContentOffset.memory.y < initialTargetContentOffset {
                 println("Ended Dragging direction NIL")
-                eventHandler?.userWillEndDraggingWeakly(direction: nil)
+                eventHandler?.userWillEndDraggingWeakly(direction: .Up)
             }
             
         } else  {
@@ -187,7 +215,7 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
             }
         }
         
-        
+        */
         
         initialTargetContentOffset = targetContentOffset.memory.y
     }
