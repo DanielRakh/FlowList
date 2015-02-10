@@ -11,17 +11,17 @@ import CoreData
 
 class FLCoreDataStack {
     
-    let managedObjectContext :NSManagedObjectContext!
-    private let persistentStoreCoordinator: NSPersistentStoreCoordinator!
-    private let model: NSManagedObjectModel!
-    private let store: NSPersistentStore?
+    var managedObjectContext :NSManagedObjectContext!
+    private var persistentStoreCoordinator: NSPersistentStoreCoordinator!
+    private var model: NSManagedObjectModel!
+    private var store: NSPersistentStore!
     
     init() {
         
         let bundle = NSBundle.mainBundle()
         let modelURL = bundle.URLForResource("FLDataModel", withExtension: "momd")!
         
-        model = NSManagedObjectModel(contentsOfURL: modelURL)
+        model = NSManagedObjectModel(contentsOfURL: modelURL)!
         persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
         managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
@@ -35,18 +35,19 @@ class FLCoreDataStack {
             configuration: nil,
             URL: storeURL,
             options: options,
-            error: &error)
+            error: &error)!
         
         if error != nil {
             println("Error adding persistent store: \(error?.localizedDescription)")
             abort()
         }
         
+        
     }
     
     private func applicationDocumentsDirectory() -> NSURL {
         let fileManager = NSFileManager.defaultManager()
-        let urls = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask) as [NSURL]
+        let urls = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask) as! [NSURL]
         return urls.first!
     }
     
@@ -65,22 +66,22 @@ class FLCoreDataStack {
         fetchRequest.predicate = predicate
         fetchRequest.sortDescriptors = []
         
-        managedObjectContext?.performBlock {
-            let queryResults = self.managedObjectContext?.executeFetchRequest(fetchRequest, error: nil)
-            let managedResults = queryResults! as [FLManagedSongItem]
+        managedObjectContext.performBlock {
+            let queryResults = self.managedObjectContext.executeFetchRequest(fetchRequest, error: nil)
+            let managedResults = queryResults! as! [FLManagedSongItem]
             completionBlock(managedResults)
         }
     }
     
     func fetchAllEntries(completionBlock:(([FLManagedSongItem]) -> Void)!) {
         let fetchRequest = NSFetchRequest(entityName: "FLManagedSongItem")
-        managedObjectContext?.performBlock {
+        managedObjectContext.performBlock {
             
             var error:NSError?
             
-            let queryResults = self.managedObjectContext?.executeFetchRequest(fetchRequest, error: &error)
+            let queryResults = self.managedObjectContext.executeFetchRequest(fetchRequest, error: &error)
             if error == nil {
-                let managedResults = queryResults! as [FLManagedSongItem]
+                let managedResults = queryResults! as! [FLManagedSongItem]
                 completionBlock(managedResults)
             } else {
                 println("Error Fetching Core Data: \(error?.localizedDescription)")
@@ -92,7 +93,7 @@ class FLCoreDataStack {
     func newSongItem() -> FLManagedSongItem {
         
         let entityDescription = NSEntityDescription.entityForName("FLManagedSongItem", inManagedObjectContext: managedObjectContext)
-        let newEntry = NSManagedObject(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext) as FLManagedSongItem
+        let newEntry = NSManagedObject(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext) as! FLManagedSongItem
         
         return newEntry
     }

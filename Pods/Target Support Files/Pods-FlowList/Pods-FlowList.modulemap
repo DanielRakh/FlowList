@@ -1,0 +1,6 @@
+framework module Pods_FlowList {
+  umbrella header "Pods-FlowList-umbrella.h"
+
+  export *
+  module * { export * }
+}

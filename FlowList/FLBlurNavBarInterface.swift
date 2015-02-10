@@ -15,7 +15,7 @@ protocol FLBlurNavBarInterface {
 //    func navBarIsExpanded()
 //    func navBarIsCollapsed()
     
-    func navBarHasExpandedBy(value:CGFloat)
-    func navBarHasCollapsedBy(value:CGFloat)
+    func navBarHasExpandedBy(value:Float)
+    func navBarHasCollapsedBy(value:Float)
     
 }

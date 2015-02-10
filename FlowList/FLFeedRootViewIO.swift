@@ -11,11 +11,11 @@ import Foundation
 
 protocol FLFeedRootViewInput {
     
-    func expandNavBarWithValue(value:CGFloat)
-    func collapseNavBarWithValue(value:CGFloat)
+    func expandNavBarWithValue(value:Float)
+    func collapseNavBarWithValue(value:Float)
     func finishNavBarTransition()
-    func collapseNavBar()
-    func expandNavBar()
+    func collapseNavBar(#returnOffset:Bool)
+    func expandNavBar(#returnOffset:Bool)
     func startNavBarTransition()
 }
 
@@ -28,8 +28,8 @@ protocol FLFeedRootViewOutput {
 //    func navBarIsExpanded()
 //    func navBarIsCollapsed()
     
-    func navBarHasExpandedBy(value:CGFloat)
-    func navBarHasCollapsedBy(value:CGFloat)
+    func navBarHasExpandedBy(value:Float)
+    func navBarHasCollapsedBy(value:Float)
     
     
 }

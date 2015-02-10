@@ -127,13 +127,13 @@ class FLFeedRootViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "embedTrendingVC" {
-            eventHandler?.setupFeedTrendModuleForViewController(segue.destinationViewController as FLFeedTrendingTableViewController)
+            eventHandler?.setupFeedTrendModuleForViewController(segue.destinationViewController as! FLFeedTrendingTableViewController)
         } else if segue.identifier == "embedNewVC"  {
-            eventHandler?.setupFeedNewModuleForViewController(segue.destinationViewController as FLFeedNewTableViewController)
+            eventHandler?.setupFeedNewModuleForViewController(segue.destinationViewController as! FLFeedNewTableViewController)
         } else if segue.identifier == "embedLikesVC" {
-            eventHandler?.setupFeedLikesModuleForViewController(segue.destinationViewController as FLFeedLikesTableViewController)
+            eventHandler?.setupFeedLikesModuleForViewController(segue.destinationViewController as! FLFeedLikesTableViewController)
         } else if segue.identifier == "presentPlayerController" {
-            eventHandler?.setupPlayerModule(segue.destinationViewController as FLPlayerViewController)
+            eventHandler?.setupPlayerModule(segue.destinationViewController as! FLPlayerViewController)
         }
     }
     
@@ -144,13 +144,13 @@ class FLFeedRootViewController: UIViewController {
 
 extension FLFeedRootViewController: FLFeedRootViewInput {
     
-    func expandNavBarWithValue(value:CGFloat) {
+    func expandNavBarWithValue(value:Float) {
         if blurNavBar.mode != .Expanded  {
             blurNavBar.expandWithValue(value)
         }
     }
     
-    func collapseNavBarWithValue(value:CGFloat) {
+    func collapseNavBarWithValue(value:Float) {
         if blurNavBar.mode != .Collapsed {
             blurNavBar.collapseWithValue(value)
         }
@@ -159,8 +159,7 @@ extension FLFeedRootViewController: FLFeedRootViewInput {
     func finishNavBarTransition() {
         
                 if blurNavBar.transitioning == true {
-                println(blurNavBar.heightConstraint.constant)
-                    if blurNavBar.heightConstraint.constant <= (blurNavBar.expandedHeight / 2) {
+                    if Float(blurNavBar.heightConstraint.constant) <= (blurNavBar.expandedHeight / 2) {
                         blurNavBar.fullyCollapse(true, shouldCallDelegate: true)
                     } else {
                         blurNavBar.fullyExpand(true, shouldCallDelegate: true)
@@ -170,29 +169,28 @@ extension FLFeedRootViewController: FLFeedRootViewInput {
     
     func startNavBarTransition() {
                 if blurNavBar.transitioning == false{
-                    blurNavBar.transitioning = true
-                println(blurNavBar.transitioning)
-        
+                    blurNavBar.transitioning = true        
                 }
     }
     
-    func collapseNavBar() {
-                blurNavBar.fullyCollapse(true, shouldCallDelegate: false)
+    func collapseNavBar(#returnOffset:Bool) {
+        println("Collapse Nav Bar")
+                blurNavBar.fullyCollapse(true, shouldCallDelegate: returnOffset)
     }
     
-    func expandNavBar() {
-                blurNavBar.fullyExpand(true, shouldCallDelegate: false)
+    func expandNavBar(#returnOffset:Bool) {
+                blurNavBar.fullyExpand(true, shouldCallDelegate: returnOffset)
     }
 }
 
 
 extension FLFeedRootViewController: FLBlurNavBarDelegate {
     
-    func navBarExpandedBy(height:CGFloat) {
+    func navBarExpandedBy(height:Float) {
         eventHandler?.navBarHasExpandedBy(height)
     }
     
-    func navBarCollapsedBy(height:CGFloat) {
+    func navBarCollapsedBy(height:Float) {
         eventHandler?.navBarHasCollapsedBy(height)
     }
     

@@ -12,7 +12,7 @@ protocol FLFeedTrendingViewInput {
     func showTrendingSongs(songs:[FLTrendingSongItem])
     
     
-    func offSetScrollViewBy(value:CGFloat)
+    func offSetScrollViewBy(value:Float)
     
 }
 
@@ -20,8 +20,9 @@ protocol FLFeedTrendingViewOutput {
     func initialSetup()
     func queueSong(song:FLTrendingSongItem)
     
-    func scrollViewDidScrollWithDragValue(dragValue:CGFloat, direction:ScrollDirection)
-    func userWillEndDragging(direction:ScrollDirection?)
+    func scrollViewDidScrollWithDragValue(dragValue:Float, direction:ScrollDirection)
+    func userWillEndDragging(direction:ScrollDirection)
+    func userWillEndDraggingWeakly(direction withDirection:ScrollDirection?)
     func userWillBeginDragging()
     
 }

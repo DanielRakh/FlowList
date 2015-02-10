@@ -57,11 +57,11 @@ extension FLFeedRootPresenter: FLFeedRootViewOutput {
         playerContainerViewShouldSlide(.In)
     }
     
-    func navBarHasExpandedBy(value:CGFloat) {
+    func navBarHasExpandedBy(value:Float) {
         blurNavBarInterface?.navBarHasExpandedBy(value)
     }
     
-    func navBarHasCollapsedBy(value:CGFloat) {
+    func navBarHasCollapsedBy(value:Float) {
         blurNavBarInterface?.navBarHasCollapsedBy(value)
     }
     
@@ -71,7 +71,7 @@ extension FLFeedRootPresenter: FLFeedRootViewOutput {
 
 extension FLFeedRootPresenter: FLTrendingScrollViewDelegate {
     
-    func userDidScrollDirection(direction: ScrollDirection, dragValue: CGFloat) {
+    func userDidScrollDirection(direction: ScrollDirection, dragValue: Float) {
         if direction == .Down {
             userInterface?.collapseNavBarWithValue(dragValue)
         } else {
@@ -79,24 +79,31 @@ extension FLFeedRootPresenter: FLTrendingScrollViewDelegate {
         }
     }
     
-    func scrollViewWillEndDragging(direction:ScrollDirection?) {
+    func scrollViewWillEndDragging(direction:ScrollDirection) {
         
-        if let scrollDirection = direction {
-            if scrollDirection == .Down {
-                userInterface?.collapseNavBar()
-            } else {
-                userInterface?.expandNavBar()
-            }
+        if direction == .Down {
+            userInterface?.collapseNavBar(returnOffset: false)
         } else {
-//            userInterface?.finishNavBarTransition()
-            println("No scroll direction")
+            userInterface?.expandNavBar(returnOffset: false)
         }
-
+        
     }
     
     
     func scrollViewWillBeginDragging() {
         userInterface?.startNavBarTransition()
+    }
+    
+    func userWillEndDraggingWeakly(direction withDirection:ScrollDirection?) {
+        if let scrollDirection = withDirection {
+            if scrollDirection == .Down {
+                userInterface?.collapseNavBar(returnOffset: true)
+            } else {
+                userInterface?.expandNavBar(returnOffset: true)
+            }
+        } else {
+            userInterface?.finishNavBarTransition()
+        }
     }
     
 }

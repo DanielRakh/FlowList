@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2771766947F92154B109CAC6 /* libPods-FlowListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC19C9B2183F57F5E2CB31B /* libPods-FlowListTests.a */; };
+		14CB6AD2752A15B9B6DC6B68 /* Pods_FlowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3512C329B12104C0A6812D33 /* Pods_FlowList.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		27EB566831FEBA899CB06485 /* Pods_FlowListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D63BC44B76CC21AA6FBD3E5 /* Pods_FlowListTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8E01AC811A81BE9E00BFAC04 /* FLBlurNavBarInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01AC801A81BE9E00BFAC04 /* FLBlurNavBarInterface.swift */; };
 		8E2C89B71A56665F00293333 /* FLPlayerWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89B61A56665F00293333 /* FLPlayerWireframe.swift */; };
 		8E2C89BA1A5666A000293333 /* FLPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C89B91A5666A000293333 /* FLPlayerViewController.swift */; };
@@ -47,8 +48,9 @@
 		8E3DE3281A56009700FB79FC /* FLVectorIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3DE3271A56009700FB79FC /* FLVectorIcon.swift */; };
 		8E49C74D1A6CCB68002D0EB7 /* FLBlurNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E49C74C1A6CCB68002D0EB7 /* FLBlurNavBar.swift */; };
 		8E4FD8B11A87F161003E7570 /* FLBlurStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4FD8B01A87F161003E7570 /* FLBlurStatusBar.swift */; };
-		8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E624ADF1A4728CD00472E9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8E7217E61A646476000C8230 /* FLScrubberSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7217E51A646476000C8230 /* FLScrubberSlider.swift */; };
+		8E834A8F1A8A6A5400DDB41F /* MMScalableVectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E834A8E1A8A6A5400DDB41F /* MMScalableVectorView.m */; };
+		8E834A901A8A6A5400DDB41F /* MMScalableVectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E834A8E1A8A6A5400DDB41F /* MMScalableVectorView.m */; };
 		8E8ECCEB1A5B824200373FFB /* Player_Usecases.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEA1A5B824200373FFB /* Player_Usecases.rtf */; };
 		8E8ECCED1A5BADA900373FFB /* FLUpvoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEC1A5BADA900373FFB /* FLUpvoteButton.swift */; };
 		8E8ECCF01A5BB69400373FFB /* FLFeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */; };
@@ -90,31 +92,9 @@
 		8EFBB02F1A45F015003DDDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB02D1A45F015003DDDC9 /* Main.storyboard */; };
 		8EFBB0311A45F015003DDDC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0301A45F015003DDDC9 /* Images.xcassets */; };
 		8EFBB0341A45F015003DDDC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBB0321A45F015003DDDC9 /* LaunchScreen.xib */; };
-		A41F3B02375B7518E181A79F /* libPods-FlowList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7C4C4184AF2FB2E444196C /* libPods-FlowList.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8E624ADE1A4728CD00472E9B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = Alamofire;
-		};
-		8E624AE01A4728CD00472E9B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = AlamofireTests;
-		};
-		8E624AE21A4728FE00472E9B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = Alamofire;
-		};
 		8EFBB03A1A45F015003DDDC9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8EFBB01C1A45F015003DDDC9 /* Project object */;
@@ -131,7 +111,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8E624AE51A47294100472E9B /* Alamofire.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +119,8 @@
 
 /* Begin PBXFileReference section */
 		01EAE4507B2D77ADF373ED54 /* Pods-FlowList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.debug.xcconfig"; sourceTree = "<group>"; };
-		1EC19C9B2183F57F5E2CB31B /* libPods-FlowListTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlowListTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D63BC44B76CC21AA6FBD3E5 /* Pods_FlowListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3512C329B12104C0A6812D33 /* Pods_FlowList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE78C3A7BA81B0A3316C9CE /* Pods-FlowListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowListTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlowListTests/Pods-FlowListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D0840D31A70F1DF5623C4FA /* Pods-FlowList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.release.xcconfig"; sourceTree = "<group>"; };
 		8BB8DA6A55063CE7A3D32BB2 /* Pods-FlowListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlowListTests/Pods-FlowListTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,7 +132,6 @@
 		8E2C89C21A566D9500293333 /* FLPlayerDataManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlayerDataManger.swift; sourceTree = "<group>"; };
 		8E2C89CF1A5679C500293333 /* FLPlayerViewIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlayerViewIO.swift; sourceTree = "<group>"; };
 		8E2C89D21A5679FE00293333 /* FLPlayerInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlayerInteractorIO.swift; sourceTree = "<group>"; };
-		8E2C89E11A588D1800293333 /* FlowListTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FlowListTests-Bridging-Header.h"; path = "../FlowList/FlowListTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E2C89E41A58995000293333 /* FLPauseIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPauseIcon.swift; sourceTree = "<group>"; };
 		8E2C89E61A58996000293333 /* FLPlayIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlayIcon.swift; sourceTree = "<group>"; };
 		8E2C89E81A59D37600293333 /* FLPlayPauseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlayPauseButton.swift; sourceTree = "<group>"; };
@@ -173,12 +152,12 @@
 		8E3D38D41A521C2400BFDD12 /* FLFeedTrendingViewIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTrendingViewIO.swift; sourceTree = "<group>"; };
 		8E3D39081A523A0100BFDD12 /* FLFeedTrendingInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTrendingInteractorIO.swift; sourceTree = "<group>"; };
 		8E3DE3191A55FBAB00FB79FC /* FLUpvoteIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLUpvoteIcon.swift; sourceTree = "<group>"; };
-		8E3DE3261A55FF7200FB79FC /* FlowList-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FlowList-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E3DE3271A56009700FB79FC /* FLVectorIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLVectorIcon.swift; sourceTree = "<group>"; };
 		8E49C74C1A6CCB68002D0EB7 /* FLBlurNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLBlurNavBar.swift; sourceTree = "<group>"; };
 		8E4FD8B01A87F161003E7570 /* FLBlurStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLBlurStatusBar.swift; sourceTree = "<group>"; };
-		8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		8E7217E51A646476000C8230 /* FLScrubberSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLScrubberSlider.swift; sourceTree = "<group>"; };
+		8E834A8D1A8A6A5400DDB41F /* MMScalableVectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMScalableVectorView.h; sourceTree = "<group>"; };
+		8E834A8E1A8A6A5400DDB41F /* MMScalableVectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMScalableVectorView.m; sourceTree = "<group>"; };
 		8E8ECCEA1A5B824200373FFB /* Player_Usecases.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Player_Usecases.rtf; sourceTree = "<group>"; };
 		8E8ECCEC1A5BADA900373FFB /* FLUpvoteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLUpvoteButton.swift; sourceTree = "<group>"; };
 		8E8ECCEF1A5BB69400373FFB /* FLFeedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedHeaderView.swift; sourceTree = "<group>"; };
@@ -209,6 +188,8 @@
 		8EAAA14C1A5533FB0041BD16 /* FLFeedTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLFeedTableCell.swift; sourceTree = "<group>"; };
 		8EAFB75B1A63083B00341D3A /* FLPlayerAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlayerAudioManager.swift; sourceTree = "<group>"; };
 		8EBF3F971A639B0200F598E1 /* FLHairlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLHairlineView.swift; sourceTree = "<group>"; };
+		8EC1BB7B1A8A647C00592152 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		8EC1BB7C1A8A664F00592152 /* Bridging-Header-Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header-Tests.h"; sourceTree = "<group>"; };
 		8EE1685F1A5F9D9F0014EAB1 /* FLCoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCoreDataStack.swift; sourceTree = "<group>"; };
 		8EE168621A5F9E9C0014EAB1 /* FLDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FLDataModel.xcdatamodel; sourceTree = "<group>"; };
 		8EFBB0241A45F015003DDDC9 /* FlowList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,7 +200,6 @@
 		8EFBB0331A45F015003DDDC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8EFBB0391A45F015003DDDC9 /* FlowListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBB03E1A45F015003DDDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA7C4C4184AF2FB2E444196C /* libPods-FlowList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlowList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,7 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A41F3B02375B7518E181A79F /* libPods-FlowList.a in Frameworks */,
+				14CB6AD2752A15B9B6DC6B68 /* Pods_FlowList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2771766947F92154B109CAC6 /* libPods-FlowListTests.a in Frameworks */,
+				27EB566831FEBA899CB06485 /* Pods_FlowListTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,15 +361,6 @@
 				8E3D38D21A520CFB00BFDD12 /* FLFeedRootWireframe.swift */,
 			);
 			name = Wireframe;
-			sourceTree = "<group>";
-		};
-		8E624ADA1A4728CD00472E9B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8E624ADF1A4728CD00472E9B /* Alamofire.framework */,
-				8E624AE11A4728CD00472E9B /* AlamofireTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		8E8ECCEE1A5BB3F300373FFB /* Buttons */ = {
@@ -643,7 +614,6 @@
 		8EFBB01B1A45F015003DDDC9 = {
 			isa = PBXGroup;
 			children = (
-				8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */,
 				8EFBB0261A45F015003DDDC9 /* FlowList */,
 				8EFBB03C1A45F015003DDDC9 /* FlowListTests */,
 				8EFBB0251A45F015003DDDC9 /* Products */,
@@ -664,6 +634,8 @@
 		8EFBB0261A45F015003DDDC9 /* FlowList */ = {
 			isa = PBXGroup;
 			children = (
+				8E834A8D1A8A6A5400DDB41F /* MMScalableVectorView.h */,
+				8E834A8E1A8A6A5400DDB41F /* MMScalableVectorView.m */,
 				8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */,
 				8E3D38CB1A52092C00BFDD12 /* FLAppDependencies.swift */,
 				8EFBB02D1A45F015003DDDC9 /* Main.storyboard */,
@@ -682,7 +654,7 @@
 				8E2E6E621A5086C700DE49C9 /* Use Cases */,
 				8E36F6151A46171600DD88D8 /* GoDJ.mp3 */,
 				8EFBB0281A45F015003DDDC9 /* Info.plist */,
-				8E3DE3261A55FF7200FB79FC /* FlowList-Bridging-Header.h */,
+				8EC1BB7B1A8A647C00592152 /* Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -692,6 +664,7 @@
 			children = (
 				8E2E6E681A50945500DE49C9 /* FLSongItemTests.swift */,
 				8EFBB03D1A45F015003DDDC9 /* Supporting Files */,
+				8EC1BB7C1A8A664F00592152 /* Bridging-Header-Tests.h */,
 			);
 			path = FlowListTests;
 			sourceTree = "<group>";
@@ -699,7 +672,6 @@
 		8EFBB03D1A45F015003DDDC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8E2C89E11A588D1800293333 /* FlowListTests-Bridging-Header.h */,
 				8EFBB03E1A45F015003DDDC9 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -708,8 +680,8 @@
 		9041F69F43E4F04AC6E6A3F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BA7C4C4184AF2FB2E444196C /* libPods-FlowList.a */,
-				1EC19C9B2183F57F5E2CB31B /* libPods-FlowListTests.a */,
+				3512C329B12104C0A6812D33 /* Pods_FlowList.framework */,
+				1D63BC44B76CC21AA6FBD3E5 /* Pods_FlowListTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -727,11 +699,11 @@
 				8EFBB0221A45F015003DDDC9 /* Resources */,
 				3DBCD2A925E3AAE084E3AE24 /* Copy Pods Resources */,
 				8E624AE41A47291300472E9B /* Copy Frameworks */,
+				73AC2DC394376090D1047548 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8E624AE31A4728FE00472E9B /* PBXTargetDependency */,
 			);
 			name = FlowList;
 			productName = FlowList;
@@ -747,6 +719,7 @@
 				8EFBB0361A45F015003DDDC9 /* Frameworks */,
 				8EFBB0371A45F015003DDDC9 /* Resources */,
 				B9D0B34E536E77EDA835D79F /* Copy Pods Resources */,
+				0D1ADDB79E1096E7561B3AAA /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -787,12 +760,6 @@
 			mainGroup = 8EFBB01B1A45F015003DDDC9;
 			productRefGroup = 8EFBB0251A45F015003DDDC9 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8E624ADA1A4728CD00472E9B /* Products */;
-					ProjectRef = 8E624AD91A4728CD00472E9B /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8EFBB0231A45F015003DDDC9 /* FlowList */,
@@ -800,23 +767,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		8E624ADF1A4728CD00472E9B /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 8E624ADE1A4728CD00472E9B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8E624AE11A4728CD00472E9B /* AlamofireTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = AlamofireTests.xctest;
-			remoteRef = 8E624AE01A4728CD00472E9B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8EFBB0221A45F015003DDDC9 /* Resources */ = {
@@ -842,6 +792,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D1ADDB79E1096E7561B3AAA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlowListTests/Pods-FlowListTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2C3746559901FCDF3C0761BA /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -870,6 +835,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlowList/Pods-FlowList-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73AC2DC394376090D1047548 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlowList/Pods-FlowList-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A173DC0F45CDDC1421D775AD /* Check Pods Manifest.lock */ = {
@@ -965,6 +945,7 @@
 				8E8F078F1A6100990052E246 /* FLFeedNewPresenter.swift in Sources */,
 				8E7217E61A646476000C8230 /* FLScrubberSlider.swift in Sources */,
 				8E8F07651A6085030052E246 /* FLFeedNewTableViewController.swift in Sources */,
+				8E834A8F1A8A6A5400DDB41F /* MMScalableVectorView.m in Sources */,
 				8E2E6E6E1A50C1EE00DE49C9 /* FLFeedTrendingInteractor.swift in Sources */,
 				8E2E6E781A511BB500DE49C9 /* FLFeedTrendingDataManager.swift in Sources */,
 				8E01AC811A81BE9E00BFAC04 /* FLBlurNavBarInterface.swift in Sources */,
@@ -987,6 +968,7 @@
 				8E2E6E791A511BB500DE49C9 /* FLFeedTrendingDataManager.swift in Sources */,
 				8E2E6E6F1A50C1EE00DE49C9 /* FLFeedTrendingInteractor.swift in Sources */,
 				8E2C89C11A566D5900293333 /* FLPlayerInteractor.swift in Sources */,
+				8E834A901A8A6A5400DDB41F /* MMScalableVectorView.m in Sources */,
 				8E8F07A21A61C8A10052E246 /* FLManagedSongItem.swift in Sources */,
 				8E2C89C41A566D9500293333 /* FLPlayerDataManger.swift in Sources */,
 				8E2E6E691A50945500DE49C9 /* FLSongItemTests.swift in Sources */,
@@ -997,11 +979,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8E624AE31A4728FE00472E9B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			targetProxy = 8E624AE21A4728FE00472E9B /* PBXContainerItemProxy */;
-		};
 		8EFBB03B1A45F015003DDDC9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8EFBB0231A45F015003DDDC9 /* FlowList */;
@@ -1118,7 +1095,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FLowList/FlowList-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/drakhamimov/iOS Projects/FlowList/FlowList/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1133,7 +1110,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FLowList/FlowList-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/drakhamimov/iOS Projects/FlowList/FlowList/Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -1155,7 +1132,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "FLowList/FlowListTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/drakhamimov/iOS Projects/FlowList/FlowListTests/Bridging-Header-Tests.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowList.app/FlowList";
 			};
@@ -1175,7 +1152,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "FLowList/FlowListTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/drakhamimov/iOS Projects/FlowList/FlowListTests/Bridging-Header-Tests.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowList.app/FlowList";
 			};
 			name = Release;

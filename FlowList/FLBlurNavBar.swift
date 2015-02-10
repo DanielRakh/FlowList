@@ -11,8 +11,8 @@ import UIKit
 
 @objc protocol FLBlurNavBarDelegate {
     
-    optional func navBarExpandedBy(height:CGFloat)
-    optional func navBarCollapsedBy(height:CGFloat)
+    optional func navBarExpandedBy(height:Float)
+    optional func navBarCollapsedBy(height:Float)
     
 }
 
@@ -31,9 +31,9 @@ class FLBlurNavBar: UIVisualEffectView {
     
     var delegate:FLBlurNavBarDelegate?
     
-    private let kAnimationDragValueMultiplier:CGFloat = 0.9
-    let expandedHeight:CGFloat = 110.0
-    let collapsedHeight:CGFloat = 20.0
+    private let kAnimationDragValueMultiplier:Float = 0.9
+    let expandedHeight:Float = 110.0
+    let collapsedHeight:Float = 20.0
     
     var mode:FLNavBarMode = .Expanded
     var transitioning:Bool = false
@@ -59,29 +59,30 @@ class FLBlurNavBar: UIVisualEffectView {
     
     
     func setupTitle() {
-        
+
         let attrString = NSAttributedString(
             string: "</FLOWLIST>",
             attributes:
             [NSForegroundColorAttributeName: UIColor.FLCElectricBlue(),
                 NSKernAttributeName: 2,
-                NSFontAttributeName: UIFont(name:"AvenirNext-DemiBold", size: CGFloat(20))!] as NSDictionary)
+                NSFontAttributeName: UIFont(name:"AvenirNext-DemiBold", size: CGFloat(20))!])
+        
         titleLabel.attributedText = attrString
         titleLabel.sizeToFit()
     }
     
-    func transitionToMode(mode:FLNavBarMode, value:CGFloat, shouldAnimate:Bool, completion:(success:Bool) -> Void) {
+    func transitionToMode(mode:FLNavBarMode, value:Float, shouldAnimate:Bool, completion:(success:Bool) -> Void) {
         
-        var height:CGFloat!
+        var height:Float!
         
         if mode == .Expanded {
-            height = heightConstraint.constant + value >= expandedHeight ? expandedHeight : heightConstraint.constant + value
+            height = Float(heightConstraint.constant) + value >= expandedHeight ? expandedHeight : Float(heightConstraint.constant) + value
         } else if mode == .Collapsed {
             
-            height = heightConstraint.constant - value <= collapsedHeight ? collapsedHeight : heightConstraint.constant - value
+            height = Float(heightConstraint.constant) - value <= collapsedHeight ? collapsedHeight : Float(heightConstraint.constant) - value
         }
         
-        heightConstraint.constant = height
+        heightConstraint.constant = CGFloat(height)
 
         let subViewAnimatedValue = mode == .Expanded ? value / expandedHeight : -(value / expandedHeight)
         
@@ -96,9 +97,9 @@ class FLBlurNavBar: UIVisualEffectView {
                     self.hairlineView.alpha = mode == .Expanded ? 1.0 : 0.0
                     
                 } else {
-                    self.titleLabel.alpha += subViewAnimatedValue * 5
-                    self.feedHeaderView.alpha += subViewAnimatedValue * 2
-                    self.hairlineView.alpha += subViewAnimatedValue * 2
+                    self.titleLabel.alpha += CGFloat(subViewAnimatedValue * 5)
+                    self.feedHeaderView.alpha += CGFloat(subViewAnimatedValue * 2)
+                    self.hairlineView.alpha += CGFloat(subViewAnimatedValue * 2)
                 }
              
                 //self.titleLabel.transform = CGAffineTransformMakeScale(self.titleLabel.alpha, self.titleLabel.alpha)
@@ -107,10 +108,10 @@ class FLBlurNavBar: UIVisualEffectView {
                 
                 switch self.heightConstraint.constant {
                     
-                case self.expandedHeight:
+                case CGFloat(self.expandedHeight):
                     self.mode = .Expanded
                     
-                case self.collapsedHeight:
+                case CGFloat(self.collapsedHeight):
                     self.mode = .Collapsed
                     
                 default:
@@ -123,23 +124,26 @@ class FLBlurNavBar: UIVisualEffectView {
         
     }
     
-    func expandWithValue(value:CGFloat) {
+    
+    
+    
+    
+    func expandWithValue(value:Float) {
         transitionToMode(.Expanded, value:value, shouldAnimate: false) { success in
             //
         }
     }
     
-    func collapseWithValue(value:CGFloat) {
+    func collapseWithValue(value:Float) {
         transitionToMode(.Collapsed, value:value, shouldAnimate: false) { success in
             //
         }
     }
     
     func fullyExpand(shouldAnimate:Bool, shouldCallDelegate:Bool) {
-        println("fully expand")
-
+        
         if self.mode != .Expanded  {
-            let initialHeight = heightConstraint.constant
+            let initialHeight = Float(heightConstraint.constant)
             if shouldCallDelegate {
                 self.delegate?.navBarExpandedBy?(self.expandedHeight - initialHeight)
    
@@ -152,13 +156,12 @@ class FLBlurNavBar: UIVisualEffectView {
     }
 
     func fullyCollapse(shouldAnimate:Bool, shouldCallDelegate:Bool) {
-        println("fully collapse")
         if self.mode != .Collapsed {
-            let initialHeight = heightConstraint.constant
+            let initialHeight = Float(heightConstraint.constant)
             if shouldCallDelegate {
                 self.delegate?.navBarCollapsedBy?(self.collapsedHeight - initialHeight)
             }
-            transitionToMode(.Collapsed, value: collapsedHeight, shouldAnimate: true, completion: { success in
+            transitionToMode(.Collapsed, value: (expandedHeight - collapsedHeight), shouldAnimate: true, completion: { success in
                 //
             })
         }

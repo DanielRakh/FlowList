@@ -1,10 +1,20 @@
 PODS:
-  - MMScalableVectorView (0.1.0)
+  - Alamofire (1.1.4)
 
 DEPENDENCIES:
-  - MMScalableVectorView (~> 0.1)
+  - Alamofire (from `git@github.com:boek/Alamofire.git`, branch `swift-1.2beta`)
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :branch: swift-1.2beta
+    :git: git@github.com:boek/Alamofire.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: 7a2cddac1904f240c4d9c20bc8e17a5ca3398647
+    :git: git@github.com:boek/Alamofire.git
 
 SPEC CHECKSUMS:
-  MMScalableVectorView: c8f1b86036c8d1056ff5d5c3be59044ef93fd9fe
+  Alamofire: 7c87bf4a655df535791f4195bd803bf4f6c9c835
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.36.0.beta.2

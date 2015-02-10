@@ -29,16 +29,19 @@ extension FLFeedTrendingPresenter:FLFeedTrendingViewOutput {
         feedModuleDelegate?.feedModuleDidSelectSong()
     }
     
-    func scrollViewDidScrollWithDragValue(dragValue: CGFloat, direction: ScrollDirection) {
+    func scrollViewDidScrollWithDragValue(dragValue: Float, direction: ScrollDirection) {
         scrollViewDelegate?.userDidScrollDirection(direction, dragValue: dragValue)
     }
 
-    func userWillEndDragging(direction:ScrollDirection?) {
+    func userWillEndDragging(direction:ScrollDirection) {
         scrollViewDelegate?.scrollViewWillEndDragging(direction)
     }
     
     func userWillBeginDragging() {
         scrollViewDelegate?.scrollViewWillBeginDragging()
+    }
+    func userWillEndDraggingWeakly(direction withDirection:ScrollDirection?) {
+        scrollViewDelegate?.userWillEndDraggingWeakly(direction: withDirection)
     }
 
 }
@@ -53,11 +56,11 @@ extension FLFeedTrendingPresenter: FLFeedTrendingInteractorOutput {
 
 extension FLFeedTrendingPresenter: FLBlurNavBarInterface {
     
-    func navBarHasExpandedBy(value:CGFloat) {
+    func navBarHasExpandedBy(value:Float) {
         userInterface?.offSetScrollViewBy(value)
     }
     
-    func navBarHasCollapsedBy(value:CGFloat) {
+    func navBarHasCollapsedBy(value:Float) {
         userInterface?.offSetScrollViewBy(value)
         
     }

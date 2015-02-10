@@ -3,15 +3,16 @@
 
 target 'FlowList' do
 
-pod 'MMScalableVectorView', '~> 0.1'
+
+pod 'Alamofire', :git => "git@github.com:boek/Alamofire.git", :branch => 'swift-1.2beta'
 
 
 end
 
 target 'FlowListTests' do
     
-pod 'MMScalableVectorView', '~> 0.1'
 
+pod 'Alamofire', :git => "git@github.com:boek/Alamofire.git", :branch => 'swift-1.2beta'
 
 end
 
