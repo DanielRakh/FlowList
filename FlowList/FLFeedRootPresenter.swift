@@ -41,12 +41,6 @@ class FLFeedRootPresenter: NSObject {
         feedRootWireframe?.slidePlayerContainerView(slideTransition)
     }
     
-    func heightForNavBarForDragValue(value:CGFloat) -> Int {
-        return 5
-    }
-    
-    
-    
 }
 
 extension FLFeedRootPresenter: FLFeedRootViewOutput {
@@ -94,7 +88,8 @@ extension FLFeedRootPresenter: FLTrendingScrollViewDelegate {
                 userInterface?.expandNavBar()
             }
         } else {
-            userInterface?.finishNavBarTransition()
+//            userInterface?.finishNavBarTransition()
+            println("No scroll direction")
         }
 
     }

@@ -20,11 +20,12 @@ class FLFeedTrendingTableViewController: UITableViewController {
     //MARK: Private
     
     private let cellIdentifier = "FeedCell"
-    private let topContentInset = 118 as CGFloat
+    private let topContentInset = 110 as CGFloat
     private let bottomContentInset = 70 as CGFloat
     
     private var songs:[FLTrendingSongItem]?
     private var initialContentOffset:CGFloat = 0
+    private var initialTargetContentOffset:CGFloat = -110.0
     private var initialNavBarExpansionContentOffset:CGFloat = 0
     private var initialNavBarDragContentOffset:CGFloat = 0
     
@@ -122,27 +123,29 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         
-        if scrollView.dragging && scrollView.tracking && scrollView.contentOffset.y > -topContentInset && isScrollViewBouncing(scrollView) == false {
-            //In the bounds of the scroll.
+        if scrollView.dragging && scrollView.contentOffset.y > -topContentInset && isScrollViewBouncing(scrollView) == false {
+            // In the bounds of scrolling
             
             var dragValue = abs(abs(initialContentOffset) - abs(scrollView.contentOffset.y))
             
-            //            println("Initial Content Offset\(initialContentOffset)")
-            //            println("Scroll View Content offset:\(scrollView.contentOffset.y)")
-            
             if scrollView.contentOffset.y > initialContentOffset {
-                
+                // Scrolling down (dragging up)
                 eventHandler?.scrollViewDidScrollWithDragValue(dragValue, direction: .Down)
                 
                 initialNavBarExpansionContentOffset = scrollView.contentOffset.y
                 
             } else if scrollView.contentOffset.y < initialContentOffset {
+                // Scrolling up (dragging down)
                 
                 if scrollView.contentOffset.y > topContentInset {
+                    println(scrollView.contentOffset.y)
                     if (initialNavBarExpansionContentOffset - scrollView.contentOffset.y) > CGRectGetHeight(view.bounds) / 2 {
+//                        println("InitialNavBarBlock")
                         eventHandler?.scrollViewDidScrollWithDragValue(dragValue, direction: .Up)
                     }
                 } else {
+//                    println("Else Block")
+
                     eventHandler?.scrollViewDidScrollWithDragValue(dragValue, direction: .Up)
                 }
                 
@@ -155,39 +158,53 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
     }
     
     override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        println("scrollViewWillBeginDragging")
+//        println("scrollViewWillBeginDragging")
         
-        //        if scrollView.decelerating == false {
         initialContentOffset = scrollView.contentOffset.y
         initialNavBarExpansionContentOffset = scrollView.contentOffset.y
-        //        }
         eventHandler?.userWillBeginDragging()
     }
     
     override func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
-        //            println("scrollViewWillEndDragging")
-        //        println("Velocity:\(velocity)")
-        println("Scroll View Offset:\(scrollView.contentOffset.y)")
-        //        println("Target Content:\(targetContentOffset.memory.y)")
-        
-        
-        
-        if scrollView.contentOffset.y > -topContentInset && isScrollViewBouncing(scrollView) == false {
-            if (targetContentOffset.memory.y - scrollView.contentOffset.y) >= topContentInset {
-                println("Velociy down")
-                eventHandler?.userWillEndDragging(.Down)
-            } else if (targetContentOffset.memory.y - scrollView.contentOffset.y) < topContentInset {
-                println("Velociy up")
-                eventHandler?.userWillEndDragging(nil)
-            } else {
-                eventHandler?.userWillEndDragging(nil)
-            }
-        } else {
-            println("nil")
+        if targetContentOffset.memory.y > initialTargetContentOffset {
+            eventHandler?.userWillEndDragging(.Down)
             
-            eventHandler?.userWillEndDragging(nil)
+        } else if targetContentOffset.memory.y <= initialTargetContentOffset {
+            
+            if abs(abs(targetContentOffset.memory.y) - abs(initialTargetContentOffset)) > 110 {
+                eventHandler?.userWillEndDragging(.Up)
+            }
         }
+        
+        initialTargetContentOffset = targetContentOffset.memory.y
+        
+        /*
+
+        if
+*/
+        
+        println("velocity:\(velocity)")
+        println("targetContentOffset:\(targetContentOffset.memory.y)")
+        println("Scroll View:\(scrollView.contentOffset.y)")
+
+
+//        if scrollView.contentOffset.y > -topContentInset && isScrollViewBouncing(scrollView) == false {
+//            if (targetContentOffset.memory.y - scrollView.contentOffset.y) >= topContentInset {
+//                println("Velocity down")
+//                eventHandler?.userWillEndDragging(.Down)
+//            } else if (targetContentOffset.memory.y - scrollView.contentOffset.y) < topContentInset {
+//                println("Velocity up")
+//                eventHandler?.userWillEndDragging(nil)
+//            } else {
+////                eventHandler?.userWillEndDragging(nil)
+//                println("else broken")
+//            }
+//        } else {
+//            println("shit")
+//            
+////            eventHandler?.userWillEndDragging(nil)
+//        }
     }
     
 }

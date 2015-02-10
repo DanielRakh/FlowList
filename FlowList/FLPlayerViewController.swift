@@ -29,8 +29,7 @@ class FLPlayerViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         backgroundBlurView.frame = CGRectMake(0, 0, backgroundBlurView.bounds.size.width, backgroundBlurView.bounds.size.height)
-        println("Layout:\(backgroundBlurView)")
-        println(view)
+
         
     }
 
