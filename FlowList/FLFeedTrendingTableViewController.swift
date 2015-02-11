@@ -167,55 +167,49 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
             If the user ended dragging.
         */
         
-        println(velocity)
-        println(abs(abs(targetContentOffset.memory.y) - abs(initialTargetContentOffset)))
+        println("Velocity:\(velocity)")
+        println("TargetCOY:\(targetContentOffset.memory.y)")
+        println("InitialCOY:\(initialTargetContentOffset)")
+        println("Abs Diff \(abs(abs(targetContentOffset.memory.y) - abs(initialTargetContentOffset)))")
+        
+        let absDiff = (abs(abs(targetContentOffset.memory.y) - abs(initialTargetContentOffset)))
         
         
-        if targetContentOffset.memory.y > initialTargetContentOffset {
-            if velocity.y == 0 {
-                println("Ended Weakly Scrolling Down")
-                eventHandler?.userWillEndDraggingWeakly(direction: .Down)
-            } else {
-                println("Ended Scrolling Down")
-                eventHandler?.userWillEndDragging(.Down)
-            }
-        } else if targetContentOffset.memory.y < initialTargetContentOffset {
-            if velocity.y == 0 {
+        if targetContentOffset.memory.y > initialTargetContentOffset && isScrollViewBouncing(scrollView) == false {
+            
+            println("In scroll down block")
+
+            
+                if velocity.y <= 0.5 && velocity.y >= 0 {
+                    println("Ended Weakly Scrolling Down")
+                    eventHandler?.userWillEndDraggingWeakly(direction: .Down)
+                } else {
+                    println("Ended Scrolling Down")
+                    eventHandler?.userWillEndDragging(.Down)
+                }
+    
+        } else if targetContentOffset.memory.y <= initialTargetContentOffset && isScrollViewBouncing(scrollView) == false {
+            
+            println("In scroll up block")
+            
+            if velocity.y >= -0.1 {
                 println("Ended Weakly direction NIL")
                 eventHandler?.userWillEndDraggingWeakly(direction: nil)
                 
-            } else if abs(abs(targetContentOffset.memory.y) - abs(initialTargetContentOffset)) > 55 {
-                
+            } else {
                 eventHandler?.userWillEndDragging(.Up)
                 println("Ended Scrolling up")
             }
-        }
-        
-        /*
-        if abs(abs(targetContentOffset.memory.y) - abs(initialTargetContentOffset)) <= abs(initialContentOffset) && isScrollViewBouncing(scrollView) == false {
-            if targetContentOffset.memory.y > initialTargetContentOffset {
-                 println("Ended Dragging direction Down")
-                eventHandler?.userWillEndDraggingWeakly(direction: .Down)
-            } else if targetContentOffset.memory.y < initialTargetContentOffset {
-                println("Ended Dragging direction NIL")
-                eventHandler?.userWillEndDraggingWeakly(direction: .Up)
-            }
             
-        } else  {
-            if targetContentOffset.memory.y > initialTargetContentOffset {
+        } else if isScrollViewBouncing(scrollView) == true {
+            if targetContentOffset.memory.y == -(topContentInset) {
+                eventHandler?.userWillEndDragging(.Up)
+            } else {
                 eventHandler?.userWillEndDragging(.Down)
-                println("Ended Scrolling Down")
-                
-            } else if targetContentOffset.memory.y <= initialTargetContentOffset {
-                
-                if abs(abs(targetContentOffset.memory.y) - abs(initialTargetContentOffset)) > 110 {
-                    eventHandler?.userWillEndDragging(.Up)
-                    println("Ended Scrolling up")
-                }
             }
         }
         
-        */
+  
         
         initialTargetContentOffset = targetContentOffset.memory.y
     }

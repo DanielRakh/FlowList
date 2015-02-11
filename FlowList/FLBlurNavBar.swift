@@ -88,7 +88,7 @@ class FLBlurNavBar: UIVisualEffectView {
         
         UIView.animateWithDuration(shouldAnimate == true ? 0.35 : 0,
             delay:0.0,
-            options:UIViewAnimationOptions.BeginFromCurrentState,
+            options:UIViewAnimationOptions.AllowAnimatedContent,
             animations: { () -> Void in
                 
                 if shouldAnimate {
