@@ -150,6 +150,7 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
             }
             
             initialContentOffset = scrollView.contentOffset.y
+
             
         }
         
@@ -203,8 +204,10 @@ extension FLFeedTrendingTableViewController: UIScrollViewDelegate {
             
         } else if isScrollViewBouncing(scrollView) == true {
             if targetContentOffset.memory.y == -(topContentInset) {
+                println("Bouncing Scroll up!")
                 eventHandler?.userWillEndDragging(.Up)
             } else {
+                println("Bouncing Scroll down!")
                 eventHandler?.userWillEndDragging(.Down)
             }
         }
