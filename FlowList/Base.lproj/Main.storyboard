@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ObG-NA-bx0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -303,7 +302,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="Ars-hu-R8v">
-                                        <variation key="widthClass=compact" constant="230"/>
+                                        <variation key="widthClass=compact" constant="210"/>
                                     </constraint>
                                 </constraints>
                                 <variation key="default">
@@ -325,7 +324,9 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="zGt-Tc-nV1" firstAttribute="top" secondItem="wRC-5h-CBy" secondAttribute="bottom" id="3ar-m4-wSv"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="nog-LH-6sr" secondAttribute="bottom" constant="-160" id="8fJ-Ie-kuR"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="nog-LH-6sr" secondAttribute="bottom" constant="-160" id="8fJ-Ie-kuR">
+                                <variation key="widthClass=compact" constant="-140"/>
+                            </constraint>
                             <constraint firstItem="wRC-5h-CBy" firstAttribute="top" secondItem="zTX-p4-Z72" secondAttribute="bottom" id="9Zz-Hv-fau"/>
                             <constraint firstAttribute="trailing" secondItem="nog-LH-6sr" secondAttribute="trailing" id="BJT-O4-gP4"/>
                             <constraint firstItem="XrL-gj-d3m" firstAttribute="leading" secondItem="utS-U5-5cI" secondAttribute="trailing" id="O71-mc-RnM"/>
@@ -758,7 +759,9 @@
                                     </variation>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="atM-4B-6eH"/>
+                                    <constraint firstAttribute="height" constant="230" id="atM-4B-6eH">
+                                        <variation key="widthClass=compact" constant="210"/>
+                                    </constraint>
                                 </constraints>
                                 <blurEffect style="dark"/>
                                 <variation key="default">
