@@ -9,6 +9,14 @@
 import UIKit
 
 class FLScrubberSlider: UISlider {
-
+    
+    override func awakeFromNib() {
+        
+        super.awakeFromNib()
+        
+        setMaximumTrackImage(UIImage(named: "PlayerSliderMaximumTrackImage")?.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 4, 0, 4), resizingMode: .Stretch), forState: .Normal)
+        
+        setMinimumTrackImage(UIImage(named: "PlayerSliderMinimumTrackImage")?.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 4, 0, 4), resizingMode: .Stretch), forState: .Normal)
+    }
 
 }

@@ -637,15 +637,30 @@
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8db-by-7jG" customClass="FLScrubberSlider" customModule="FlowList" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="41" y="20" width="314" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="271" id="ajc-v8-kFd">
+                                                            <variation key="widthClass=compact" constant="275"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="ajc-v8-kFd"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="ajc-v8-kFd"/>
+                                                        </mask>
                                                     </variation>
                                                 </slider>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="8db-by-7jG" secondAttribute="centerX" constant="21.5" id="Q8s-5n-efS">
+                                                    <variation key="widthClass=compact" constant="0.0"/>
+                                                </constraint>
+                                                <constraint firstAttribute="centerY" secondItem="8db-by-7jG" secondAttribute="centerY" id="Y6Y-ax-VrA"/>
                                                 <constraint firstAttribute="height" constant="70" id="luY-Ei-29M"/>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="zBR-pc-PIp"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -653,7 +668,8 @@
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="luY-Ei-29M"/>
-                                                    <exclude reference="zBR-pc-PIp"/>
+                                                    <exclude reference="Q8s-5n-efS"/>
+                                                    <exclude reference="Y6Y-ax-VrA"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -662,7 +678,8 @@
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="luY-Ei-29M"/>
-                                                    <include reference="zBR-pc-PIp"/>
+                                                    <include reference="Q8s-5n-efS"/>
+                                                    <include reference="Y6Y-ax-VrA"/>
                                                 </mask>
                                             </variation>
                                         </view>
