@@ -580,6 +580,7 @@
 		8EAAA1441A535F0E0041BD16 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8EF7F51A1A8E6C8200272061 /* 3rd Party */,
 				8E2E6E701A50CB7100DE49C9 /* Network Services */,
 				8EE1685D1A5F9D7B0014EAB1 /* Core Data */,
 				8E2C89B51A56661800293333 /* Extensions */,
@@ -611,6 +612,15 @@
 			name = "Core Data";
 			sourceTree = "<group>";
 		};
+		8EF7F51A1A8E6C8200272061 /* 3rd Party */ = {
+			isa = PBXGroup;
+			children = (
+				8E834A8D1A8A6A5400DDB41F /* MMScalableVectorView.h */,
+				8E834A8E1A8A6A5400DDB41F /* MMScalableVectorView.m */,
+			);
+			name = "3rd Party";
+			sourceTree = "<group>";
+		};
 		8EFBB01B1A45F015003DDDC9 = {
 			isa = PBXGroup;
 			children = (
@@ -634,8 +644,6 @@
 		8EFBB0261A45F015003DDDC9 /* FlowList */ = {
 			isa = PBXGroup;
 			children = (
-				8E834A8D1A8A6A5400DDB41F /* MMScalableVectorView.h */,
-				8E834A8E1A8A6A5400DDB41F /* MMScalableVectorView.m */,
 				8EFBB0291A45F015003DDDC9 /* AppDelegate.swift */,
 				8E3D38CB1A52092C00BFDD12 /* FLAppDependencies.swift */,
 				8EFBB02D1A45F015003DDDC9 /* Main.storyboard */,
