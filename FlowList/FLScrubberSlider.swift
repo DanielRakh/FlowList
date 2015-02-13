@@ -14,6 +14,8 @@ class FLScrubberSlider: UISlider {
         
         super.awakeFromNib()
         
+        setThumbImage(UIImage(named: "PlayerSliderThumbImage"), forState: .Normal)
+        
         setMaximumTrackImage(UIImage(named: "PlayerSliderMaximumTrackImage")?.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 4, 0, 4), resizingMode: .Stretch), forState: .Normal)
         
         setMinimumTrackImage(UIImage(named: "PlayerSliderMinimumTrackImage")?.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 4, 0, 4), resizingMode: .Stretch), forState: .Normal)
