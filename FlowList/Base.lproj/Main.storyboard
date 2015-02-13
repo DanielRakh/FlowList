@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ObG-NA-bx0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ObG-NA-bx0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -231,6 +231,7 @@
                                             <exclude reference="7gX-bZ-uKN"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <exclude reference="Gza-e2-i4b"/>
                                             <exclude reference="Uc3-Z2-Glm"/>
                                             <exclude reference="cIN-SZ-pOl"/>
                                             <exclude reference="i51-3g-DeX"/>
@@ -242,7 +243,6 @@
                                             <exclude reference="9OD-DY-4Pi"/>
                                             <exclude reference="BPM-NI-RQg"/>
                                             <exclude reference="m4B-ZP-SVl"/>
-                                            <exclude reference="Gza-e2-i4b"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -252,6 +252,7 @@
                                             <include reference="7gX-bZ-uKN"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <include reference="Gza-e2-i4b"/>
                                             <include reference="Uc3-Z2-Glm"/>
                                             <include reference="cIN-SZ-pOl"/>
                                             <include reference="i51-3g-DeX"/>
@@ -263,7 +264,6 @@
                                             <include reference="9OD-DY-4Pi"/>
                                             <include reference="BPM-NI-RQg"/>
                                             <include reference="m4B-ZP-SVl"/>
-                                            <include reference="Gza-e2-i4b"/>
                                         </mask>
                                     </variation>
                                 </view>
@@ -291,6 +291,14 @@
                                     <outlet property="vibrancyEffectView" destination="RJz-8K-aum" id="z6Q-eN-zhA"/>
                                 </connections>
                             </visualEffectView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRC-5h-CBy" userLabel="Transparent View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ruj-83-Pnz" appends="YES" id="oZ8-ca-YDS"/>
+                                </connections>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nog-LH-6sr" userLabel="Player Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
@@ -313,14 +321,6 @@
                                     <segue destination="yWP-CK-utu" kind="embed" identifier="presentPlayerController" id="ksI-KH-DCN"/>
                                 </connections>
                             </containerView>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRC-5h-CBy" userLabel="Transparent View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Ruj-83-Pnz" appends="YES" id="oZ8-ca-YDS"/>
-                                </connections>
-                            </view>
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
@@ -353,24 +353,16 @@
                                 <exclude reference="XrL-gj-d3m"/>
                                 <exclude reference="aF2-L5-Uuz"/>
                                 <exclude reference="zEY-1D-HFW"/>
-                                <exclude reference="nog-LH-6sr"/>
                                 <exclude reference="wRC-5h-CBy"/>
+                                <exclude reference="nog-LH-6sr"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="3ar-m4-wSv"/>
                                 <exclude reference="O71-mc-RnM"/>
                                 <exclude reference="UBQ-Zz-Vgf"/>
                                 <exclude reference="jS2-X1-zoV"/>
                                 <exclude reference="xfc-go-mkG"/>
                                 <exclude reference="yEG-P2-Xgc"/>
-                                <exclude reference="9Zz-Hv-fau"/>
-                                <exclude reference="rmi-V0-UET"/>
-                                <exclude reference="v9T-Go-KFn"/>
-                                <exclude reference="RZa-0u-hLt"/>
-                                <exclude reference="eU4-m4-Jiz"/>
-                                <exclude reference="tt3-IP-FDU"/>
-                                <exclude reference="Uqy-zo-Mkb"/>
-                                <exclude reference="sUy-kE-JoY"/>
-                                <exclude reference="vik-6e-fXS"/>
                                 <exclude reference="Pvx-Bu-Zq2"/>
                                 <exclude reference="ngK-Z2-nX3"/>
                                 <exclude reference="sTE-BM-7OE"/>
@@ -378,7 +370,15 @@
                                 <exclude reference="8fJ-Ie-kuR"/>
                                 <exclude reference="BJT-O4-gP4"/>
                                 <exclude reference="TFu-fG-2ae"/>
-                                <exclude reference="3ar-m4-wSv"/>
+                                <exclude reference="Uqy-zo-Mkb"/>
+                                <exclude reference="sUy-kE-JoY"/>
+                                <exclude reference="vik-6e-fXS"/>
+                                <exclude reference="RZa-0u-hLt"/>
+                                <exclude reference="eU4-m4-Jiz"/>
+                                <exclude reference="tt3-IP-FDU"/>
+                                <exclude reference="9Zz-Hv-fau"/>
+                                <exclude reference="rmi-V0-UET"/>
+                                <exclude reference="v9T-Go-KFn"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -387,24 +387,16 @@
                                 <include reference="XrL-gj-d3m"/>
                                 <include reference="aF2-L5-Uuz"/>
                                 <include reference="zEY-1D-HFW"/>
-                                <include reference="nog-LH-6sr"/>
                                 <include reference="wRC-5h-CBy"/>
+                                <include reference="nog-LH-6sr"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="3ar-m4-wSv"/>
                                 <include reference="O71-mc-RnM"/>
                                 <include reference="UBQ-Zz-Vgf"/>
                                 <include reference="jS2-X1-zoV"/>
                                 <include reference="xfc-go-mkG"/>
                                 <include reference="yEG-P2-Xgc"/>
-                                <include reference="9Zz-Hv-fau"/>
-                                <include reference="rmi-V0-UET"/>
-                                <include reference="v9T-Go-KFn"/>
-                                <include reference="RZa-0u-hLt"/>
-                                <include reference="eU4-m4-Jiz"/>
-                                <include reference="tt3-IP-FDU"/>
-                                <include reference="Uqy-zo-Mkb"/>
-                                <include reference="sUy-kE-JoY"/>
-                                <include reference="vik-6e-fXS"/>
                                 <include reference="Pvx-Bu-Zq2"/>
                                 <include reference="ngK-Z2-nX3"/>
                                 <include reference="sTE-BM-7OE"/>
@@ -412,7 +404,15 @@
                                 <include reference="8fJ-Ie-kuR"/>
                                 <include reference="BJT-O4-gP4"/>
                                 <include reference="TFu-fG-2ae"/>
-                                <include reference="3ar-m4-wSv"/>
+                                <include reference="Uqy-zo-Mkb"/>
+                                <include reference="sUy-kE-JoY"/>
+                                <include reference="vik-6e-fXS"/>
+                                <include reference="RZa-0u-hLt"/>
+                                <include reference="eU4-m4-Jiz"/>
+                                <include reference="tt3-IP-FDU"/>
+                                <include reference="9Zz-Hv-fau"/>
+                                <include reference="rmi-V0-UET"/>
+                                <include reference="v9T-Go-KFn"/>
                             </mask>
                         </variation>
                     </view>
@@ -793,7 +793,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z1j-9B-2rN" id="ahw-EJ-vfv">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5E-X9-jjR">
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5E-X9-jjR">
                                             <rect key="frame" x="-4" y="-3" width="77" height="89"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="7777" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rV-bg-GcN">
@@ -866,18 +866,12 @@
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="24" width="130" height="19.5"/>
-                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJe-aR-13S">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="48" width="130" height="19.5"/>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -962,7 +956,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Edh-wN-Wik" id="tIM-DN-Mts">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEz-Up-DUa">
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEz-Up-DUa">
                                             <rect key="frame" x="-4" y="-3" width="77" height="89"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InK-JS-EIa" customClass="FLUpvoteButton" customModule="FlowList" customModuleProvider="target">
@@ -1035,18 +1029,12 @@
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="24" width="130" height="19.5"/>
-                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wj-oe-4Jw">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="48" width="130" height="19.5"/>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -1131,7 +1119,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DFG-mc-fRX" id="RFq-xD-wXt">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bae-DI-MpK">
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bae-DI-MpK">
                                             <rect key="frame" x="-4" y="-3" width="77" height="89"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="7777" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DZ-MK-WLP">
@@ -1204,18 +1192,12 @@
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="48" width="130" height="19.5"/>
-                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOILER ROOM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqE-kE-N7h">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="24" width="130" height="19.5"/>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
