@@ -639,18 +639,69 @@
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8db-by-7jG" customClass="FLScrubberSlider" customModule="FlowList" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                                 </slider>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99:99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="eI7-KO-iGU">
-                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-99:99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="fx9-yx-o8Y">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99:99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="eI7-KO-iGU">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1GN-iT-cyd">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="tintColor" red="0.97999999999999998" green="0.98799999999999999" blue="0.98799999999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Previous">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="14" name="AvenirNext-DemiBold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="51" width="55" height="31"/>
+                                                    </variation>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvq-rw-Gmr">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="tintColor" red="0.97999999999999998" green="0.98799999999999999" blue="0.98799999999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Repeat">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="14" name="AvenirNext-DemiBold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="173" y="51" width="46" height="31"/>
+                                                    </variation>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O7K-w9-Hmr">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="tintColor" red="0.97999999999999998" green="0.98799999999999999" blue="0.98799999999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Next">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="14" name="AvenirNext-DemiBold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="360" y="51" width="32" height="31"/>
+                                                    </variation>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -664,17 +715,24 @@
                                                 <constraint firstItem="8db-by-7jG" firstAttribute="centerY" secondItem="fx9-yx-o8Y" secondAttribute="centerY" constant="0.5" id="Nm1-Dg-Pfb">
                                                     <variation key="widthClass=compact" constant="-2"/>
                                                 </constraint>
-                                                <constraint firstAttribute="centerY" secondItem="8db-by-7jG" secondAttribute="centerY" id="PTX-OA-Dbz"/>
+                                                <constraint firstAttribute="centerY" secondItem="8db-by-7jG" secondAttribute="centerY" id="PTX-OA-Dbz">
+                                                    <variation key="widthClass=compact" constant="15"/>
+                                                </constraint>
                                                 <constraint firstItem="8db-by-7jG" firstAttribute="leading" secondItem="eI7-KO-iGU" secondAttribute="trailing" constant="8" id="Qfa-O9-tfa"/>
                                                 <constraint firstItem="eI7-KO-iGU" firstAttribute="leading" secondItem="xp4-Bj-fVe" secondAttribute="leading" constant="8" id="bMK-EP-2wq"/>
                                                 <constraint firstAttribute="trailing" secondItem="fx9-yx-o8Y" secondAttribute="trailing" constant="8" id="j9y-vj-PsN"/>
-                                                <constraint firstAttribute="height" constant="70" id="luY-Ei-29M"/>
+                                                <constraint firstAttribute="height" constant="70" id="luY-Ei-29M">
+                                                    <variation key="widthClass=compact" constant="85"/>
+                                                </constraint>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="8db-by-7jG"/>
-                                                    <exclude reference="eI7-KO-iGU"/>
                                                     <exclude reference="fx9-yx-o8Y"/>
+                                                    <exclude reference="eI7-KO-iGU"/>
+                                                    <exclude reference="1GN-iT-cyd"/>
+                                                    <exclude reference="zvq-rw-Gmr"/>
+                                                    <exclude reference="O7K-w9-Hmr"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="luY-Ei-29M"/>
@@ -691,8 +749,11 @@
                                             <variation key="widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="8db-by-7jG"/>
-                                                    <include reference="eI7-KO-iGU"/>
                                                     <include reference="fx9-yx-o8Y"/>
+                                                    <include reference="eI7-KO-iGU"/>
+                                                    <include reference="1GN-iT-cyd"/>
+                                                    <include reference="zvq-rw-Gmr"/>
+                                                    <include reference="O7K-w9-Hmr"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="luY-Ei-29M"/>
@@ -704,6 +765,30 @@
                                                     <include reference="Qfa-O9-tfa"/>
                                                     <include reference="7cQ-Pq-r2z"/>
                                                     <include reference="j9y-vj-PsN"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNt-Ki-0cA">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCr-dA-vb6" customClass="FLHairlineView" customModule="FlowList" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="1"/>
+                                                    </variation>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="MCr-dA-vb6"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="0.0" y="155" width="400" height="55"/>
+                                                <mask key="subviews">
+                                                    <include reference="MCr-dA-vb6"/>
                                                 </mask>
                                             </variation>
                                         </view>
@@ -725,6 +810,7 @@
                                             <exclude reference="EJK-ro-UDn"/>
                                             <exclude reference="gJT-NU-O7g"/>
                                             <exclude reference="xp4-Bj-fVe"/>
+                                            <exclude reference="kNt-Ki-0cA"/>
                                         </mask>
                                         <mask key="constraints">
                                             <exclude reference="ZBi-XF-JnA"/>
@@ -744,6 +830,7 @@
                                             <include reference="EJK-ro-UDn"/>
                                             <include reference="gJT-NU-O7g"/>
                                             <include reference="xp4-Bj-fVe"/>
+                                            <include reference="kNt-Ki-0cA"/>
                                         </mask>
                                         <mask key="constraints">
                                             <include reference="ZBi-XF-JnA"/>
