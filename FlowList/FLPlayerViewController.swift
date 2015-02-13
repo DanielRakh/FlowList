@@ -19,17 +19,44 @@ class FLPlayerViewController: UIViewController {
     @IBOutlet weak var creatorTitleLabel: UILabel!
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var playButton: FLPlayPauseButton!
+    @IBOutlet var playerButtonsCollection: [UIButton]!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.clearColor()
-        vibrancyBackground.contentView.backgroundColor = UIColor.FLCHazyBlue()
+        
+        setupUI()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         backgroundBlurView.frame = CGRectMake(0, 0, backgroundBlurView.bounds.size.width, backgroundBlurView.bounds.size.height)
-
+    }
+    
+    
+    func setupUI() {
+        
+        vibrancyBackground.contentView.backgroundColor = UIColor.FLCHazyBlue()
+        
+        var actionName:String!
+        
+        for button in playerButtonsCollection {
+            
+            switch button.tag {
+            case 1:
+                actionName = "Previous"
+            case 2:
+                actionName = "Repeat"
+            case 3:
+                actionName = "Next"
+            default:
+                println("There was an error")
+            }
+            
+            button.setAttributedTitle(NSAttributedString(string: actionName, attributes: [NSForegroundColorAttributeName: UIColor.FLCPlainWhite(),
+                NSFontAttributeName: UIFont(name:"AvenirNext-DemiBold", size: CGFloat(14))!]), forState: .Normal)
+        }
+        
         
     }
 

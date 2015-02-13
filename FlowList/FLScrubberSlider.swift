@@ -21,4 +21,5 @@ class FLScrubberSlider: UISlider {
         setMinimumTrackImage(UIImage(named: "PlayerSliderMinimumTrackImage")?.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 4, 0, 4), resizingMode: .Stretch), forState: .Normal)
     }
 
+    
 }
