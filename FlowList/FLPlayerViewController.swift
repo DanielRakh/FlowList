@@ -20,6 +20,7 @@ class FLPlayerViewController: UIViewController {
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var playButton: FLPlayPauseButton!
     @IBOutlet var playerButtonsCollection: [UIButton]!
+    @IBOutlet weak var activityLabel: UILabel!
 
     
     override func viewDidLoad() {
@@ -31,6 +32,8 @@ class FLPlayerViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         backgroundBlurView.frame = CGRectMake(0, 0, backgroundBlurView.bounds.size.width, backgroundBlurView.bounds.size.height)
+        activityLabel.attributedText = formattedStringForUser("Daniel Rakhamimov", project: "FlowList")
+
     }
     
     
@@ -57,6 +60,20 @@ class FLPlayerViewController: UIViewController {
                 NSFontAttributeName: UIFont(name:"AvenirNext-DemiBold", size: CGFloat(14))!]), forState: .Normal)
         }
         
+        
+    }
+    
+    func formattedStringForUser(username:String, project:String) -> NSAttributedString {
+        
+        let fullString = "via \(username) working on \(project)"
+        let rangeOfName = (fullString as NSString).rangeOfString(username)
+        let rangeOfProject = (fullString as NSString).rangeOfString(project)
+        
+        let fullAttributedString = NSMutableAttributedString(string: fullString, attributes: [NSForegroundColorAttributeName: UIColor.FLCPlainWhite(),NSFontAttributeName: UIFont(name:"AvenirNext-Regular", size: CGFloat(12))!])
+        fullAttributedString.addAttribute(NSFontAttributeName, value: UIFont(name:"AvenirNext-DemiBold", size: CGFloat(12))!, range: rangeOfName)
+        fullAttributedString.addAttributes([NSForegroundColorAttributeName: UIColor.FLCElectricBlue(),NSFontAttributeName: UIFont(name:"AvenirNext-DemiBold", size: CGFloat(12))!], range: rangeOfProject)
+        
+        return fullAttributedString
         
     }
 

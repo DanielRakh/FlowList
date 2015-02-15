@@ -25,6 +25,8 @@ import UIKit
             setImage(imageToSet, forState: .Normal)
         }
     }
+
+
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -35,6 +37,7 @@ import UIKit
         super.init(frame: frame)
         setupUI()
     }
+    
     
     func setupUI() {
         setImage(uncoloredUpvoteImage, forState: .Normal)

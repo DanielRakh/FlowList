@@ -50,6 +50,7 @@
 		8E49C74D1A6CCB68002D0EB7 /* FLBlurNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E49C74C1A6CCB68002D0EB7 /* FLBlurNavBar.swift */; };
 		8E4FD8B11A87F161003E7570 /* FLBlurStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4FD8B01A87F161003E7570 /* FLBlurStatusBar.swift */; };
 		8E7217E61A646476000C8230 /* FLScrubberSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7217E51A646476000C8230 /* FLScrubberSlider.swift */; };
+		8E7900001A8FE99C00A9C8C4 /* FLAvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79FFFF1A8FE99C00A9C8C4 /* FLAvatarButton.swift */; };
 		8E834A8F1A8A6A5400DDB41F /* MMScalableVectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E834A8E1A8A6A5400DDB41F /* MMScalableVectorView.m */; };
 		8E834A901A8A6A5400DDB41F /* MMScalableVectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E834A8E1A8A6A5400DDB41F /* MMScalableVectorView.m */; };
 		8E8ECCEB1A5B824200373FFB /* Player_Usecases.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8ECCEA1A5B824200373FFB /* Player_Usecases.rtf */; };
@@ -156,6 +157,7 @@
 		8E49C74C1A6CCB68002D0EB7 /* FLBlurNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLBlurNavBar.swift; sourceTree = "<group>"; };
 		8E4FD8B01A87F161003E7570 /* FLBlurStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLBlurStatusBar.swift; sourceTree = "<group>"; };
 		8E7217E51A646476000C8230 /* FLScrubberSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLScrubberSlider.swift; sourceTree = "<group>"; };
+		8E79FFFF1A8FE99C00A9C8C4 /* FLAvatarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLAvatarButton.swift; sourceTree = "<group>"; };
 		8E834A8D1A8A6A5400DDB41F /* MMScalableVectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMScalableVectorView.h; sourceTree = "<group>"; };
 		8E834A8E1A8A6A5400DDB41F /* MMScalableVectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMScalableVectorView.m; sourceTree = "<group>"; };
 		8E8ECCEA1A5B824200373FFB /* Player_Usecases.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Player_Usecases.rtf; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				8E2C89E81A59D37600293333 /* FLPlayPauseButton.swift */,
 				8E2C89ED1A5B6DB200293333 /* FLLikeButton.swift */,
 				8E8ECCEC1A5BADA900373FFB /* FLUpvoteButton.swift */,
+				8E79FFFF1A8FE99C00A9C8C4 /* FLAvatarButton.swift */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -939,6 +942,7 @@
 				8E3D38CC1A52092C00BFDD12 /* FLAppDependencies.swift in Sources */,
 				8E8F07811A60FD470052E246 /* FLFeedTrendingPresenter.swift in Sources */,
 				8E3D39091A523A0100BFDD12 /* FLFeedTrendingInteractorIO.swift in Sources */,
+				8E7900001A8FE99C00A9C8C4 /* FLAvatarButton.swift in Sources */,
 				8E2C89BD1A566D4400293333 /* FLPlayerPresenter.swift in Sources */,
 				8EAFB75C1A63083B00341D3A /* FLPlayerAudioManager.swift in Sources */,
 				8E2C89E71A58996000293333 /* FLPlayIcon.swift in Sources */,

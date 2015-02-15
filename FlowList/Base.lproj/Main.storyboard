@@ -809,31 +809,90 @@
                                                         </mask>
                                                     </variation>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNj-fo-5e7" customClass="FLAvatarButton" customModule="FlowList" customModuleProvider="target">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="backgroundColor" red="0.0078431372550000003" green="0.56078431370000004" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="35" id="SMy-0j-gtE"/>
+                                                        <constraint firstAttribute="height" constant="35" id="qro-gl-aBK"/>
+                                                    </constraints>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="SMy-0j-gtE"/>
+                                                            <exclude reference="qro-gl-aBK"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="SMy-0j-gtE"/>
+                                                            <include reference="qro-gl-aBK"/>
+                                                        </mask>
+                                                    </variation>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4f-Hb-M4N">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="via working on FlowList">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="AvenirNext-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    </variation>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="MCr-dA-vb6" firstAttribute="leading" secondItem="kNt-Ki-0cA" secondAttribute="leading" id="8wm-Cf-IVd"/>
+                                                <constraint firstItem="W4f-Hb-M4N" firstAttribute="leading" secondItem="gNj-fo-5e7" secondAttribute="trailing" constant="10" id="HUN-1u-zSg"/>
+                                                <constraint firstItem="W4f-Hb-M4N" firstAttribute="centerY" secondItem="gNj-fo-5e7" secondAttribute="centerY" id="Mzx-Fn-u1Q"/>
+                                                <constraint firstAttribute="centerY" secondItem="gNj-fo-5e7" secondAttribute="centerY" id="Oa1-rF-HhA"/>
                                                 <constraint firstAttribute="trailing" secondItem="MCr-dA-vb6" secondAttribute="trailing" id="cPY-U2-emX"/>
+                                                <constraint firstItem="gNj-fo-5e7" firstAttribute="leading" secondItem="kNt-Ki-0cA" secondAttribute="leading" constant="8" id="jZD-5K-GiH"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W4f-Hb-M4N" secondAttribute="trailing" constant="80" id="uxY-f7-WpV">
+                                                    <variation key="widthClass=compact" constant="8"/>
+                                                </constraint>
                                                 <constraint firstItem="MCr-dA-vb6" firstAttribute="top" secondItem="kNt-Ki-0cA" secondAttribute="top" id="zms-mg-hjI"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="MCr-dA-vb6"/>
+                                                    <exclude reference="gNj-fo-5e7"/>
+                                                    <exclude reference="W4f-Hb-M4N"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="8wm-Cf-IVd"/>
                                                     <exclude reference="cPY-U2-emX"/>
                                                     <exclude reference="zms-mg-hjI"/>
+                                                    <exclude reference="Oa1-rF-HhA"/>
+                                                    <exclude reference="jZD-5K-GiH"/>
+                                                    <exclude reference="HUN-1u-zSg"/>
+                                                    <exclude reference="Mzx-Fn-u1Q"/>
+                                                    <exclude reference="uxY-f7-WpV"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="MCr-dA-vb6"/>
+                                                    <include reference="gNj-fo-5e7"/>
+                                                    <include reference="W4f-Hb-M4N"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="8wm-Cf-IVd"/>
                                                     <include reference="cPY-U2-emX"/>
                                                     <include reference="zms-mg-hjI"/>
+                                                    <include reference="Oa1-rF-HhA"/>
+                                                    <include reference="jZD-5K-GiH"/>
+                                                    <include reference="HUN-1u-zSg"/>
+                                                    <include reference="Mzx-Fn-u1Q"/>
+                                                    <include reference="uxY-f7-WpV"/>
                                                 </mask>
                                             </variation>
                                         </view>
@@ -954,6 +1013,7 @@
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="activityLabel" destination="W4f-Hb-M4N" id="aZW-sH-HlB"/>
                         <outlet property="backgroundBlurView" destination="c8c-oX-3Ya" id="vkJ-uD-AQR"/>
                         <outlet property="creatorTitleLabel" destination="ALa-8y-Y8c" id="iTr-Xb-HGc"/>
                         <outlet property="hairlineView" destination="EJK-ro-UDn" id="Z2u-TQ-P4B"/>
@@ -1059,18 +1119,12 @@
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="24" width="130" height="20"/>
-                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJe-aR-13S">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="49" width="130" height="20"/>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -1228,18 +1282,12 @@
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="24" width="130" height="20"/>
-                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wj-oe-4Jw">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="49" width="130" height="20"/>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -1397,18 +1445,12 @@
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="49" width="130" height="20"/>
-                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOILER ROOM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqE-kE-N7h">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="90" y="24" width="130" height="20"/>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
