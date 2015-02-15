@@ -90,7 +90,6 @@ extension FLFeedLikesTableViewController: UITableViewDataSource {
 extension FLFeedLikesTableViewController: UITableViewDelegate {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Table View Did Select row")
     }
 }
 

@@ -24,18 +24,16 @@ class FLPlayerViewController: UIViewController {
 
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        super.viewDidLoad()        
         setupUI()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
         backgroundBlurView.frame = CGRectMake(0, 0, backgroundBlurView.bounds.size.width, backgroundBlurView.bounds.size.height)
-        activityLabel.attributedText = formattedStringForUser("Daniel Rakhamimov", project: "FlowList")
 
     }
-    
     
     func setupUI() {
         
@@ -102,12 +100,12 @@ class FLPlayerViewController: UIViewController {
 
 }
 
-
 extension FLPlayerViewController: FLPlayerViewInput {
     
     func setupInterfaceForSong(song:FLSongItem) {
         creatorTitleLabel.text = song.creator
         songTitleLabel.text = song.title
+        activityLabel.attributedText = formattedStringForUser("Daniel Rakhamimov", project: "FlowList")
     }
     
 }

@@ -20,12 +20,17 @@ import UIKit
     let playIconImage = FLPlayIcon(frame: CGRectZero, iconColor: UIColor.FLCPlainWhite()).getImageWithSize(CGSizeMake(19, 24))
     
     var buttonMode:ButtonMode = .Play {
+        
         willSet {
             let imageToSet = newValue == .Pause ? pausedIconImage : playIconImage
             setImage(imageToSet, forState: .Normal)
+            
+            var leftInset:CGFloat = newValue == .Pause ? 0 : 4
+            imageEdgeInsets = UIEdgeInsetsMake(0, leftInset, 0, 0)
+
         }
     }
-
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupUI()
@@ -38,12 +43,17 @@ import UIKit
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         self.layer.cornerRadius = self.bounds.size.width / 2
+
     }
     
+    
     func setupUI() {
+        
         setImage(playIconImage, forState: .Normal)
         backgroundColor = UIColor.FLCElectricBlue()
+        imageEdgeInsets = UIEdgeInsetsMake(0, 4, 0, 0)
     }
     
     
