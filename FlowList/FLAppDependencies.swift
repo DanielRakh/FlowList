@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class FLAppDependencies {
     
     let feedRootWireframe = FLFeedRootWireframe()

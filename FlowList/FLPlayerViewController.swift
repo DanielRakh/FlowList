@@ -24,7 +24,7 @@ class FLPlayerViewController: UIViewController {
 
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
         setupUI()
     }
 
@@ -103,6 +103,7 @@ class FLPlayerViewController: UIViewController {
 extension FLPlayerViewController: FLPlayerViewInput {
     
     func setupInterfaceForSong(song:FLSongItem) {
+        log.debug("")
         creatorTitleLabel.text = song.creator
         songTitleLabel.text = song.title
         activityLabel.attributedText = formattedStringForUser("Daniel Rakhamimov", project: "FlowList")

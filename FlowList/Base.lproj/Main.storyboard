@@ -868,14 +868,14 @@
                                                     <exclude reference="W4f-Hb-M4N"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="8wm-Cf-IVd"/>
-                                                    <exclude reference="cPY-U2-emX"/>
-                                                    <exclude reference="zms-mg-hjI"/>
-                                                    <exclude reference="Oa1-rF-HhA"/>
-                                                    <exclude reference="jZD-5K-GiH"/>
                                                     <exclude reference="HUN-1u-zSg"/>
                                                     <exclude reference="Mzx-Fn-u1Q"/>
                                                     <exclude reference="uxY-f7-WpV"/>
+                                                    <exclude reference="Oa1-rF-HhA"/>
+                                                    <exclude reference="jZD-5K-GiH"/>
+                                                    <exclude reference="8wm-Cf-IVd"/>
+                                                    <exclude reference="cPY-U2-emX"/>
+                                                    <exclude reference="zms-mg-hjI"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -885,14 +885,14 @@
                                                     <include reference="W4f-Hb-M4N"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="8wm-Cf-IVd"/>
-                                                    <include reference="cPY-U2-emX"/>
-                                                    <include reference="zms-mg-hjI"/>
-                                                    <include reference="Oa1-rF-HhA"/>
-                                                    <include reference="jZD-5K-GiH"/>
                                                     <include reference="HUN-1u-zSg"/>
                                                     <include reference="Mzx-Fn-u1Q"/>
                                                     <include reference="uxY-f7-WpV"/>
+                                                    <include reference="Oa1-rF-HhA"/>
+                                                    <include reference="jZD-5K-GiH"/>
+                                                    <include reference="8wm-Cf-IVd"/>
+                                                    <include reference="cPY-U2-emX"/>
+                                                    <include reference="zms-mg-hjI"/>
                                                 </mask>
                                             </variation>
                                         </view>

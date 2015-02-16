@@ -96,6 +96,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8E0336241A9160DA007E2079 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E03361E1A9160DA007E2079 /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 55E3EE4519D76F280068C3A7;
+			remoteInfo = "XCGLogger (iOS)";
+		};
+		8E0336261A9160DA007E2079 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E03361E1A9160DA007E2079 /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 554DF41719D76FE7005708BE;
+			remoteInfo = "XCGLogger (OS X)";
+		};
+		8E0336281A9160DA007E2079 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E03361E1A9160DA007E2079 /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 55E3EE5019D76F280068C3A7;
+			remoteInfo = XCGLoggerTests;
+		};
+		8E0336371A9161FF007E2079 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E03361E1A9160DA007E2079 /* XCGLogger.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 55E3EE4419D76F280068C3A7;
+			remoteInfo = "XCGLogger (iOS)";
+		};
 		8EFBB03A1A45F015003DDDC9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8EFBB01C1A45F015003DDDC9 /* Project object */;
@@ -105,19 +133,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		8E624AE41A47291300472E9B /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		01EAE4507B2D77ADF373ED54 /* Pods-FlowList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.debug.xcconfig"; sourceTree = "<group>"; };
 		1D63BC44B76CC21AA6FBD3E5 /* Pods_FlowListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +141,7 @@
 		5D0840D31A70F1DF5623C4FA /* Pods-FlowList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowList.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlowList/Pods-FlowList.release.xcconfig"; sourceTree = "<group>"; };
 		8BB8DA6A55063CE7A3D32BB2 /* Pods-FlowListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlowListTests/Pods-FlowListTests.release.xcconfig"; sourceTree = "<group>"; };
 		8E01AC801A81BE9E00BFAC04 /* FLBlurNavBarInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLBlurNavBarInterface.swift; sourceTree = "<group>"; };
+		8E03361E1A9160DA007E2079 /* XCGLogger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XCGLogger.xcodeproj; path = "../../Downloads/XCGLogger-master/XCGLogger/Library/XCGLogger.xcodeproj"; sourceTree = "<group>"; };
 		8E28E6F11A8EB5290074940C /* FLPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLPlayerViewController.swift; sourceTree = "<group>"; };
 		8E2C89B61A56665F00293333 /* FLPlayerWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlayerWireframe.swift; sourceTree = "<group>"; };
 		8E2C89BC1A566D4400293333 /* FLPlayerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLPlayerPresenter.swift; sourceTree = "<group>"; };
@@ -233,6 +249,16 @@
 				8BB8DA6A55063CE7A3D32BB2 /* Pods-FlowListTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8E03361F1A9160DA007E2079 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E0336251A9160DA007E2079 /* XCGLogger.framework */,
+				8E0336271A9160DA007E2079 /* XCGLogger.framework */,
+				8E0336291A9160DA007E2079 /* XCGLoggerTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		8E2C89AF1A56629600293333 /* Player */ = {
@@ -627,6 +653,7 @@
 		8EFBB01B1A45F015003DDDC9 = {
 			isa = PBXGroup;
 			children = (
+				8E03361E1A9160DA007E2079 /* XCGLogger.xcodeproj */,
 				8EFBB0261A45F015003DDDC9 /* FlowList */,
 				8EFBB03C1A45F015003DDDC9 /* FlowListTests */,
 				8EFBB0251A45F015003DDDC9 /* Products */,
@@ -709,12 +736,12 @@
 				8EFBB0211A45F015003DDDC9 /* Frameworks */,
 				8EFBB0221A45F015003DDDC9 /* Resources */,
 				3DBCD2A925E3AAE084E3AE24 /* Copy Pods Resources */,
-				8E624AE41A47291300472E9B /* Copy Frameworks */,
 				73AC2DC394376090D1047548 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8E0336381A9161FF007E2079 /* PBXTargetDependency */,
 			);
 			name = FlowList;
 			productName = FlowList;
@@ -771,6 +798,12 @@
 			mainGroup = 8EFBB01B1A45F015003DDDC9;
 			productRefGroup = 8EFBB0251A45F015003DDDC9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8E03361F1A9160DA007E2079 /* Products */;
+					ProjectRef = 8E03361E1A9160DA007E2079 /* XCGLogger.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8EFBB0231A45F015003DDDC9 /* FlowList */,
@@ -778,6 +811,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8E0336251A9160DA007E2079 /* XCGLogger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCGLogger.framework;
+			remoteRef = 8E0336241A9160DA007E2079 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8E0336271A9160DA007E2079 /* XCGLogger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCGLogger.framework;
+			remoteRef = 8E0336261A9160DA007E2079 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8E0336291A9160DA007E2079 /* XCGLoggerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XCGLoggerTests.xctest;
+			remoteRef = 8E0336281A9160DA007E2079 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8EFBB0221A45F015003DDDC9 /* Resources */ = {
@@ -991,6 +1048,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8E0336381A9161FF007E2079 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "XCGLogger (iOS)";
+			targetProxy = 8E0336371A9161FF007E2079 /* PBXContainerItemProxy */;
+		};
 		8EFBB03B1A45F015003DDDC9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8EFBB0231A45F015003DDDC9 /* FlowList */;
