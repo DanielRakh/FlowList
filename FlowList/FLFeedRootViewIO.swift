@@ -20,14 +20,8 @@ protocol FLFeedRootViewInput {
 }
 
 protocol FLFeedRootViewOutput {
+    
     func setupPlayerModule(playerViewController:FLPlayerViewController)
-    func playerViewDidRecognizeTap()
-    func feedViewDidRecognizeTap()
-    
-//    func navBarIsInMidAnimation()
-//    func navBarIsExpanded()
-//    func navBarIsCollapsed()
-    
     func navBarHasExpandedBy(value:Float)
     func navBarHasCollapsedBy(value:Float)
     

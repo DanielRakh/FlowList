@@ -44,25 +44,6 @@ class FLFeedRootWireframe: NSObject {
         playerWireframe?.setupPlayerInterfaceFromViewController(controller)
     }
     
-    func slidePlayerContainerView(slideTransition:PlayerViewAnimation) {
-        
-        rootContainerViewController?.bottomSpacePlayerContainerViewToSuperView.constant = slideTransition == .Out ? -rootContainerViewController!.playerContainerView.bounds.size.height : -70
-        
-        let alpha:CGFloat = slideTransition == .Out ? 0.50 : 0
-        
-        UIView.animateWithDuration(0.35,
-            delay: 0.0,
-            usingSpringWithDamping: 0.8,
-            initialSpringVelocity: 0.8,
-            options: UIViewAnimationOptions.CurveEaseInOut,
-            animations: {
-                self.rootContainerViewController!.transparentView.alpha = alpha
-                self.rootContainerViewController!.view.layoutIfNeeded()
-            }) { success in
-                //
-        }
-        
-    }
     
 }
 

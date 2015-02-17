@@ -36,10 +36,7 @@ class FLFeedRootPresenter: NSObject {
     func setupPlayerModuleForViewController(viewController:FLPlayerViewController) {
         feedRootWireframe?.setupPlayerInterfaceFromViewController(viewController)
     }
-    
-    func playerContainerViewShouldSlide(slideTransition:PlayerViewAnimation) {
-        feedRootWireframe?.slidePlayerContainerView(slideTransition)
-    }
+
     
 }
 
@@ -47,14 +44,6 @@ extension FLFeedRootPresenter: FLFeedRootViewOutput {
     
     func setupPlayerModule(playerViewController:FLPlayerViewController) {
         setupPlayerModuleForViewController(playerViewController)
-    }
-    
-    func playerViewDidRecognizeTap() {
-        playerContainerViewShouldSlide(.Out)
-    }
-    
-    func feedViewDidRecognizeTap() {
-        playerContainerViewShouldSlide(.In)
     }
     
     func navBarHasExpandedBy(value:Float) {

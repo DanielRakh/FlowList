@@ -25,6 +25,8 @@ class FLFeedRootViewController: UIViewController {
         }
     }
     
+    private let playerContainerNormalOffset:CGFloat = -70
+    
     //MARK: IBOutlets
     @IBOutlet weak var transparentView: UIView!
     @IBOutlet weak var playerContainerView: UIView!
@@ -81,19 +83,14 @@ class FLFeedRootViewController: UIViewController {
     }
     
     @IBAction func playerViewDidTap(sender: AnyObject) {
-        eventHandler?.playerViewDidRecognizeTap()
-        playerTapGestureRecognizer.enabled = false
-        feedTapGestureRecognizer.enabled = true
+        slidePlayerContainerView(.Out)
     }
     
     @IBAction func feedViewDidTap(sender: AnyObject) {
-        eventHandler?.feedViewDidRecognizeTap()
-        playerTapGestureRecognizer.enabled = true
-        feedTapGestureRecognizer.enabled = false
+        slidePlayerContainerView(.In)
     }
     
     @IBAction func playerViewDidPan(sender: UIPanGestureRecognizer) {
-        log.d
     }
     
     //MARK: Animation
@@ -122,6 +119,28 @@ class FLFeedRootViewController: UIViewController {
             }) { (success:Bool) -> Void in
                 //
         }
+    }
+    
+    
+    func slidePlayerContainerView(slideTransition:PlayerViewAnimation) {
+        
+        bottomSpacePlayerContainerViewToSuperView.constant = slideTransition == .Out ? -playerContainerView.bounds.size.height : playerContainerNormalOffset
+        
+        let alpha:CGFloat = slideTransition == .Out ? 0.50 : 0
+        
+        UIView.animateWithDuration(0.35,
+            delay: 0.0,
+            usingSpringWithDamping: 0.8,
+            initialSpringVelocity: 0.8,
+            options: UIViewAnimationOptions.CurveEaseInOut,
+            animations: {
+                self.transparentView.alpha = alpha
+                self.view.layoutIfNeeded()
+            }) { success in
+                self.playerTapGestureRecognizer.enabled = slideTransition == .Out ? false : true
+                self.feedTapGestureRecognizer.enabled = slideTransition == .Out ? true: false
+        }
+        
     }
 
     //MARK: Segues
