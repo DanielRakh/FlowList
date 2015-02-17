@@ -14,13 +14,12 @@ class FLPlayerViewController: UIViewController {
 
     @IBOutlet weak var backgroundBlurView: UIVisualEffectView!
     @IBOutlet weak var vibrancyBackground: UIVisualEffectView!
-    @IBOutlet weak var topPlayerContainerView: UIView!
-    @IBOutlet weak var hairlineView: FLHairlineView!
+    
     @IBOutlet weak var creatorTitleLabel: UILabel!
     @IBOutlet weak var songTitleLabel: UILabel!
-    @IBOutlet weak var playButton: FLPlayPauseButton!
-    @IBOutlet var playerButtonsCollection: [UIButton]!
     @IBOutlet weak var activityLabel: UILabel!
+    
+    @IBOutlet var playerButtonsCollection: [UIButton]!
 
     
     override func viewDidLoad() {
@@ -28,16 +27,18 @@ class FLPlayerViewController: UIViewController {
         setupUI()
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        backgroundBlurView.frame = CGRectMake(0, 0, backgroundBlurView.bounds.size.width, backgroundBlurView.bounds.size.height)
 
-    }
-    
     func setupUI() {
         
         vibrancyBackground.contentView.backgroundColor = UIColor.FLCHazyBlue()
+        
+        
+        setupPlayerButtons()
+    
+    }
+    
+    
+    func setupPlayerButtons() {
         
         var actionName:String!
         
@@ -57,10 +58,12 @@ class FLPlayerViewController: UIViewController {
             button.setAttributedTitle(NSAttributedString(string: actionName, attributes: [NSForegroundColorAttributeName: UIColor.FLCPlainWhite(),
                 NSFontAttributeName: UIFont(name:"AvenirNext-DemiBold", size: CGFloat(14))!]), forState: .Normal)
         }
-        
-        
     }
     
+    
+    
+    
+    //TODO: This should technically be in the presenter. Once we start having a user to add to our database we should move this shit.
     func formattedStringForUser(username:String, project:String) -> NSAttributedString {
         
         let fullString = "via \(username) working on \(project)"
@@ -99,6 +102,8 @@ class FLPlayerViewController: UIViewController {
     }
 
 }
+
+
 
 extension FLPlayerViewController: FLPlayerViewInput {
     

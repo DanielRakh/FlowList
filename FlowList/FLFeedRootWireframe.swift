@@ -46,7 +46,7 @@ class FLFeedRootWireframe: NSObject {
     
     func slidePlayerContainerView(slideTransition:PlayerViewAnimation) {
         
-        rootContainerViewController?.bottomSpacePlayerContainerViewToSuperView.constant = slideTransition == .Out ? 0 : -rootContainerViewController!.playerContainerView.bounds.size.height + 70
+        rootContainerViewController?.bottomSpacePlayerContainerViewToSuperView.constant = slideTransition == .Out ? -rootContainerViewController!.playerContainerView.bounds.size.height : -70
         
         let alpha:CGFloat = slideTransition == .Out ? 0.50 : 0
         

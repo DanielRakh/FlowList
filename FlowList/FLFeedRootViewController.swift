@@ -29,12 +29,10 @@ class FLFeedRootViewController: UIViewController {
     @IBOutlet weak var transparentView: UIView!
     @IBOutlet weak var playerContainerView: UIView!
     @IBOutlet weak var blurNavBar: FLBlurNavBar!
-//    @IBOutlet weak var blurStatusBar: FLBlurStatusBar!
     
     //MARK: Constraints
     @IBOutlet weak var centerXTrendingViewToSuperView: NSLayoutConstraint!
     @IBOutlet weak var bottomSpacePlayerContainerViewToSuperView: NSLayoutConstraint!
-//    @IBOutlet weak var verticalSpaceStatusBarToNavBar: NSLayoutConstraint!
     
     //MARK: Gesture Recognizers
     @IBOutlet weak var playerTapGestureRecognizer: UITapGestureRecognizer!
@@ -94,6 +92,9 @@ class FLFeedRootViewController: UIViewController {
         feedTapGestureRecognizer.enabled = false
     }
     
+    @IBAction func playerViewDidPan(sender: UIPanGestureRecognizer) {
+        log.d
+    }
     
     //MARK: Animation
     
