@@ -11,5 +11,6 @@
 
 #import "MMScalableVectorView.h"
 #import <pop/POP.h>
+#import "POP+MCAnimate.h"
 
 #endif

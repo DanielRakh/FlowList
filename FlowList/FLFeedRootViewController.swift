@@ -65,7 +65,6 @@ class FLFeedRootViewController: UIViewController {
         
     }
     
-    
     //MARK: IBAction
     
     @IBAction func newButtonDidTouch(sender: AnyObject) {
@@ -129,31 +128,29 @@ class FLFeedRootViewController: UIViewController {
     
     func slidePlayerContainerView(slideTransition:FLPlayerSlideAnimation) {
         
-//        bottomSpacePlayerContainerViewToSuperView.constant = slideTransition == .Out ? playerContainerExpandedConstant : playerContainerCollapsedConstant
-//        
-//        let alpha:CGFloat = slideTransition == .Out ? 0.50 : 0
-////
-//        UIView.animateWithDuration(0.35,
-//            delay: 0.0,
-//            options: UIViewAnimationOptions.CurveEaseInOut,
-//            animations: {
-//                self.transparentView.alpha = alpha
-////                self.view.layoutIfNeeded()
-//            }) { success in
-//                self.playerTapGestureRecognizer.enabled = slideTransition == .Out ? false : true
-//                self.feedTapGestureRecognizer.enabled = slideTransition == .Out ? true: false
-//        }
+        
+        self.bottomSpacePlayerContainerViewToSuperView.pop_removeAllAnimations()
+        self.transparentView.pop_removeAllAnimations()
+        
+        NSObject.pop_animate({
+            
+            self.bottomSpacePlayerContainerViewToSuperView.pop_springSpeed = 20.0
+            self.bottomSpacePlayerContainerViewToSuperView.pop_springBounciness = 12.0
+            self.bottomSpacePlayerContainerViewToSuperView.pop_spring().constant = slideTransition == .Out ? self.playerContainerExpandedConstant : self.playerContainerCollapsedConstant
+            
+            self.transparentView.pop_easeInEaseOut().alpha = slideTransition == .Out ? 0.50 : 0
+            
+            self.playerTapGestureRecognizer.enabled = slideTransition == .Out ? false : true
+            self.feedTapGestureRecognizer.enabled = slideTransition == .Out ? true: false
+            
+            }, completion: { (success:Bool) -> Void in
+
+        })
         
 
+     
         
-        let popSpring = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
-        //        popSpring.velocity = NSNumber(float: velocity)
-        popSpring.delegate = self
-        popSpring.springSpeed = 20.0
-        popSpring.springBounciness = 15.0
-        popSpring.toValue = NSNumber(float: slideTransition == .Out ? Float(playerContainerExpandedConstant) : Float(playerContainerCollapsedConstant))
-        bottomSpacePlayerContainerViewToSuperView.pop_addAnimation(popSpring, forKey: "slidePlayerAnim")
-        
+
     }
     
     func panPlayerContainerViewWithRecognizer(recognizer:UIPanGestureRecognizer) {
@@ -162,12 +159,14 @@ class FLFeedRootViewController: UIViewController {
         let yVelocity = recognizer.velocityInView(view).y
         
         switch recognizer.state {
+            
         case .Began:
             bottomSpacePlayerContainerViewToSuperView.pop_removeAllAnimations()
         case .Changed:
             bottomSpacePlayerContainerViewToSuperView.constant -= yTranslation
             recognizer.setTranslation(CGPointZero, inView: view)
         case .Ended, .Failed, .Cancelled:
+            
             if yVelocity < 0 {
                 slidePlayerContainerView(.Out)
             } else {
@@ -175,6 +174,7 @@ class FLFeedRootViewController: UIViewController {
             }
             
         default:
+            
             log.debug("default")
         }
     }
