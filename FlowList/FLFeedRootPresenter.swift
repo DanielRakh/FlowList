@@ -8,10 +8,6 @@
 
 import UIKit
 
-enum PlayerViewAnimation {
-    case Out
-    case In
-}
 
 class FLFeedRootPresenter: NSObject {
     

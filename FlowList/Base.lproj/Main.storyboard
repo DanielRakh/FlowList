@@ -310,7 +310,9 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="zGt-Tc-nV1" firstAttribute="top" secondItem="wRC-5h-CBy" secondAttribute="bottom" id="3ar-m4-wSv"/>
-                            <constraint firstItem="nog-LH-6sr" firstAttribute="top" secondItem="zGt-Tc-nV1" secondAttribute="bottom" constant="-70" id="5iq-gC-6fb"/>
+                            <constraint firstItem="zGt-Tc-nV1" firstAttribute="bottom" secondItem="nog-LH-6sr" secondAttribute="top" constant="70" id="5iq-gC-6fb">
+                                <variation key="widthClass=compact" constant="70"/>
+                            </constraint>
                             <constraint firstItem="wRC-5h-CBy" firstAttribute="top" secondItem="zTX-p4-Z72" secondAttribute="bottom" id="9Zz-Hv-fau"/>
                             <constraint firstAttribute="trailing" secondItem="nog-LH-6sr" secondAttribute="trailing" id="BJT-O4-gP4"/>
                             <constraint firstItem="XrL-gj-d3m" firstAttribute="leading" secondItem="utS-U5-5cI" secondAttribute="trailing" id="O71-mc-RnM"/>

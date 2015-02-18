@@ -24,13 +24,14 @@ class FLFeedRootViewController: UIViewController {
             animateVisibleFeedForMode(newValue)
         }
     }
-    private let playerContainerNormalOffset:CGFloat = -70
     
+
     
     //MARK: UIKit Dynamics
     private var animator:UIDynamicAnimator!
     private var collisionBehavior: UICollisionBehavior!
     private var gravityBehavior: UIGravityBehavior!
+
     
     
     //MARK: IBOutlets
@@ -41,6 +42,8 @@ class FLFeedRootViewController: UIViewController {
     //Constraints
     @IBOutlet weak var centerXTrendingViewToSuperView: NSLayoutConstraint!
     @IBOutlet weak var bottomSpacePlayerContainerViewToSuperView: NSLayoutConstraint!
+    private let playerContainerCollapsedConstant:CGFloat = 70
+    private let playerContainerExpandedConstant:CGFloat = 230
     
     //Gesture Recognizers
     @IBOutlet weak var playerTapGestureRecognizer: UITapGestureRecognizer!
@@ -62,10 +65,10 @@ class FLFeedRootViewController: UIViewController {
     func setupDynamics() {
         animator = UIDynamicAnimator(referenceView: view)
         collisionBehavior = UICollisionBehavior(items: [playerContainerView])
-        collisionBehavior.setTranslatesReferenceBoundsIntoBoundaryWithInsets(UIEdgeInsetsMake(0, 0, -playerContainerView.bounds.size.height - playerContainerNormalOffset, 0))
+//        collisionBehavior.setTranslatesReferenceBoundsIntoBoundaryWithInsets(UIEdgeInsetsMake(0, 0, -playerContainerView.bounds.size.height - playerContainerNormalOffset, 0))
         gravityBehavior = UIGravityBehavior(items: [playerContainerView])
         gravityBehavior.action = {
-            log.debug("Action")
+            
         }
     }
     
@@ -141,9 +144,9 @@ class FLFeedRootViewController: UIViewController {
     }
     
     
-    func slidePlayerContainerView(slideTransition:PlayerViewAnimation) {
+    func slidePlayerContainerView(slideTransition:FLPlayerSlideAnimation) {
         
-        bottomSpacePlayerContainerViewToSuperView.constant = slideTransition == .Out ? -playerContainerView.bounds.size.height : playerContainerNormalOffset
+        bottomSpacePlayerContainerViewToSuperView.constant = slideTransition == .Out ? playerContainerExpandedConstant : playerContainerCollapsedConstant
         
         let alpha:CGFloat = slideTransition == .Out ? 0.50 : 0
         
@@ -170,7 +173,7 @@ class FLFeedRootViewController: UIViewController {
         case .Began:
             animator.removeAllBehaviors()
         case .Changed:
-            bottomSpacePlayerContainerViewToSuperView.constant += yTranslation
+            bottomSpacePlayerContainerViewToSuperView.constant -= yTranslation
             recognizer.setTranslation(CGPointZero, inView: view)
         case .Ended, .Failed, .Cancelled:
             animator.addBehavior(collisionBehavior)

@@ -64,3 +64,22 @@ enum FLNavBarMode {
     case Transitioning
 }
 
+
+
+/**
+
+The visible state of the Player Container
+
+
+- Out:      Fully expanded
+
+- In:     Fully collapsed
+
+
+*/
+
+enum FLPlayerSlideAnimation {
+    case Out
+    case In
+}
+
