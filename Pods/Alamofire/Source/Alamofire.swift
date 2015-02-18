@@ -219,28 +219,19 @@ public class Manager {
     /**
         A shared instance of `Manager`, used by top-level Alamofire request methods, and suitable for use directly for any ad hoc requests.
     */
-    public class var sharedInstance: Manager {
-        struct Singleton {
-            static var configuration: NSURLSessionConfiguration = {
-                var configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-                configuration.HTTPAdditionalHeaders = Manager.defaultHTTPHeaders()
+    public static let sharedInstance: Manager = {
+        let configuration: NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        configuration.HTTPAdditionalHeaders = Manager.defaultHTTPHeaders
 
-                return configuration
-            }()
-
-            static let instance = Manager(configuration: configuration)
-        }
-
-        return Singleton.instance
-    }
+        return Manager(configuration: configuration)
+    }()
 
     /**
         Creates default values for the "Accept-Encoding", "Accept-Language" and "User-Agent" headers.
 
         :returns: The default header values.
     */
-    public class func defaultHTTPHeaders() -> [String: String] {
-
+    public static let defaultHTTPHeaders: [String: String] = {
         // Accept-Encoding HTTP Header; see http://tools.ietf.org/html/rfc7230#section-4.2.3
         let acceptEncoding: String = "gzip;q=1.0,compress;q=0.5"
 
@@ -272,13 +263,14 @@ public class Manager {
                     return mutableUserAgent as NSString as! String
                 }
             }
+
             return "Alamofire"
         }()
 
         return ["Accept-Encoding": acceptEncoding,
                 "Accept-Language": acceptLanguage,
                 "User-Agent": userAgent]
-    }
+    }()
 
     private let delegate: SessionDelegate
 
@@ -870,10 +862,6 @@ extension Request {
 
     // MARK: Status Code
 
-    private class func response(response: NSHTTPURLResponse, hasAcceptableStatusCode statusCodes: [Int]) -> Bool {
-        return contains(statusCodes, response.statusCode)
-    }
-
     /**
         Validates that the response has a status code in the specified range.
 
@@ -883,24 +871,9 @@ extension Request {
 
         :returns: The request.
     */
-    public func validate(statusCode range: Range<Int>) -> Self {
+    public func validate<S : SequenceType where S.Generator.Element == Int>(statusCode acceptableStatusCode: S) -> Self {
         return validate { (_, response) in
-            return Request.response(response, hasAcceptableStatusCode: range.map({$0}))
-        }
-    }
-
-    /**
-        Validates that the response has a status code in the specified array.
-
-        If validation fails, subsequent calls to response handlers will have an associated error.
-
-        :param: array The acceptable status codes.
-
-        :returns: The request.
-    */
-    public func validate(statusCode array: [Int]) -> Self {
-        return validate { (_, response) in
-            return Request.response(response, hasAcceptableStatusCode: array)
+            return contains(acceptableStatusCode, response.statusCode)
         }
     }
 
@@ -910,34 +883,27 @@ extension Request {
         let type: String
         let subtype: String
 
-        init(_ string: String) {
+        init?(_ string: String) {
             let components = string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).substringToIndex(string.rangeOfString(";")?.endIndex ?? string.endIndex).componentsSeparatedByString("/")
 
-            self.type = components.first!
-            self.subtype = components.last!
+            if let type = components.first,
+                    subtype = components.last
+            {
+                self.type = type
+                self.subtype = subtype
+            } else {
+                return nil
+            }
         }
 
         func matches(MIME: MIMEType) -> Bool {
             switch (type, subtype) {
-            case ("*", "*"), ("*", MIME.subtype), (MIME.type, "*"), (MIME.type, MIME.subtype):
+            case (MIME.type, MIME.subtype), (MIME.type, "*"), ("*", MIME.subtype), ("*", "*"):
                 return true
             default:
                 return false
             }
         }
-    }
-
-    private class func response(response: NSHTTPURLResponse, hasAcceptableContentType contentTypes: [String]) -> Bool {
-        if response.MIMEType != nil {
-            let responseMIMEType = MIMEType(response.MIMEType!)
-            for acceptableMIMEType in contentTypes.map({MIMEType($0)}) {
-                if acceptableMIMEType.matches(responseMIMEType) {
-                    return true
-                }
-            }
-        }
-
-        return false
     }
 
     /**
@@ -949,9 +915,21 @@ extension Request {
 
         :returns: The request.
     */
-    public func validate(contentType array: [String]) -> Self {
+    public func validate<S : SequenceType where S.Generator.Element == String>(contentType acceptableContentTypes: S) -> Self {
         return validate {(_, response) in
-            return Request.response(response, hasAcceptableContentType: array)
+            if let responseContentType = response.MIMEType,
+                    responseMIMEType = MIMEType(responseContentType)
+            {
+                for contentType in acceptableContentTypes {
+                    if let acceptableMIMEType = MIMEType(contentType)
+                        where acceptableMIMEType.matches(responseMIMEType)
+                    {
+                        return true
+                    }
+                }
+            }
+            
+            return false
         }
     }
 
@@ -1261,13 +1239,12 @@ extension Request: DebugPrintable {
         // Temporarily disabled on OS X due to build failure for CocoaPods
         // See https://github.com/CocoaPods/swift/issues/24
         #if !os(OSX)
-        if let cookieStorage = session.configuration.HTTPCookieStorage {
-            if let cookies = cookieStorage.cookiesForURL(URL!) as? [NSHTTPCookie] {
-                if !cookies.isEmpty {
-                    let string = cookies.reduce(""){ $0 + "\($1.name)=\($1.value ?? String());" }
-                    components.append("-b \"\(string.substringToIndex(string.endIndex.predecessor()))\"")
-                }
-            }
+        if let cookieStorage = session.configuration.HTTPCookieStorage,
+               cookies = cookieStorage.cookiesForURL(URL!) as? [NSHTTPCookie]
+            where !cookies.isEmpty
+        {
+            let string = cookies.reduce(""){ $0 + "\($1.name)=\($1.value ?? String());" }
+            components.append("-b \"\(string.substringToIndex(string.endIndex.predecessor()))\"")
         }
         #endif
 
@@ -1293,10 +1270,10 @@ extension Request: DebugPrintable {
             }
         }
         
-        if let HTTPBody = request.HTTPBody {
-            if let escapedBody = NSString(data: HTTPBody, encoding: NSUTF8StringEncoding)?.stringByReplacingOccurrencesOfString("\"", withString: "\\\"") {
-                components.append("-d \"\(escapedBody)\"")
-            }
+        if let HTTPBody = request.HTTPBody,
+               escapedBody = NSString(data: HTTPBody, encoding: NSUTF8StringEncoding)?.stringByReplacingOccurrencesOfString("\"", withString: "\\\"")
+        {
+            components.append("-d \"\(escapedBody)\"")
         }
 
         components.append("\"\(URL!.absoluteString!)\"")

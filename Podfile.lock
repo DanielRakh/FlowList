@@ -1,20 +1,28 @@
 PODS:
   - Alamofire (1.1.4)
+  - pop (1.0.7)
 
 DEPENDENCIES:
-  - Alamofire (from `git@github.com:boek/Alamofire.git`, branch `swift-1.2beta`)
+  - Alamofire (from `git@github.com:Alamofire/Alamofire.git`, branch `xcode-6.3`)
+  - pop (from `https://github.com/facebook/pop.git`)
 
 EXTERNAL SOURCES:
   Alamofire:
-    :branch: swift-1.2beta
-    :git: git@github.com:boek/Alamofire.git
+    :branch: xcode-6.3
+    :git: git@github.com:Alamofire/Alamofire.git
+  pop:
+    :git: https://github.com/facebook/pop.git
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: 7a2cddac1904f240c4d9c20bc8e17a5ca3398647
-    :git: git@github.com:boek/Alamofire.git
+    :commit: cde1cc93824a689f5d429f035bc663548fcca135
+    :git: git@github.com:Alamofire/Alamofire.git
+  pop:
+    :commit: ec447a054826361ef8612a22469c8455001b81c7
+    :git: https://github.com/facebook/pop.git
 
 SPEC CHECKSUMS:
   Alamofire: 7c87bf4a655df535791f4195bd803bf4f6c9c835
+  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
 
 COCOAPODS: 0.36.0.beta.2

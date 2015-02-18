@@ -4,15 +4,15 @@
 target 'FlowList' do
 
 
-pod 'Alamofire', :git => "git@github.com:boek/Alamofire.git", :branch => 'swift-1.2beta'
+pod 'Alamofire', :git => "git@github.com:Alamofire/Alamofire.git", :branch => 'xcode-6.3'
 
+pod 'pop', :git => 'https://github.com/facebook/pop.git'
 
 end
 
 target 'FlowListTests' do
+
+pod 'Alamofire', :git => "git@github.com:Alamofire/Alamofire.git", :branch => 'xcode-6.3'
     
-
-pod 'Alamofire', :git => "git@github.com:boek/Alamofire.git", :branch => 'swift-1.2beta'
-
 end
 

@@ -10,5 +10,6 @@
 #define FlowList_Bridging_Header_h
 
 #import "MMScalableVectorView.h"
+#import <pop/POP.h>
 
 #endif
