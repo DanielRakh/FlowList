@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import pop
 
 class FLFeedRootViewController: UIViewController {
     
@@ -25,13 +25,6 @@ class FLFeedRootViewController: UIViewController {
         }
     }
     
-
-    
-    //MARK: UIKit Dynamics
-    private var animator:UIDynamicAnimator!
-    private var collisionBehavior: UICollisionBehavior!
-    private var gravityBehavior: UIGravityBehavior!
-
     
     
     //MARK: IBOutlets
@@ -62,15 +55,6 @@ class FLFeedRootViewController: UIViewController {
         blurNavBar.delegate = self
     }
     
-    func setupDynamics() {
-        animator = UIDynamicAnimator(referenceView: view)
-        collisionBehavior = UICollisionBehavior(items: [playerContainerView])
-//        collisionBehavior.setTranslatesReferenceBoundsIntoBoundaryWithInsets(UIEdgeInsetsMake(0, 0, -playerContainerView.bounds.size.height - playerContainerNormalOffset, 0))
-        gravityBehavior = UIGravityBehavior(items: [playerContainerView])
-        gravityBehavior.action = {
-            
-        }
-    }
     
     
     //MARK: View Life Cycle
@@ -78,7 +62,6 @@ class FLFeedRootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        setupDynamics()
         
     }
     
@@ -146,38 +129,51 @@ class FLFeedRootViewController: UIViewController {
     
     func slidePlayerContainerView(slideTransition:FLPlayerSlideAnimation) {
         
-        bottomSpacePlayerContainerViewToSuperView.constant = slideTransition == .Out ? playerContainerExpandedConstant : playerContainerCollapsedConstant
+//        bottomSpacePlayerContainerViewToSuperView.constant = slideTransition == .Out ? playerContainerExpandedConstant : playerContainerCollapsedConstant
+//        
+//        let alpha:CGFloat = slideTransition == .Out ? 0.50 : 0
+////
+//        UIView.animateWithDuration(0.35,
+//            delay: 0.0,
+//            options: UIViewAnimationOptions.CurveEaseInOut,
+//            animations: {
+//                self.transparentView.alpha = alpha
+////                self.view.layoutIfNeeded()
+//            }) { success in
+//                self.playerTapGestureRecognizer.enabled = slideTransition == .Out ? false : true
+//                self.feedTapGestureRecognizer.enabled = slideTransition == .Out ? true: false
+//        }
         
-        let alpha:CGFloat = slideTransition == .Out ? 0.50 : 0
+
         
-        UIView.animateWithDuration(0.35,
-            delay: 0.0,
-            usingSpringWithDamping: 0.8,
-            initialSpringVelocity: 0.8,
-            options: UIViewAnimationOptions.CurveEaseInOut,
-            animations: {
-                self.transparentView.alpha = alpha
-                self.view.layoutIfNeeded()
-            }) { success in
-                self.playerTapGestureRecognizer.enabled = slideTransition == .Out ? false : true
-                self.feedTapGestureRecognizer.enabled = slideTransition == .Out ? true: false
-        }
+        let popSpring = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
+        //        popSpring.velocity = NSNumber(float: velocity)
+        popSpring.delegate = self
+        popSpring.springSpeed = 20.0
+        popSpring.springBounciness = 15.0
+        popSpring.toValue = NSNumber(float: slideTransition == .Out ? Float(playerContainerExpandedConstant) : Float(playerContainerCollapsedConstant))
+        bottomSpacePlayerContainerViewToSuperView.pop_addAnimation(popSpring, forKey: "slidePlayerAnim")
         
     }
     
     func panPlayerContainerViewWithRecognizer(recognizer:UIPanGestureRecognizer) {
         
         let yTranslation = recognizer.translationInView(view).y
+        let yVelocity = recognizer.velocityInView(view).y
         
         switch recognizer.state {
         case .Began:
-            animator.removeAllBehaviors()
+            bottomSpacePlayerContainerViewToSuperView.pop_removeAllAnimations()
         case .Changed:
             bottomSpacePlayerContainerViewToSuperView.constant -= yTranslation
             recognizer.setTranslation(CGPointZero, inView: view)
         case .Ended, .Failed, .Cancelled:
-            animator.addBehavior(collisionBehavior)
-            animator.addBehavior(gravityBehavior)
+            if yVelocity < 0 {
+                slidePlayerContainerView(.Out)
+            } else {
+                slidePlayerContainerView(.In)
+            }
+            
         default:
             log.debug("default")
         }
@@ -254,6 +250,14 @@ extension FLFeedRootViewController: FLBlurNavBarDelegate {
         eventHandler?.navBarHasCollapsedBy(height)
     }
     
+}
+
+
+extension FLFeedRootViewController: POPAnimationDelegate {
+    
+    func pop_animationDidStop(anim: POPAnimation!, finished: Bool) {
+        anim.pop_removeAllAnimations()
+    }
 }
 
 
