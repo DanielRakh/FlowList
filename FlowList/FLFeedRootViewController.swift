@@ -24,19 +24,25 @@ class FLFeedRootViewController: UIViewController {
             animateVisibleFeedForMode(newValue)
         }
     }
-    
     private let playerContainerNormalOffset:CGFloat = -70
+    
+    
+    //MARK: UIKit Dynamics
+    private var animator:UIDynamicAnimator!
+    private var collisionBehavior: UICollisionBehavior!
+    private var gravityBehavior: UIGravityBehavior!
+    
     
     //MARK: IBOutlets
     @IBOutlet weak var transparentView: UIView!
     @IBOutlet weak var playerContainerView: UIView!
     @IBOutlet weak var blurNavBar: FLBlurNavBar!
     
-    //MARK: Constraints
+    //Constraints
     @IBOutlet weak var centerXTrendingViewToSuperView: NSLayoutConstraint!
     @IBOutlet weak var bottomSpacePlayerContainerViewToSuperView: NSLayoutConstraint!
     
-    //MARK: Gesture Recognizers
+    //Gesture Recognizers
     @IBOutlet weak var playerTapGestureRecognizer: UITapGestureRecognizer!
     @IBOutlet weak var feedTapGestureRecognizer: UITapGestureRecognizer!
     
@@ -53,12 +59,24 @@ class FLFeedRootViewController: UIViewController {
         blurNavBar.delegate = self
     }
     
+    func setupDynamics() {
+        animator = UIDynamicAnimator(referenceView: view)
+        collisionBehavior = UICollisionBehavior(items: [playerContainerView])
+        collisionBehavior.setTranslatesReferenceBoundsIntoBoundaryWithInsets(UIEdgeInsetsMake(0, 0, -playerContainerView.bounds.size.height - playerContainerNormalOffset, 0))
+        gravityBehavior = UIGravityBehavior(items: [playerContainerView])
+        gravityBehavior.action = {
+            log.debug("Action")
+        }
+    }
+    
     
     //MARK: View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        setupDynamics()
+        
     }
     
     
@@ -91,6 +109,7 @@ class FLFeedRootViewController: UIViewController {
     }
     
     @IBAction func playerViewDidPan(sender: UIPanGestureRecognizer) {
+        panPlayerContainerViewWithRecognizer(sender)
     }
     
     //MARK: Animation
@@ -141,6 +160,24 @@ class FLFeedRootViewController: UIViewController {
                 self.feedTapGestureRecognizer.enabled = slideTransition == .Out ? true: false
         }
         
+    }
+    
+    func panPlayerContainerViewWithRecognizer(recognizer:UIPanGestureRecognizer) {
+        
+        let yTranslation = recognizer.translationInView(view).y
+        
+        switch recognizer.state {
+        case .Began:
+            animator.removeAllBehaviors()
+        case .Changed:
+            bottomSpacePlayerContainerViewToSuperView.constant += yTranslation
+            recognizer.setTranslation(CGPointZero, inView: view)
+        case .Ended, .Failed, .Cancelled:
+            animator.addBehavior(collisionBehavior)
+            animator.addBehavior(gravityBehavior)
+        default:
+            log.debug("default")
+        }
     }
 
     //MARK: Segues
